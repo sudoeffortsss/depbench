@@ -1,0 +1,3356 @@
+{
+ "probe_date": "2026-09-05",
+ "scoring_date": "2023-01-01T00:00:00+00:00",
+ "download_window": "2022-12-01:2022-12-31",
+ "sampled": 700,
+ "eligible_before_d": 367,
+ "by_bucket": {
+  "10-100": {
+   "n": 98,
+   "pos": 86,
+   "dep": 3,
+   "adv": 0,
+   "aband": 86
+  },
+  "1-10": {
+   "n": 210,
+   "pos": 206,
+   "dep": 6,
+   "adv": 0,
+   "aband": 206
+  },
+  "100-1K": {
+   "n": 38,
+   "pos": 21,
+   "dep": 0,
+   "adv": 0,
+   "aband": 21
+  },
+  "1K-10K": {
+   "n": 13,
+   "pos": 7,
+   "dep": 0,
+   "adv": 0,
+   "aband": 7
+  },
+  "0": {
+   "n": 5,
+   "pos": 1,
+   "dep": 0,
+   "adv": 0,
+   "aband": 1
+  },
+  "10K-100K": {
+   "n": 3,
+   "pos": 1,
+   "dep": 0,
+   "adv": 0,
+   "aband": 1
+  }
+ },
+ "rows": [
+  {
+   "name": "rf",
+   "downloads_2022_12": 83,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-3d-view",
+   "downloads_2022_12": 24,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-access-control",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-acl",
+   "downloads_2022_12": 248,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-amazons3-upload",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-api",
+   "downloads_2022_12": 251,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-api-mailer",
+   "downloads_2022_12": 39,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-api-simple",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-api-thumbnail",
+   "downloads_2022_12": 195,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-api-url2pdf",
+   "downloads_2022_12": 28,
+   "bucket": "10-100",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-api-websocket",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-app-data-layer",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-auto-jenkins-plugin",
+   "downloads_2022_12": 61,
+   "bucket": "10-100",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-bank",
+   "downloads_2022_12": 42,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-bootstrap3",
+   "downloads_2022_12": 32,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-changelog",
+   "downloads_2022_12": 162,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-cli",
+   "downloads_2022_12": 12,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-cli-dev",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-config",
+   "downloads_2022_12": 226,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-controls",
+   "downloads_2022_12": 16,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-cron-parse",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-cron-parser",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-db-mailer",
+   "downloads_2022_12": 195,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-db-settings",
+   "downloads_2022_12": 200,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-design",
+   "downloads_2022_12": 11,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-discord-logger",
+   "downloads_2022_12": 21,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-discord-webhook-sender",
+   "downloads_2022_12": 15,
+   "bucket": "10-100",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-ez-database",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-fields-utils",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-filereceiver",
+   "downloads_2022_12": 85,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-files",
+   "downloads_2022_12": 211,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-form",
+   "downloads_2022_12": 12,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-frame-print",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-frontend-common",
+   "downloads_2022_12": 962,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-gql",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-heapdump",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-hf-tools",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-http",
+   "downloads_2022_12": 197,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-install-update",
+   "downloads_2022_12": 9,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-lerna",
+   "downloads_2022_12": 2176,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "rf-load",
+   "downloads_2022_12": 24,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-log",
+   "downloads_2022_12": 209,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-logger",
+   "downloads_2022_12": 73,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "rf-login",
+   "downloads_2022_12": 21,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6u",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6v",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-h5",
+   "downloads_2022_12": 243,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-h5-video",
+   "downloads_2022_12": 192,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-h5-video-dev",
+   "downloads_2022_12": 30,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-hh5",
+   "downloads_2022_12": 244,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-loufengtang-a",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-pub-api1",
+   "downloads_2022_12": 253,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "6vd-pub-api2",
+   "downloads_2022_12": 37,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "6vd-pub-baoyu",
+   "downloads_2022_12": 971,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "6vd-pub-dev",
+   "downloads_2022_12": 62,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-pub-dev-2",
+   "downloads_2022_12": 49,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-pub-dsad",
+   "downloads_2022_12": 12,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-pub-sada",
+   "downloads_2022_12": 26,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-pub-shen",
+   "downloads_2022_12": 732,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "6vd-pub-ttxby",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-video-h5",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-xiaofeng-ggm",
+   "downloads_2022_12": 13,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-xiaofeng-kkb",
+   "downloads_2022_12": 18,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vd-zhaopiao-kkb",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6vdpub",
+   "downloads_2022_12": 11,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6w",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6x",
+   "downloads_2022_12": 0,
+   "bucket": "0",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "6x6",
+   "downloads_2022_12": 0,
+   "bucket": "0",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "6xs",
+   "downloads_2022_12": 26,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "6y",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4g",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4g-lte",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4game-server",
+   "downloads_2022_12": 22,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4get",
+   "downloads_2022_12": 28,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4h",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4help-app-shared",
+   "downloads_2022_12": 249,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4help-shared",
+   "downloads_2022_12": 14,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4hhhhhhhhhlxchhhhh",
+   "downloads_2022_12": 72,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4hoofs-react-cron-builder",
+   "downloads_2022_12": 44,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4house-libts-places-autocomplete",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4i",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4i18n-cli",
+   "downloads_2022_12": 68,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4i18n-client-lib",
+   "downloads_2022_12": 73,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "4icloud-detailform",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc",
+   "downloads_2022_12": 2556,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "oc-14-modal-lib",
+   "downloads_2022_12": 282,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-auth-ldap",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-azure-storage-adapter",
+   "downloads_2022_12": 46,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "oc-bpk-common",
+   "downloads_2022_12": 18,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-bpk-tokens-android",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-bpk-tokens-ios",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-bpk-tokens-rn",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-bpk-tokens-web",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-calendar",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-card",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-ckeditor5-build",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-clean-template-things",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-cli",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-client",
+   "downloads_2022_12": 1432,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "oc-client-browser",
+   "downloads_2022_12": 2249,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "oc-client-js",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-colorutil",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-component-library",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-design",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-design-mobile",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-editor",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "oc-empty-response-handler",
+   "downloads_2022_12": 1251,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn",
+   "downloads_2022_12": 158,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-a-common",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-apollo-link-token-refresh",
+   "downloads_2022_12": 15,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-arrchunk",
+   "downloads_2022_12": 16,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-arrelm",
+   "downloads_2022_12": 62,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-audit-logger",
+   "downloads_2022_12": 14,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-backup",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-capitalize",
+   "downloads_2022_12": 1255,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-case",
+   "downloads_2022_12": 1252,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-cloneobj",
+   "downloads_2022_12": 20,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-color",
+   "downloads_2022_12": 60,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-common",
+   "downloads_2022_12": 14,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-components",
+   "downloads_2022_12": 11,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-console",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-consoler",
+   "downloads_2022_12": 124,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-copycat",
+   "downloads_2022_12": 165,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-custom-primeng",
+   "downloads_2022_12": 281,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-datamaps",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-deepobj",
+   "downloads_2022_12": 34,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-design",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-electron-winbounds",
+   "downloads_2022_12": 295,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-element-ui",
+   "downloads_2022_12": 25,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-filterobj",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-firerate",
+   "downloads_2022_12": 16,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-first-module",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-gqlcodegen-evict-plugin",
+   "downloads_2022_12": 19,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-gqlcodegen-qm-plugin",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-graph-guard",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-graphql",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-graphql-auth",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-lucid",
+   "downloads_2022_12": 17,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-mapobj",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "tn-mergeobj",
+   "downloads_2022_12": 23,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "tn-minmax",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id",
+   "downloads_2022_12": 3834,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-16",
+   "downloads_2022_12": 32,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-applesigninplugin",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-area-keys",
+   "downloads_2022_12": 14107,
+   "bucket": "10K-100K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "id-auto-increment",
+   "downloads_2022_12": 1098,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-bank-scraper",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-brain",
+   "downloads_2022_12": 18,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-builder",
+   "downloads_2022_12": 66,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-editor",
+   "downloads_2022_12": 22,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-helper",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-model",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-model-testing",
+   "downloads_2022_12": 213,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-of-china",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-read",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-card-validator",
+   "downloads_2022_12": 26,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-cli",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-collection",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-collection-component",
+   "downloads_2022_12": 75,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-community-style-kit",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-community-ui-kit",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-components",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-cookies",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-core",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-day-9-concat",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-debug",
+   "downloads_2022_12": 15,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-diagram",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-diff",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-docs.telenordigital.com",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-en-dictionary",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "id-encode",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-est",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-from-list",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-fs",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-fsm",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-gen",
+   "downloads_2022_12": 17,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-gen-path-segments",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "id-generation",
+   "downloads_2022_12": 0,
+   "bucket": "0",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "an",
+   "downloads_2022_12": 0,
+   "bucket": "0",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-adaptor",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-angular-deckgrid",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-anime-scraper",
+   "downloads_2022_12": 17,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-ansi",
+   "downloads_2022_12": 201,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-api-skeleton",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array",
+   "downloads_2022_12": 44874,
+   "bucket": "10K-100K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-dutch-words",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-english-words",
+   "downloads_2022_12": 6106,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-french-words",
+   "downloads_2022_12": 51,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-german-words",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-italian-words",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-persian-words",
+   "downloads_2022_12": 13,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-portuguese-words",
+   "downloads_2022_12": 12,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-spanish-words",
+   "downloads_2022_12": 24,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-array-of-turkish-words",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-async",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-basic",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-browserify-angular-annotate",
+   "downloads_2022_12": 15,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-browserify-template",
+   "downloads_2022_12": 12,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-cli",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-clone",
+   "downloads_2022_12": 48,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-color-picker",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-cookie",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-core-module",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-db",
+   "downloads_2022_12": 26,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "an-dev",
+   "downloads_2022_12": 215,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-doc",
+   "downloads_2022_12": 14,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-dom",
+   "downloads_2022_12": 143,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-dust",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-empty-package-yylfc-second",
+   "downloads_2022_12": 44,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-example-component-m",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-expression",
+   "downloads_2022_12": 183,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-flow",
+   "downloads_2022_12": 98,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-format-date",
+   "downloads_2022_12": 164,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "an-function",
+   "downloads_2022_12": 65,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "an-gifs",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-babel",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-blog-minio-sdk",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-chat-app",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-class",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-cli",
+   "downloads_2022_12": 573,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "kn-cligame",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-components",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-devcamp-js-footer",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-error-handler",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-fis",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-hooks",
+   "downloads_2022_12": 30,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "kn-js-footer",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-layout-generator",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-module",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-ng-common",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-react-native-router",
+   "downloads_2022_12": 256,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-react-native-views",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-react-redux-cli",
+   "downloads_2022_12": 17,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-release",
+   "downloads_2022_12": 9,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-rule",
+   "downloads_2022_12": 13,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "kn-sso",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-statinamic",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-table-parser",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-test",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-todo",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-ui",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-webpack",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn-wxhelper",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "kn2auth",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "kn3sv1-random-number-generator",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc",
+   "downloads_2022_12": 1853,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-acp",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-agent-api",
+   "downloads_2022_12": 58,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "vc-agent-api-wanghonghui",
+   "downloads_2022_12": 16,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-agent-api_syt",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-alert",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-align",
+   "downloads_2022_12": 13,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-analytics",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-autocomplete",
+   "downloads_2022_12": 13,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-aws-sqs-helper",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-backtop",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-boilerplate",
+   "downloads_2022_12": 573,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-bootstrap",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-box",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": true,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-breadcrumb",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-breadcrumd",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-button",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-buttonGroup",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-cake",
+   "downloads_2022_12": 341,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "vc-capture-plugin",
+   "downloads_2022_12": 30,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-card",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-chart",
+   "downloads_2022_12": 29,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-checkbox",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-chord-diagram",
+   "downloads_2022_12": 22,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-common-ui",
+   "downloads_2022_12": 19,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-component",
+   "downloads_2022_12": 9,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-components",
+   "downloads_2022_12": 26,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-components-expo",
+   "downloads_2022_12": 11,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-create-dashboard",
+   "downloads_2022_12": 1611,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "vc-cuenta-excedente-app",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-custom-pkg",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-cz-emoji",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-design",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-design-system",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-dialog",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-directive",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-dropdown",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-easyclearinput",
+   "downloads_2022_12": 26,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "vc-elixir-typescript",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-apis",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-apis-test",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-auth-jwt",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-bin",
+   "downloads_2022_12": 6,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-blocks-engine",
+   "downloads_2022_12": 61,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-blocks-profession",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-blocks-ui-logic",
+   "downloads_2022_12": 47,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-button",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-cli",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-common-methods",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-common2",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-comp-ui",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-components-ui",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-comps-ui",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-console",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-cooper-business-component",
+   "downloads_2022_12": 127,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "gz-cooper-engine",
+   "downloads_2022_12": 3104,
+   "bucket": "1K-10K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "gz-cooper-ui-logic",
+   "downloads_2022_12": 401,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "gz-corn",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-correlation-id",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-exobit",
+   "downloads_2022_12": 10,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-form-making",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-gis",
+   "downloads_2022_12": 9,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-hapi-db",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-hapi-firestarter",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-image-compressor",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-info-flow",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-measure-text",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-objection",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-popup",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-run-cli",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-server",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-spider",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "gz-test-ajax",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-test-demo",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-test-first",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-tpl-loader",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-ui",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-ui-react",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-util-tool-tpl",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-utils",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-vue-cli",
+   "downloads_2022_12": 16,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-vue-router",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-vue-treeselect",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz-xlsx-style",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz001clac",
+   "downloads_2022_12": 14,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz06calc",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "gz17835052626",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds",
+   "downloads_2022_12": 40756,
+   "bucket": "10K-100K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "ds-100",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-access-tokens",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-accordion",
+   "downloads_2022_12": 5,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-accordions",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-additional-pages",
+   "downloads_2022_12": 7,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-addpage-templates",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-ai-tech-notes",
+   "downloads_2022_12": 0,
+   "bucket": "0",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": false,
+   "positive": false
+  },
+  {
+   "name": "ds-algo-js",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-algo-study",
+   "downloads_2022_12": 204,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-algorithms",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-alurabooks",
+   "downloads_2022_12": 128,
+   "bucket": "100-1K",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "ds-alurabooks-base",
+   "downloads_2022_12": 37,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1",
+   "downloads_2022_12": 8,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-core",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-device-browser",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-device-node",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-config-extensions",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-config-settings",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-iam-project-select",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-insight-journal",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-root-auth",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-root-openapi-generator",
+   "downloads_2022_12": 4,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-ext-storage-vault",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-cli-framework",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-precise-api",
+   "downloads_2022_12": 1,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-precise-scripts",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1-react-components",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h100b-module",
+   "downloads_2022_12": 9,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h1058",
+   "downloads_2022_12": 25,
+   "bucket": "10-100",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h11-debug",
+   "downloads_2022_12": 2,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  },
+  {
+   "name": "h11debug",
+   "downloads_2022_12": 3,
+   "bucket": "1-10",
+   "deprecated": false,
+   "advisory_after_d": 0,
+   "abandoned": true,
+   "positive": true
+  }
+ ]
+}

@@ -1,0 +1,400 @@
+# depbench — design
+
+**2026-09-05 · Allen Cai · design fixed, data not yet collected**
+
+This document is the requirements record. Every requirement below is derived from a
+publicly observable problem in the npm ecosystem, not from a guess about what would be
+fun to build. `FINDINGS.md` records the four places where reality corrected the design
+before any of it was written.
+
+---
+
+## 1. The question
+
+**Do dependency risk signals work? Does any of them beat sorting by download count?**
+
+Not another scanner. A ruler for the scanners.
+
+---
+
+## 2. Why this shape
+
+The original plan was a product: decide, under a fixed nightly budget, which packages to
+re-verify. Research killed it.
+
+| why it died | evidence |
+|---|---|
+| no demand language for the core mechanism | four independent search axes for `rescan` / `nightly` / `budget` phrasing returned nothing |
+| three of the intended signals already shipped | Dependabot's install-script and provenance alerts closed `completed` on 2026-02-13 |
+| cooldowns are already free and default | pnpm 11 defaults `minimumReleaseAge` to 1440 minutes; Yarn and Deno the same |
+| health scores are methodologically dead | R² of 9–12% predicting vulnerability counts, **and the sign is backwards** |
+| the market has been tried and declined | comparable indie products score zero publicly |
+
+But the same research exposed a gap nobody has filled: **everyone's signals are poor, and
+nobody has measured them.**
+
+- scanner false positive rate: **92%**
+- malware detector decay over two years: 87.15% → **39.49%**
+- Dependabot compatibility score coverage: **3.4%**, `unknown` in 98.5% of cases
+- median npm vulnerability disclosure lag: **31.5 months**
+
+A measuring instrument dodges every objection above. It does not need anyone to want it.
+Dependabot emits signals; it does not evaluate them. Health scores being methodologically
+weak is not an obstacle — it is the hypothesis.
+
+---
+
+## 3. Method: point-in-time reconstruction
+
+**Return to a scoring date D, score each package using only what was knowable that day,
+then look at what actually happened.**
+
+**The feasibility insight:** we do not need three years of collected data. An npm
+packument returns a package's entire version history with timestamps in a single request,
+so "what did this package look like on 2023-01-01" is exactly reconstructible today.
+
+### What cannot be reconstructed, stated plainly
+
+| field | recoverable | note |
+|---|---|---|
+| version list and publish times | ✅ exact | packument `time` |
+| release cadence and gaps | ✅ exact | derived from the above |
+| per-version provenance attestation | ✅ | `dist.attestations` |
+| daily download counts | ✅ | the downloads API keeps history |
+| license, repository, engines | ✅ per version | |
+| **maintainer list history** | ❌ **current value only** | the registry keeps no history |
+| **when deprecation happened** | ❌ current flag only | flagged, but never timestamped |
+
+**Maintainer change cannot be reconstructed, and it is one of the signals we would most
+want to test.** That is a hard boundary of the retrospective arm. It is reported, not
+hidden. The prospective arm (§9) begins accumulating it from 2026-09-05.
+
+### Right-censoring and the window
+
+Median disclosure lag is about 31.5 months, so recent events are badly under-observed.
+
+- scoring date **D = 2023-01-01**
+- observation window **D → 2026-09-01**, about 3.7 years
+- undisclosed events remain missing; the residual bias is quantified, not waved at
+
+---
+
+## 4. Architecture: eight boxes
+
+```
+  1  universe      freeze the evaluation set, hash it
+       |
+  2  ingest        registry packuments, downloads, OSV export
+                   autonomous, idempotent, content-hashed
+       |
+  3  snapshot      reconstruct what was knowable on D
+       |
+  4  policies      cheap deterministic rules + LLM tier
+       |
+  5  outcomes      what actually happened after D
+       |
+  6  harness       score, and force no_answer / abstain into the report
+       |
+  7  report        static results page + CLI
+       :
+  8  prospective   seal today's predictions daily, let time verify them
+```
+
+### 1 · universe
+
+A benchmark whose question set moves cannot compare runs. The set is frozen once and
+identified by a hash of its sorted members; every score and report carries that hash.
+
+**The trap: today's top-N destroys the benchmark.** Packages still on today's leaderboard
+are survivors. Many that rotted between 2023 and 2026 have fallen off it, so building the
+universe from today's rankings systematically excludes the outcomes we are trying to
+predict — and biases every result in the flattering direction.
+
+Measured proof: `request` did **70,489,266** downloads in 2022-12 and is deprecated
+today; `left-pad` did 8,844,841 and likewise. Both belong in the universe precisely
+because they are the outcome.
+
+**Selection, as of D rather than today.** The candidate pool is the whole registry via
+`replicate.npmjs.com/_all_docs` (4,362,870 packages, paginate with `startkey` — `skip` is
+rejected). Ranking uses **2022-12** download volume, which contains no post-D information.
+
+**Case-control, not a cohort.** From `FINDINGS.md` F4:
+
+```
+in-window GHSA advisories                  4,334
+  -> distinct packages affected            1,633
+  -> existed before D                      1,101
+  -> also active in the year before D         823
+  -> also >= 1,000 downloads in 2022-12       383   <- cases
+
+controls: ~1,530, matched about 1:4 on download band and pre-D activity
+universe:  ~1,900 packages
+```
+
+**The cost of this design, which must be stated in the method.** Under case-control the
+positive rate is chosen by the designer, not by nature, so `precision@k` is not directly
+interpretable. **AUC is the headline metric.** The true base rate cannot be estimated
+from this design, and any absolute figure carries that caveat.
+
+**Pre-registration.** The selection rule is committed and pushed *before* outcomes are
+pulled. The public git timestamp replaces "trust me" — the same principle as §9.
+
+### 2 · ingest
+
+| source | endpoint | provides |
+|---|---|---|
+| npm registry | `registry.npmjs.org/<pkg>` | versions, timestamps, provenance |
+| npm downloads | `api.npmjs.org/downloads/point/<range>/<pkgs>` | historical volume |
+| OSV | bulk export `npm/all.zip` | advisories with affected ranges |
+
+**Idempotency is the `UNIQUE (source, external_id, content_hash)` constraint itself**, not
+a check standing next to one. A second ingest over unchanged data inserts zero rows.
+`src/db/migrate.test.ts` proves this rather than asserting it.
+
+**Measured limits (F1):** downloads bulk caps at **128** per request and returns 429s
+above roughly 3 req/s, so ingestion throttles and backs off exponentially. The registry
+itself is generous.
+
+### 3 · snapshot
+
+Reconstructs each package as of D into its own table, so a bug in reconstruction is a
+recompute rather than a re-crawl.
+
+---
+
+## 5. Data model
+
+Eight tables, plain SQL migrations, no ORM. See `db/migrations/001_init.sql`.
+
+`observation` is append-only and keeps raw payloads, including failed fetches — that is
+what makes `no_answer` computable instead of invisible. Everything downstream derives
+from it.
+
+Two schema-level invariants worth calling out:
+
+- `universe_counts_add_up` — a universe whose case and control counts do not sum to its
+  member count cannot be inserted
+- `score_present_unless_unanswered` — a score row with no score, no abstention, and a
+  clean parse status would vanish from every metric unnoticed. The database rejects it.
+
+---
+
+## 6. Policies
+
+**Tier one, deterministic, whole universe, effectively free:**
+
+`random` (the floor) · `popularity` (**the control group that matters**) · `age` ·
+`cadence` · `provenance` · `composite` · `budget-triage`
+
+On `budget-triage`, honestly: the original justification was "LLM calls are expensive, so
+triage is mandatory." Measurement showed the full LLM sweep costs about ten dollars, so
+that argument does not hold and is not used. Its real place here is as a deliberate
+experimental condition — *if you could only inspect 5% of packages, what order maximises
+return?* — which remains a good question without a manufactured cost story.
+
+**Tier two, language models, same universe:**
+
+Models read what metadata cannot see: README and changelog wording, install script
+contents, maintainer handover notices. Output is strict JSON with an explicit abstain:
+
+```json
+{ "risk": 0.0, "reason": "", "evidence_quote": "", "abstain": false }
+```
+
+Unparseable output, timeouts and refusals all become `no_answer` and stay in the
+denominator. **This is the tier that makes the harness rules load-bearing** — rules rarely
+fail to parse; models do it constantly.
+
+| policy | model | $/1M in | $/1M out |
+|---|---|---|---|
+| `llm-flash-lite` | Gemini 3.1 Flash-Lite | 0.25 | 1.50 |
+| `llm-haiku` | Claude Haiku 4.5 | 1.00 | 5.00 |
+| `llm-sonnet` | Claude Sonnet 5 | 2.00 | 10.00 |
+
+Three tiers turn model choice into a measured axis rather than a defended decision.
+
+---
+
+## 7. Harness
+
+**Rule 1 — anything unanswerable stays in the denominator.** Unreachable packages, 404
+advisories, unparseable model output: recorded as `no_answer`, never dropped. A CVSS 9.5
+advisory (`GHSA-2xp9-vwfh-vxw4`) currently 404s from both the GitHub and OSV APIs; a user
+reported "even our socket.dev scans returned nothing." Excluding records like that is how
+a headline number becomes false.
+
+**Rule 2 — abstention is scored apart from error.** Report the abstention rate and how
+often abstaining was correct.
+
+**Rule 3 — the headline refuses to compute without rules 1 and 2.** `depbench score` exits
+with an error rather than print a number it cannot support. This is demonstrable: comment
+out the reporting and watch it refuse.
+
+> Rule 3 is not our idea. Andrew Nesbitt of ecosyste.ms said it better: treating a missing
+> signal as a low score is the most serious available error, because rendered out, `null`
+> and `0` look identical. depbench turns that into an assertion that halts.
+
+**Guardrails, because a headline can be gamed:**
+
+| metric | catches |
+|---|---|
+| **AUC** | the headline; case-control makes `precision@k` uninterpretable |
+| `high_severity_miss_rate` | policies that only catch easy cases |
+| `active_package_false_flag_rate` | policies that flag everything |
+| `abstain_rate` + `abstain_hit_rate` | how much it declines, and whether declining was right |
+| `no_answer_rate` | how much of the denominator is unanswerable |
+| `cost_per_correct` | **accuracy per dollar, not accuracy alone** |
+
+---
+
+## 8. Cost control
+
+Universe of ~1,900 packages, roughly 5,000 input and 300 output tokens each, batch
+pricing at 50%, cached rubric prefix at ~0.1× read:
+
+| tier | scope | cost |
+|---|---|---|
+| 0 | rules only, no LLM | **$0** |
+| 1 | Flash-Lite, full universe | ~$1.60 |
+| 2 | Haiku 4.5, full universe | ~$6 |
+| 3 | Sonnet 5, full universe | ~$12 |
+
+**All three arms ≈ $20. Hard ceiling $50.**
+
+Cost control is built in, and is itself part of the demonstration:
+
+1. **dry-run by default** — counts tokens, prints the projected spend, exits without
+   spending anything
+2. **a hard budget gate** — actual spend accumulates from `response.usage`; exceeding the
+   ceiling throws rather than warns
+3. **spend is persisted per score**, so the report shows accuracy and cost together
+
+---
+
+## 9. The prospective arm
+
+Every backtest carries the same unfixable problem: we already know how the story ended.
+Even without cheating, hindsight leaks into feature choice and threshold tuning.
+
+The prospective arm has no such problem. A daily GitHub Action snapshots current state,
+runs every policy, writes `predictions/YYYY-MM-DD.jsonl`, commits, and checks whether
+earlier predictions have resolved.
+
+**The git history is a public, timestamped, tamper-evident ledger.** Anyone can verify
+the prediction preceded the outcome.
+
+Public repositories get unlimited free standard runners, so this costs nothing. Two
+caveats: scheduled workflows on public repos are silently disabled after 60 days of
+inactivity, and cron has a five-minute floor and defaults to UTC.
+
+**It will not produce a meaningful result for a long time** — low base rate, slow
+disclosure. Its near-term value is that it is running, that N days of predictions are
+sealed, and that the design demonstrates the overfitting problem is understood. Saying so
+plainly is the point.
+
+Side benefit: recording the maintainer list daily begins accumulating the one signal the
+retrospective arm cannot reach.
+
+---
+
+## 10. Deliverables
+
+**Ninety seconds** — a static results page on GitHub Pages: the leaderboard, the
+guardrails beside it, the prospective counter ticking up. Sortable columns, one toggle.
+No live dashboard; research showed standalone dashboards go unread, and a job search is
+no time to operate a service.
+
+**Ten minutes** — this document and `FINDINGS.md`, every finding reproducible by command.
+
+**Thirty seconds, live** — the CLI refusing to print a headline it cannot support, then
+printing it once the unknowns are reported.
+
+Plus the versioned dataset as JSONL so results can be checked and cited, and a LICENSE,
+because an unlicensed public repository cannot legally be used or built on.
+
+---
+
+## 11. Publication
+
+Public from the start, because pre-registration only means something if the timestamps
+are public.
+
+Three risks and what we do about them:
+
+**Naming products invites a fight.** We evaluate *signal types*, not vendor products.
+"Popularity-dominated ranking achieves X" rather than "vendor Y is bad." This is also the
+more honest claim, since proprietary scoring cannot be replicated anyway.
+
+**Naming packages harms people.** 60% of maintainers are unpaid and nearly six in ten have
+considered quitting. Aggregate metrics and methodology are published; package names stay
+in the dataset because reproducibility requires it and the data is already public. **No
+"risky packages" leaderboard.** This is retrospective analysis, not a prediction service.
+
+**Being wrong in public.** LIMITATIONS leads rather than trails. Naming your own weakest
+point first is the best available defence, and it is more persuasive than any number.
+
+Release in three stages: public repo without promotion; then a LinkedIn post once there
+are findings; then wider only if the result is genuinely surprising and defensible.
+
+---
+
+## 12. Build order
+
+| stage | work | state |
+|---|---|---|
+| 0 | measure API limits and base rates | ✅ done — F1 to F4 |
+| 1 | schema, migrations, idempotency proofs | ✅ done — 10 tables, 11 tests |
+| 2 | freeze the universe, commit the rule first | ⬜ next |
+| 3 | ingest and snapshot reconstruction | ⬜ |
+| 4 | `random` and `popularity` baselines | ⬜ |
+| 5 | outcomes, harness, guardrails | ⬜ |
+| **6** | **first numbers, rules only, $0** | ⬜ |
+| 7 | remaining rule policies | ⬜ |
+| 8 | cost control, then the first LLM arm | ⬜ |
+| 9 | the other two model arms | ⬜ |
+| 10 | results page and CLI | ⬜ |
+| 11 | prospective arm | ⬜ |
+
+**No claim about this project goes on a résumé before stage 6**, because until then the
+numbers do not exist.
+
+Stack: TypeScript throughout, Node 22+, PGlite, plain SQL migrations, Vercel AI SDK for
+multi-provider access, vitest.
+
+---
+
+## 13. Non-goals
+
+Not a live dashboard. Not a SaaS. Not a competitor to Dependabot, Socket or Snyk — we
+evaluate the *kinds of signal* they emit. Not a predictor of the next supply chain
+attack. Not a risky-package leaderboard. Not a claim about npm as a whole; the universe
+is packages with real usage and real advisories.
+
+---
+
+## 14. Open questions
+
+1. The tightened `abandoned` threshold, once the control group's distribution is visible
+2. Which variables controls are matched on beyond download band
+3. Whether to add the GitHub API for archived status — one more source, one more limit
+4. Whether the prospective arm shares the retrospective universe (leaning yes)
+5. **Why in-window GHSA counts jump from 400–600 a year to 2,866 in 2026** — unexplained,
+   and it may bear on the window choice
+
+---
+
+## 15. Relation to prior art
+
+The shape of a benchmark — a model asked for one structured judgement, deterministic
+scoring, parse failures counted separately, guardrails beside the headline — is ordinary
+evaluation engineering, visible in any public benchmark repository.
+
+Two structural properties distinguish this one:
+
+**Ground truth is real history, not hand labelling.** No expert annotation budget caps the
+sample size, and the "synthetic cases drift from real distributions" problem does not
+arise. The cost is right-censoring, which hand-labelled benchmarks do not have.
+
+**There are trivial baselines.** The question is not "which model is best" but **"is any
+of this worth using at all"** — which is the question more likely to produce an
+uncomfortable answer.

@@ -1,0 +1,22 @@
+{
+  "name": "depbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A benchmark that asks whether npm dependency-risk signals actually predict anything.",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "migrate": "tsx src/db/migrate.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

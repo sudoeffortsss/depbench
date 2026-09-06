@@ -1,4 +1,4 @@
-# depbench
+# truthlag
 
 **Do npm dependency risk signals actually predict anything?**
 
@@ -6,7 +6,7 @@ Everyone ranks packages by something: downloads, staleness, release cadence, pro
 an aggregate health score. Almost nobody has measured whether those signals beat sorting
 by download count.
 
-depbench is not another scanner. It is a ruler for the scanners.
+truthlag is not another scanner. It is a ruler for the scanners.
 
 It reconstructs what was knowable about a package on **2023-01-01**, scores it with
 several competing policies using only information available that day, and then checks
@@ -53,11 +53,11 @@ A policy may decline to answer and say how much evidence it had. We report the
 abstention rate *and* how often abstention was the right call.
 
 **3. The headline metric refuses to compute if 1 and 2 are missing.**
-`depbench score` exits with an error rather than print a number it cannot stand behind.
+`truthlag score` exits with an error rather than print a number it cannot stand behind.
 
 > The idea behind rule 3 is not ours. Andrew Nesbitt, who runs ecosyste.ms, put it
 > better: treating a missing signal as a low score is the most serious error you can
-> make, because rendered out, `null` and `0` look identical. depbench turns that
+> make, because rendered out, `null` and `0` look identical. truthlag turns that
 > sentence into an assertion that halts the program.
 
 ---

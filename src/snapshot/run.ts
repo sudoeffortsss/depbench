@@ -16,7 +16,7 @@ async function main(): Promise<void> {
   try {
     await migrate(db);
 
-    console.log(`depbench snapshot + outcomes`);
+    console.log(`truthlag snapshot + outcomes`);
     console.log(`  scoring date: ${SCORING_DATE}\n`);
 
     const s = await buildAllSnapshots(db);

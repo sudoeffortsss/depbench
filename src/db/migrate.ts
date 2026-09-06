@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const MIGRATIONS_DIR = join(ROOT, "db", "migrations");
-export const DATA_DIR = process.env.DEPBENCH_DATA ?? join(ROOT, "data", "pgdata");
+export const DATA_DIR = process.env.TRUTHLAG_DATA ?? join(ROOT, "data", "pgdata");
 
 export async function openDb(dataDir: string = DATA_DIR): Promise<PGlite> {
   await mkdir(dataDir, { recursive: true });
@@ -63,7 +63,7 @@ export async function migrate(db: PGlite): Promise<string[]> {
 }
 
 async function main(): Promise<void> {
-  console.log(`depbench migrate`);
+  console.log(`truthlag migrate`);
   console.log(`  data dir: ${DATA_DIR}`);
   const db = await openDb();
   try {

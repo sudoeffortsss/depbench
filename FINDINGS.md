@@ -13,6 +13,49 @@ design.
 
 ---
 
+## F9 · We checked npm and GitHub for the name, and forgot that research exists
+
+**2026-09-06** · direct verification, prompted by an outside tip
+
+**Assumed.** The project was called `depbench`. Availability had been checked: the npm
+name was free and no repository of that name existed under the account. That felt like
+diligence.
+
+**Ran.** Verified two claims that a name collision existed, rather than taking them on
+trust, and then searched the plain term.
+
+**Came back.** Both claims were true, and understated.
+
+| paper | arXiv | date | benchmark | scope |
+|---|---|---|---|---|
+| DepRepair | [2607.17957](https://arxiv.org/abs/2607.17957) | 2026-07 | **DepBench** | 95 real dependency-update instances |
+| Update from Hell | [2608.30300](https://arxiv.org/abs/2608.30300) | **2026-08-31** | **DEPBENCH** | 203 tasks |
+
+The second was submitted **six days before this repository existed**, and its 203 tasks
+include **68 npm/yarn** ones. Not an unrelated field: the same ecosystem, a different
+question. Searching the bare term returns both papers as the top three results.
+
+A second candidate died the same way. `foretrace` is an operating security company with
+a product line and a LinkedIn page, which is worse than an academic collision: same
+sector, and a reader searching the name finds someone else's business.
+
+**Changed.** Renamed to **truthlag**, after the thing three separate findings circle:
+the median 31.5-month lag between a vulnerability existing and anybody publishing it
+(F4, F5, F6). Verified across four surfaces this time rather than two: npm registry,
+GitHub search across all of GitHub rather than one account, academic literature, and
+operating companies. Zero hits on every one.
+
+**The lesson is F7's, wearing a different face.** F7 said: before building a crawler,
+look for the dataset. This one says: before claiming a name, look where names actually
+live. Both are the same failure — checking the surfaces that are easy to check and
+calling it done.
+
+**Also changed: `*bench` is abandoned as a suffix.** SWE-bench, MTEB, LiveBench,
+DepBench, PostTrainBench, LongCLI-Bench. New ones land monthly. Any name ending in
+`bench` is a collision waiting for its turn.
+
+---
+
 ## F8 · A consistency check fired, and the exception turned out to have a name
 
 **2026-09-06** · stage 3 ingest and snapshot reconstruction

@@ -6,7 +6,7 @@ const db = new PGlite();                    // in-memory
 await migrate(db);
 
 // a scoped name, an unscoped name, and one that certainly does not exist
-const names = ["chalk", "@playwright/test", "this-package-does-not-exist-depbench-xyz"];
+const names = ["chalk", "@playwright/test", "this-package-does-not-exist-truthlag-xyz"];
 
 console.log("first pass");
 const a = await ingestPackuments(db, names);

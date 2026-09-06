@@ -16,7 +16,7 @@ async function main(): Promise<void> {
     await migrate(db);
 
     const members = await readUniverse();
-    console.log(`depbench ingest`);
+    console.log(`truthlag ingest`);
     console.log(`  universe: ${members.length} packages`);
 
     const before = await db.query<{ n: string }>(

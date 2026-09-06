@@ -1,4 +1,4 @@
-# depbench — design
+# truthlag — design
 
 **2026-09-05, universe frozen 2026-09-06 · Allen Cai**
 
@@ -257,13 +257,13 @@ a headline number becomes false.
 **Rule 2 — abstention is scored apart from error.** Report the abstention rate and how
 often abstaining was correct.
 
-**Rule 3 — the headline refuses to compute without rules 1 and 2.** `depbench score` exits
+**Rule 3 — the headline refuses to compute without rules 1 and 2.** `truthlag score` exits
 with an error rather than print a number it cannot support. This is demonstrable: comment
 out the reporting and watch it refuse.
 
 > Rule 3 is not our idea. Andrew Nesbitt of ecosyste.ms said it better: treating a missing
 > signal as a low score is the most serious available error, because rendered out, `null`
-> and `0` look identical. depbench turns that into an assertion that halts.
+> and `0` look identical. truthlag turns that into an assertion that halts.
 
 **Guardrails, because a headline can be gamed:**
 

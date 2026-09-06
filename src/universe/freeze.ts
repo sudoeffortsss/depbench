@@ -132,7 +132,7 @@ async function loadEligibleControls(
 }
 
 export async function freeze(): Promise<void> {
-  console.log("depbench universe freeze");
+  console.log("truthlag universe freeze");
   console.log(`  scoring date : ${SCORING_DATE}`);
   console.log(`  window       : ${WINDOW_START} .. ${WINDOW_END}`);
 

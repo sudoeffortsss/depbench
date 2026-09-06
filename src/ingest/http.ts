@@ -137,7 +137,7 @@ export async function fetchJson<T>(
  * an identifiable client can be rate-limited rather than blocked.
  */
 export const USER_AGENT =
-  "depbench/0.1 (+https://github.com/sudoeffortsss/depbench) research benchmark";
+  "truthlag/0.1 (+https://github.com/sudoeffortsss/truthlag) research benchmark";
 
 /** Measured limits, kept in one place so they are easy to find and to justify. */
 export const LIMITS = {

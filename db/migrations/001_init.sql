@@ -1,4 +1,4 @@
--- depbench schema, migration 001
+-- truthlag schema, migration 001
 --
 -- Design notes that are load-bearing, not decoration:
 --

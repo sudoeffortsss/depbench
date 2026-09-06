@@ -25,7 +25,7 @@ from collections import Counter
 from pathlib import Path
 
 DUMP = os.environ.get(
-    "DEPBENCH_ECO_DUMP",
+    "TRUTHLAG_ECO_DUMP",
     "/private/tmp/claude-502/-Users-projects-Documents-Claude/"
     "1fbc2f1b-5c47-41b6-b4d3-d7ca590e0067/scratchpad/eco2022.pgdmp",
 )

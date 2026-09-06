@@ -4,3 +4,4 @@ dist/
 .env.local
 data/pgdata/
 *.zip
+probe/npm_ranking_2022-11-09.tsv

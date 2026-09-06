@@ -1,0 +1,21 @@
+{
+ "probe_date": "2026-09-06",
+ "source": "ecosyste.ms open data release packages-2022-11-09",
+ "source_licence": "CC BY-SA 4.0, (c) 2022 Andrew Nesbitt",
+ "source_frozen_at": "2022-11-09T10:46:31Z (S3 Last-Modified)",
+ "total_rows_scanned": 5409011,
+ "npm_rows": 2152144,
+ "downloads_period": {
+  "last-month": 2123753,
+  "(null)": 28391
+ },
+ "bands": {
+  "<1K": 1999026,
+  "10K-100K": 34738,
+  "1K-10K": 90001,
+  "1M+": 8221,
+  "100K-1M": 14513,
+  "(null)": 5645
+ },
+ "output": "npm_ranking_2022-11-09.tsv"
+}

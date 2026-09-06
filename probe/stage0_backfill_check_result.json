@@ -1,0 +1,124 @@
+{
+ "probe_date": "2026-09-05",
+ "question": "is the 2026 GHSA surge back-filled history or real disclosure",
+ "method": "CVE aliases carry their year; compare to GHSA published year",
+ "by_published_year": {
+  "2017": {
+   "total": 50,
+   "no_cve_alias": 4,
+   "cve_same_year": 13,
+   "cve_one_year_old": 5,
+   "cve_two_plus_years_old": 28,
+   "pct_two_plus_years_old": 60.9
+  },
+  "2018": {
+   "total": 305,
+   "no_cve_alias": 13,
+   "cve_same_year": 97,
+   "cve_one_year_old": 158,
+   "cve_two_plus_years_old": 37,
+   "pct_two_plus_years_old": 12.7
+  },
+  "2019": {
+   "total": 365,
+   "no_cve_alias": 94,
+   "cve_same_year": 89,
+   "cve_one_year_old": 26,
+   "cve_two_plus_years_old": 155,
+   "pct_two_plus_years_old": 57.2
+  },
+  "2020": {
+   "total": 934,
+   "no_cve_alias": 634,
+   "cve_same_year": 127,
+   "cve_one_year_old": 27,
+   "cve_two_plus_years_old": 146,
+   "pct_two_plus_years_old": 48.7
+  },
+  "2021": {
+   "total": 597,
+   "no_cve_alias": 54,
+   "cve_same_year": 325,
+   "cve_one_year_old": 189,
+   "cve_two_plus_years_old": 25,
+   "pct_two_plus_years_old": 4.6
+  },
+  "2022": {
+   "total": 668,
+   "no_cve_alias": 49,
+   "cve_same_year": 357,
+   "cve_one_year_old": 92,
+   "cve_two_plus_years_old": 170,
+   "pct_two_plus_years_old": 27.5
+  },
+  "2023": {
+   "total": 400,
+   "no_cve_alias": 39,
+   "cve_same_year": 278,
+   "cve_one_year_old": 37,
+   "cve_two_plus_years_old": 44,
+   "pct_two_plus_years_old": 12.2
+  },
+  "2024": {
+   "total": 436,
+   "no_cve_alias": 38,
+   "cve_same_year": 359,
+   "cve_one_year_old": 26,
+   "cve_two_plus_years_old": 13,
+   "pct_two_plus_years_old": 3.3
+  },
+  "2025": {
+   "total": 632,
+   "no_cve_alias": 59,
+   "cve_same_year": 526,
+   "cve_one_year_old": 44,
+   "cve_two_plus_years_old": 3,
+   "pct_two_plus_years_old": 0.5
+  },
+  "2026": {
+   "total": 2930,
+   "no_cve_alias": 424,
+   "cve_same_year": 2428,
+   "cve_one_year_old": 73,
+   "cve_two_plus_years_old": 5,
+   "pct_two_plus_years_old": 0.2
+  }
+ },
+ "nvd_published_year_for_2026": {
+  "2026": 1909,
+  "2025": 1
+ },
+ "examples_2026_large_gap": [
+  {
+   "id": "GHSA-37ch-88jc-xwx2",
+   "published": "2026",
+   "oldest_cve_year": "2024",
+   "gap": 2
+  },
+  {
+   "id": "GHSA-6rcw-ww3x-xqwm",
+   "published": "2026",
+   "oldest_cve_year": "2024",
+   "gap": 2
+  },
+  {
+   "id": "GHSA-9fv2-c7v6-p45w",
+   "published": "2026",
+   "oldest_cve_year": "2024",
+   "gap": 2
+  },
+  {
+   "id": "GHSA-c27g-q93r-2cwf",
+   "published": "2026",
+   "oldest_cve_year": "2024",
+   "gap": 2
+  },
+  {
+   "id": "GHSA-r5fr-rjxr-66jc",
+   "published": "2026",
+   "oldest_cve_year": "2021",
+   "gap": 5
+  }
+ ],
+ "pct_2026_two_plus_years_old": 0.2
+}

@@ -12,6 +12,69 @@ anything on top of it.
 
 ---
 
+## F6 · The 2026 advisory surge is real, but the early years are back-fill, and that is a fourth wall
+
+**2026-09-05** · probe: `probe/stage0_backfill_check.py`
+
+**The blocker.** 2026 alone holds 40% of every GHSA record in the npm corpus (2,930 of
+7,317). Cases are selected on `published` falling inside the observation window, so if
+GitHub had started importing older vulnerabilities in 2026, `published` would be an
+import date rather than an event date and the window filter would be quietly pulling
+2019-vintage vulnerabilities in as new ones. **The universe could not be frozen until this
+was resolved.**
+
+**Ran.** CVE identifiers carry their year, and that is free evidence sitting in the export
+already. For every GHSA, compare its publication year against the oldest CVE it aliases.
+A 2026 advisory aliasing `CVE-2019-xxxxx` is a back-fill. One aliasing `CVE-2026-xxxxx`
+is a genuine new disclosure. Cross-checked against `database_specific.nvd_published_at`,
+which is NVD's own date and independent of GitHub's ingestion.
+
+**Came back.**
+
+```
+pub     total  no CVE  same yr  1 yr old  2+ yr old   % back-fill
+2017       50       4       13         5         28        60.9%
+2018      305      13       97       158         37        12.7%
+2019      365      94       89        26        155        57.2%
+2020      934     634      127        27        146        48.7%
+2021      597      54      325       189         25         4.6%
+2022      668      49      357        92        170        27.5%
+2023      400      39      278        37         44        12.2%
+2024      436      38      359        26         13         3.3%
+2025      632      59      526        44          3         0.5%
+2026     2930     424     2428        73          5         0.2%
+```
+
+**The blocker clears.** Of 2,930 advisories published in 2026, **five** alias a CVE two or
+more years older. 0.2%. NVD agrees independently: 1,909 of them have an
+`nvd_published_at` in 2026 and exactly one in 2025. Two separate sources say the same
+thing. `published` tracks the event closely enough to use as the window filter, and the
+case pool is sound.
+
+**But the same table exposes a wall we had not found.** Read the early years:
+
+- 2017: **60.9%** of advisories alias a CVE two or more years older
+- 2019: **57.2%**
+- 2020: **48.7%**, and 634 of that year's 934 records carry **no CVE alias at all** (68%)
+- 2022: **27.5%**
+
+**The GitHub Advisory Database was back-filling history at scale through about 2022.** In
+those years `published` is an import date, not an event date. The 2020 shape — two thirds
+of records with no CVE alias — looks nothing like 2026's 14%.
+
+**Changed.**
+
+- **A fourth constraint on the scoring date, and a harder one than we had.** F5 argued
+  early dates were unusable because advisory counts were small. The real reason is worse:
+  **in those years the dates themselves are not trustworthy.** A pre-2021 scoring date
+  would filter on an import timestamp while believing it was filtering on an event
+- **This makes 2023-01-01 a stronger choice, not a weaker one.** Back-fill has fallen to
+  12.2% by 2023 and under 3.3% from 2024 on. The window sits almost entirely in the
+  regime where publication tracks disclosure
+- The blocker on freezing the universe is lifted
+
+---
+
 ## F5 · The scoring date is boxed in on both sides, and one signal cannot be tested at all
 
 **2026-09-05** · probe: direct API measurement, prompted by the question "why not use a

@@ -408,18 +408,24 @@ is packages with real usage and real advisories.
 5. ~~Why in-window GHSA counts jump in 2026~~ — **promoted to a blocker on stage 2,
    see below**
 
-## 14a. Blocker before the universe can be frozen
+## 14a. Resolved: the 2026 surge is real disclosure, not back-fill
 
-2026 alone accounts for **40% of every GHSA record** (2,930 of 7,317). Two readings with
-very different consequences:
+2026 holds 40% of every GHSA record, which threatened the case pool: if those were
+back-filled older vulnerabilities, `published` would be an import date and the window
+filter would import old vulnerabilities as new.
 
-| if | then |
-|---|---|
-| disclosure genuinely spiked | the window is fine |
-| **GitHub began back-filling older vulnerabilities in 2026** | `published` is not the event date, and our in-window filter is importing old vulnerabilities as new ones, **corrupting the case pool** |
+**Resolved (F6).** CVE identifiers carry their year. Of 2,930 advisories published in
+2026, **five** alias a CVE two or more years older — 0.2%. NVD agrees independently.
+`published` is usable as the window filter.
 
-Resolve by checking whether the affected version ranges of 2026 advisories point at
-releases from 2020 to 2022. **The universe is not frozen until this is answered.**
+**But the same check found a fourth wall on the scoring date.** The Advisory Database was
+back-filling at scale through about 2022: 60.9% of 2017 records alias an older CVE, 57.2%
+in 2019, and 68% of 2020 records carry no CVE alias at all. **In those years the dates
+themselves are untrustworthy**, which is a harder constraint than the thin counts noted in
+F5. Back-fill falls to 12.2% by 2023 and under 3.3% from 2024, so the chosen window sits
+almost entirely in the regime where publication tracks disclosure.
+
+**The universe can now be frozen.**
 
 ---
 

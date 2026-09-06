@@ -82,8 +82,11 @@ Cheap deterministic policies score every package:
 | `popularity` | download rank alone — **the control group that matters** |
 | `age` | days since last publish |
 | `cadence` | change in release rhythm |
-| `provenance` | presence of a signed attestation |
 | `composite` | a weighted blend, in the style of an aggregate health score |
+
+`provenance` is missing on purpose: npm provenance reached GA in September 2023, after
+the scoring date, so no package had an attestation to measure. It runs in the
+prospective arm only. See `FINDINGS.md` F5.
 
 Then language models read what the metadata cannot see — README and changelog wording,
 install script contents, maintainer handover notices — and return a structured judgement

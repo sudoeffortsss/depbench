@@ -12,6 +12,86 @@ anything on top of it.
 
 ---
 
+## F5 · The scoring date is boxed in on both sides, and one signal cannot be tested at all
+
+**2026-09-05** · probe: direct API measurement, prompted by the question "why not use a
+twenty year window?"
+
+**Assumed.** The scoring date is a free parameter, and a longer observation window is
+strictly better because more outcomes have had time to surface.
+
+**Ran.** Walked the downloads API backwards to find where history ends, plotted GHSA
+publication counts by year across the whole corpus, and checked when npm provenance
+attestations actually became available.
+
+**Came back — three separate walls.**
+
+**(a) A signal we planned to test did not exist on the scoring date.**
+npm provenance entered public beta in April 2023 and reached general availability on
+2023-09-26. Our scoring date is 2023-01-01. **On that day, no npm package carried a
+provenance attestation.** The `provenance` policy is not weak in the retrospective arm,
+it is identically zero — there is no information there to be right or wrong about.
+
+**(b) Download history stops, and stops silently.**
+
+```
+2021-03-01 .. 2021-09-01   express: 0 downloads
+2021-10-01                 express: 18,061,497
+2021-11-01                 express: 17,656,232
+```
+
+express did not have zero downloads in 2021. **The API returns `0` rather than an error
+once you ask past roughly 2021-10** — a rolling window of about five years. A caller who
+does not know this will compute a popularity ranking out of zeros and never see a
+failure.
+
+This is exactly the failure mode harness rule 1 exists to catch, found in our own
+upstream data source: **a missing value rendered as a real one.** `null` and `0` look
+identical, and here the API itself is the one doing the conflating.
+
+**(c) Advisory coverage collapses going backwards, and it is not because software was
+safer.**
+
+```
+2017     50
+2018    305
+2019    365
+2020    934
+2021    597
+2022    668
+2023    400
+2024    436
+2025    632
+2026  2,930   <- 40% of all GHSA records, in one year
+```
+
+Pick a scoring date in 2017 and the case pool is empty, not because packages were sound
+but because **nobody was cataloguing**. This is F4's scrutiny bias in its most extreme
+form, expressed over time rather than over popularity.
+
+**Changed.**
+
+- **The scoring date is not a free parameter.** It is boxed in: no earlier than the
+  download history boundary and the point where advisory cataloguing becomes meaningful,
+  no later than the disclosure lag allows. 2023-01-01 sits 15 months clear of the left
+  wall with 44 months of observation to the right. That is a constraint satisfied, not
+  a preference
+- **The `provenance` policy is removed from the retrospective arm** and tested only
+  prospectively. Reporting AUC 0.5 for a signal that could not exist would have been
+  a fabricated result, not a null one
+- Ingestion asserts that a zero download figure at a date inside the supported window is
+  genuinely zero, and treats out-of-window dates as `no_answer` rather than as zero
+
+**Left open, and promoted to a blocker for the next stage.** 2026 alone accounts for 40%
+of all GHSA records. Two possibilities with very different consequences: either
+disclosure genuinely spiked, or GitHub began back-filling older vulnerabilities in 2026.
+If it is back-filling, `published` dates are not event dates, and our in-window filter is
+silently importing old vulnerabilities as new ones — which would corrupt the case pool.
+**This must be resolved before the universe is frozen**, by checking whether the affected
+version ranges of 2026 advisories point at old releases.
+
+---
+
 ## F4 · The base rate runs backwards: advisories concentrate in the most popular packages
 
 **2026-09-05** · probe: `probe/stage0_ghsa_pool.py`

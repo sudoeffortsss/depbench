@@ -69,13 +69,36 @@ so "what did this package look like on 2023-01-01" is exactly reconstructible to
 want to test.** That is a hard boundary of the retrospective arm. It is reported, not
 hidden. The prospective arm (§9) begins accumulating it from 2026-09-05.
 
-### Right-censoring and the window
+### Choosing the scoring date: it is boxed in, not picked
 
-Median disclosure lag is about 31.5 months, so recent events are badly under-observed.
+The scoring date is not a free parameter. Three measured walls close in on it (F5).
 
-- scoring date **D = 2023-01-01**
-- observation window **D → 2026-09-01**, about 3.7 years
-- undisclosed events remain missing; the residual bias is quantified, not waved at
+```
+        data does not exist          usable            outcomes not yet surfaced
+    |--------------------------|----------------|------------------------------|
+                          2021-10          D = 2023-01                     2026-09
+                                            ^ 15 months clear of the left wall
+                                              44 months of observation to the right
+```
+
+**Left wall, hard.** The downloads API keeps roughly five rolling years and, past that,
+**returns `0` rather than an error**. Without download volume at D there is no universe
+filter and no `popularity` baseline, so D cannot precede about 2021-10.
+
+**Left wall, softer but real.** GHSA coverage collapses going backwards: 50 records in
+2017 against 2,930 in 2026. Not because software was safer, but because nobody was
+cataloguing. A 2017 scoring date has an empty case pool.
+
+**Right wall.** Median disclosure lag is about 31.5 months, so a recent D leaves most
+outcomes still buried.
+
+**2023-01-01 satisfies all three.** It is a constraint solution, not a preference, and
+"why not a twenty year window" has a measured answer: the data for one does not exist.
+
+**Known cost of this choice.** npm provenance reached GA on 2023-09-26, after D, so **no
+package carried an attestation on the scoring date.** The `provenance` policy is
+therefore removed from the retrospective arm rather than reported as a 0.5 AUC that
+would look like a result and be an artefact. It is tested prospectively only.
 
 ---
 
@@ -184,7 +207,11 @@ Two schema-level invariants worth calling out:
 **Tier one, deterministic, whole universe, effectively free:**
 
 `random` (the floor) · `popularity` (**the control group that matters**) · `age` ·
-`cadence` · `provenance` · `composite` · `budget-triage`
+`cadence` · `composite` · `budget-triage`
+
+`provenance` is absent by necessity, not oversight: the feature postdates the scoring
+date, so there is nothing to measure retrospectively (F5). It runs in the prospective
+arm only.
 
 On `budget-triage`, honestly: the original justification was "LLM calls are expensive, so
 triage is mandatory." Measurement showed the full LLM sweep costs about ten dollars, so
@@ -378,8 +405,21 @@ is packages with real usage and real advisories.
 2. Which variables controls are matched on beyond download band
 3. Whether to add the GitHub API for archived status — one more source, one more limit
 4. Whether the prospective arm shares the retrospective universe (leaning yes)
-5. **Why in-window GHSA counts jump from 400–600 a year to 2,866 in 2026** — unexplained,
-   and it may bear on the window choice
+5. ~~Why in-window GHSA counts jump in 2026~~ — **promoted to a blocker on stage 2,
+   see below**
+
+## 14a. Blocker before the universe can be frozen
+
+2026 alone accounts for **40% of every GHSA record** (2,930 of 7,317). Two readings with
+very different consequences:
+
+| if | then |
+|---|---|
+| disclosure genuinely spiked | the window is fine |
+| **GitHub began back-filling older vulnerabilities in 2026** | `published` is not the event date, and our in-window filter is importing old vulnerabilities as new ones, **corrupting the case pool** |
+
+Resolve by checking whether the affected version ranges of 2026 advisories point at
+releases from 2020 to 2022. **The universe is not frozen until this is answered.**
 
 ---
 

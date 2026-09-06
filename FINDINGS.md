@@ -13,6 +13,64 @@ design.
 
 ---
 
+## F8 · A consistency check fired, and the exception turned out to have a name
+
+**2026-09-06** · stage 3 ingest and snapshot reconstruction
+
+**Assumed.** npm provenance reached GA on 2023-09-26 and entered public beta in April
+2023, both after our 2023-01-01 scoring date, so **no package** can carry an attestation
+in a correct reconstruction. The snapshot builder asserts exactly that, on the reasoning
+that if this is wrong then every other reconstructed field is suspect too.
+
+**Ran.** Ingested packuments for all 1,915 universe members and rebuilt point-in-time
+state.
+
+**Came back.** The assertion fired. One package.
+
+```
+sigstore  v0.2.0  published 2022-12-08T16:18:41Z  attestation present
+  32 of its 40 versions carry attestations
+  earliest: 0.2.0 @ 2022-12-08, then 0.3.0 @ 2023-01-05, 0.4.0 @ 2023-01-11
+```
+
+`sigstore` is the signing infrastructure npm provenance is built on. **Its own team was
+using its own mechanism four months before the public beta and nine months before GA.**
+Textbook dogfooding, and it is the one package on the registry for which a pre-GA
+attestation is not an anomaly.
+
+**Changed.**
+
+- The assertion is refined rather than removed: **one** pre-GA attestation is expected
+  and named; two would still halt the run. Deleting the check because it fired would have
+  thrown away the only thing standing between us and a silently wrong reconstruction
+- F5's claim is made exact. "No package carried an attestation on the scoring date" was
+  very nearly true and is now precisely true with one named exception. The `provenance`
+  policy still cannot run retrospectively: a signal present on exactly one of 1,915
+  packages has no discriminative power
+
+**Why this is recorded at all.** The check cost nothing and caught something on its first
+real run. That it turned out to be a true fact about the ecosystem rather than a bug is
+the good case; the point is that a reconstruction producing 1,915 plausible rows would
+have looked identical either way.
+
+**Stage 3 results, for the record.**
+
+```
+ingest       1,915 attempted, 1,906 fetched, 9 failed
+             failures stored as rows with a null payload, so they enter no_answer
+             2,668 MB of raw packuments kept, gzipped, content-addressed
+snapshot     1,906 reconstructed, 0 with no versions before D
+             58 packages shipping an install hook on the scoring date
+outcomes     383 advisory (strong), all on cases, zero on controls
+             130 deprecated (weak), 89 abandoned under the tightened F2 definition
+staleness    758 packages published within 30 days of D, 727 within a year, 2 beyond
+```
+
+The `controls_with_advisory = 0` check matters as much as the provenance one: it is what
+proves the universe and the outcome join agree about who was hit.
+
+---
+
 ## F7 · We rate-limited ourselves, then found the data already existed
 
 **2026-09-06** · probe: direct rate measurement, then a search for prior art

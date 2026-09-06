@@ -5,3 +5,4 @@ dist/
 data/pgdata/
 *.zip
 probe/npm_ranking_2022-11-09.tsv
+raw/

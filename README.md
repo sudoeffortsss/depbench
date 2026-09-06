@@ -173,5 +173,10 @@ raw results next to them as JSON.
 
 **Allen Cai** · [LinkedIn](https://www.linkedin.com/in/cheng-cai-woodmont/) · [GitHub](https://github.com/sudoeffortsss)
 
-Apache-2.0. Corrections and refutations are welcome and will be credited — that is
-rather the point of publishing the method before the results.
+**Code Apache-2.0. Data CC BY-SA 4.0** — see [`DATA_LICENSE.md`](./DATA_LICENSE.md).
+The share-alike term is inherited from [ecosyste.ms](https://ecosyste.ms), whose
+historical open data release (© 2022 Andrew Nesbitt) is what makes point-in-time
+reconstruction possible at all.
+
+Corrections and refutations are welcome and will be credited — that is rather the point
+of publishing the method before the results.

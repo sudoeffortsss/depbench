@@ -6,9 +6,75 @@ Every entry follows the same shape: what we believed, what we ran, what came bac
 what changed. Everything here was measured. Nothing here was reasoned into
 existence. The probe scripts are in `probe/` and run with a fixed seed.
 
-All four findings below predate the first line of schema. That is deliberate: the
-cheapest time to discover that your ground truth is wrong is before you have built
-anything on top of it.
+Every finding below predates the first policy score. That is deliberate: the cheapest
+time to discover that your ground truth is wrong is before you have built anything on
+top of it. Four of the seven overturned an assumption we had already written into the
+design.
+
+---
+
+## F7 · We rate-limited ourselves, then found the data already existed
+
+**2026-09-06** · probe: direct rate measurement, then a search for prior art
+
+**Assumed.** Filling the control bands needs a download ranking of the whole registry, so
+we would enumerate all 4,362,870 packages against the npm downloads API. Roughly 34,000
+batched requests.
+
+**Ran.** Measured the sustainable request rate before committing to a three-hour job.
+
+**Came back — first, a lesson about our own conduct.**
+
+```
+concurrency 1    8.2 req/s     0 x 429      <- first pass, looked fine
+concurrency 3   44.3 req/s     6 x 429
+concurrency 5   85.7 req/s    24 x 429      <- "fast" because every request was rejected
+```
+
+Then a sustained test, and the real picture:
+
+```
+concurrency 1   429 on 52/60 then 58/60   succeeded 10/120
+```
+
+The clean first result was the token bucket's initial allowance, not a sustainable rate.
+**By probing aggressively we exhausted it and spent the rest of the test being refused.**
+The plan had been to run 34,000 requests against a free public API overnight. We were
+about to be a bad citizen at scale, and the only reason we found out is that we measured
+first.
+
+**Then the actual finding.** The right question was never "how fast may we hammer npm."
+It was "has somebody already published this?" They had.
+[ecosyste.ms](https://ecosyste.ms) publishes open data releases of its package database,
+including **`packages-2022-11-09`**, an 8.91 GB dump whose S3 `Last-Modified` still reads
+`Wed, 09 Nov 2022 10:46:31 GMT`.
+
+That is strictly better than what we were going to build:
+
+| | our exhaustive crawl | the ecosyste.ms snapshot |
+|---|---|---|
+| requests to npm | ~34,000 | **0** |
+| time | ~3.5 hours | one download |
+| look-ahead bias | none, if done carefully | **none, structurally** — the file was frozen before the scoring date |
+| survivorship bias | none | none; the snapshot contains packages that have since died |
+| verifiable | by trusting our code | **by an S3 timestamp anyone can check** |
+
+**Changed.**
+
+- Exhaustive crawling is abandoned. The universe is ranked from the 2022-11-09 snapshot
+- The snapshot's own `Last-Modified` becomes part of the method's evidence: the ranking
+  provably could not have seen the outcome period
+- **Licensing was corrected before any data entered the repository.** The ecosyste.ms
+  release is CC BY-SA 4.0, which propagates to anything derived from it. Code stays
+  Apache-2.0; published datasets are CC BY-SA 4.0 with attribution. See `DATA_LICENSE.md`
+- A standing rule, recorded because it nearly cost us three hours and some goodwill:
+  **before building a crawler, look for the dataset**
+
+**The residual cost, stated rather than hidden.** The snapshot is dated 2022-11-09 and the
+scoring date is 2023-01-01, a gap of seven weeks. Download volumes shift in that time.
+The snapshot is therefore used to *rank and select* candidates; the exact download figure
+attached to each selected package is fetched from npm for the true 2022-12 window. That
+is a few thousand requests, not thirty-four thousand.
 
 ---
 

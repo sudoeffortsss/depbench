@@ -1,11 +1,15 @@
 # depbench — design
 
-**2026-09-05 · Allen Cai · design fixed, data not yet collected**
+**2026-09-05, universe frozen 2026-09-06 · Allen Cai**
 
 This document is the requirements record. Every requirement below is derived from a
 publicly observable problem in the npm ecosystem, not from a guess about what would be
-fun to build. `FINDINGS.md` records the four places where reality corrected the design
-before any of it was written.
+fun to build. `FINDINGS.md` records the seven places where measurement corrected the
+design, four of which overturned something already written here.
+
+**Current state:** universe frozen at 1,915 packages
+(hash `e8c899ee68cef5daad5bef256f9ee650bb7cda838aa616cc6651c212a3bfbd97`).
+No policy has been written and no score computed.
 
 ---
 

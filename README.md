@@ -20,12 +20,18 @@ what actually happened over the following three and a half years.
 
 | stage | state |
 |---|---|
-| API feasibility measured | ✅ done, see `FINDINGS.md` F1 |
-| ground truth defined and validated | ✅ done, see F2, F3, F4 |
-| universe design | ✅ case-control, 383 cases + ~1,530 controls |
+| API feasibility measured | ✅ `FINDINGS.md` F1 |
+| ground truth defined and validated | ✅ F2, F3, F4, F6 |
+| scoring date constrained | ✅ F5, F6 |
+| ranking source chosen | ✅ F7 |
 | schema and migrations | ✅ 10 tables, 11 passing proofs |
-| universe frozen | ⬜ next |
+| **universe frozen** | ✅ **1,915 packages, hash `e8c899ee68cef5`** |
+| ingest and snapshot reconstruction | ⬜ next |
 | first numbers | ⬜ |
+
+The frozen set is in [`universe/`](./universe/). It was committed before a single policy
+existed, which is the whole point: the public timestamp shows the evaluation set could
+not have been chosen to flatter a result.
 
 When there are numbers, they go here. Until then this repo is a method and a set of
 measurements about whether the method is even possible. Read `FINDINGS.md` first — it is

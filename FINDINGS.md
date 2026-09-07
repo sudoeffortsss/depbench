@@ -13,6 +13,74 @@ design.
 
 ---
 
+## F11 · First numbers, and two of our own guardrails were broken
+
+**2026-09-06** · stage 5 and 6, rule policies only, zero cost
+
+**The result.** Five deterministic policies, 1,915 packages, 383 cases.
+
+```
+policy          AUC   scored abstain no_ans  top10% falseflag
+popularity    0.539    99.4%   0.1%   0.5%   15.1%  30.0%
+random        0.512    99.5%   0.0%   0.5%    9.9%  48.2%
+cadence       0.471    98.1%   1.5%   0.5%    8.6%   0.0%
+composite     0.461    99.5%   0.0%   0.5%    7.6%   8.4%
+age           0.451    99.5%   0.0%   0.5%    8.6%   0.0%
+
+policies beating popularity: none
+```
+
+**Nothing beats download count, and download count barely beats chance.** 0.539 against
+a 0.512 floor. The three policies built from actual health signals — staleness, cadence
+collapse, an aggregate blend — all land *below* chance.
+
+**The direction is inverted, and cleanly so.** Comparing raw features between the groups:
+
+```
+              n     days stale   rel/90d      downloads    has repo
+controls   1,523           99      13.79      8,786,204         93%
+cases        383           81      11.70     22,439,167         98%
+```
+
+Packages that received an advisory were **fresher** (81 days versus 99 since last
+publish), **2.6x more downloaded**, and **more likely to have a public repository**.
+
+This is F4 arriving in the metrics rather than in the sampling. A vulnerability has to
+be *found*. Active, popular, publicly developed packages get audited; quiet ones do not.
+**"Stale means risky", the intuition the entire category is built on, points the wrong
+way against this ground truth** — not because staleness is safe, but because staleness
+is invisible.
+
+**Before publishing any of that, three suspicions were checked. Two were our own bugs.**
+
+**Bug one: "top decile" was not a decile.** `cadence` reported 32.1% case recall in its
+riskiest tenth, which looked like a real signal hiding under a bad AUC. It was not. 704
+of cadence's 1,878 scores sit at exactly 1.000, so `score >= quantile(0.9)` landed inside
+that tie block and silently selected the top **37.5%**. Against a 37.5% slice, 32.1% is
+worse than chance. Fixed to take a fixed-size slice; the number fell to 8.6% and the
+"finding" evaporated.
+
+**Bug two, introduced while fixing bug one.** The first fix broke ties by package name.
+In the unit test where a policy flags everything identically, alphabetical order put
+every `case*` ahead of every `ctl*`, and the guardrail reported a **0% false flag rate
+for a policy that flags literally everything**. The test caught it within a minute. Ties
+are now shared proportionally: a policy whose scores are one flat block gets the
+universe's own composition back, which is the honest answer for a policy that expressed
+no preference.
+
+**A third suspicion was not a bug, and saying so matters.** `composite` scores span only
+0.005 to 0.767 with a median of 0.19, which looked like a crushed signal. AUC depends
+only on ordering, so the compression changes nothing: 0.461 is 0.461 either way.
+Rescaling would have made the table prettier and the conclusion identical. It was not
+done.
+
+**What this episode is really about.** Every AUC in the table above was correct from the
+first run. Both bugs were in the numbers we would have used to *explain* the AUCs, and
+one of them manufactured a signal that was not there. A benchmark that only checks its
+headline is not checking the part most likely to mislead it.
+
+---
+
 ## F10 · Two undocumented API shapes, caught because the arithmetic did not add up
 
 **2026-09-06** · stage 4, fetching exact 2022-12 download volume

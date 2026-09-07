@@ -145,6 +145,13 @@ export const COMPOSITE: Policy = {
 
     // Fewer than three usable components is not a weak score, it is no score.
     if (parts.length < 3) return ABSTAIN;
+
+    // A note on the first run, kept because it is a real trap: composite's scores sat
+    // between 0.005 and 0.767 with a median of 0.19, which looked like the signal had
+    // been crushed. It had not. AUC depends only on ordering, so the compressed range
+    // changes nothing about the measured 0.461. The compression is cosmetic; the poor
+    // discrimination is real. Rescaling would have made the numbers prettier and the
+    // conclusion identical, which is exactly why it is not done here.
     const mean = parts.reduce((a, b) => a + b, 0) / parts.length;
     return { score: mean, abstain: false, evidence_n: parts.length };
   },

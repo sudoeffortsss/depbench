@@ -18,24 +18,52 @@ what actually happened over the following three and a half years.
 
 **Design and method are fixed. Data has not been collected yet. There are no results.**
 
+```
+policy          AUC   scored abstain no_ans  top10% falseflag
+popularity    0.539    99.4%   0.1%   0.5%   15.1%  30.0%
+random        0.512    99.5%   0.0%   0.5%    9.9%  48.2%
+cadence       0.471    98.1%   1.5%   0.5%    8.6%   0.0%
+composite     0.461    99.5%   0.0%   0.5%    7.6%   8.4%
+age           0.451    99.5%   0.0%   0.5%    8.6%   0.0%
+
+policies beating popularity: none
+```
+
+**Nothing beats download count, and download count barely beats chance.** The three
+policies built from actual health signals all land below chance — and the raw features
+say why:
+
+```
+              n     days stale   downloads    has repo
+controls   1,523           99    8,786,204         93%
+cases        383           81   22,439,167         98%
+```
+
+Packages that received an advisory were **fresher**, **2.6x more downloaded**, and more
+likely to be developed in public. "Stale means risky" points the wrong way here, not
+because staleness is safe but because staleness is invisible: a vulnerability has to be
+*found*, and nobody audits a package nobody uses.
+
+**[Full results page →](https://sudoeffortsss.github.io/truthlag/)**
+
+Everything above cost nothing to produce. No model was called.
+
 | stage | state |
 |---|---|
-| API feasibility measured | ✅ `FINDINGS.md` F1 |
-| ground truth defined and validated | ✅ F2, F3, F4, F6 |
-| scoring date constrained | ✅ F5, F6 |
-| ranking source chosen | ✅ F7 |
-| schema and migrations | ✅ 10 tables, 11 passing proofs |
-| **universe frozen** | ✅ **1,915 packages, hash `e8c899ee68cef5`** |
-| ingest and snapshot reconstruction | ⬜ next |
-| first numbers | ⬜ |
+| API feasibility, ground truth, scoring date | ✅ F1–F7 |
+| schema and migrations | ✅ 10 tables |
+| universe frozen | ✅ 1,915 packages, hash `e8c899ee68cef5` |
+| ingest and reconstruction | ✅ 1,906 of 1,915, F8 |
+| rule policies and harness | ✅ 38 tests, F11 |
+| **first numbers** | ✅ **above, $0** |
+| model arms | ⏸ built and registered, **deliberately unrun** |
+| prospective arm | ✅ sealing daily |
 
-The frozen set is in [`universe/`](./universe/). It was committed before a single policy
-existed, which is the whole point: the public timestamp shows the evaluation set could
-not have been chosen to flatter a result.
+`npm run estimate` prints what running the model arms would cost ($20.30 batched across
+all three) and exits without calling anything. Spending is a decision with a number
+attached; the project does not make it quietly.
 
-When there are numbers, they go here. Until then this repo is a method and a set of
-measurements about whether the method is even possible. Read `FINDINGS.md` first — it is
-the most useful thing in here.
+Read [`FINDINGS.md`](./FINDINGS.md) first — it is the most useful thing in here.
 
 ---
 

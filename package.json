@@ -5,9 +5,18 @@
   "type": "module",
   "description": "A benchmark that asks whether npm dependency-risk signals actually predict anything.",
   "license": "Apache-2.0",
-  "engines": { "node": ">=22.0.0" },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "migrate": "tsx src/db/migrate.ts",
+    "ingest": "tsx src/ingest/run.ts",
+    "snapshot": "tsx src/snapshot/run.ts",
+    "score": "tsx src/policies/run.ts",
+    "report": "tsx src/harness/report.ts",
+    "page": "tsx src/report/page.ts",
+    "estimate": "tsx src/policies/estimate.ts",
+    "seal": "tsx src/prospective/seal.ts",
     "test": "vitest run"
   },
   "dependencies": {

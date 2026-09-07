@@ -373,21 +373,26 @@ are findings; then wider only if the result is genuinely surprising and defensib
 
 | stage | work | state |
 |---|---|---|
-| 0 | measure API limits and base rates | ✅ done — F1 to F4 |
-| 1 | schema, migrations, idempotency proofs | ✅ done — 10 tables, 11 tests |
-| 2 | freeze the universe, commit the rule first | ⬜ next |
-| 3 | ingest and snapshot reconstruction | ⬜ |
-| 4 | `random` and `popularity` baselines | ⬜ |
-| 5 | outcomes, harness, guardrails | ⬜ |
-| **6** | **first numbers, rules only, $0** | ⬜ |
-| 7 | remaining rule policies | ⬜ |
-| 8 | cost control, then the first LLM arm | ⬜ |
-| 9 | the other two model arms | ⬜ |
-| 10 | results page and CLI | ⬜ |
-| 11 | prospective arm | ⬜ |
+| 0 | measure API limits and base rates | ✅ F1 to F4 |
+| 1 | schema, migrations, idempotency proofs | ✅ 10 tables |
+| 2 | freeze the universe, commit the rule first | ✅ 1,915 packages, hash `e8c899ee68cef5` |
+| 3 | ingest and snapshot reconstruction | ✅ 1,906 of 1,915, F8 |
+| 4 | `random` and `popularity` baselines | ✅ shipped with all five rule policies |
+| 5 | outcomes, harness, guardrails | ✅ F11 fixed two broken guardrails |
+| **6** | **first numbers, rules only, $0** | ✅ **nothing beats download count** |
+| 7 | remaining rule policies | ✅ folded into stage 4 |
+| 8 | cost control and the LLM policy interface | ✅ built, **deliberately unrun** |
+| 9 | the three model arms | ⏸ **registered, not executed** — see below |
+| 10 | results page and CLI | ✅ |
+| 11 | prospective arm | ✅ running daily |
 
-**No claim about this project goes on a résumé before stage 6**, because until then the
-numbers do not exist.
+**The model arms are built and left unrun on purpose.** The interface, the cost gate, and
+the dry-run estimator all exist and are tested; what has not happened is a paid
+execution. `truthlag estimate` prints the projected spend for each arm and exits without
+calling anything. Running them is a decision with a dollar figure attached, and the
+project should not make that decision quietly on someone's behalf.
+
+Everything reported so far cost nothing to produce.
 
 Stack: TypeScript throughout, Node 22+, PGlite, plain SQL migrations, Vercel AI SDK for
 multi-provider access, vitest.

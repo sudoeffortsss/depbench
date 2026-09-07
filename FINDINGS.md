@@ -13,6 +13,64 @@ design.
 
 ---
 
+## F10 · Two undocumented API shapes, caught because the arithmetic did not add up
+
+**2026-09-06** · stage 4, fetching exact 2022-12 download volume
+
+**Assumed.** The npm downloads point endpoint takes up to 128 package names and returns a
+dictionary keyed by name. One code path handles every case.
+
+**Ran.** Fetched the December 2022 figure for all 1,915 universe members.
+
+**Came back, twice.**
+
+**First: a scoped package poisons the entire batch.**
+
+```
+15 batches, 7 failed outright, 896 packages with no figure
+{"error":"scoped packages are not currently supported in bulk lookups"}
+```
+
+One `@babel/core` in a batch of 128 takes 127 innocent packages down with it. Not
+documented anywhere we could find. Scoped names now go one at a time, which works fine
+on the same endpoint.
+
+**Second, and the more instructive one: the endpoint returns two different shapes.**
+
+After splitting scoped names out, the numbers still refused to reconcile:
+
+```
+849 batches, only 11 failures
+...yet 840 packages still had no figure
+```
+
+**Eleven failures cannot produce 840 missing values.** The arithmetic was the entire
+clue. A bulk query returns `{ "chalk": {...}, "express": {...} }`; a single-package
+query returns the record *flat*, `{"downloads": 169508056, "package": "@babel/core"}`,
+with no key at all. Reading `body[name]` against a single response yields `undefined`
+silently, forever, for every scoped package.
+
+```
+before   resolved 1,019   missing 896
+after    resolved 1,904   missing  11
+```
+
+**Changed.** Both shapes handled explicitly. The remaining 11 overlap almost entirely
+with the 9 packuments that genuinely could not be fetched; they stay as rows.
+
+**Why this belongs in FINDINGS rather than a commit message.** Had 840 packages been
+accepted as "just missing", `popularity` — the baseline every other policy has to beat —
+would have been computed on 56% of the universe while looking entirely healthy. Nothing
+would have errored. The leaderboard would have printed. **The only symptom was two
+numbers that could not both be true**, which is precisely the class of failure this
+benchmark was built to measure, arriving uninvited in our own ingest.
+
+Also worth recording: 52 packages that cleared the 1,000-download threshold in the
+2022-11-09 selection snapshot were below it by December. Seven weeks of drift, which is
+why the exact figure is fetched rather than the snapshot value reused (F7).
+
+---
+
 ## F9 · We checked npm and GitHub for the name, and forgot that research exists
 
 **2026-09-06** · direct verification, prompted by an outside tip

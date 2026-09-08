@@ -6,16 +6,344 @@ Every entry follows the same shape: what we believed, what we ran, what came bac
 what changed. Everything here was measured. Nothing here was reasoned into
 existence. The probe scripts are in `probe/` and run with a fixed seed.
 
-Every finding below predates the first policy score. That is deliberate: the cheapest
+F1 through F10 all predate the first policy score. That was deliberate: the cheapest
 time to discover that your ground truth is wrong is before you have built anything on
-top of it. Four of the seven overturned an assumption we had already written into the
-design.
+top of it. Four of those ten overturned an assumption already written into the design.
+
+F11 and later are what the scoring itself turned up, including three defects in this
+project's own code. F14 is the one to read if you only read one: a bug fixed in F10 was
+still live in a second file, and it had already damaged the evaluation set.
+
+---
+
+## F15 · Most of the models cannot be benchmarked, because they will not say when they stopped reading
+
+**2026-09-07** · model arm selection, nothing spent
+
+**What we believed.** Picking a model for the LLM arm was a price question. The arm was
+registered with `gemini-3.1-flash-lite` on that basis: newest cheap tier, $0.25/$1.50.
+
+**Why it is not a price question.** Every case in this benchmark carries a GHSA
+publication date, and 312 of the 643 advisories were published before January 2025. A
+model trained past a case's disclosure date may be *recalling* the advisory rather than
+predicting it, and there is no way to tell those apart from the score. The only defence
+is to split the cases at the model's training cutoff and compare the two strata, which
+requires the cutoff to be a date.
+
+**What we ran.** Read the primary documentation for every candidate model on both
+providers: the API docs pages, the DeepMind HTML model cards, and the linked PDF cards,
+checked against raw HTML rather than a summary.
+
+**What came back.**
+
+```
+model                    published cutoff
+gemini-2.5-flash-lite    2025-01     unhedged
+gemini-2.5-flash         2025-01     unhedged
+gemini-3.1-flash-lite    none        zero occurrences of "cutoff" in card or PDF
+gemini-3.5-flash         none        card defers to a base card that also states none
+gemini-3.1-pro-preview   none        same
+gemini-3.5-flash-lite    2026-03     hedged, see below
+claude-sonnet-5          2026-01     both published fields agree
+claude-haiku-4-5         2025-07     the two published fields disagree
+```
+
+**Three separate problems, none of them about price.**
+
+*The field moved and then got hedged.* Google's per-model API pages carry a "Knowledge
+cutoff" row for 2.5 and no such row for any 3.x model; the only 3.x statement lives on
+the DeepMind card, and where it exists it reads, verbatim:
+
+> "March 2026 – users can expect updated information for some domains while in others
+> they may experience the model's knowledge is limited to January 2025."
+
+A range of fourteen months, assigned per unnamed domain, is not a boundary anything can
+be split on.
+
+*Four models publish no cutoff at all,* including the one this project had already
+registered. Their cards defer to a base model's card, and those state none either.
+
+*One vendor's documentation contradicts itself.* Anthropic's Haiku 4.5 page publishes
+"Reliable knowledge cutoff | Feb 2025" and "Training data cutoff | Jul 2025" in the same
+table, five months apart.
+
+**What changed.** The Gemini arm is now `gemini-2.5-flash-lite`, chosen because it is the
+newest Gemini that publishes an unhedged date, not because it is the cheapest. It happens
+to split this evaluation set 312/331, the most balanced of the three arms and therefore
+the best-powered.
+
+`assertStratifiable()` refuses to price or run an arm whose cutoff is not a `YYYY-MM`
+date, or whose split leaves a stratum under 100 cases. Both conditions are checked before
+any paid request, because a number that cannot be told apart from memorisation is worse
+than no number: it will be quoted anyway.
+
+The Haiku contradiction is registered as an experiment rather than routed around. Both
+boundaries split the set usefully (316/327 at Feb 2025, 377/266 at Jul 2025), so scoring
+at each and seeing which one performance actually steps at is a statement about the model
+that its own documentation does not make.
+
+**A correction to our own numbers while we were in there.** `estimateCost` defaulted to
+5,000 input tokens per package, a guess. `probe/tarball_size.mts` pulled the
+point-in-time tarball for 20 randomly drawn members, 20 of 20 succeeded, and measured
+what would actually be sent. Untruncated the mean is 4,988, which looks like a lucky
+guess and is not: it is dragged there by a long tail, with one 162 KB README in a sample
+of twenty. Capped at 8,000 characters of README the mean is **2,320**. The full three-arm
+batched estimate fell from about $50 to **$16.51**, and the Gemini arm alone to **$0.50**.
+
+**What this episode is really about.** A benchmark that reports which model scored higher,
+without reporting when each model stopped reading, is not measuring what it says it is.
+That field is missing from most of the models on the market right now, and the omission
+is not treated as a defect by anyone shipping them.
+
+---
+
+## F14 · The same bug, in two files, and the freeze happened in between
+
+**2026-09-07** · universe rebuild, retrospective arm re-run
+
+**What we believed.** F10 was closed. Scoped packages break npm's bulk download
+endpoint, the fix went into `src/ingest/downloads.ts`, and downloads went from 1,019
+resolved to 1,904 of 1,915. The finding was written up and the matter dropped.
+
+**What an adversarial design review asked.** Reviewing a proposed LLM arm, one reviewer
+checked the composition of the evaluation set rather than the proposal, and reported
+that the case group contained no scoped packages at all. Verified directly:
+
+```
+universe.tsv (before)
+  control  1532 packages, scoped  840  (54.8%)
+  case      383 packages, scoped    0  ( 0.0%)
+```
+
+Zero. `@babel/traverse` carries GHSA-67hx-6x53-jw92 (2023-10-16, critical) and had
+163,074,895 downloads in December 2022. It meets every stated case criterion and appears
+nowhere in the file, in either role.
+
+**Where it came from.** `probe/stage0_ghsa_pool.py`, which built the case pool, holds its
+own copy of the bulk-download loop:
+
+```
+curl ".../downloads/point/2022-12-01:2022-12-31/lodash,%40babel%2Ftraverse,react"
+{"error":"scoped packages are not currently supported in bulk lookups"}
+```
+
+That error body **is a dict**, so the `isinstance(d, dict)` guard passed, the loop wrote
+`out["error"] = 0`, and all 128 real packages in the batch got no entry. `dls.get(n, 0)`
+then returned 0 and the `>= 1000 downloads` filter discarded the batch. The name list is
+sorted, so scoped names formed one contiguous block and the loss was systematic rather
+than scattered.
+
+**The timeline is the finding.**
+
+```
+09-05 19:19   stage 0 probe runs, builds the case pool     <- bug live here
+09-06 09:01   universe frozen from that output            <- 0 scoped cases baked in
+09-06 19:47   F10 discovers the bulk-lookup rejection
+09-06 21:24   fix lands in src/ingest/downloads.ts
+```
+
+The fix arrived **ten and a half hours after the set it should have protected was already
+frozen**, and it was applied to the wrong layer. `downloads.ts` fetches figures for a
+membership list that already exists; F10 repaired the denominator inside that list and
+never asked whether the list itself had been cut by the same mechanism a day earlier.
+
+F10's own closing line reads, in hindsight, as a warning it did not take:
+
+> Had 840 packages been accepted as "just missing", `popularity` would have been computed
+> on 56% of the universe while looking entirely healthy.
+
+That was about 840 packages missing from the denominator. The identical bug upstream had
+already removed 40% of the numerator, and nothing checked.
+
+**What came back after fixing it.** Purely additive; not one previously qualifying
+package dropped out.
+
+```
+alive_at_d   383 -> 643   (+260, of which 211 scoped)
+
+largest recoveries, by 2022-12 downloads
+  322,939,810  ajv
+  154,623,611  bn.js
+  141,243,871  axios
+  112,983,150  body-parser
+   40,716,537  aws-sdk
+```
+
+**A second artifact, found while fixing the first.** With cases at 0% scoped and controls
+at 54.8%, the leading `@` was on its own the strongest classifier in the dataset:
+
+```
+AUC of "name has no @ prefix", as a case predictor
+  before the fix   0.774      <- beats every policy under test
+  after the fix    0.611      <- still beats every policy under test
+  after matching   0.500
+```
+
+Fixing the pool cut it but did not remove it: scoped packages carry fewer downloads, so
+the `>= 1000` filter removes 36% of them against 12% of unscoped ones, and the residual
+survives band matching (in the 1M+ band, cases were 16% scoped against controls at 47%).
+Scope style is a naming convention, not a risk signal anyone would propose, so
+`src/universe/freeze.ts` now matches controls on **download band and scope style**, and
+the artifact measures exactly 0.500. Recorded here because matching on a covariate is a
+design decision, not a bug fix, and it should be visible.
+
+**A third check, which came back clean and is reported anyway.** `freeze.ts` claimed to
+exclude every GHSA-affected package from the control pool but excluded only the 823 that
+survived stage 0's activity filter, leaving several hundred unexcluded. Every one of the
+1,532 controls was audited against the GitHub Advisory API: **0 were mislabelled**. The
+bug was latent, never fired, and is fixed anyway because the redraw needs 2,572 controls
+and the margin was not worth keeping. The exclusion set now comes from paginating the
+advisory API directly: 4,334 in-window advisories, which matches stage 0's independent
+count from the OSV bulk export exactly.
+
+**What changed in the result.** The headline did not merely survive. It roughly doubled.
+
+```
+                before (383 cases)        after (643 cases, 2,572 controls)
+popularity        0.539                     0.529  [0.503, 0.553]
+random            0.512                     0.504  [0.479, 0.529]
+cadence           0.471                     0.402  [0.381, 0.425]
+composite         0.461                     0.372  [0.349, 0.394]
+age               0.451                     0.357  [0.333, 0.381]
+```
+
+`age` moved from 0.451, barely distinguishable from chance, to **0.357 with a 95%
+interval of [0.333, 0.381]** — nowhere near 0.5. Inverted, it scores 0.643, which is the
+best number in the entire benchmark. The feature table sharpened in the same direction:
+
+```
+              n      days stale   rel/90d   versions      downloads   repo   install hook
+controls   2,572          110.9     14.63      138.8      8,141,850    92%           1.6%
+cases        643           65.5     17.63      229.9     15,400,220    97%           6.2%
+```
+
+Packages that later received an advisory were **fresher by 45 days**, shipped more often,
+had 1.7x the version history, had nearly 2x the downloads, and were more likely to
+publish a repository link. Every health signal points the wrong way. The single exception
+is the install hook, at 6.2% against 1.6%, which is the one input in the set that is a
+genuine risk marker rather than a health marker.
+
+**Why the effect grew.** The lost packages were not a random 40%. They were the scoped
+ones, which skew toward actively maintained monorepo publications, so dropping them
+removed the cases that most strongly contradicted "stale means risky". The broken sample
+was **biased toward the conventional wisdom**, and fixing it made the contradiction
+larger.
+
+**What this episode is really about.** F10 found a bug, fixed it, wrote it up, and closed
+it. Every step of that was correct except the scope of the search. The question F10 never
+asked is the one worth institutionalising: *where else does this code live, and what did
+it already touch?* Both copies were in the repository, both were written by the same
+process, and thirty hours passed between them.
+
+---
+
+## F13 · Two vulnerability databases, asked the same question, gave different answers
+
+**2026-09-07** · outcome backfill
+
+**What we needed.** `outcome.occurred_at` was NULL for all 383 cases and `source_id` was
+the literal string `"GHSA"`. The comment in `src/outcomes/build.ts` claimed ids and dates
+were "re-derived here from the same source file"; the code wrote `{id: "", published: ""}`
+for every package. Nothing downstream could ask *when* a package was hit, which makes any
+disclosure-date stratification impossible.
+
+**What we ran.** Backfilled from OSV's `/v1/query` endpoint, 383 packages, 0 failures.
+Then, because six packages came back with no in-window advisory at all, cross-checked
+every one against the GitHub Advisory API.
+
+**What came back.** The six were not clean. They all have in-window advisories.
+
+```
+eslint        GHSA-p5wg-g6qr-c7cg  2026-01-26     stylelint   GHSA-f7xj-rg7h-mc87  2023-07-07
+fast-redact   GHSA-ffrw-9mx8-89p8  2025-09-24     jquery      GHSA-257q-pv89-v3xv  2023-06-26
+papaparse     GHSA-798h-g4j5-5537  2023-01-11     npm         GHSA-3966-f6p6-2qr9  2026-01-23
+```
+
+Re-running the whole backfill against the GitHub Advisory API resolved **383 of 383 with
+zero packages missing an advisory**, which independently confirms the case labelling was
+right and the query API was wrong.
+
+The disagreement is not one-directional, which is what makes it worth recording:
+
+```
+packages OSV returned nothing for                    6
+packages where OSV's earliest advisory is later      5   (worst: nx, true 2025-09-25, OSV 2026-07-31)
+packages where the two disagree on which is earliest 30  (7.8%)
+total in-window advisory records                     GitHub 1,525 vs OSV 1,535
+```
+
+OSV returns *more* records overall while missing packages entirely and misdating others.
+Neither source is a superset of the other.
+
+**What changed.** Outcomes are built from the GitHub Advisory API
+(`probe/ghsa_affected_all.py`), which found 4,334 in-window advisories, matching stage 0's
+count from the OSV *bulk export* exactly. The disagreement is therefore with OSV's query
+endpoint, not with OSV's data. `ghsaByPackage()` now throws if a case package carries no
+advisory in that source, so the two can never silently drift apart again.
+
+**Why this matters beyond our own plumbing.** A ten-month error in a first-disclosure date
+is invisible to anyone who queries one source and moves on. Every dependency scanner in
+the ecosystem queries one source and moves on.
+
+---
+
+## F12 · We shipped an AUC table with no confidence intervals, and one guardrail column meant nothing
+
+**2026-09-06** · self-audit of F11's own output
+
+**What prompted it.** A question about how accurate each policy actually was. The
+published table put popularity at 0.539 and age at 0.451, an 0.088 spread, with no
+indication of how much of that was noise.
+
+**What we ran.** 2,000-sample bootstrap over cases and controls, fixed seed, in
+`probe/confidence.mts`.
+
+```
+policy        AUC     95% CI            crosses 0.5?
+popularity   0.539   [0.505, 0.572]     no, barely
+random       0.512   [0.477, 0.544]     yes
+cadence      0.471   [0.442, 0.502]     yes
+composite    0.461   [0.430, 0.492]     no
+age          0.451   [0.420, 0.483]     no
+```
+
+**Only one policy's interval cleared chance, and its lower bound was 0.505.** Two of the
+five could not be distinguished from a coin flip at that sample size. None of this was
+visible in the published table.
+
+**A second problem, found in the same pass.** The `falseflag` column reported **0.0% for
+both `age` and `cadence`**, which reads as perfect precision. It is a tautology. The
+column measures what fraction of a policy's riskiest decile are *actively maintained*
+controls, and for a policy that ranks by staleness the riskiest decile consists of the
+least actively maintained packages by construction. Checked directly:
+
+```
+top decile composition        size   cases   active controls   inactive controls
+age                            191      33                 0                 158
+cadence                        188      33                 0                 155
+random                         191      38                92                  61
+popularity                     190      58                57                  75
+```
+
+Zero, in both cases, for definitional reasons. The number cannot go anywhere else.
+
+**What changed.** Intervals are computed and published beside every AUC, and the
+false-flag column carries an explicit note that it is uninformative for staleness-ranked
+policies. Recorded as a finding rather than a quiet edit because this project's stated
+objection to the category is that it reports numbers without the context that makes them
+interpretable, and for one release it was doing exactly that.
 
 ---
 
 ## F11 · First numbers, and two of our own guardrails were broken
 
 **2026-09-06** · stage 5 and 6, rule policies only, zero cost
+
+> **Superseded by F14.** The numbers in this entry were computed on an evaluation set
+> that had silently lost every scoped package. They are kept verbatim rather than
+> corrected, because the comparison between them and the rebuilt figures is itself the
+> evidence in F14. For current results see F14 or `docs/index.html`. The two guardrail
+> bugs described below were real and their fixes still stand.
 
 **The result.** Five deterministic policies, 1,915 packages, 383 cases.
 

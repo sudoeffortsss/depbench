@@ -16,33 +16,45 @@ what actually happened over the following three and a half years.
 
 ## Status
 
-**Design and method are fixed. Data has not been collected yet. There are no results.**
+**Retrospective arm complete. Model arms built and deliberately unrun.**
 
 ```
-policy          AUC   scored abstain no_ans  top10% falseflag
-popularity    0.539    99.4%   0.1%   0.5%   15.1%  30.0%
-random        0.512    99.5%   0.0%   0.5%    9.9%  48.2%
-cadence       0.471    98.1%   1.5%   0.5%    8.6%   0.0%
-composite     0.461    99.5%   0.0%   0.5%    7.6%   8.4%
-age           0.451    99.5%   0.0%   0.5%    8.6%   0.0%
+policy          AUC           95% CI  scored abstain no_ans  top10% falseflag
+popularity    0.529   [0.503, 0.553]   99.5%   0.2%   0.3%   12.6%  32.8%
+random        0.504   [0.479, 0.529]   99.7%   0.0%   0.3%    9.5%  47.5%
+cadence       0.402   [0.381, 0.424]   98.6%   1.1%   0.3%    5.9%     n/a*
+composite     0.372   [0.348, 0.394]   99.7%   0.0%   0.3%    5.3%   8.1%
+age           0.357   [0.334, 0.380]   99.7%   0.0%   0.3%    5.6%     n/a*
 
 policies beating popularity: none
+* falseflag cannot be anything but 0 for a staleness-ranked policy. See F12.
 ```
 
-**Nothing beats download count, and download count barely beats chance.** The three
-policies built from actual health signals all land below chance — and the raw features
-say why:
+**Nothing beats download count, and download count barely beats chance** — 0.529 against
+a 0.504 floor, with an interval whose lower bound is 0.503. The three policies built from
+actual health signals land far *below* chance, and the raw features say why:
 
 ```
-              n     days stale   downloads    has repo
-controls   1,523           99    8,786,204         93%
-cases        383           81   22,439,167         98%
+              n   days stale   rel/90d   versions      downloads   repo   install hook
+controls  2,572        110.9     14.63      138.8      8,141,850    92%           1.6%
+cases       643         65.5     17.63      229.9     15,400,220    97%           6.2%
 ```
 
-Packages that received an advisory were **fresher**, **2.6x more downloaded**, and more
-likely to be developed in public. "Stale means risky" points the wrong way here, not
-because staleness is safe but because staleness is invisible: a vulnerability has to be
-*found*, and nobody audits a package nobody uses.
+Packages that received an advisory were **fresher by 45 days**, shipped **more often**,
+had **1.7x the version history**, were **1.9x more downloaded**, and were more likely to
+be developed in public. Every health signal points the wrong way. The one exception is
+the install hook, at 6.2% against 1.6% — the only input here that is a risk marker rather
+than a health marker.
+
+"Stale means risky" is inverted against this ground truth, not because staleness is safe
+but because staleness is *invisible*: a vulnerability has to be **found**, and nobody
+audits a package nobody uses. Inverted, `age` scores 0.643, the best number in the
+benchmark.
+
+> These figures replace an earlier run on 383 cases. A bug in the case-pool probe had
+> silently dropped every scoped package, including `ajv`, `axios` and `body-parser`. The
+> repaired set is 68% larger and the effect is roughly twice the size. What the broken
+> sample removed was biased toward the conventional wisdom. See **[F14](FINDINGS.md)**.
 
 **[Full results page →](https://sudoeffortsss.github.io/truthlag/)**
 
@@ -52,11 +64,11 @@ Everything above cost nothing to produce. No model was called.
 |---|---|
 | API feasibility, ground truth, scoring date | ✅ F1–F7 |
 | schema and migrations | ✅ 10 tables |
-| universe frozen | ✅ 1,915 packages, hash `e8c899ee68cef5` |
-| ingest and reconstruction | ✅ 1,906 of 1,915, F8 |
-| rule policies and harness | ✅ 38 tests, F11 |
+| universe frozen | ✅ 3,215 packages, hash `00ecc34b2137ea` |
+| ingest and reconstruction | ✅ 3,204 of 3,215, F8 |
+| rule policies and harness | ✅ 42 tests, F11–F14 |
 | **first numbers** | ✅ **above, $0** |
-| model arms | ⏸ built and registered, **deliberately unrun** |
+| model arms | ⏸ built and registered, cutoffs verified (F15), **deliberately unrun** |
 | prospective arm | ✅ sealing daily |
 
 `npm run estimate` prints what running the model arms would cost ($20.30 batched across
@@ -95,7 +107,7 @@ abstention rate *and* how often abstention was the right call.
 Take the 4,334 `GHSA-*` advisories published between 2023-01-01 and 2026-09-01, resolve
 them to the npm packages they affect, and keep the ones that were genuinely alive on the
 scoring date — at least 1,000 downloads that month and at least one release in the
-preceding year. That yields **383 cases**. Match each roughly 1:4 with controls at the
+preceding year. That yields **643 cases**. Match each roughly 1:4 with controls at the
 same download volume and activity level. Reconstruct every package's state as of
 2023-01-01 from registry data that still exists today. Score with competing policies,
 including two that must be beaten for any of this to matter: `random` and `popularity`.
@@ -126,25 +138,45 @@ Then language models read what the metadata cannot see — README and changelog 
 install script contents, maintainer handover notices — and return a structured judgement
 with an explicit abstain option:
 
-| policy | model |
-|---|---|
-| `llm-flash-lite` | Gemini 3.1 Flash-Lite |
-| `llm-haiku` | Claude Haiku 4.5 |
-| `llm-sonnet` | Claude Sonnet 5 |
+| policy | model | published cutoff | cases pre/post | batched |
+|---|---|---|---|---|
+| `llm-flash-lite` | Gemini 2.5 Flash-Lite | 2025-01 | 312 / 331 | $0.50 |
+| `llm-haiku` | Claude Haiku 4.5 | 2025-07 | 377 / 266 | $5.34 |
+| `llm-sonnet` | Claude Sonnet 5 | 2026-01 | 457 / 186 | $10.67 |
 
 Three model tiers turn "which model" into an axis the benchmark measures rather than a
 decision someone has to defend: **how much accuracy does four times the price buy?**
 Every score carries its own token count and dollar cost, so the report can show accuracy
 and cost per correct answer side by side.
 
+**The cutoff column is a hard requirement, not documentation.** Every case in the
+evaluation set carries a GHSA publication date, and a model trained past that date may be
+recalling the advisory rather than predicting it. The only defence is to split the cases
+at the model's cutoff and compare the strata, so `assertStratifiable()` refuses to price
+or run an arm whose cutoff is unpublished, or whose split leaves a stratum too small to
+tell its own AUC from chance.
+
+That requirement cost us the obvious choice. `gemini-3.1-flash-lite` was registered here
+first; its model card states no cutoff at all. Nor do the newer 3.x cards help, because
+where they do give a date they immediately hedge it — *"March 2026 … in others they may
+experience the model's knowledge is limited to January 2025"* — which is not a boundary
+anything can be split on. Gemini 2.5 Flash-Lite is the newest Gemini that publishes an
+unhedged date, and it happens to split this set 312/331, the most balanced of the three.
+
+Anthropic's own documentation disagrees with itself on Haiku 4.5, publishing *"Reliable
+knowledge cutoff | Feb 2025"* and *"Training data cutoff | Jul 2025"* on the same page.
+That is registered as an experiment rather than routed around: score both boundaries and
+see which one performance actually steps at.
+
 ---
 
 ## Known limitations, stated first rather than last
 
-**Advisories measure scrutiny, not danger.** 45% of our positives are packages doing over
-a million downloads a month. A vulnerability has to be *found* to become an advisory, and
-nobody is looking at a package with three downloads a month. This bias sits underneath
-everything here and sampling cannot fix it. (`FINDINGS.md` F4)
+**Advisories measure scrutiny, not danger.** 37% of our positives are packages doing over
+a million downloads a month, against 5.2% of the eligible npm population they were drawn
+from. A vulnerability has to be *found* to become an advisory, and nobody is looking at a
+package with three downloads a month. This bias sits underneath everything here and
+sampling cannot fix it. (`FINDINGS.md` F4)
 
 **Ground truth arrives late.** Median disclosure lag for npm vulnerabilities is about
 31.5 months, so recent events are badly under-observed. The scoring date is set three and

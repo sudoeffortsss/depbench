@@ -7,7 +7,7 @@ publicly observable problem in the npm ecosystem, not from a guess about what wo
 fun to build. `FINDINGS.md` records the seven places where measurement corrected the
 design, four of which overturned something already written here.
 
-**Current state:** universe frozen at 1,915 packages
+**Current state:** universe frozen at 3,215 packages
 (hash `e8c899ee68cef5daad5bef256f9ee650bb7cda838aa616cc6651c212a3bfbd97`).
 No policy has been written and no score computed.
 
@@ -152,7 +152,11 @@ in-window GHSA advisories                  4,334
   -> distinct packages affected            1,633
   -> existed before D                      1,101
   -> also active in the year before D         823
-  -> also >= 1,000 downloads in 2022-12       383   <- cases
+  -> also >= 1,000 downloads in 2022-12       643   <- cases
+
+     (this last step read 383 until 2026-09-07. The download lookup batched 128 names
+      at a time and npm rejects any batch containing a scoped name outright, so every
+      scoped package and its batch-mates were silently dropped. See FINDINGS.md F14.)
 
 controls: ~1,530, matched about 1:4 on download band and pre-D activity
 universe:  ~1,900 packages
@@ -280,17 +284,22 @@ out the reporting and watch it refuse.
 
 ## 8. Cost control
 
-Universe of ~1,900 packages, roughly 5,000 input and 300 output tokens each, batch
+Universe of 3,215 packages at **2,320 input and 200 output tokens each** — measured on 20
+point-in-time tarballs with the README capped at 8,000 characters, not assumed — batch
 pricing at 50%, cached rubric prefix at ~0.1× read:
 
-| tier | scope | cost |
-|---|---|---|
-| 0 | rules only, no LLM | **$0** |
-| 1 | Flash-Lite, full universe | ~$1.60 |
-| 2 | Haiku 4.5, full universe | ~$6 |
-| 3 | Sonnet 5, full universe | ~$12 |
+| tier | scope | published cutoff | cost |
+|---|---|---|---|
+| 0 | rules only, no LLM | n/a | **$0** |
+| 1 | Gemini 2.5 Flash-Lite, full universe | 2025-01 | ~$0.50 |
+| 2 | Claude Haiku 4.5, full universe | 2025-07 | ~$5.34 |
+| 3 | Claude Sonnet 5, full universe | 2026-01 | ~$10.67 |
 
-**All three arms ≈ $20. Hard ceiling $50.**
+**All three arms ≈ $16.51. Hard ceiling $50.**
+
+The earlier figure here was ~$20 against a 5,000-token guess and a Gemini 3.x arm that
+turned out to publish no training cutoff. Both were corrected: see `FINDINGS.md` F15 for
+why the cutoff column is a precondition for running an arm rather than a spec detail.
 
 Cost control is built in, and is itself part of the demonstration:
 
@@ -375,10 +384,10 @@ are findings; then wider only if the result is genuinely surprising and defensib
 |---|---|---|
 | 0 | measure API limits and base rates | ✅ F1 to F4 |
 | 1 | schema, migrations, idempotency proofs | ✅ 10 tables |
-| 2 | freeze the universe, commit the rule first | ✅ 1,915 packages, hash `e8c899ee68cef5` |
-| 3 | ingest and snapshot reconstruction | ✅ 1,906 of 1,915, F8 |
+| 2 | freeze the universe, commit the rule first | ✅ 3,215 packages, hash `00ecc34b2137ea` |
+| 3 | ingest and snapshot reconstruction | ✅ 3,204 of 3,215, F8 |
 | 4 | `random` and `popularity` baselines | ✅ shipped with all five rule policies |
-| 5 | outcomes, harness, guardrails | ✅ F11 fixed two broken guardrails |
+| 5 | outcomes, harness, guardrails | ✅ F11–F14 fixed six defects in our own code |
 | **6** | **first numbers, rules only, $0** | ✅ **nothing beats download count** |
 | 7 | remaining rule policies | ✅ folded into stage 4 |
 | 8 | cost control and the LLM policy interface | ✅ built, **deliberately unrun** |

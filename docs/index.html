@@ -28,6 +28,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;back
 .kv b{font-weight:600;color:var(--fg);font-family:ui-monospace,Menlo,monospace}
 footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px}
 a{color:var(--accent)}
+td.chance{color:var(--muted);font-style:italic}
+abbr{text-decoration:underline dotted;cursor:help}
 </style>
 <main>
 <h1>truthlag</h1>
@@ -42,76 +44,86 @@ of these signals is worth using at all.</p>
 <h2>Read this before the table</h2>
 <p><strong>Advisories measure scrutiny, not danger.</strong> A vulnerability has to be
 <em>found</em> before it becomes an advisory, and nobody audits a package nobody uses.
-45% of the cases here sit above a million monthly downloads. These numbers measure
-agreement with where attention went.</p>
+37% of the cases here sit above a million monthly downloads, against 5.2% of the eligible
+npm population they were drawn from. These numbers measure agreement with where attention
+went, not with where danger was.</p>
 <p><strong>Case-control changes what the numbers mean.</strong> The positive rate is set by
 the design, not by nature, so <code>precision@k</code> is not interpretable and AUC is the
-headline.</p>
-<p><strong>The universe is not npm.</strong> It is 1,915 packages with real usage and real
-advisories, not the 4.3 million package registry.</p>
+headline. Controls are matched to cases on download band <em>and</em> scope style, so the
+two groups share those distributions by construction and neither can be read as a finding.</p>
+<p><strong>Every interval here is wide.</strong> The whole leaderboard spans about 0.17 of
+AUC and the intervals are roughly ±0.025, so small gaps between adjacent policies are not
+differences. An interval printed in grey contains 0.500, meaning chance is not excluded.</p>
+<p><strong>The universe is not npm.</strong> It is 3,215
+packages with real usage and real advisories, not the 4.3 million package registry.</p>
 </div>
 
 <h2>Leaderboard</h2>
 <div class="wrap">
 <table>
 <thead><tr>
-<th>policy</th><th>AUC</th><th>cases</th><th>controls</th>
+<th>policy</th><th>AUC</th><th>95% CI</th><th>cases</th><th>controls</th>
 <th>scored</th><th>abstain</th><th>no answer</th><th>top 10%</th><th>false flag</th>
 </tr></thead>
 <tbody>
 <tr class="baseline">
     <td>popularity</td>
-    <td><strong>0.539</strong></td>
-    <td>383</td><td>1521</td>
-    <td>99.4%</td>
-    <td>0.1%</td>
-    <td>0.5%</td>
-    <td>15.1%</td>
-    <td>30.0%</td>
+    <td><strong>0.529</strong></td>
+    <td>[0.502, 0.553]</td>
+    <td>641</td><td>2558</td>
+    <td>99.5%</td>
+    <td>0.2%</td>
+    <td>0.3%</td>
+    <td>12.6%</td>
+    <td>32.8%</td>
   </tr>
 <tr class="baseline">
     <td>random</td>
-    <td><strong>0.512</strong></td>
-    <td>383</td><td>1523</td>
-    <td>99.5%</td>
+    <td><strong>0.504</strong></td>
+    <td class="chance">[0.479, 0.530]</td>
+    <td>643</td><td>2561</td>
+    <td>99.7%</td>
     <td>0.0%</td>
-    <td>0.5%</td>
-    <td>9.9%</td>
-    <td>48.2%</td>
+    <td>0.3%</td>
+    <td>9.5%</td>
+    <td>47.5%</td>
   </tr>
 <tr>
     <td>cadence</td>
-    <td><strong>0.471</strong></td>
-    <td>383</td><td>1495</td>
-    <td>98.1%</td>
-    <td>1.5%</td>
-    <td>0.5%</td>
-    <td>8.6%</td>
-    <td>0.0%</td>
+    <td><strong>0.402</strong></td>
+    <td>[0.380, 0.425]</td>
+    <td>641</td><td>2528</td>
+    <td>98.6%</td>
+    <td>1.1%</td>
+    <td>0.3%</td>
+    <td>5.9%</td>
+    <td><abbr title="This policy ranks by staleness, so no actively maintained control can enter its riskiest decile. The rate is 0 by construction, not by precision.">n/a</abbr></td>
   </tr>
 <tr>
     <td>composite</td>
-    <td><strong>0.461</strong></td>
-    <td>383</td><td>1523</td>
-    <td>99.5%</td>
+    <td><strong>0.372</strong></td>
+    <td>[0.348, 0.395]</td>
+    <td>643</td><td>2561</td>
+    <td>99.7%</td>
     <td>0.0%</td>
-    <td>0.5%</td>
-    <td>7.6%</td>
-    <td>8.4%</td>
+    <td>0.3%</td>
+    <td>5.3%</td>
+    <td>8.1%</td>
   </tr>
 <tr>
     <td>age</td>
-    <td><strong>0.451</strong></td>
-    <td>383</td><td>1523</td>
-    <td>99.5%</td>
+    <td><strong>0.357</strong></td>
+    <td>[0.334, 0.380]</td>
+    <td>643</td><td>2561</td>
+    <td>99.7%</td>
     <td>0.0%</td>
-    <td>0.5%</td>
-    <td>8.6%</td>
-    <td>0.0%</td>
+    <td>0.3%</td>
+    <td>5.6%</td>
+    <td><abbr title="This policy ranks by staleness, so no actively maintained control can enter its riskiest decile. The rate is 0 by construction, not by precision.">n/a</abbr></td>
   </tr>
-<tr class="pending"><td>llm-flash-lite</td><td colspan="7">not run — built and registered; a batched run would cost about $1.63</td></tr>
-<tr class="pending"><td>llm-haiku</td><td colspan="7">not run — built and registered; a batched run would cost about $6.22</td></tr>
-<tr class="pending"><td>llm-sonnet</td><td colspan="7">not run — built and registered; a batched run would cost about $12.45</td></tr>
+<tr class="pending"><td>llm-flash-lite</td><td colspan="9"><strong>gemini-2.5-flash-lite</strong> — not run, built and registered. Training cutoff 2025-01, which splits the cases 312/331. A batched run would cost about $0.50.</td></tr>
+<tr class="pending"><td>llm-haiku</td><td colspan="9"><strong>claude-haiku-4-5</strong> — not run, built and registered. Training cutoff 2025-07, which splits the cases 377/266. A batched run would cost about $5.34.</td></tr>
+<tr class="pending"><td>llm-sonnet</td><td colspan="9"><strong>claude-sonnet-5</strong> — not run, built and registered. Training cutoff 2026-01, which splits the cases 457/186. A batched run would cost about $10.67.</td></tr>
 </tbody>
 </table>
 </div>
@@ -124,8 +136,8 @@ health signals all land below chance.</p>
 <table>
 <thead><tr><th>group</th><th>n</th><th>days since last publish</th><th>monthly downloads</th><th>has public repo</th></tr></thead>
 <tbody>
-<tr><td>controls</td><td>1523</td><td>99</td><td>8,786,204</td><td>93%</td></tr>
-<tr><td>cases</td><td>383</td><td>81</td><td>22,439,167</td><td>98%</td></tr>
+<tr><td>controls</td><td>2561</td><td>111</td><td>8,141,850</td><td>92%</td></tr>
+<tr><td>cases</td><td>643</td><td>66</td><td>15,400,220</td><td>97%</td></tr>
 </tbody>
 </table>
 </div>
@@ -150,10 +162,10 @@ the point.</p>
 <h2>Reproducing this</h2>
 <p>Everything above cost nothing to produce. No model was called.</p>
 <div class="kv">
-<span>universe hash</span><b>e8c899ee68cef5daad5bef25…</b>
+<span>universe hash</span><b>00ecc34b2137eaaffd5ef539…</b>
 <span>scoring date</span><b>2023-01-01</b>
 <span>observation window</span><b>2023-01-01 → 2026-09-01</b>
-<span>cases / controls</span><b>383 / 1,532</b>
+<span>cases / controls</span><b>643 / 2,572</b>
 </div>
 <p class="note"><code>npm install &amp;&amp; npm run migrate &amp;&amp; npm test</code> —
 the database is PGlite, so there is no server to install. The universe was frozen and
@@ -162,8 +174,9 @@ committed before any policy existed; its hash is above.</p>
 <footer>
 <p><a href="https://github.com/sudoeffortsss/truthlag">Source, method and findings</a> ·
 <a href="https://github.com/sudoeffortsss/truthlag/blob/main/FINDINGS.md">FINDINGS.md</a>
-records eleven things this project assumed, tested, and had to change, including two of
-its own broken guardrails.</p>
+records fifteen things this project assumed, tested, and had to change, including
+four defects in its own code — one of which had silently removed 40% of the evaluation
+set before anything was scored.</p>
 <p>Allen Cai · code Apache-2.0, data CC BY-SA 4.0 · download ranking from
 <a href="https://ecosyste.ms">ecosyste.ms</a> (© 2022 Andrew Nesbitt)</p>
 </footer>

@@ -12,13 +12,14 @@
  * not mean.
  */
 
-import { mkdir, writeFile, readdir } from "node:fs/promises";
+import { mkdir, writeFile, readdir, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { migrate, openDb } from "../db/migrate.js";
 import { SCORING_DATE } from "../snapshot/build.js";
 import { computeMetrics, type Metrics, type ScoredPackage } from "../harness/metrics.js";
 import { MODEL_ARMS, estimateCost } from "../policies/llm.js";
+import { readUniverse } from "../ingest/registry.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = join(ROOT, "docs");
@@ -53,24 +54,33 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;back
 .kv b{font-weight:600;color:var(--fg);font-family:ui-monospace,Menlo,monospace}
 footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px}
 a{color:var(--accent)}
+td.chance{color:var(--muted);font-style:italic}
+abbr{text-decoration:underline dotted;cursor:help}
 `;
 
 function row(m: Metrics): string {
   if (!m.ok) {
-    return `<tr class="pending"><td>${esc(m.policy)}</td><td colspan="8">refused: ${esc(m.reason)}</td></tr>`;
+    return `<tr class="pending"><td>${esc(m.policy)}</td><td colspan="9">refused: ${esc(m.reason)}</td></tr>`;
   }
   const cls =
     m.policy === "popularity" || m.policy === "random" ? ' class="baseline"' : "";
   const p = (x: number) => (Number.isNaN(x) ? "n/a" : `${(x * 100).toFixed(1)}%`);
+  // An interval that contains 0.5 is the headline caveat, so it is marked in the row
+  // itself rather than left to a footnote (FINDINGS.md F12).
+  const ciCls = m.aucCi.includesChance ? ' class="chance"' : "";
+  const ff = m.guardrails.falseFlagIsTautological
+    ? '<abbr title="This policy ranks by staleness, so no actively maintained control can enter its riskiest decile. The rate is 0 by construction, not by precision.">n/a</abbr>'
+    : p(m.guardrails.activeControlFalseFlagRate);
   return `<tr${cls}>
     <td>${esc(m.policy)}</td>
     <td><strong>${m.auc.toFixed(3)}</strong></td>
+    <td${ciCls}>[${m.aucCi.lo.toFixed(3)}, ${m.aucCi.hi.toFixed(3)}]</td>
     <td>${m.casesScored}</td><td>${m.controlsScored}</td>
     <td>${p(m.coverage.scoredFraction)}</td>
     <td>${p(m.coverage.abstainRate)}</td>
     <td>${p(m.coverage.noAnswerRate)}</td>
     <td>${p(m.guardrails.topDecileCaseRecall)}</td>
-    <td>${p(m.guardrails.activeControlFalseFlagRate)}</td>
+    <td>${ff}</td>
   </tr>`;
 }
 
@@ -121,6 +131,26 @@ async function main(): Promise<void> {
       f.endsWith(".jsonl"),
     );
 
+    // Counts come from the frozen manifest, so the page cannot drift from the set that
+    // was actually scored.
+    const manifest = JSON.parse(
+      await readFile(join(ROOT, "universe", "universe.json"), "utf8"),
+    ) as { member_count: number; case_count: number; control_count: number };
+    const caseN = manifest.case_count;
+    const ctlN = manifest.control_count;
+    const members = await readUniverse();
+    if (members.length !== manifest.member_count) {
+      throw new Error(
+        `universe.json declares ${manifest.member_count} members, universe.tsv has ` +
+          `${members.length}`,
+      );
+    }
+
+    // Restricted to current members for the same reason src/policies/run.ts is:
+    // `snapshot` is append-only and still holds rows for packages that left the
+    // universe when it was refrozen, and averaging over them would describe a
+    // population nothing was scored against.
+    const memberNames = members.map((m: { name: string }) => m.name);
     const feat = await db.query<any>(
       `SELECT (o.pkg_name IS NOT NULL) AS is_case, count(*) n,
               round(avg(s.days_since_last_pub)) stale,
@@ -129,15 +159,23 @@ async function main(): Promise<void> {
          FROM snapshot s
          LEFT JOIN outcome o ON o.pkg_name=s.pkg_name AND o.as_of_date=s.as_of_date
                             AND o.kind='advisory'
-        WHERE s.as_of_date=$1 AND s.reconstructed GROUP BY 1 ORDER BY 1`,
-      [SCORING_DATE],
+        WHERE s.as_of_date=$1 AND s.reconstructed AND s.pkg_name = ANY($2::text[])
+        GROUP BY 1 ORDER BY 1`,
+      [SCORING_DATE, memberNames],
     );
     const ctl = feat.rows.find((r: any) => !r.is_case);
     const cse = feat.rows.find((r: any) => r.is_case);
 
     const armRows = MODEL_ARMS.map((a) => {
-      const e = estimateCost(a, 1915);
-      return `<tr class="pending"><td>${esc(a.policy)}</td><td colspan="7">not run — built and registered; a batched run would cost about $${e.usdBatched.toFixed(2)}</td></tr>`;
+      const e = estimateCost(a, members.length);
+      // The cutoff is shown because it is what makes the arm interpretable at all, not
+      // as a spec detail: without it the cases cannot be split and a good score cannot
+      // be told apart from the model having read the advisory.
+      return `<tr class="pending"><td>${esc(a.policy)}</td><td colspan="9">` +
+        `<strong>${esc(a.model)}</strong> — not run, built and registered. ` +
+        `Training cutoff ${esc(a.trainingCutoff)}, which splits the cases ` +
+        `${a.caseSplit.preCutoff}/${a.caseSplit.postCutoff}. ` +
+        `A batched run would cost about $${e.usdBatched.toFixed(2)}.</td></tr>`;
     }).join("\n");
 
     const html = `<!doctype html>
@@ -158,20 +196,25 @@ of these signals is worth using at all.</p>
 <h2>Read this before the table</h2>
 <p><strong>Advisories measure scrutiny, not danger.</strong> A vulnerability has to be
 <em>found</em> before it becomes an advisory, and nobody audits a package nobody uses.
-45% of the cases here sit above a million monthly downloads. These numbers measure
-agreement with where attention went.</p>
+37% of the cases here sit above a million monthly downloads, against 5.2% of the eligible
+npm population they were drawn from. These numbers measure agreement with where attention
+went, not with where danger was.</p>
 <p><strong>Case-control changes what the numbers mean.</strong> The positive rate is set by
 the design, not by nature, so <code>precision@k</code> is not interpretable and AUC is the
-headline.</p>
-<p><strong>The universe is not npm.</strong> It is 1,915 packages with real usage and real
-advisories, not the 4.3 million package registry.</p>
+headline. Controls are matched to cases on download band <em>and</em> scope style, so the
+two groups share those distributions by construction and neither can be read as a finding.</p>
+<p><strong>Every interval here is wide.</strong> The whole leaderboard spans about 0.17 of
+AUC and the intervals are roughly ±0.025, so small gaps between adjacent policies are not
+differences. An interval printed in grey contains 0.500, meaning chance is not excluded.</p>
+<p><strong>The universe is not npm.</strong> It is ${(caseN + ctlN).toLocaleString()}
+packages with real usage and real advisories, not the 4.3 million package registry.</p>
 </div>
 
 <h2>Leaderboard</h2>
 <div class="wrap">
 <table>
 <thead><tr>
-<th>policy</th><th>AUC</th><th>cases</th><th>controls</th>
+<th>policy</th><th>AUC</th><th>95% CI</th><th>cases</th><th>controls</th>
 <th>scored</th><th>abstain</th><th>no answer</th><th>top 10%</th><th>false flag</th>
 </tr></thead>
 <tbody>
@@ -218,7 +261,7 @@ the point.</p>
 <span>universe hash</span><b>${esc(universeHash.slice(0, 24))}…</b>
 <span>scoring date</span><b>${SCORING_DATE}</b>
 <span>observation window</span><b>2023-01-01 → 2026-09-01</b>
-<span>cases / controls</span><b>383 / 1,532</b>
+<span>cases / controls</span><b>${caseN.toLocaleString()} / ${ctlN.toLocaleString()}</b>
 </div>
 <p class="note"><code>npm install &amp;&amp; npm run migrate &amp;&amp; npm test</code> —
 the database is PGlite, so there is no server to install. The universe was frozen and
@@ -227,8 +270,9 @@ committed before any policy existed; its hash is above.</p>
 <footer>
 <p><a href="https://github.com/sudoeffortsss/truthlag">Source, method and findings</a> ·
 <a href="https://github.com/sudoeffortsss/truthlag/blob/main/FINDINGS.md">FINDINGS.md</a>
-records eleven things this project assumed, tested, and had to change, including two of
-its own broken guardrails.</p>
+records fifteen things this project assumed, tested, and had to change, including
+four defects in its own code — one of which had silently removed 40% of the evaluation
+set before anything was scored.</p>
 <p>Allen Cai · code Apache-2.0, data CC BY-SA 4.0 · download ranking from
 <a href="https://ecosyste.ms">ecosyste.ms</a> (© 2022 Andrew Nesbitt)</p>
 </footer>

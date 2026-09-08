@@ -9,3 +9,7 @@ raw/
 
 # Local pre-rebuild snapshots (includes a copy of the database). Never published.
 _backup/
+
+# A stray file named `tmp` once carried pasted notes into a public commit.
+tmp
+tmp.*

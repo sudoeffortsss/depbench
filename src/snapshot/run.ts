@@ -10,6 +10,7 @@
 import { migrate, openDb } from "../db/migrate.js";
 import { buildAllSnapshots, SCORING_DATE } from "./build.js";
 import { buildOutcomes } from "../outcomes/build.js";
+import { applyDownloadsToSnapshot } from "../ingest/downloads.js";
 
 async function main(): Promise<void> {
   const db = await openDb();
@@ -27,6 +28,15 @@ async function main(): Promise<void> {
     console.log(`  no versions before D: ${s.noVersionsBeforeD}`);
     console.log(`  with provenance     : ${s.withProvenance}   <- expected 0, see F5`);
     console.log(`  with install hook   : ${s.withInstallHook}`);
+
+    // Snapshots are rebuilt from scratch above, so the download figures have to be
+    // reapplied every time. Leaving this out silently gives every package a null
+    // downloads_prior_month, which the popularity policy answers by abstaining on all
+    // of them: a total loss of the one baseline that matters, reported as a clean run.
+    const dl = await applyDownloadsToSnapshot(db, SCORING_DATE);
+    console.log(`\n=== downloads applied ===`);
+    console.log(`  with a figure       : ${dl.updated}`);
+    console.log(`  still null          : ${dl.stillNull}`);
 
     const o = await buildOutcomes(db);
     console.log(`\n=== outcomes ===`);

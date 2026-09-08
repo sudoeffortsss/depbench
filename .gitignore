@@ -6,3 +6,6 @@ data/pgdata/
 *.zip
 probe/npm_ranking_2022-11-09.tsv
 raw/
+
+# Local pre-rebuild snapshots (includes a copy of the database). Never published.
+_backup/

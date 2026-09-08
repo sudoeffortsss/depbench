@@ -8,7 +8,9 @@
  * Design (BLUEPRINT.md section 4 box 1, and FINDINGS.md F4):
  *
  *   cases     packages hit by a GHSA published in-window, that were genuinely alive on
- *             the scoring date. 383 of them, already established by probe 2.
+ *             the scoring date, established by probe 2. The count is read from the
+ *             probe output rather than hardcoded: it was 383 until the scoped-package
+ *             bulk-lookup bug in stage 0 was fixed, and is 643 after.
  *   controls  matched roughly 1:4 within download band, drawn from packages that were
  *             alive at the scoring date and were NOT hit by any in-window GHSA.
  *
@@ -27,6 +29,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const RANKING = join(ROOT, "probe", "npm_ranking_2022-11-09.tsv");
 const GHSA_POOL = join(ROOT, "probe", "stage0_ghsa_pool_result.json");
+const GHSA_AFFECTED = join(ROOT, "probe", "ghsa_affected_all_result.json");
 const OUT_DIR = join(ROOT, "universe");
 
 const SCORING_DATE = "2023-01-01";
@@ -40,12 +43,37 @@ const ALIVE_MAX_DAYS_SINCE_RELEASE = 365;
 const SEED = 20260906;
 
 type Band = "1K-10K" | "10K-100K" | "100K-1M" | "1M+";
+type Scope = "scoped" | "plain";
+/**
+ * Controls are matched within download band AND scope style.
+ *
+ * Scope style is a naming convention, not a risk signal anyone would propose, but left
+ * unmatched it is the strongest classifier in the dataset. The first draw had 0% scoped
+ * cases against 54.8% scoped controls, so "name starts with @" alone scored AUC 0.774,
+ * beating every policy under test. Fixing the stage-0 bulk-lookup bug brought cases to
+ * 32.8% and cut that to 0.611, still above the best real policy (popularity, 0.529).
+ * The residual is a genuine population difference (scoped packages carry fewer
+ * downloads, so the >=1000 filter removes 36% of them against 12% of unscoped ones) and
+ * it survives band matching: in the 1M+ band cases are 16% scoped and controls 47%.
+ * Matching on it removes the artifact rather than leaving every name-aware method to
+ * collect it for free.
+ */
+type Cell = `${Band}|${Scope}`;
+
+const BANDS: Band[] = ["1K-10K", "10K-100K", "100K-1M", "1M+"];
+const SCOPES: Scope[] = ["scoped", "plain"];
+const CELLS: Cell[] = BANDS.flatMap((b) => SCOPES.map((s) => `${b}|${s}` as Cell));
+
+const scopeOf = (name: string): Scope => (name.startsWith("@") ? "scoped" : "plain");
+const cellOf = (name: string, band: Band): Cell => `${band}|${scopeOf(name)}`;
 
 interface RankingRow {
   name: string;
   downloads: number;
   latestReleaseAt: string;
 }
+
+const emptyCells = <T,>(): Map<Cell, T[]> => new Map(CELLS.map((c) => [c, [] as T[]]));
 
 function bandOf(downloads: number): Band | null {
   if (downloads >= 1_000_000) return "1M+";
@@ -78,13 +106,8 @@ async function loadCases(): Promise<{ names: string[]; downloads: Record<string,
 async function loadEligibleControls(
   excluded: Set<string>,
   cutoff: Date,
-): Promise<Map<Band, RankingRow[]>> {
-  const byBand = new Map<Band, RankingRow[]>([
-    ["1K-10K", []],
-    ["10K-100K", []],
-    ["100K-1M", []],
-    ["1M+", []],
-  ]);
+): Promise<Map<Cell, RankingRow[]>> {
+  const byCell = emptyCells<RankingRow>();
 
   const rl = createInterface({
     input: createReadStream(RANKING, { encoding: "utf8" }),
@@ -125,10 +148,10 @@ async function loadEligibleControls(
     const daysSince = (cutoff.getTime() - latest.getTime()) / 86_400_000;
     if (daysSince < 0 || daysSince > ALIVE_MAX_DAYS_SINCE_RELEASE) continue;
 
-    byBand.get(band)!.push({ name, downloads: dl, latestReleaseAt: latestRaw });
+    byCell.get(cellOf(name, band))!.push({ name, downloads: dl, latestReleaseAt: latestRaw });
   }
 
-  return byBand;
+  return byCell;
 }
 
 export async function freeze(): Promise<void> {
@@ -139,26 +162,41 @@ export async function freeze(): Promise<void> {
   const { names: caseNames, downloads: caseDownloads } = await loadCases();
   console.log(`  cases        : ${caseNames.length}`);
 
-  // Every GHSA-affected package is excluded from controls, not just the 383 cases:
-  // a package that had an in-window advisory is not a clean control even if it failed
-  // the alive-at-D filter for some other reason.
-  const ghsaAffected = new Set(Object.keys(caseDownloads));
+  // Every GHSA-affected package is excluded from controls, not just the cases: a
+  // package that had an in-window advisory is not a clean control even if it failed the
+  // alive-at-D filter for some other reason.
+  //
+  // This used to read `new Set(Object.keys(caseDownloads))`, which is only the packages
+  // that survived stage 0's active-before-D filter, so several hundred GHSA-affected
+  // packages were never excluded and could be drawn as controls. Auditing the 1,532
+  // controls of the previous draw against the GitHub Advisory API found 0 mislabelled,
+  // so the bug never fired, but the redraw needs far more controls and the margin is
+  // not worth keeping. The complete set is paginated from the advisory API itself
+  // (probe/ghsa_affected_all.py), which found 4,334 in-window advisories, matching
+  // stage 0's independent count from the OSV bulk export exactly.
+  const affectedFile = JSON.parse(await readFile(GHSA_AFFECTED, "utf8")) as {
+    in_window_advisories: number;
+    affected: Record<string, { first: string; id: string }>;
+  };
+  const ghsaAffected = new Set(Object.keys(affectedFile.affected));
+  for (const n of Object.keys(caseDownloads)) ghsaAffected.add(n);
   for (const n of caseNames) ghsaAffected.add(n);
-  console.log(`  excluded from controls: ${ghsaAffected.size} GHSA-affected packages`);
+  console.log(
+    `  excluded from controls: ${ghsaAffected.size} GHSA-affected packages ` +
+      `(${affectedFile.in_window_advisories} in-window advisories)`,
+  );
 
   const cutoff = new Date(`${SCORING_DATE}T00:00:00Z`);
   console.log("  streaming ranking...");
   const eligible = await loadEligibleControls(ghsaAffected, cutoff);
 
-  const caseBands = new Map<Band, string[]>([
-    ["1K-10K", []],
-    ["10K-100K", []],
-    ["100K-1M", []],
-    ["1M+", []],
-  ]);
+  const caseCells = emptyCells<string>();
+  const bandByName = new Map<string, Band>();
   for (const n of caseNames) {
     const b = bandOf(caseDownloads[n] ?? 0);
-    if (b) caseBands.get(b)!.push(n);
+    if (!b) continue;
+    bandByName.set(n, b);
+    caseCells.get(cellOf(n, b))!.push(n);
   }
 
   const rng = mulberry32(SEED);
@@ -168,12 +206,14 @@ export async function freeze(): Promise<void> {
     band: Band;
   }> = [];
 
-  console.log("\n  band        cases  need  available  drawn");
+  console.log("\n  band       scope    cases  need  available  drawn");
   const bandStats: Record<string, unknown> = {};
+  let short = 0;
 
-  for (const band of ["1K-10K", "10K-100K", "100K-1M", "1M+"] as Band[]) {
-    const cases = caseBands.get(band)!;
-    const pool = eligible.get(band)!;
+  for (const cell of CELLS) {
+    const [band, scope] = cell.split("|") as [Band, Scope];
+    const cases = caseCells.get(cell)!;
+    const pool = eligible.get(cell)!;
     const need = cases.length * CONTROLS_PER_CASE;
 
     for (const n of cases) members.push({ pkg_name: n, role: "case", band });
@@ -187,19 +227,22 @@ export async function freeze(): Promise<void> {
     const drawn = shuffled.slice(0, Math.min(need, shuffled.length));
     for (const c of drawn) members.push({ pkg_name: c.name, role: "control", band });
 
+    if (drawn.length < need) short += need - drawn.length;
     console.log(
-      `  ${band.padEnd(10)} ${String(cases.length).padStart(5)} ` +
+      `  ${band.padEnd(10)} ${scope.padEnd(8)} ${String(cases.length).padStart(5)} ` +
         `${String(need).padStart(5)} ${String(pool.length).padStart(10)} ` +
         `${String(drawn.length).padStart(6)}` +
         (drawn.length < need ? "   <- SHORT" : ""),
     );
-    bandStats[band] = {
+    bandStats[cell] = {
       cases: cases.length,
       controls_needed: need,
       controls_available: pool.length,
       controls_drawn: drawn.length,
     };
   }
+  // A short cell means the matched ratio is not what the manifest claims. Say so.
+  if (short > 0) console.log(`\n  WARNING: ${short} controls short of the matched ratio`);
 
   members.sort((a, b) => a.pkg_name.localeCompare(b.pkg_name));
   const caseCount = members.filter((m) => m.role === "case").length;
@@ -218,8 +261,9 @@ export async function freeze(): Promise<void> {
     control_definition:
       "no in-window GHSA, >= 1000 downloads in the 2022-11-09 ecosyste.ms snapshot, " +
       "and a release within 365 days before D",
-    matching: `${CONTROLS_PER_CASE}:1 within download band`,
-    bands: ["1K-10K", "10K-100K", "100K-1M", "1M+"],
+    matching: `${CONTROLS_PER_CASE}:1 within download band and scope style (scoped @org/name vs plain), the latter added because it was the strongest classifier in the dataset when left unmatched`,
+    bands: BANDS,
+    cells: CELLS,
     ranking_source:
       "ecosyste.ms open data release packages-2022-11-09 (CC BY-SA 4.0, " +
       "(c) 2022 Andrew Nesbitt), frozen 2022-11-09T10:46:31Z, before the scoring date",

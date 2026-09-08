@@ -47,22 +47,52 @@ export interface OutcomeStats {
 }
 
 /**
- * GHSA identifiers per package, read from the probe output rather than re-parsing the
- * 225 MB OSV export. `stage0_ghsa_pool_result.json` was produced by
- * `probe/stage0_ghsa_pool.py`, which applies the GHSA-only filter.
+ * The advisory id and publication date for each package that qualified as a case.
+ *
+ * This function used to claim in a comment that ids and dates were "re-derived here
+ * from the same source file", while the code actually wrote `{id: "", published: ""}`
+ * for every package. The result was that `outcome.occurred_at` was NULL for all 383
+ * cases and `source_id` was the literal string "GHSA", so nothing downstream could ask
+ * when a package was hit. Anything that stratifies on disclosure date, the LLM arm's
+ * training-cutoff split above all, was impossible.
+ *
+ * Dates now come from `probe/ghsa_affected_all_result.json`, paginated from the GitHub
+ * Advisory API by `probe/ghsa_affected_all.py`. That source found 4,334 in-window
+ * advisories, matching stage 0's independent count from the OSV bulk export exactly.
+ * It is preferred over OSV's /v1/query endpoint, which was measured against it and
+ * disagreed: OSV returned nothing at all for six packages that do have in-window
+ * advisories (eslint, fast-redact, jquery, npm, papaparse, stylelint), and named a
+ * later first advisory for five more, worst of them nx at 2026-07-31 against a true
+ * 2025-09-25. Cases are the intersection with the universe's own case list, so cases
+ * and outcomes cannot disagree about who was hit.
  */
 async function ghsaByPackage(): Promise<Map<string, { id: string; published: string }>> {
-  const raw = await readFile(
-    join(ROOT, "probe", "stage0_ghsa_pool_result.json"),
-    "utf8",
-  );
-  const parsed = JSON.parse(raw) as { alive_packages: string[] };
-  // The probe recorded which packages qualified; the advisory id and date for each are
-  // re-derived here from the same source file the universe used, so cases and outcomes
-  // cannot disagree about who was hit.
+  const [poolRaw, affectedRaw] = await Promise.all([
+    readFile(join(ROOT, "probe", "stage0_ghsa_pool_result.json"), "utf8"),
+    readFile(join(ROOT, "probe", "ghsa_affected_all_result.json"), "utf8"),
+  ]);
+  const pool = JSON.parse(poolRaw) as { alive_packages: string[] };
+  const affected = (
+    JSON.parse(affectedRaw) as { affected: Record<string, { first: string; id: string }> }
+  ).affected;
+
   const out = new Map<string, { id: string; published: string }>();
-  for (const name of parsed.alive_packages) {
-    out.set(name, { id: "", published: "" });
+  const undated: string[] = [];
+  for (const name of pool.alive_packages) {
+    const hit = affected[name];
+    if (!hit) {
+      undated.push(name);
+      continue;
+    }
+    out.set(name, { id: hit.id, published: hit.first });
+  }
+  // A case with no advisory in the authoritative list is a contradiction, not a gap.
+  if (undated.length > 0) {
+    throw new Error(
+      `${undated.length} case packages carry no in-window advisory in ` +
+        `ghsa_affected_all_result.json, so the case list and the outcome source ` +
+        `disagree: ${undated.slice(0, 8).join(", ")}`,
+    );
   }
   return out;
 }
@@ -110,11 +140,18 @@ export async function buildOutcomes(db: PGlite): Promise<OutcomeStats> {
         stats.advisory++;
         if (members.get(name) === "case") stats.casesWithAdvisory++;
         else stats.controlsWithAdvisory++;
+        const hit = hits.get(name)!;
         await db.query(
           `INSERT INTO outcome (pkg_name, as_of_date, kind, occurred_at, source_id, source_url, confidence)
-           VALUES ($1,$2,'advisory',NULL,$3,$4,'strong')
+           VALUES ($1,$2,'advisory',$3,$4,$5,'strong')
            ON CONFLICT DO NOTHING`,
-          [name, SCORING_DATE, hits.get(name)!.id || "GHSA", "https://osv.dev"],
+          [
+            name,
+            SCORING_DATE,
+            hit.published,
+            hit.id,
+            `https://github.com/advisories/${hit.id}`,
+          ],
         );
       }
 

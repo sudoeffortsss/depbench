@@ -118,17 +118,49 @@ def existed_before_d(name):
 
 
 def downloads_at_d(names):
+    """2022-12 downloads per package.
+
+    npm's bulk endpoint rejects any batch containing a scoped name outright:
+    {"error":"scoped packages are not currently supported in bulk lookups"}. That
+    response is a dict, so a bare isinstance(d, dict) guard passes and the loop writes
+    out["error"]=0 while every real package in the batch gets no entry at all. Callers
+    then read dls.get(n, 0) == 0 and drop the whole batch against the >=1000 threshold.
+
+    Because the name list is sorted, scoped names form a contiguous block, so the loss
+    was systematic: the case pool it produced had 0 scoped packages out of 383 while the
+    control pool was 54.8% scoped, and packages as large as ajv (323M monthly downloads)
+    and axios (141M) were silently absent. Scoped names are queried one at a time, which
+    is the only shape the endpoint accepts, and every batch is checked for the error
+    body rather than assumed to have succeeded.
+    """
     out = {}
-    for i in range(0, len(names), 128):
-        chunk = names[i : i + 128]
+    unscoped = [n for n in names if not n.startswith("@")]
+    scoped = [n for n in names if n.startswith("@")]
+
+    for i in range(0, len(unscoped), 128):
+        chunk = unscoped[i : i + 128]
         q = ",".join(urllib.parse.quote(c, safe="") for c in chunk)
         d = get(f"https://api.npmjs.org/downloads/point/{DOWNLOAD_WINDOW}/{q}")
         time.sleep(DOWNLOADS_DELAY)
-        if isinstance(d, dict):
-            for k, v in d.items():
-                out[k] = (v or {}).get("downloads", 0) if isinstance(v, dict) else 0
+        if not isinstance(d, dict) or "error" in d:
+            raise RuntimeError(f"bulk downloads batch at {i} failed: {str(d)[:160]}")
+        for k, v in d.items():
+            out[k] = (v or {}).get("downloads", 0) if isinstance(v, dict) else 0
         if (i // 128) % 5 == 0:
-            print(f"  downloads {min(i+128, len(names))}/{len(names)}", flush=True)
+            print(f"  downloads {min(i+128, len(unscoped))}/{len(unscoped)} unscoped", flush=True)
+
+    for j, n in enumerate(scoped, 1):
+        d = get(f"https://api.npmjs.org/downloads/point/{DOWNLOAD_WINDOW}/"
+                f"{urllib.parse.quote(n, safe='')}")
+        time.sleep(DOWNLOADS_DELAY)
+        out[n] = d.get("downloads", 0) if isinstance(d, dict) else 0
+        if j % 50 == 0:
+            print(f"  downloads {j}/{len(scoped)} scoped", flush=True)
+
+    # Silence is not success (FINDINGS.md F10). Every name must come back with a number.
+    missing = [n for n in names if n not in out]
+    if missing:
+        raise RuntimeError(f"{len(missing)} packages returned no download figure: {missing[:5]}")
     return out
 
 

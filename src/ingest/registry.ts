@@ -4,9 +4,12 @@
  * Storage is split, and the split was measured rather than guessed. A 40-package sample
  * spread across the universe gave:
  *
- *     full packument   avg 737 KB   ->  1,915 packages = 1,446 MB
- *     gzipped          avg 116 KB   ->                 =   227 MB
- *     reduced record   avg  35 KB   ->                 =    69 MB
+ *     full packument   avg 737 KB   ->  3,215 packages = 2,428 MB
+ *     gzipped          avg 116 KB   ->                 =   381 MB
+ *     reduced record   avg  35 KB   ->                 =   116 MB
+ *
+ * Per-package averages are as measured at stage 1; the totals were 1,915 packages
+ * until the universe was refrozen at 3,215 (FINDINGS.md F14).
  *     largest single: @playwright/test at 9.5 MB
  *
  * 1.4 GB of JSONB inside an in-process WASM Postgres would make every later query

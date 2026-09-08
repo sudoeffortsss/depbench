@@ -1,33 +1,57 @@
 {
- "universe_hash": "e8c899ee68cef5daad5bef256f9ee650bb7cda838aa616cc6651c212a3bfbd97",
+ "universe_hash": "00ecc34b2137eaaffd5ef5390ad939ba39020bd99fea0412dd4cfab96a550298",
  "frozen_at_utc_date": "2023-01-01",
- "member_count": 1915,
- "case_count": 383,
- "control_count": 1532,
+ "member_count": 3215,
+ "case_count": 643,
+ "control_count": 2572,
  "bands": {
-  "1K-10K": {
-   "cases": 42,
-   "controls_needed": 168,
-   "controls_available": 45013,
-   "controls_drawn": 168
+  "1K-10K|scoped": {
+   "cases": 52,
+   "controls_needed": 208,
+   "controls_available": 29722,
+   "controls_drawn": 208
   },
-  "10K-100K": {
-   "cases": 76,
-   "controls_needed": 304,
-   "controls_available": 16188,
-   "controls_drawn": 304
+  "1K-10K|plain": {
+   "cases": 48,
+   "controls_needed": 192,
+   "controls_available": 15291,
+   "controls_drawn": 192
   },
-  "100K-1M": {
-   "cases": 92,
-   "controls_needed": 368,
-   "controls_available": 6807,
-   "controls_drawn": 368
+  "10K-100K|scoped": {
+   "cases": 64,
+   "controls_needed": 256,
+   "controls_available": 9873,
+   "controls_drawn": 256
   },
-  "1M+": {
-   "cases": 173,
-   "controls_needed": 692,
-   "controls_available": 3724,
-   "controls_drawn": 692
+  "10K-100K|plain": {
+   "cases": 84,
+   "controls_needed": 336,
+   "controls_available": 6315,
+   "controls_drawn": 336
+  },
+  "100K-1M|scoped": {
+   "cases": 57,
+   "controls_needed": 228,
+   "controls_available": 3825,
+   "controls_drawn": 228
+  },
+  "100K-1M|plain": {
+   "cases": 103,
+   "controls_needed": 412,
+   "controls_available": 2982,
+   "controls_drawn": 412
+  },
+  "1M+|scoped": {
+   "cases": 38,
+   "controls_needed": 152,
+   "controls_available": 1763,
+   "controls_drawn": 152
+  },
+  "1M+|plain": {
+   "cases": 197,
+   "controls_needed": 788,
+   "controls_available": 1961,
+   "controls_drawn": 788
   }
  },
  "selection_rule": {
@@ -39,15 +63,25 @@
   "ground_truth": "GHSA-* only; MAL-* excluded, see FINDINGS.md F3",
   "case_definition": "affected by a GHSA published in-window, existed before D, released in the year before D, and >= 1000 downloads in 2022-12",
   "control_definition": "no in-window GHSA, >= 1000 downloads in the 2022-11-09 ecosyste.ms snapshot, and a release within 365 days before D",
-  "matching": "4:1 within download band",
+  "matching": "4:1 within download band and scope style (scoped @org/name vs plain), the latter added because it was the strongest classifier in the dataset when left unmatched",
   "bands": [
    "1K-10K",
    "10K-100K",
    "100K-1M",
    "1M+"
   ],
+  "cells": [
+   "1K-10K|scoped",
+   "1K-10K|plain",
+   "10K-100K|scoped",
+   "10K-100K|plain",
+   "100K-1M|scoped",
+   "100K-1M|plain",
+   "1M+|scoped",
+   "1M+|plain"
+  ],
   "ranking_source": "ecosyste.ms open data release packages-2022-11-09 (CC BY-SA 4.0, (c) 2022 Andrew Nesbitt), frozen 2022-11-09T10:46:31Z, before the scoring date",
   "seed": 20260906,
-  "excluded_from_controls": 823
+  "excluded_from_controls": 1626
  }
 }

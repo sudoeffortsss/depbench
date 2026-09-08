@@ -1,0 +1,6515 @@
+{
+ "window": [
+  "2023-01-01",
+  "2026-09-01"
+ ],
+ "pages": 44,
+ "in_window_advisories": 4334,
+ "distinct_affected_packages": 1626,
+ "affected": {
+  "string-kit": {
+   "first": "2023-01-02",
+   "id": "GHSA-pfrm-4rjw-g9q5"
+  },
+  "mootools": {
+   "first": "2023-01-03",
+   "id": "GHSA-v63q-hgqc-qvpg"
+  },
+  "window-control": {
+   "first": "2023-01-04",
+   "id": "GHSA-9mjx-wfqp-j5ph"
+  },
+  "@uniswap/universal-router": {
+   "first": "2023-01-04",
+   "id": "GHSA-7m37-cx35-qgmr"
+  },
+  "@mattkrick/sanitize-svg": {
+   "first": "2023-01-05",
+   "id": "GHSA-h857-2g56-468g"
+  },
+  "robots-txt-guard": {
+   "first": "2023-01-05",
+   "id": "GHSA-6g33-8w2q-4hxv"
+  },
+  "ms": {
+   "first": "2023-01-05",
+   "id": "GHSA-w9mr-4mfr-499f"
+  },
+  "exec-local-bin": {
+   "first": "2023-01-06",
+   "id": "GHSA-f259-h6m8-hm8m"
+  },
+  "nodebatis": {
+   "first": "2023-01-06",
+   "id": "GHSA-8ph8-9q2j-c3rq"
+  },
+  "terminal-kit": {
+   "first": "2023-01-07",
+   "id": "GHSA-wxgh-8gmr-3qh3"
+  },
+  "baobab": {
+   "first": "2023-01-07",
+   "id": "GHSA-wvr2-q86m-6whp"
+  },
+  "wifey": {
+   "first": "2023-01-09",
+   "id": "GHSA-xj9v-6q2f-vqhx"
+  },
+  "debug": {
+   "first": "2023-01-09",
+   "id": "GHSA-9vvw-cc9w-f27h"
+  },
+  "luxon": {
+   "first": "2023-01-09",
+   "id": "GHSA-3xq5-wjfh-ppjc"
+  },
+  "@okta/oidc-middleware": {
+   "first": "2023-01-09",
+   "id": "GHSA-58h4-9m7m-j9m4"
+  },
+  "mercurius": {
+   "first": "2023-01-09",
+   "id": "GHSA-cm8h-q92v-xcfc"
+  },
+  "phoenix_html": {
+   "first": "2023-01-10",
+   "id": "GHSA-5g2h-9x5v-5h3x"
+  },
+  "convict": {
+   "first": "2023-01-10",
+   "id": "GHSA-4jrm-c32x-w4jf"
+  },
+  "papaparse": {
+   "first": "2023-01-11",
+   "id": "GHSA-798h-g4j5-5537"
+  },
+  "skeemas": {
+   "first": "2023-01-11",
+   "id": "GHSA-qv66-f876-vjvr"
+  },
+  "gatsby-transformer-remark": {
+   "first": "2023-01-11",
+   "id": "GHSA-7ch4-rr99-cqcw"
+  },
+  "gry": {
+   "first": "2023-01-11",
+   "id": "GHSA-w5mw-f2hq-5fw8"
+  },
+  "rsshub": {
+   "first": "2023-01-11",
+   "id": "GHSA-64wp-jh9p-5cg2"
+  },
+  "global-modules-path": {
+   "first": "2023-01-13",
+   "id": "GHSA-vvj3-85vf-fgmw"
+  },
+  "@curveball/a12n-server": {
+   "first": "2023-01-13",
+   "id": "GHSA-crhg-xgrg-vvcc"
+  },
+  "mel-spintax": {
+   "first": "2023-01-18",
+   "id": "GHSA-qjm7-55vv-3c5f"
+  },
+  "web-node-server": {
+   "first": "2023-01-18",
+   "id": "GHSA-3fwq-qv5v-2wxf"
+  },
+  "cookiejar": {
+   "first": "2023-01-18",
+   "id": "GHSA-h452-7996-h45h"
+  },
+  "@builder.io/qwik": {
+   "first": "2023-01-20",
+   "id": "GHSA-hm7f-rq7q-j9xp"
+  },
+  "electerm": {
+   "first": "2023-01-20",
+   "id": "GHSA-x73w-g8hx-v7rp"
+  },
+  "ua-parser-js": {
+   "first": "2023-01-24",
+   "id": "GHSA-fhg7-m89q-25r3"
+  },
+  "vagrant.js": {
+   "first": "2023-01-26",
+   "id": "GHSA-54jw-jqr9-6cj9"
+  },
+  "serve-lite": {
+   "first": "2023-01-26",
+   "id": "GHSA-j8x7-qcw4-xx85"
+  },
+  "create-choo-electron": {
+   "first": "2023-01-26",
+   "id": "GHSA-j8wr-fwf2-vvr9"
+  },
+  "simple-git": {
+   "first": "2023-01-26",
+   "id": "GHSA-9w5j-4mwv-2wj8"
+  },
+  "puppet-facter": {
+   "first": "2023-01-26",
+   "id": "GHSA-g5qr-xgg7-8q2w"
+  },
+  "smartctl": {
+   "first": "2023-01-26",
+   "id": "GHSA-69f2-4375-qv9h"
+  },
+  "yapi-vendor": {
+   "first": "2023-01-26",
+   "id": "GHSA-4jqw-vfmj-9rmh"
+  },
+  "jszip": {
+   "first": "2023-01-29",
+   "id": "GHSA-36fh-84j7-cv5h"
+  },
+  "eta": {
+   "first": "2023-01-30",
+   "id": "GHSA-mf6x-hrgr-658f"
+  },
+  "servst": {
+   "first": "2023-01-30",
+   "id": "GHSA-88v8-v46g-6c9w"
+  },
+  "jsuites": {
+   "first": "2023-01-31",
+   "id": "GHSA-r4hg-4cpq-q57c"
+  },
+  "http-cache-semantics": {
+   "first": "2023-01-31",
+   "id": "GHSA-rc47-6667-2j5j"
+  },
+  "nemo-appium": {
+   "first": "2023-01-31",
+   "id": "GHSA-c6rx-gxqv-vr5j"
+  },
+  "joplin": {
+   "first": "2023-01-31",
+   "id": "GHSA-h6c2-879r-jffh"
+  },
+  "parse-server": {
+   "first": "2023-01-31",
+   "id": "GHSA-vm5r-c87r-pf6x"
+  },
+  "is-http2": {
+   "first": "2023-02-01",
+   "id": "GHSA-2275-rpf5-xv8h"
+  },
+  "mt7688-wiscan": {
+   "first": "2023-02-01",
+   "id": "GHSA-5h8c-8ccp-8gmh"
+  },
+  "switcher-client": {
+   "first": "2023-02-02",
+   "id": "GHSA-wqxw-8h5g-hq56"
+  },
+  "jellyfin-web": {
+   "first": "2023-02-03",
+   "id": "GHSA-749c-pc87-4qcw"
+  },
+  "is-url": {
+   "first": "2023-02-04",
+   "id": "GHSA-p9w8-2mpq-49h9"
+  },
+  "create-choo-app3": {
+   "first": "2023-02-06",
+   "id": "GHSA-rj7m-2p3g-fjxg"
+  },
+  "semver-tags": {
+   "first": "2023-02-06",
+   "id": "GHSA-8h3g-hcwp-6hxq"
+  },
+  "@tinacms/cli": {
+   "first": "2023-02-08",
+   "id": "GHSA-pc2q-jcxq-rjrr"
+  },
+  "@sideway/formula": {
+   "first": "2023-02-08",
+   "id": "GHSA-c2jc-4fpr-4vhg"
+  },
+  "cacheable-request": {
+   "first": "2023-02-11",
+   "id": "GHSA-8x6c-cv3v-vp6g"
+  },
+  "simple-markdown": {
+   "first": "2023-02-12",
+   "id": "GHSA-gpvj-gp8c-c7p2"
+  },
+  "glance": {
+   "first": "2023-02-13",
+   "id": "GHSA-3hjh-5hgx-f5wh"
+  },
+  "ckeditor5": {
+   "first": "2023-02-13",
+   "id": "GHSA-6p89-3p7c-qrhv"
+  },
+  "react-admin": {
+   "first": "2023-02-14",
+   "id": "GHSA-5jcr-82fh-339v"
+  },
+  "ra-ui-materialui": {
+   "first": "2023-02-14",
+   "id": "GHSA-5jcr-82fh-339v"
+  },
+  "@backstage/core-components": {
+   "first": "2023-02-14",
+   "id": "GHSA-7hv8-3fr9-j2hv"
+  },
+  "@backstage/catalog-model": {
+   "first": "2023-02-14",
+   "id": "GHSA-7hv8-3fr9-j2hv"
+  },
+  "@backstage/plugin-catalog-backend": {
+   "first": "2023-02-14",
+   "id": "GHSA-7hv8-3fr9-j2hv"
+  },
+  "@fastify/multipart": {
+   "first": "2023-02-14",
+   "id": "GHSA-hpp2-2cr5-pf6g"
+  },
+  "@sequelize/core": {
+   "first": "2023-02-16",
+   "id": "GHSA-8mwq-mj73-qv68"
+  },
+  "sequelize": {
+   "first": "2023-02-16",
+   "id": "GHSA-8mwq-mj73-qv68"
+  },
+  "@graphql-mesh/cli": {
+   "first": "2023-02-16",
+   "id": "GHSA-j2wh-wrv3-4x4g"
+  },
+  "@graphql-mesh/http": {
+   "first": "2023-02-16",
+   "id": "GHSA-j2wh-wrv3-4x4g"
+  },
+  "node-jose": {
+   "first": "2023-02-16",
+   "id": "GHSA-5h4j-qrvg-9xhw"
+  },
+  "undici": {
+   "first": "2023-02-16",
+   "id": "GHSA-r6ch-mqf9-qc9w"
+  },
+  "jspreadsheet-ce": {
+   "first": "2023-02-18",
+   "id": "GHSA-q82h-q47j-f492"
+  },
+  "generator-hottowel": {
+   "first": "2023-02-20",
+   "id": "GHSA-f8hv-rx9p-f9r4"
+  },
+  "erxes": {
+   "first": "2023-02-21",
+   "id": "GHSA-g9ph-r9hc-34r8"
+  },
+  "mind-elixir": {
+   "first": "2023-02-21",
+   "id": "GHSA-m22q-97p5-79v2"
+  },
+  "@claviska/jquery-minicolors": {
+   "first": "2023-02-21",
+   "id": "GHSA-crh5-vv2v-c82q"
+  },
+  "textangular": {
+   "first": "2023-02-21",
+   "id": "GHSA-7h4w-6p98-r3wx"
+  },
+  "izimodal": {
+   "first": "2023-02-21",
+   "id": "GHSA-h685-83w4-3ph3"
+  },
+  "vditor": {
+   "first": "2023-02-21",
+   "id": "GHSA-vfmp-9999-6wqj"
+  },
+  "baremetrics-calendar": {
+   "first": "2023-02-21",
+   "id": "GHSA-465f-mxxh-grc4"
+  },
+  "versionn": {
+   "first": "2023-02-22",
+   "id": "GHSA-fj78-2vc5-f6cm"
+  },
+  "@braintree/sanitize-url": {
+   "first": "2023-02-24",
+   "id": "GHSA-q8gg-vj6m-hgmj"
+  },
+  "rangy": {
+   "first": "2023-02-24",
+   "id": "GHSA-65rp-mhqf-8gj3"
+  },
+  "ecdh": {
+   "first": "2023-02-24",
+   "id": "GHSA-p2hp-3wv3-4w74"
+  },
+  "lite-web-server": {
+   "first": "2023-02-25",
+   "id": "GHSA-8237-3q5g-99fv"
+  },
+  "utilities": {
+   "first": "2023-02-28",
+   "id": "GHSA-wxfj-84xf-7gxv"
+  },
+  "@zowe/imperative": {
+   "first": "2023-03-01",
+   "id": "GHSA-6q8m-42qq-64r7"
+  },
+  "vega": {
+   "first": "2023-03-02",
+   "id": "GHSA-w5m3-xh75-mp55"
+  },
+  "vega-functions": {
+   "first": "2023-03-02",
+   "id": "GHSA-w5m3-xh75-mp55"
+  },
+  "keycloak-connect": {
+   "first": "2023-03-02",
+   "id": "GHSA-59fq-727j-hm3f"
+  },
+  "@openzeppelin/contracts": {
+   "first": "2023-03-03",
+   "id": "GHSA-878m-3g6q-594q"
+  },
+  "@openzeppelin/contracts-upgradeable": {
+   "first": "2023-03-03",
+   "id": "GHSA-878m-3g6q-594q"
+  },
+  "directus": {
+   "first": "2023-03-03",
+   "id": "GHSA-j3rg-3rgm-537h"
+  },
+  "json-logic-js": {
+   "first": "2023-03-05",
+   "id": "GHSA-67j4-2mh6-8627"
+  },
+  "sketchsvg": {
+   "first": "2023-03-06",
+   "id": "GHSA-6722-xvq8-3254"
+  },
+  "node-static": {
+   "first": "2023-03-06",
+   "id": "GHSA-5g97-whc9-8g7j"
+  },
+  "@nubosoftware/node-static": {
+   "first": "2023-03-06",
+   "id": "GHSA-5g97-whc9-8g7j"
+  },
+  "@nestjs/core": {
+   "first": "2023-03-06",
+   "id": "GHSA-4jpv-8r57-pv7j"
+  },
+  "dot-lens": {
+   "first": "2023-03-06",
+   "id": "GHSA-rmhg-2cvv-q7vx"
+  },
+  "node-bluetooth": {
+   "first": "2023-03-09",
+   "id": "GHSA-cxx3-36qc-m6qm"
+  },
+  "node-bluetooth-serial-port": {
+   "first": "2023-03-09",
+   "id": "GHSA-9jh3-4pc9-hq29"
+  },
+  "@stoqey/gnuplot": {
+   "first": "2023-03-10",
+   "id": "GHSA-795w-7426-m94j"
+  },
+  "webpack": {
+   "first": "2023-03-13",
+   "id": "GHSA-hc6q-2mpp-qw7j"
+  },
+  "sqlite3": {
+   "first": "2023-03-13",
+   "id": "GHSA-jqv5-7xpx-qj74"
+  },
+  "next-auth": {
+   "first": "2023-03-13",
+   "id": "GHSA-7r7x-4c4q-c4qf"
+  },
+  "swig-templates": {
+   "first": "2023-03-15",
+   "id": "GHSA-2rq5-699j-x7p6"
+  },
+  "swig": {
+   "first": "2023-03-15",
+   "id": "GHSA-2rq5-699j-x7p6"
+  },
+  "request": {
+   "first": "2023-03-16",
+   "id": "GHSA-p8p7-x288-28g6"
+  },
+  "@cypress/request": {
+   "first": "2023-03-16",
+   "id": "GHSA-p8p7-x288-28g6"
+  },
+  "collection.js": {
+   "first": "2023-03-18",
+   "id": "GHSA-47pj-q2vm-46xc"
+  },
+  "code-server": {
+   "first": "2023-03-23",
+   "id": "GHSA-frjg-g767-7363"
+  },
+  "angular-server-side-configuration": {
+   "first": "2023-03-24",
+   "id": "GHSA-gwvm-vrp4-4pp5"
+  },
+  "pullit": {
+   "first": "2023-03-27",
+   "id": "GHSA-2w9p-xf5h-qwj3"
+  },
+  "matrix-js-sdk": {
+   "first": "2023-03-28",
+   "id": "GHSA-rfv9-x7hh-xc32"
+  },
+  "matrix-react-sdk": {
+   "first": "2023-03-28",
+   "id": "GHSA-2x9c-qwgf-94xr"
+  },
+  "angular": {
+   "first": "2023-03-30",
+   "id": "GHSA-qwqh-hm9m-p5hr"
+  },
+  "editor.md": {
+   "first": "2023-04-04",
+   "id": "GHSA-w974-rq9x-mh3v"
+  },
+  "@sveltejs/kit": {
+   "first": "2023-04-04",
+   "id": "GHSA-5p75-vc5g-8rv2"
+  },
+  "markdown-pdf": {
+   "first": "2023-04-05",
+   "id": "GHSA-qghr-877h-f9jh"
+  },
+  "xml2js": {
+   "first": "2023-04-05",
+   "id": "GHSA-776f-qx25-q3cc"
+  },
+  "vm2": {
+   "first": "2023-04-07",
+   "id": "GHSA-7jxr-cg7f-gpgv"
+  },
+  "safe-eval": {
+   "first": "2023-04-11",
+   "id": "GHSA-79xf-67r4-q2jj"
+  },
+  "@nuxtlabs/github-module": {
+   "first": "2023-04-18",
+   "id": "GHSA-fp2w-g92g-fgq4"
+  },
+  "@strapi/plugin-users-permissions": {
+   "first": "2023-04-18",
+   "id": "GHSA-xv3q-jrmm-4fxv"
+  },
+  "@web3-react/coinbase-wallet": {
+   "first": "2023-04-18",
+   "id": "GHSA-8pf3-6fgr-3g3g"
+  },
+  "@web3-react/eip1193": {
+   "first": "2023-04-18",
+   "id": "GHSA-8pf3-6fgr-3g3g"
+  },
+  "@web3-react/metamask": {
+   "first": "2023-04-18",
+   "id": "GHSA-8pf3-6fgr-3g3g"
+  },
+  "@web3-react/walletconnect": {
+   "first": "2023-04-18",
+   "id": "GHSA-8pf3-6fgr-3g3g"
+  },
+  "@strapi/strapi": {
+   "first": "2023-04-19",
+   "id": "GHSA-jjqf-j4w7-92w8"
+  },
+  "@strapi/plugin-email": {
+   "first": "2023-04-19",
+   "id": "GHSA-2h87-4q2w-v4hf"
+  },
+  "eslint-detailed-reporter": {
+   "first": "2023-04-20",
+   "id": "GHSA-4xr4-89m5-46c7"
+  },
+  "gatsby-plugin-sharp": {
+   "first": "2023-04-20",
+   "id": "GHSA-h2pm-378c-pcxx"
+  },
+  "@fastify/csrf-protection": {
+   "first": "2023-04-20",
+   "id": "GHSA-qrgf-9gpc-vrxw"
+  },
+  "nunjucks": {
+   "first": "2023-04-20",
+   "id": "GHSA-x77j-w7wf-fjmw"
+  },
+  "@fastify/passport": {
+   "first": "2023-04-21",
+   "id": "GHSA-2ccf-ffrj-m4qw"
+  },
+  "expo": {
+   "first": "2023-04-24",
+   "id": "GHSA-wr5g-q49g-548w"
+  },
+  "xlsx": {
+   "first": "2023-04-24",
+   "id": "GHSA-4r6h-8v6p-xvw6"
+  },
+  "yaml": {
+   "first": "2023-04-24",
+   "id": "GHSA-f9xv-q969-pqx4"
+  },
+  "broccoli-compass": {
+   "first": "2023-04-24",
+   "id": "GHSA-wq8f-xmq3-5vq9"
+  },
+  "dawnsparks-node-tesseract": {
+   "first": "2023-04-24",
+   "id": "GHSA-88qf-5f3v-pm6m"
+  },
+  "@builder.io/qwik-city": {
+   "first": "2023-04-26",
+   "id": "GHSA-c54w-7j5f-xg98"
+  },
+  "payload": {
+   "first": "2023-04-26",
+   "id": "GHSA-35jj-vqcf-f2jf"
+  },
+  "vconsole": {
+   "first": "2023-04-26",
+   "id": "GHSA-f737-3fh6-jf6w"
+  },
+  "typed-rest-client": {
+   "first": "2023-04-27",
+   "id": "GHSA-558p-m34m-vpmq"
+  },
+  "@aedart/support": {
+   "first": "2023-05-01",
+   "id": "GHSA-wwxh-74fx-33c6"
+  },
+  "appium-desktop": {
+   "first": "2023-05-02",
+   "id": "GHSA-xq6j-x8pq-g3gr"
+  },
+  "@mittwald/kubernetes": {
+   "first": "2023-05-02",
+   "id": "GHSA-g35x-j6jj-8g7j"
+  },
+  "engine.io": {
+   "first": "2023-05-03",
+   "id": "GHSA-q9mw-68c2-j6m5"
+  },
+  "ghost": {
+   "first": "2023-05-03",
+   "id": "GHSA-r97q-ghch-82j9"
+  },
+  "total4": {
+   "first": "2023-05-04",
+   "id": "GHSA-jj45-24rw-v6jw"
+  },
+  "jsreport": {
+   "first": "2023-05-08",
+   "id": "GHSA-g7rj-q722-245g"
+  },
+  "m.static": {
+   "first": "2023-05-10",
+   "id": "GHSA-vcxh-qvgr-9fw9"
+  },
+  "n8n": {
+   "first": "2023-05-10",
+   "id": "GHSA-97cp-mr4m-9mcf"
+  },
+  "workerd": {
+   "first": "2023-05-12",
+   "id": "GHSA-8vx6-69vg-c46f"
+  },
+  "snarkjs": {
+   "first": "2023-05-22",
+   "id": "GHSA-xp5g-jhg3-3rg2"
+  },
+  "parse-server-push-adapter": {
+   "first": "2023-05-22",
+   "id": "GHSA-mxhg-rvwx-x993"
+  },
+  "posthog-js": {
+   "first": "2023-05-22",
+   "id": "GHSA-8775-5hwv-wr6v"
+  },
+  "socket.io-parser": {
+   "first": "2023-05-23",
+   "id": "GHSA-cqmj-92xf-r6r9"
+  },
+  "bignum": {
+   "first": "2023-05-24",
+   "id": "GHSA-7cgc-fjv4-52x6"
+  },
+  "highlight.run": {
+   "first": "2023-05-26",
+   "id": "GHSA-9qpj-qq2r-5mcc"
+  },
+  "bwm-ng": {
+   "first": "2023-05-27",
+   "id": "GHSA-8vw3-vxmj-h43w"
+  },
+  "keep-module-latest": {
+   "first": "2023-05-27",
+   "id": "GHSA-wxrx-pc44-rcgc"
+  },
+  "n158": {
+   "first": "2023-05-27",
+   "id": "GHSA-549h-r7g9-2qpf"
+  },
+  "@antfu/utils": {
+   "first": "2023-05-30",
+   "id": "GHSA-p2fh-2h23-6grg"
+  },
+  "proxy": {
+   "first": "2023-05-30",
+   "id": "GHSA-mj6p-3pc9-wf5m"
+  },
+  "vite": {
+   "first": "2023-06-06",
+   "id": "GHSA-353f-5xf4-qw67"
+  },
+  "fast-xml-parser": {
+   "first": "2023-06-06",
+   "id": "GHSA-6w63-h3fj-q4vw"
+  },
+  "@udecode/plate-link": {
+   "first": "2023-06-09",
+   "id": "GHSA-4882-hxpr-hrvm"
+  },
+  "gatsby": {
+   "first": "2023-06-09",
+   "id": "GHSA-c6f8-8r25-c4gc"
+  },
+  "snowflake-sdk": {
+   "first": "2023-06-09",
+   "id": "GHSA-h53w-7qw7-vh5c"
+  },
+  "dottie": {
+   "first": "2023-06-10",
+   "id": "GHSA-4gxf-g5gf-22h4"
+  },
+  "crypto-js": {
+   "first": "2023-06-12",
+   "id": "GHSA-3w3w-pxmm-2w2j"
+  },
+  "progressbar.js": {
+   "first": "2023-06-12",
+   "id": "GHSA-89qm-hm2x-mxm3"
+  },
+  "@keystone-6/core": {
+   "first": "2023-06-12",
+   "id": "GHSA-5fp6-4xw3-xqq3"
+  },
+  "nuxt": {
+   "first": "2023-06-13",
+   "id": "GHSA-gc34-5v43-h7v8"
+  },
+  "@keystone-6/auth": {
+   "first": "2023-06-14",
+   "id": "GHSA-jqxr-vjvv-899m"
+  },
+  "@apollo/server": {
+   "first": "2023-06-16",
+   "id": "GHSA-68jh-rf6x-836f"
+  },
+  "aws-cdk-lib": {
+   "first": "2023-06-19",
+   "id": "GHSA-rx28-r23p-2qc3"
+  },
+  "@aws-cdk/aws-eks": {
+   "first": "2023-06-19",
+   "id": "GHSA-rx28-r23p-2qc3"
+  },
+  "remult": {
+   "first": "2023-06-20",
+   "id": "GHSA-7hh3-3x64-v2g9"
+  },
+  "semver": {
+   "first": "2023-06-21",
+   "id": "GHSA-c2qf-rxjj-qqgw"
+  },
+  "passport-wsfed-saml2": {
+   "first": "2023-06-21",
+   "id": "GHSA-77fw-rf4v-vfp9"
+  },
+  "@backstage/plugin-scaffolder-backend": {
+   "first": "2023-06-21",
+   "id": "GHSA-wg6p-jmpc-xjmr"
+  },
+  "word-wrap": {
+   "first": "2023-06-22",
+   "id": "GHSA-j8xg-fqg3-53r7"
+  },
+  "shescape": {
+   "first": "2023-06-22",
+   "id": "GHSA-3g7p-8qhx-mc8r"
+  },
+  "jquery": {
+   "first": "2023-06-26",
+   "id": "GHSA-257q-pv89-v3xv"
+  },
+  "git-commit-info": {
+   "first": "2023-06-28",
+   "id": "GHSA-h42j-mrmp-9369"
+  },
+  "flatnest": {
+   "first": "2023-06-30",
+   "id": "GHSA-7px2-3c2p-q4v4"
+  },
+  "angular-ui-notification": {
+   "first": "2023-06-30",
+   "id": "GHSA-mrcj-5qxr-vhp2"
+  },
+  "llhttp": {
+   "first": "2023-07-01",
+   "id": "GHSA-cggh-pq45-6h9x"
+  },
+  "tough-cookie": {
+   "first": "2023-07-01",
+   "id": "GHSA-72xf-g2v4-qvf3"
+  },
+  "@fastify/oauth2": {
+   "first": "2023-07-04",
+   "id": "GHSA-hgxv-3497-3hhj"
+  },
+  "protobufjs": {
+   "first": "2023-07-05",
+   "id": "GHSA-h755-8qp9-cq85"
+  },
+  "@vendure/admin-ui-plugin": {
+   "first": "2023-07-06",
+   "id": "GHSA-gm68-572p-q28r"
+  },
+  "snyk": {
+   "first": "2023-07-06",
+   "id": "GHSA-4vrv-93c7-m92j"
+  },
+  "is_js": {
+   "first": "2023-07-06",
+   "id": "GHSA-pvrw-g6fx-mcx2"
+  },
+  "stylelint": {
+   "first": "2023-07-07",
+   "id": "GHSA-f7xj-rg7h-mc87"
+  },
+  "sweetalert2": {
+   "first": "2023-07-10",
+   "id": "GHSA-mrr8-v49w-3333"
+  },
+  "ckeditor-wordcount-plugin": {
+   "first": "2023-07-10",
+   "id": "GHSA-q9w4-w667-qqj4"
+  },
+  "tarteaucitronjs": {
+   "first": "2023-07-11",
+   "id": "GHSA-f44m-65h3-99vc"
+  },
+  "@vendure/core": {
+   "first": "2023-07-11",
+   "id": "GHSA-h9wq-xcqx-mqxm"
+  },
+  "webmention.js": {
+   "first": "2023-07-14",
+   "id": "GHSA-r54g-4qq6-chxg"
+  },
+  "clevertap-cordova": {
+   "first": "2023-07-15",
+   "id": "GHSA-x2ph-qqwm-9cc6"
+  },
+  "layui": {
+   "first": "2023-07-16",
+   "id": "GHSA-hx4h-676r-j3qp"
+  },
+  "mongoose": {
+   "first": "2023-07-17",
+   "id": "GHSA-9m93-w8w6-76hh"
+  },
+  "@feathersjs/socketio": {
+   "first": "2023-07-20",
+   "id": "GHSA-hhr9-rh25-hvf9"
+  },
+  "@feathersjs/transport-commons": {
+   "first": "2023-07-20",
+   "id": "GHSA-hhr9-rh25-hvf9"
+  },
+  "nodebb": {
+   "first": "2023-07-25",
+   "id": "GHSA-vh2g-6c4x-5hmp"
+  },
+  "@strapi/utils": {
+   "first": "2023-07-25",
+   "id": "GHSA-chmr-rg2f-9jmf"
+  },
+  "@strapi/database": {
+   "first": "2023-07-25",
+   "id": "GHSA-chmr-rg2f-9jmf"
+  },
+  "sails": {
+   "first": "2023-07-27",
+   "id": "GHSA-gpw9-fwm8-7rx7"
+  },
+  "@saltcorn/cli": {
+   "first": "2023-07-27",
+   "id": "GHSA-wxf3-4fvj-vqqx"
+  },
+  "umami": {
+   "first": "2023-07-28",
+   "id": "GHSA-8www-cffh-4q98"
+  },
+  "underscore-keypath": {
+   "first": "2023-08-01",
+   "id": "GHSA-gpvc-mx6g-cchv"
+  },
+  "@simonsmith/cypress-image-snapshot": {
+   "first": "2023-08-01",
+   "id": "GHSA-vxjg-hchx-cc4g"
+  },
+  "pnpm": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/exe": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/linux-arm64": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/linux-x64": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/linuxstatic-arm64": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/macos-arm64": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/macos-x64": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/win-x64": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@pnpm/cafs": {
+   "first": "2023-08-01",
+   "id": "GHSA-5r98-f33j-g8h7"
+  },
+  "@ensdomains/ens-contracts": {
+   "first": "2023-08-01",
+   "id": "GHSA-rrxv-q8m4-wch3"
+  },
+  "wrangler": {
+   "first": "2023-08-03",
+   "id": "GHSA-8c93-4hch-xgxp"
+  },
+  "@soketi/soketi": {
+   "first": "2023-08-03",
+   "id": "GHSA-g6w6-h933-4rc5"
+  },
+  "matrix-appservice-irc": {
+   "first": "2023-08-04",
+   "id": "GHSA-c7hh-3v6c-fj4q"
+  },
+  "matrix-appservice-bridge": {
+   "first": "2023-08-04",
+   "id": "GHSA-vc7j-h8xg-fv5x"
+  },
+  "import-in-the-middle": {
+   "first": "2023-08-08",
+   "id": "GHSA-5r27-rw8r-7967"
+  },
+  "@nguniversal/common": {
+   "first": "2023-08-09",
+   "id": "GHSA-r3hf-q8q7-fv2p"
+  },
+  "ses": {
+   "first": "2023-08-09",
+   "id": "GHSA-9c4h-3f7h-322r"
+  },
+  "@opentelemetry/instrumentation": {
+   "first": "2023-08-09",
+   "id": "GHSA-f8pq-3926-8gx5"
+  },
+  "hellojs": {
+   "first": "2023-08-11",
+   "id": "GHSA-g3vf-47fv-8f3c"
+  },
+  "braft-editor": {
+   "first": "2023-08-11",
+   "id": "GHSA-jfrf-vv54-j2jg"
+  },
+  "node-worker-threads-pool": {
+   "first": "2023-08-11",
+   "id": "GHSA-7vxc-q7rv-qfj8"
+  },
+  "critters": {
+   "first": "2023-08-11",
+   "id": "GHSA-cx3j-qqxj-9597"
+  },
+  "svelecte": {
+   "first": "2023-08-14",
+   "id": "GHSA-7h45-grc5-89wq"
+  },
+  "external-svg-loader": {
+   "first": "2023-08-14",
+   "id": "GHSA-xc2r-jf2x-gjr8"
+  },
+  "@excalidraw/excalidraw": {
+   "first": "2023-08-16",
+   "id": "GHSA-fr9g-2m2h-c27j"
+  },
+  "tree-kit": {
+   "first": "2023-08-17",
+   "id": "GHSA-5p42-m6f3-hpmj"
+  },
+  "@node-saml/node-saml": {
+   "first": "2023-08-21",
+   "id": "GHSA-vx8m-6fhw-pccw"
+  },
+  "webui-aria2": {
+   "first": "2023-08-22",
+   "id": "GHSA-crv8-r5wq-gv2w"
+  },
+  "basti-cdk": {
+   "first": "2023-08-24",
+   "id": "GHSA-q4pp-j36h-3gqg"
+  },
+  "@webiny/react-rich-text-renderer": {
+   "first": "2023-08-24",
+   "id": "GHSA-3x59-vrmc-5mx6"
+  },
+  "openpgp": {
+   "first": "2023-08-29",
+   "id": "GHSA-ch3c-v47x-4pgp"
+  },
+  "mongodb": {
+   "first": "2023-08-29",
+   "id": "GHSA-vxvm-qww3-2fh7"
+  },
+  "mathjax": {
+   "first": "2023-08-29",
+   "id": "GHSA-v638-q856-grg8"
+  },
+  "@adobe/css-tools": {
+   "first": "2023-08-29",
+   "id": "GHSA-hpx4-r86g-5jrg"
+  },
+  "@goauthentik/api": {
+   "first": "2023-08-29",
+   "id": "GHSA-vmf9-6pcv-xr87"
+  },
+  "find-exec": {
+   "first": "2023-08-30",
+   "id": "GHSA-95rp-6gqp-6622"
+  },
+  "apollo-server-core": {
+   "first": "2023-08-30",
+   "id": "GHSA-j5g3-5c8r-7qfx"
+  },
+  "@dcl/single-sign-on-client": {
+   "first": "2023-09-04",
+   "id": "GHSA-vp4f-wxgw-7x8x"
+  },
+  "electron": {
+   "first": "2023-09-06",
+   "id": "GHSA-gxh7-wv9q-fwfr"
+  },
+  "buttercup": {
+   "first": "2023-09-08",
+   "id": "GHSA-7cwq-p8cr-h9qg"
+  },
+  "hexo": {
+   "first": "2023-09-08",
+   "id": "GHSA-x2jc-989c-47q4"
+  },
+  "@strapi/plugin-content-manager": {
+   "first": "2023-09-13",
+   "id": "GHSA-v8gg-4mq2-88q4"
+  },
+  "@strapi/admin": {
+   "first": "2023-09-13",
+   "id": "GHSA-v8gg-4mq2-88q4"
+  },
+  "froala-editor": {
+   "first": "2023-09-15",
+   "id": "GHSA-hvpq-7vcc-5hj5"
+  },
+  "@frangoteam/fuxa": {
+   "first": "2023-09-18",
+   "id": "GHSA-r87q-fq37-pvr6"
+  },
+  "blamer": {
+   "first": "2023-09-19",
+   "id": "GHSA-6f9p-g466-f8v8"
+  },
+  "jodit": {
+   "first": "2023-09-19",
+   "id": "GHSA-95xr-cq6h-vwr3"
+  },
+  "graphql": {
+   "first": "2023-09-20",
+   "id": "GHSA-9pv7-vfvm-6vr7"
+  },
+  "nocodb": {
+   "first": "2023-09-21",
+   "id": "GHSA-xrpm-hccg-28x7"
+  },
+  "systeminformation": {
+   "first": "2023-09-21",
+   "id": "GHSA-gx6r-qc2v-3p3v"
+  },
+  "fuxa-server": {
+   "first": "2023-09-22",
+   "id": "GHSA-v9q5-9crp-92f9"
+  },
+  "get-func-name": {
+   "first": "2023-09-27",
+   "id": "GHSA-4q6p-r6v2-jvc5"
+  },
+  "@napi-rs/image": {
+   "first": "2023-09-27",
+   "id": "GHSA-4vjr-crvh-383h"
+  },
+  "quill-mention": {
+   "first": "2023-09-28",
+   "id": "GHSA-jgw5-rp4p-qhp6"
+  },
+  "zod": {
+   "first": "2023-09-28",
+   "id": "GHSA-m95q-7qp3-xv42"
+  },
+  "postcss": {
+   "first": "2023-09-30",
+   "id": "GHSA-7fh5-64p2-3v2j"
+  },
+  "static-server": {
+   "first": "2023-10-03",
+   "id": "GHSA-v834-rhv4-65m3"
+  },
+  "express-zod-api": {
+   "first": "2023-10-04",
+   "id": "GHSA-mvrp-3cvx-c325"
+  },
+  "openmct": {
+   "first": "2023-10-06",
+   "id": "GHSA-4xcx-cwrq-w792"
+  },
+  "fsevents": {
+   "first": "2023-10-06",
+   "id": "GHSA-8r6j-v8pm-fqw3"
+  },
+  "uptime-kuma": {
+   "first": "2023-10-10",
+   "id": "GHSA-g9v2-wqcj-j99g"
+  },
+  "@graphql-mesh/runtime": {
+   "first": "2023-10-10",
+   "id": "GHSA-rr4x-crhf-8886"
+  },
+  "@vrite/sdk": {
+   "first": "2023-10-13",
+   "id": "GHSA-44ff-9w4f-99w6"
+  },
+  "node-qpdf": {
+   "first": "2023-10-14",
+   "id": "GHSA-fpr8-4wvx-j9q3"
+  },
+  "@babel/traverse": {
+   "first": "2023-10-16",
+   "id": "GHSA-67hx-6x53-jw92"
+  },
+  "babel-traverse": {
+   "first": "2023-10-16",
+   "id": "GHSA-67hx-6x53-jw92"
+  },
+  "@seal-security/mongoose-fixed": {
+   "first": "2023-10-17",
+   "id": "GHSA-rc4v-99cr-pjcm"
+  },
+  "deobfuscator": {
+   "first": "2023-10-18",
+   "id": "GHSA-jg82-xh3w-rhxx"
+  },
+  "react-devtools-core": {
+   "first": "2023-10-19",
+   "id": "GHSA-rxrc-rgv4-jpvx"
+  },
+  "tinymce": {
+   "first": "2023-10-19",
+   "id": "GHSA-v65r-p3vv-jjfv"
+  },
+  "@tauri-apps/cli": {
+   "first": "2023-10-20",
+   "id": "GHSA-2rcp-jvr4-r259"
+  },
+  "next": {
+   "first": "2023-10-22",
+   "id": "GHSA-c59h-r6p8-q9wc"
+  },
+  "node-email-check": {
+   "first": "2023-10-25",
+   "id": "GHSA-9242-6p36-6256"
+  },
+  "crypto-es": {
+   "first": "2023-10-25",
+   "id": "GHSA-mpj8-q39x-wq5h"
+  },
+  "browserify-sign": {
+   "first": "2023-10-26",
+   "id": "GHSA-x9w5-v3q2-3rhw"
+  },
+  "generator-jhipster": {
+   "first": "2023-10-31",
+   "id": "GHSA-4gpm-r23h-gprw"
+  },
+  "cordova-plugin-fingerprint-aio": {
+   "first": "2023-11-02",
+   "id": "GHSA-7vfx-hfvm-rhr8"
+  },
+  "@clickbar/dot-diver": {
+   "first": "2023-11-03",
+   "id": "GHSA-9w5f-mw3p-pj47"
+  },
+  "axios": {
+   "first": "2023-11-08",
+   "id": "GHSA-wf5p-g6vw-rhxx"
+  },
+  "chromedriver": {
+   "first": "2023-11-09",
+   "id": "GHSA-hm92-vgmw-qfmx"
+  },
+  "@sentry/nextjs": {
+   "first": "2023-11-09",
+   "id": "GHSA-2rmr-xw8m-22q9"
+  },
+  "bootbox": {
+   "first": "2023-11-14",
+   "id": "GHSA-m4ch-4m5f-2gp6"
+  },
+  "cesium": {
+   "first": "2023-11-14",
+   "id": "GHSA-4532-pmx7-9ww7"
+  },
+  "dompurify": {
+   "first": "2023-11-14",
+   "id": "GHSA-8hgg-xxm5-3873"
+  },
+  "ckeditor4": {
+   "first": "2023-11-16",
+   "id": "GHSA-hxjc-9j8v-v9pr"
+  },
+  "sharp": {
+   "first": "2023-11-16",
+   "id": "GHSA-54xq-cgqr-rpm3"
+  },
+  "json-web-token": {
+   "first": "2023-11-17",
+   "id": "GHSA-4xw9-cx39-r355"
+  },
+  "fast-jwt": {
+   "first": "2023-11-20",
+   "id": "GHSA-c2ff-88x2-x9pg"
+  },
+  "strapi-plugin-protected-populate": {
+   "first": "2023-11-20",
+   "id": "GHSA-6h67-934r-82g7"
+  },
+  "openssl": {
+   "first": "2023-11-23",
+   "id": "GHSA-75w2-qv55-x7fv"
+  },
+  "sequelize-typescript": {
+   "first": "2023-11-24",
+   "id": "GHSA-7pvx-4585-hqww"
+  },
+  "google-translate-api-browser": {
+   "first": "2023-11-27",
+   "id": "GHSA-4233-7q5q-m7p6"
+  },
+  "@google-cloud/firestore": {
+   "first": "2023-12-04",
+   "id": "GHSA-4g6q-77j7-vvjc"
+  },
+  "pubnub": {
+   "first": "2023-12-06",
+   "id": "GHSA-5844-q3fc-56rh"
+  },
+  "gladys": {
+   "first": "2023-12-07",
+   "id": "GHSA-c79f-pqgf-fhp3"
+  },
+  "mockjs": {
+   "first": "2023-12-08",
+   "id": "GHSA-mh8j-9jvh-gjf6"
+  },
+  "@evershop/evershop": {
+   "first": "2023-12-08",
+   "id": "GHSA-gjj8-m83c-qv9h"
+  },
+  "nuxt-api-party": {
+   "first": "2023-12-11",
+   "id": "GHSA-q6hx-3m4p-749h"
+  },
+  "@koa/cors": {
+   "first": "2023-12-11",
+   "id": "GHSA-qxrj-hx23-xp82"
+  },
+  "@sap/xssec": {
+   "first": "2023-12-12",
+   "id": "GHSA-p2vx-qj66-88q3"
+  },
+  "@cubejs-backend/api-gateway": {
+   "first": "2023-12-13",
+   "id": "GHSA-9759-3276-g2pm"
+  },
+  "hono": {
+   "first": "2023-12-15",
+   "id": "GHSA-f6gv-hh8j-q8vq"
+  },
+  "@spscommerce/ds-react": {
+   "first": "2023-12-15",
+   "id": "GHSA-cfxh-frx4-9gjg"
+  },
+  "@octokit/webhooks": {
+   "first": "2023-12-16",
+   "id": "GHSA-pwfr-8pq7-x9qv"
+  },
+  "@octokit/app": {
+   "first": "2023-12-16",
+   "id": "GHSA-pwfr-8pq7-x9qv"
+  },
+  "octokit": {
+   "first": "2023-12-16",
+   "id": "GHSA-pwfr-8pq7-x9qv"
+  },
+  "probot": {
+   "first": "2023-12-16",
+   "id": "GHSA-pwfr-8pq7-x9qv"
+  },
+  "@sentry/astro": {
+   "first": "2023-12-18",
+   "id": "GHSA-x3v3-8xg8-8v72"
+  },
+  "tts-api": {
+   "first": "2023-12-19",
+   "id": "GHSA-jx6q-fq9h-6g7q"
+  },
+  "bsock": {
+   "first": "2023-12-21",
+   "id": "GHSA-jj93-39pf-7mcf"
+  },
+  "blinksocks": {
+   "first": "2023-12-21",
+   "id": "GHSA-pqj5-37xf-x5gc"
+  },
+  "msgpackr": {
+   "first": "2023-12-28",
+   "id": "GHSA-7hpj-7hhx-2fgx"
+  },
+  "miniflare": {
+   "first": "2023-12-29",
+   "id": "GHSA-fwvg-2739-22v7"
+  },
+  "follow-redirects": {
+   "first": "2024-01-02",
+   "id": "GHSA-jchw-25xp-jwwc"
+  },
+  "plotly.js": {
+   "first": "2024-01-03",
+   "id": "GHSA-wjc4-73q6-gv3m"
+  },
+  "@perfood/couch-auth": {
+   "first": "2024-01-03",
+   "id": "GHSA-fqh6-6h6c-366m"
+  },
+  "@backstage/backend-app-api": {
+   "first": "2024-01-04",
+   "id": "GHSA-86rg-pf4c-5grg"
+  },
+  "@fastify/reply-from": {
+   "first": "2024-01-08",
+   "id": "GHSA-v2v2-hph8-q5xp"
+  },
+  "appwrite-cli": {
+   "first": "2024-01-09",
+   "id": "GHSA-g777-crp9-m27g"
+  },
+  "react-native-mmkv": {
+   "first": "2024-01-09",
+   "id": "GHSA-4jh3-6jhv-2mgp"
+  },
+  "@clerk/nextjs": {
+   "first": "2024-01-12",
+   "id": "GHSA-q6w5-jg5q-47vg"
+  },
+  "@fastify/swagger-ui": {
+   "first": "2024-01-16",
+   "id": "GHSA-62jr-84gf-wmg4"
+  },
+  "jsrsasign": {
+   "first": "2024-01-19",
+   "id": "GHSA-rh63-9qcf-83gf"
+  },
+  "@keep-network/tbtc-v2": {
+   "first": "2024-01-19",
+   "id": "GHSA-wg2x-rv86-mmpx"
+  },
+  "@hono/node-server": {
+   "first": "2024-01-23",
+   "id": "GHSA-rjq5-w47x-x359"
+  },
+  "hoolock": {
+   "first": "2024-01-23",
+   "id": "GHSA-4c2g-hx49-7h25"
+  },
+  "@sveltejs/adapter-node": {
+   "first": "2024-01-24",
+   "id": "GHSA-g5m6-hxpp-fc49"
+  },
+  "meshcentral": {
+   "first": "2024-01-29",
+   "id": "GHSA-wpxw-5xfm-x22v"
+  },
+  "@devicefarmer/stf": {
+   "first": "2024-01-29",
+   "id": "GHSA-7xm8-wjq7-88r5"
+  },
+  "network": {
+   "first": "2024-01-30",
+   "id": "GHSA-vvh2-82c7-ppfg"
+  },
+  "@tanstack/react-query-next-experimental": {
+   "first": "2024-01-30",
+   "id": "GHSA-997g-27x8-43rf"
+  },
+  "@urql/next": {
+   "first": "2024-01-30",
+   "id": "GHSA-qhjf-hm5j-335w"
+  },
+  "@apollo/experimental-nextjs-app-support": {
+   "first": "2024-01-30",
+   "id": "GHSA-rv8p-rr2h-fgpg"
+  },
+  "@lobehub/chat": {
+   "first": "2024-01-31",
+   "id": "GHSA-pf55-fj96-xf37"
+  },
+  "nodemailer": {
+   "first": "2024-01-31",
+   "id": "GHSA-9h6g-pr28-7cqp"
+  },
+  "dash-core-components": {
+   "first": "2024-02-02",
+   "id": "GHSA-547x-748v-vp6p"
+  },
+  "dash-html-components": {
+   "first": "2024-02-02",
+   "id": "GHSA-547x-748v-vp6p"
+  },
+  "zmarkdown": {
+   "first": "2024-02-03",
+   "id": "GHSA-mq6v-w35g-3c97"
+  },
+  "remark-images-download": {
+   "first": "2024-02-03",
+   "id": "GHSA-mf74-qq7w-6j7v"
+  },
+  "yarn": {
+   "first": "2024-02-04",
+   "id": "GHSA-mpwj-fcr6-x34c"
+  },
+  "stimulsoft-dashboards-js": {
+   "first": "2024-02-05",
+   "id": "GHSA-9cgf-pxwq-2cpw"
+  },
+  "ip": {
+   "first": "2024-02-08",
+   "id": "GHSA-78xj-cgh5-2h22"
+  },
+  "pkg": {
+   "first": "2024-02-09",
+   "id": "GHSA-22r3-9w55-cj54"
+  },
+  "@lambda-middleware/json-deserializer": {
+   "first": "2024-02-12",
+   "id": "GHSA-m3f4-957x-m785"
+  },
+  "mapshaper": {
+   "first": "2024-02-13",
+   "id": "GHSA-8m36-62rw-9mxw"
+  },
+  "react-native-document-picker": {
+   "first": "2024-02-16",
+   "id": "GHSA-pmgm-h3cc-m4hj"
+  },
+  "@scrypted/server": {
+   "first": "2024-02-16",
+   "id": "GHSA-w4hv-vmv9-hgcr"
+  },
+  "@scrypted/core": {
+   "first": "2024-02-16",
+   "id": "GHSA-w4hv-vmv9-hgcr"
+  },
+  "@serenity-is/corelib": {
+   "first": "2024-02-19",
+   "id": "GHSA-5jjq-8cvj-v6m9"
+  },
+  "electron-pdf": {
+   "first": "2024-02-20",
+   "id": "GHSA-3jcv-5f9p-2f2p"
+  },
+  "@dfinity/identity": {
+   "first": "2024-02-21",
+   "id": "GHSA-c9vv-fhgv-cjc3"
+  },
+  "@dfinity/auth-client": {
+   "first": "2024-02-21",
+   "id": "GHSA-c9vv-fhgv-cjc3"
+  },
+  "@backstage/backend-common": {
+   "first": "2024-02-23",
+   "id": "GHSA-2fc9-xpp8-2g9h"
+  },
+  "sanitize-html": {
+   "first": "2024-02-24",
+   "id": "GHSA-rm97-x556-q36h"
+  },
+  "es5-ext": {
+   "first": "2024-02-26",
+   "id": "GHSA-4gmj-3p3h-gm8h"
+  },
+  "@nfid/embed": {
+   "first": "2024-02-26",
+   "id": "GHSA-84c3-j8r2-mcm8"
+  },
+  "showdown": {
+   "first": "2024-02-26",
+   "id": "GHSA-rmmh-p597-ppvv"
+  },
+  "nteract": {
+   "first": "2024-03-01",
+   "id": "GHSA-6jvg-hp25-42f6"
+  },
+  "mongo-express": {
+   "first": "2024-03-01",
+   "id": "GHSA-fffg-cwc9-xvj7"
+  },
+  "@sentry/react-native": {
+   "first": "2024-03-01",
+   "id": "GHSA-68c2-4mpx-qh95"
+  },
+  "@budibase/server": {
+   "first": "2024-03-01",
+   "id": "GHSA-4g2x-vq5p-5vj6"
+  },
+  "hexo-theme-anzhiyu": {
+   "first": "2024-03-03",
+   "id": "GHSA-82jf-8f24-xq9m"
+  },
+  "app-builder-lib": {
+   "first": "2024-03-04",
+   "id": "GHSA-r4pf-3v7r-hh55"
+  },
+  "jsonata": {
+   "first": "2024-03-04",
+   "id": "GHSA-fqg8-vfv7-8fj8"
+  },
+  "@tomphttp/bare-server-node": {
+   "first": "2024-03-05",
+   "id": "GHSA-86fc-f9gr-v533"
+  },
+  "jose": {
+   "first": "2024-03-07",
+   "id": "GHSA-hhhv-q57g-882q"
+  },
+  "jose-node-cjs-runtime": {
+   "first": "2024-03-07",
+   "id": "GHSA-hhhv-q57g-882q"
+  },
+  "jose-node-esm-runtime": {
+   "first": "2024-03-07",
+   "id": "GHSA-hhhv-q57g-882q"
+  },
+  "stimulus_reflex": {
+   "first": "2024-03-12",
+   "id": "GHSA-f78j-4w3g-4q65"
+  },
+  "@turbo-boost/commands": {
+   "first": "2024-03-15",
+   "id": "GHSA-mp76-7w5v-pr75"
+  },
+  "survey-creator": {
+   "first": "2024-03-21",
+   "id": "GHSA-xgj4-2hrf-j4xg"
+  },
+  "webpack-dev-middleware": {
+   "first": "2024-03-21",
+   "id": "GHSA-wr3j-pwj9-hqq6"
+  },
+  "vvvebjs": {
+   "first": "2024-03-22",
+   "id": "GHSA-pc95-3wgm-x28p"
+  },
+  "vvvebJs": {
+   "first": "2024-03-22",
+   "id": "GHSA-pmm3-68q9-57jg"
+  },
+  "node-tar": {
+   "first": "2024-03-22",
+   "id": "GHSA-f5x3-32g6-xq36"
+  },
+  "tar": {
+   "first": "2024-03-22",
+   "id": "GHSA-f5x3-32g6-xq36"
+  },
+  "translate": {
+   "first": "2024-03-22",
+   "id": "GHSA-882j-4vj5-7vmj"
+  },
+  "web3-utils": {
+   "first": "2024-03-25",
+   "id": "GHSA-87qp-7cw8-8q9c"
+  },
+  "@thi.ng/paths": {
+   "first": "2024-03-25",
+   "id": "GHSA-8ppr-www8-hfjx"
+  },
+  "@oneuptime/model": {
+   "first": "2024-03-25",
+   "id": "GHSA-246p-xmg8-wmcq"
+  },
+  "@oneuptime/common-server": {
+   "first": "2024-03-25",
+   "id": "GHSA-246p-xmg8-wmcq"
+  },
+  "katex": {
+   "first": "2024-03-25",
+   "id": "GHSA-64fm-8hw2-v72w"
+  },
+  "express": {
+   "first": "2024-03-25",
+   "id": "GHSA-rv95-896h-c2vc"
+  },
+  "domain-suffix": {
+   "first": "2024-03-28",
+   "id": "GHSA-cqfh-c4c5-c2hg"
+  },
+  "@kindspells/astro-shield": {
+   "first": "2024-03-29",
+   "id": "GHSA-w387-5qqw-7g8m"
+  },
+  "@workos-inc/authkit-nextjs": {
+   "first": "2024-03-29",
+   "id": "GHSA-35w3-6qhc-474v"
+  },
+  "@electron/packager": {
+   "first": "2024-03-29",
+   "id": "GHSA-34h3-8mw4-qw57"
+  },
+  "dectalk-tts": {
+   "first": "2024-04-04",
+   "id": "GHSA-6cf6-8hvr-r68w"
+  },
+  "maildev": {
+   "first": "2024-04-05",
+   "id": "GHSA-vc6q-ccj9-9r89"
+  },
+  "psitransfer": {
+   "first": "2024-04-05",
+   "id": "GHSA-xg8v-m2mh-45m6"
+  },
+  "@kyivstarteam/react-native-sms-user-consent": {
+   "first": "2024-04-07",
+   "id": "GHSA-r956-2553-vvhr"
+  },
+  "mysql2": {
+   "first": "2024-04-10",
+   "id": "GHSA-49j4-86m8-q2jw"
+  },
+  "@fastify/secure-session": {
+   "first": "2024-04-10",
+   "id": "GHSA-9wwp-q7wq-jx35"
+  },
+  "@digitalbazaar/zcap": {
+   "first": "2024-04-10",
+   "id": "GHSA-hp8h-7x69-4wmv"
+  },
+  "summernote": {
+   "first": "2024-04-11",
+   "id": "GHSA-4wh3-3wf2-39m9"
+  },
+  "phin": {
+   "first": "2024-04-11",
+   "id": "GHSA-x565-32qp-m3vf"
+  },
+  "@aws-amplify/cli": {
+   "first": "2024-04-15",
+   "id": "GHSA-846g-p7hm-f54r"
+  },
+  "@solana/web3.js": {
+   "first": "2024-04-17",
+   "id": "GHSA-8m45-2rjm-j347"
+  },
+  "derby": {
+   "first": "2024-04-17",
+   "id": "GHSA-82jv-9wjw-pqh6"
+  },
+  "@andrei-tatar/nora-firebase-common": {
+   "first": "2024-04-18",
+   "id": "GHSA-jjff-q3q4-5hh8"
+  },
+  "@hoppscotch/cli": {
+   "first": "2024-04-22",
+   "id": "GHSA-qmmm-73r2-f8xr"
+  },
+  "renovate": {
+   "first": "2024-04-23",
+   "id": "GHSA-rqgv-292v-5qgr"
+  },
+  "@conform-to/dom": {
+   "first": "2024-04-23",
+   "id": "GHSA-624g-8qjg-8qxf"
+  },
+  "@conform-to/zod": {
+   "first": "2024-04-23",
+   "id": "GHSA-624g-8qjg-8qxf"
+  },
+  "@conform-to/yup": {
+   "first": "2024-04-23",
+   "id": "GHSA-624g-8qjg-8qxf"
+  },
+  "passbolt-browser-extension": {
+   "first": "2024-04-26",
+   "id": "GHSA-xfq4-78j7-v594"
+  },
+  "ejs": {
+   "first": "2024-04-28",
+   "id": "GHSA-ghr5-ch3p-vcr6"
+  },
+  "flowise": {
+   "first": "2024-04-29",
+   "id": "GHSA-6wp6-22x5-rr3w"
+  },
+  "xml-crypto": {
+   "first": "2024-05-01",
+   "id": "GHSA-2xp3-57p7-qf4v"
+  },
+  "s3-url-parser": {
+   "first": "2024-05-01",
+   "id": "GHSA-r4q9-xx5g-j24p"
+  },
+  "firebase-tools": {
+   "first": "2024-05-02",
+   "id": "GHSA-rcm2-22f3-pqv3"
+  },
+  "libxmljs": {
+   "first": "2024-05-02",
+   "id": "GHSA-6433-x5p4-8jc7"
+  },
+  "libxmljs2": {
+   "first": "2024-05-02",
+   "id": "GHSA-78h3-pg4x-j8cv"
+  },
+  "kurwov": {
+   "first": "2024-05-03",
+   "id": "GHSA-hfrv-h3q8-9jpr"
+  },
+  "pdfjs-dist": {
+   "first": "2024-05-07",
+   "id": "GHSA-wgrm-67xf-hhpq"
+  },
+  "react-pdf": {
+   "first": "2024-05-07",
+   "id": "GHSA-87hq-q4gp-9wr4"
+  },
+  "trix": {
+   "first": "2024-05-07",
+   "id": "GHSA-qjqp-xr96-cj99"
+  },
+  "@cyclonedx/cyclonedx-library": {
+   "first": "2024-05-08",
+   "id": "GHSA-38gf-rh2w-gmj7"
+  },
+  "thelounge": {
+   "first": "2024-05-09",
+   "id": "GHSA-g49q-jw42-6x85"
+  },
+  "@valtimo/components": {
+   "first": "2024-05-13",
+   "id": "GHSA-xcp4-62vj-cq3r"
+  },
+  "braces": {
+   "first": "2024-05-14",
+   "id": "GHSA-grv7-fg5c-xmjg"
+  },
+  "micromatch": {
+   "first": "2024-05-14",
+   "id": "GHSA-952p-6rrq-rcjv"
+  },
+  "kongadmin": {
+   "first": "2024-05-14",
+   "id": "GHSA-93pf-mrc8-4g3h"
+  },
+  "oceanic.js": {
+   "first": "2024-05-14",
+   "id": "GHSA-5h5v-hw44-f6gg"
+  },
+  "njwt": {
+   "first": "2024-05-16",
+   "id": "GHSA-3hvj-2783-34x2"
+  },
+  "@blackprint/engine": {
+   "first": "2024-05-20",
+   "id": "GHSA-g3q2-vcjq-rgrc"
+  },
+  "@bit/loader": {
+   "first": "2024-05-20",
+   "id": "GHSA-8vr4-h4rr-8ph6"
+  },
+  "@apidevtools/json-schema-ref-parser": {
+   "first": "2024-05-20",
+   "id": "GHSA-5f97-h2c2-826q"
+  },
+  "@fastify/session": {
+   "first": "2024-05-21",
+   "id": "GHSA-pj27-2xvp-4qxg"
+  },
+  "@tryghost/members-csv": {
+   "first": "2024-05-22",
+   "id": "GHSA-xgwh-cgv9-783v"
+  },
+  "pug": {
+   "first": "2024-05-24",
+   "id": "GHSA-3965-hpx2-q597"
+  },
+  "pug-code-gen": {
+   "first": "2024-05-24",
+   "id": "GHSA-3965-hpx2-q597"
+  },
+  "vxe-table": {
+   "first": "2024-05-24",
+   "id": "GHSA-2qjp-fg8c-g878"
+  },
+  "@wangeditor/editor": {
+   "first": "2024-05-31",
+   "id": "GHSA-9hfw-cvf4-5x25"
+  },
+  "js-deobfuscator": {
+   "first": "2024-06-04",
+   "id": "GHSA-9p6p-8v9r-8c9m"
+  },
+  "@janhq/core": {
+   "first": "2024-06-04",
+   "id": "GHSA-5jqc-qj57-4hrc"
+  },
+  "@jmondi/url-to-png": {
+   "first": "2024-06-05",
+   "id": "GHSA-665w-mwrr-77q3"
+  },
+  "lunary": {
+   "first": "2024-06-06",
+   "id": "GHSA-rpx8-fg6w-rm6x"
+  },
+  "zsa": {
+   "first": "2024-06-06",
+   "id": "GHSA-wjmj-h3xc-hxp8"
+  },
+  "ghtml": {
+   "first": "2024-06-10",
+   "id": "GHSA-vvhj-v88f-5gxr"
+  },
+  "@grpc/grpc-js": {
+   "first": "2024-06-10",
+   "id": "GHSA-7v5v-9h63-cj86"
+  },
+  "@azure/identity": {
+   "first": "2024-06-11",
+   "id": "GHSA-m5vv-6r4h-3vj9"
+  },
+  "@azure/msal-node": {
+   "first": "2024-06-11",
+   "id": "GHSA-m5vv-6r4h-3vj9"
+  },
+  "@strapi/plugin-upload": {
+   "first": "2024-06-12",
+   "id": "GHSA-pm9q-xj9p-96pm"
+  },
+  "mattermost-desktop": {
+   "first": "2024-06-14",
+   "id": "GHSA-xgqm-wp7w-mgg2"
+  },
+  "@cdr0/sg": {
+   "first": "2024-06-17",
+   "id": "GHSA-fg52-5jjj-28h7"
+  },
+  "@alexbinary/object-deep-assign": {
+   "first": "2024-06-17",
+   "id": "GHSA-4xg3-7w7q-856q"
+  },
+  "@abw/badger-database": {
+   "first": "2024-06-17",
+   "id": "GHSA-69r2-2fg7-7hf9"
+  },
+  "@allanlancioni/flatten-json": {
+   "first": "2024-06-17",
+   "id": "GHSA-j8px-pjmp-325f"
+  },
+  "@almela/obx": {
+   "first": "2024-06-17",
+   "id": "GHSA-jj58-488v-4rgf"
+  },
+  "@apphp/object-resolver": {
+   "first": "2024-06-17",
+   "id": "GHSA-qj86-v6m7-4qv2"
+  },
+  "@akbr/update": {
+   "first": "2024-06-17",
+   "id": "GHSA-mj4p-gmhr-92g3"
+  },
+  "ws": {
+   "first": "2024-06-17",
+   "id": "GHSA-3h5v-q93c-6h6q"
+  },
+  "socket.io": {
+   "first": "2024-06-19",
+   "id": "GHSA-25hc-qcg6-38wj"
+  },
+  "@zenuml/core": {
+   "first": "2024-06-26",
+   "id": "GHSA-q6xv-jm4v-349h"
+  },
+  "@fastly/js-compute": {
+   "first": "2024-06-26",
+   "id": "GHSA-mp3g-vpm9-9vqv"
+  },
+  "@aofl/cli-lib": {
+   "first": "2024-07-01",
+   "id": "GHSA-vg6v-jcg3-5mp7"
+  },
+  "@akbr/patch-into": {
+   "first": "2024-07-01",
+   "id": "GHSA-gh4x-qv3p-m9pm"
+  },
+  "@airvertco/frappejs": {
+   "first": "2024-07-01",
+   "id": "GHSA-gc7m-596h-x57r"
+  },
+  "jsonic": {
+   "first": "2024-07-01",
+   "id": "GHSA-4wm9-3qmv-gvxj"
+  },
+  "@amoy/common": {
+   "first": "2024-07-01",
+   "id": "GHSA-w58v-r3cp-qr93"
+  },
+  "ag-grid-enterprise": {
+   "first": "2024-07-01",
+   "id": "GHSA-876p-c77m-x2hc"
+  },
+  "ag-grid-community": {
+   "first": "2024-07-01",
+   "id": "GHSA-876p-c77m-x2hc"
+  },
+  "@adolph_dudu/ratio-swiper": {
+   "first": "2024-07-01",
+   "id": "GHSA-88vr-hjqx-57qh"
+  },
+  "requirejs": {
+   "first": "2024-07-01",
+   "id": "GHSA-x3m3-4wpv-5vgc"
+  },
+  "@ag-grid-enterprise/charts": {
+   "first": "2024-07-01",
+   "id": "GHSA-328p-362g-r48j"
+  },
+  "fast-loops": {
+   "first": "2024-07-01",
+   "id": "GHSA-3q56-9cc2-46j4"
+  },
+  "@cat5th/key-serializer": {
+   "first": "2024-07-01",
+   "id": "GHSA-whpx-g542-7c7v"
+  },
+  "@mongodb-js/connection-form": {
+   "first": "2024-07-01",
+   "id": "GHSA-jxr4-4prv-mh83"
+  },
+  "hfs": {
+   "first": "2024-07-05",
+   "id": "GHSA-5f4x-hwv2-w9w2"
+  },
+  "@fedify/fedify": {
+   "first": "2024-07-05",
+   "id": "GHSA-p9cg-vqcc-grcx"
+  },
+  "@directus/api": {
+   "first": "2024-07-08",
+   "id": "GHSA-8p72-rcq4-h6pw"
+  },
+  "@directus/env": {
+   "first": "2024-07-08",
+   "id": "GHSA-7hmh-pfrp-vcx4"
+  },
+  "electron-updater": {
+   "first": "2024-07-09",
+   "id": "GHSA-9jxc-qjr9-vjxq"
+  },
+  "audify": {
+   "first": "2024-07-10",
+   "id": "GHSA-7vhm-fmph-7wxw"
+  },
+  "@discordjs/opus": {
+   "first": "2024-07-10",
+   "id": "GHSA-43wq-xrcm-3vgr"
+  },
+  "images": {
+   "first": "2024-07-10",
+   "id": "GHSA-vjpv-x8p9-7p85"
+  },
+  "node-stringbuilder": {
+   "first": "2024-07-10",
+   "id": "GHSA-g533-xq5w-jmf3"
+  },
+  "speaker": {
+   "first": "2024-07-10",
+   "id": "GHSA-w5fc-gj3h-26rx"
+  },
+  "node-twain": {
+   "first": "2024-07-10",
+   "id": "GHSA-wxr3-2hgv-qm8f"
+  },
+  "bootstrap": {
+   "first": "2024-07-11",
+   "id": "GHSA-9mvj-f7w8-pvh2"
+  },
+  "bootstrap-sass": {
+   "first": "2024-07-11",
+   "id": "GHSA-9mvj-f7w8-pvh2"
+  },
+  "@udecode/plate-media": {
+   "first": "2024-07-15",
+   "id": "GHSA-h3pq-667x-r789"
+  },
+  "@zowe/cli": {
+   "first": "2024-07-17",
+   "id": "GHSA-ghgq-x6wc-6jr5"
+  },
+  "tf2-item-format": {
+   "first": "2024-07-23",
+   "id": "GHSA-8h55-q5qq-p685"
+  },
+  "vue-template-compiler": {
+   "first": "2024-07-23",
+   "id": "GHSA-g3ch-rx76-35fx"
+  },
+  "@fuel-ts/account": {
+   "first": "2024-07-30",
+   "id": "GHSA-3jcg-vx7f-j6qf"
+  },
+  "@75lb/deep-merge": {
+   "first": "2024-07-30",
+   "id": "GHSA-28mc-g557-92m7"
+  },
+  "bostr": {
+   "first": "2024-08-02",
+   "id": "GHSA-5cf7-cxrf-mq73"
+  },
+  "elliptic": {
+   "first": "2024-08-02",
+   "id": "GHSA-f7q4-pwc6-w24p"
+  },
+  "rocket.chat": {
+   "first": "2024-08-05",
+   "id": "GHSA-ffxg-5f8m-h72j"
+  },
+  "@nuxt/devtools": {
+   "first": "2024-08-05",
+   "id": "GHSA-rcvg-rgf7-pppv"
+  },
+  "@nuxt/icon": {
+   "first": "2024-08-05",
+   "id": "GHSA-cxgv-px37-4mp2"
+  },
+  "@editorjs/editorjs": {
+   "first": "2024-08-05",
+   "id": "GHSA-6mvj-2569-3mcm"
+  },
+  "nextchat": {
+   "first": "2024-08-05",
+   "id": "GHSA-qf3q-9f3h-cjp9"
+  },
+  "@bunt/app": {
+   "first": "2024-08-12",
+   "id": "GHSA-p734-xg27-8cfq"
+  },
+  "webcrack": {
+   "first": "2024-08-14",
+   "id": "GHSA-ccqh-278p-xq6w"
+  },
+  "gettext.js": {
+   "first": "2024-08-15",
+   "id": "GHSA-vwhg-jwr4-vxgg"
+  },
+  "@tryghost/portal": {
+   "first": "2024-08-20",
+   "id": "GHSA-78x2-cwp9-5j42"
+  },
+  "squirrelly": {
+   "first": "2024-08-21",
+   "id": "GHSA-w5pw-gmcw-rfc8"
+  },
+  "unzip-stream": {
+   "first": "2024-08-26",
+   "id": "GHSA-6jrj-vc65-c983"
+  },
+  "@apollo/query-planner": {
+   "first": "2024-08-27",
+   "id": "GHSA-fmj9-77q8-g6c4"
+  },
+  "@apollo/gateway": {
+   "first": "2024-08-27",
+   "id": "GHSA-fmj9-77q8-g6c4"
+  },
+  "aws-cdk": {
+   "first": "2024-08-27",
+   "id": "GHSA-qj85-69xf-2vxq"
+  },
+  "svelte": {
+   "first": "2024-08-30",
+   "id": "GHSA-8266-84wp-wv5c"
+  },
+  "urlregex": {
+   "first": "2024-09-02",
+   "id": "GHSA-rw72-v6c7-hf9r"
+  },
+  "pagefind": {
+   "first": "2024-09-03",
+   "id": "GHSA-gprj-6m2f-j9hx"
+  },
+  "@pagefind/default-ui": {
+   "first": "2024-09-03",
+   "id": "GHSA-gprj-6m2f-j9hx"
+  },
+  "@pagefind/modular-ui": {
+   "first": "2024-09-03",
+   "id": "GHSA-gprj-6m2f-j9hx"
+  },
+  "@blakeembrey/template": {
+   "first": "2024-09-03",
+   "id": "GHSA-q765-wm9j-66qj"
+  },
+  "@actions/artifact": {
+   "first": "2024-09-03",
+   "id": "GHSA-6q32-hq47-5qq3"
+  },
+  "path-to-regexp": {
+   "first": "2024-09-09",
+   "id": "GHSA-9wv6-86v2-598j"
+  },
+  "node-gettext": {
+   "first": "2024-09-10",
+   "id": "GHSA-g974-hxvm-x689"
+  },
+  "body-parser": {
+   "first": "2024-09-10",
+   "id": "GHSA-qwcr-r2fm-qrc7"
+  },
+  "serve-static": {
+   "first": "2024-09-10",
+   "id": "GHSA-cm22-4g7w-348p"
+  },
+  "send": {
+   "first": "2024-09-10",
+   "id": "GHSA-m6fv-jmcg-4jfg"
+  },
+  "dset": {
+   "first": "2024-09-11",
+   "id": "GHSA-f6v4-cf5j-vf3w"
+  },
+  "whatsapp-api-js": {
+   "first": "2024-09-12",
+   "id": "GHSA-mwhf-vhr5-7j23"
+  },
+  "@lunary/backend": {
+   "first": "2024-09-13",
+   "id": "GHSA-v6x6-4v4x-2fx9"
+  },
+  "@backstage/plugin-techdocs-backend": {
+   "first": "2024-09-17",
+   "id": "GHSA-39v3-f278-vj3g"
+  },
+  "find-my-way": {
+   "first": "2024-09-18",
+   "id": "GHSA-rrr8-f88r-h8q6"
+  },
+  "@rspack/core": {
+   "first": "2024-09-19",
+   "id": "GHSA-84jw-g43v-8gjm"
+  },
+  "@udecode/plate-core": {
+   "first": "2024-09-20",
+   "id": "GHSA-73rg-f94j-xvhx"
+  },
+  "rollup": {
+   "first": "2024-09-23",
+   "id": "GHSA-gcx4-mw62-g8wm"
+  },
+  "@rocket.chat/message-parser": {
+   "first": "2024-09-25",
+   "id": "GHSA-6375-pg5j-8wph"
+  },
+  "flowise-embed": {
+   "first": "2024-09-25",
+   "id": "GHSA-m5p9-xvxj-64c8"
+  },
+  "@ckeditor/ckeditor5-clipboard": {
+   "first": "2024-09-25",
+   "id": "GHSA-rgg8-g5x8-wr9v"
+  },
+  "sqlite-vec": {
+   "first": "2024-09-25",
+   "id": "GHSA-vrcx-gx3g-j3h8"
+  },
+  "@ifnotnowwhen/promptr": {
+   "first": "2024-09-25",
+   "id": "GHSA-hwxp-6qf7-q3rc"
+  },
+  "agnai": {
+   "first": "2024-09-26",
+   "id": "GHSA-mpch-89gm-hm83"
+  },
+  "relaxedjs": {
+   "first": "2024-09-27",
+   "id": "GHSA-gj3p-j74v-3x57"
+  },
+  "basic-auth-connect": {
+   "first": "2024-09-30",
+   "id": "GHSA-7p89-p6hx-q4fw"
+  },
+  "uplot": {
+   "first": "2024-10-01",
+   "id": "GHSA-34q8-jcq6-mc37"
+  },
+  "git-shallow-clone": {
+   "first": "2024-10-01",
+   "id": "GHSA-qwrq-vxvw-537r"
+  },
+  "@openc3/tool-common": {
+   "first": "2024-10-02",
+   "id": "GHSA-vfj8-5pj7-2f9g"
+  },
+  "slim-select": {
+   "first": "2024-10-02",
+   "id": "GHSA-qvqv-mcxr-x8qw"
+  },
+  "@backstage/plugin-app-backend": {
+   "first": "2024-10-03",
+   "id": "GHSA-qc4v-xq2m-65wc"
+  },
+  "@sentry/browser": {
+   "first": "2024-10-03",
+   "id": "GHSA-593m-55hh-j8gv"
+  },
+  "@saltcorn/server": {
+   "first": "2024-10-03",
+   "id": "GHSA-277h-px4m-62q8"
+  },
+  "@saltcorn/plugins-loader": {
+   "first": "2024-10-03",
+   "id": "GHSA-fm76-w8jw-xf8m"
+  },
+  "cookie": {
+   "first": "2024-10-04",
+   "id": "GHSA-pxg6-pf52-xh8x"
+  },
+  "@sap/hana-client": {
+   "first": "2024-10-08",
+   "id": "GHSA-6339-gv7w-g5f4"
+  },
+  "ggit": {
+   "first": "2024-10-08",
+   "id": "GHSA-62cx-5xj4-wfm4"
+  },
+  "jsonpath-plus": {
+   "first": "2024-10-11",
+   "id": "GHSA-pppg-cpfq-h7wr"
+  },
+  "angular-base64-upload": {
+   "first": "2024-10-11",
+   "id": "GHSA-vgxq-6rcf-qwrw"
+  },
+  "astro": {
+   "first": "2024-10-14",
+   "id": "GHSA-m85w-3h95-hcf9"
+  },
+  "markdown-to-jsx": {
+   "first": "2024-10-15",
+   "id": "GHSA-4wx3-54gh-9fr9"
+  },
+  "@vendure/asset-server-plugin": {
+   "first": "2024-10-15",
+   "id": "GHSA-r9mq-3c9r-fmjq"
+  },
+  "vue": {
+   "first": "2024-10-15",
+   "id": "GHSA-5j4c-8p2g-v4jx"
+  },
+  "http-proxy-middleware": {
+   "first": "2024-10-19",
+   "id": "GHSA-c7qv-q95q-8v27"
+  },
+  "secp256k1": {
+   "first": "2024-10-21",
+   "id": "GHSA-584q-6j8j-r5pm"
+  },
+  "@umbraco-cms/backoffice": {
+   "first": "2024-10-22",
+   "id": "GHSA-c5g6-6xf7-qxp3"
+  },
+  "mermaid": {
+   "first": "2024-10-22",
+   "id": "GHSA-m4gq-x24j-jpmf"
+  },
+  "snyk-php-plugin": {
+   "first": "2024-10-23",
+   "id": "GHSA-69f9-h8f9-7vjf"
+  },
+  "snyk-gradle-plugin": {
+   "first": "2024-10-23",
+   "id": "GHSA-qqqw-gm93-qf6m"
+  },
+  "insane": {
+   "first": "2024-10-26",
+   "id": "GHSA-w455-mfq9-hf74"
+  },
+  "validate.js": {
+   "first": "2024-10-26",
+   "id": "GHSA-rv73-9c8w-jp4c"
+  },
+  "commonregex": {
+   "first": "2024-10-26",
+   "id": "GHSA-pmvv-57rg-5g86"
+  },
+  "foundation-sites": {
+   "first": "2024-10-26",
+   "id": "GHSA-p8pc-3f7w-jr5q"
+  },
+  "knwl.js": {
+   "first": "2024-10-26",
+   "id": "GHSA-68qg-g787-3rp5"
+  },
+  "nope-validator": {
+   "first": "2024-10-26",
+   "id": "GHSA-3phv-83cj-p8p7"
+  },
+  "useragent": {
+   "first": "2024-10-26",
+   "id": "GHSA-mgfv-m47x-4wqp"
+  },
+  "@cyclonedx/cdxgen": {
+   "first": "2024-10-28",
+   "id": "GHSA-hxf3-vgpm-fv9p"
+  },
+  "@langchain/community": {
+   "first": "2024-10-29",
+   "id": "GHSA-6m59-8fmv-m5f9"
+  },
+  "langchain": {
+   "first": "2024-10-29",
+   "id": "GHSA-hc5w-c9f8-9cc4"
+  },
+  "lilconfig": {
+   "first": "2024-10-31",
+   "id": "GHSA-fq9m-v26v-2m4f"
+  },
+  "glossarizer": {
+   "first": "2024-10-31",
+   "id": "GHSA-hhhv-ggjx-q9j2"
+  },
+  "@oakserver/oak": {
+   "first": "2024-11-01",
+   "id": "GHSA-qm92-93fv-vh7m"
+  },
+  "@workos-inc/authkit-remix": {
+   "first": "2024-11-05",
+   "id": "GHSA-v2qh-f584-6hj8"
+  },
+  "happy-dom": {
+   "first": "2024-11-06",
+   "id": "GHSA-96g7-g7g9-jxw8"
+  },
+  "cross-spawn": {
+   "first": "2024-11-08",
+   "id": "GHSA-3xgq-45jj-v275"
+  },
+  "dom-iterator": {
+   "first": "2024-11-13",
+   "id": "GHSA-jrvm-mcxc-mf6m"
+  },
+  "@eslint/plugin-kit": {
+   "first": "2024-11-15",
+   "id": "GHSA-7q7g-4xm8-89cq"
+  },
+  "firebase": {
+   "first": "2024-11-18",
+   "id": "GHSA-3wf4-68gx-mph8"
+  },
+  "smol-toml": {
+   "first": "2024-11-22",
+   "id": "GHSA-pqhp-25j4-6hq9"
+  },
+  "@dapperduckling/keycloak-connector-server": {
+   "first": "2024-11-26",
+   "id": "GHSA-w5rq-g9r6-vrcg"
+  },
+  "@intlify/core-base": {
+   "first": "2024-12-02",
+   "id": "GHSA-9r9m-ffp6-9x4v"
+  },
+  "vue-i18n": {
+   "first": "2024-12-02",
+   "id": "GHSA-9r9m-ffp6-9x4v"
+  },
+  "@intlify/core": {
+   "first": "2024-12-02",
+   "id": "GHSA-9r9m-ffp6-9x4v"
+  },
+  "@intlify/vue-i18n-core": {
+   "first": "2024-12-02",
+   "id": "GHSA-9r9m-ffp6-9x4v"
+  },
+  "petite-vue-i18n": {
+   "first": "2024-12-02",
+   "id": "GHSA-9r9m-ffp6-9x4v"
+  },
+  "@intlify/shared": {
+   "first": "2024-12-02",
+   "id": "GHSA-hjwq-mjwj-4x6c"
+  },
+  "hull.js": {
+   "first": "2024-12-02",
+   "id": "GHSA-q849-wxrc-vqrp"
+  },
+  "@backstage/plugin-scaffolder-node": {
+   "first": "2024-12-02",
+   "id": "GHSA-qmc2-jpr5-7rg9"
+  },
+  "firepad": {
+   "first": "2024-12-04",
+   "id": "GHSA-4fh7-m2wx-6wfm"
+  },
+  "@directus/app": {
+   "first": "2024-12-05",
+   "id": "GHSA-r6wx-627v-gh2f"
+  },
+  "nanoid": {
+   "first": "2024-12-09",
+   "id": "GHSA-mwcw-c2x4-8c55"
+  },
+  "cookie-encrypter": {
+   "first": "2024-12-09",
+   "id": "GHSA-h63v-hw6g-x8hp"
+  },
+  "angular-expressions": {
+   "first": "2024-12-10",
+   "id": "GHSA-5462-4vcx-jh7j"
+  },
+  "whistle": {
+   "first": "2024-12-10",
+   "id": "GHSA-gg6x-448q-pqqm"
+  },
+  "bun": {
+   "first": "2024-12-18",
+   "id": "GHSA-v9mx-4pqq-h232"
+  },
+  "jsii": {
+   "first": "2024-12-18",
+   "id": "GHSA-m56h-5xx3-2jc2"
+  },
+  "@marp-team/marp-core": {
+   "first": "2024-12-26",
+   "id": "GHSA-x52f-h5g4-8qv5"
+  },
+  "better-auth": {
+   "first": "2024-12-30",
+   "id": "GHSA-8jhw-6pjj-8723"
+  },
+  "path-sanitizer": {
+   "first": "2025-01-02",
+   "id": "GHSA-94p5-r7cc-3rpr"
+  },
+  "@lodestar/reqresp": {
+   "first": "2025-01-14",
+   "id": "GHSA-53rv-hcvm-rpp9"
+  },
+  "parse-uri": {
+   "first": "2025-01-16",
+   "id": "GHSA-6fx8-h7jm-663j"
+  },
+  "parseuri": {
+   "first": "2025-01-16",
+   "id": "GHSA-6fx8-h7jm-663j"
+  },
+  "tabby-ssh": {
+   "first": "2025-01-17",
+   "id": "GHSA-8vq4-8hfp-29xh"
+  },
+  "mathlive": {
+   "first": "2025-01-21",
+   "id": "GHSA-qwj6-q94f-8425"
+  },
+  "store2": {
+   "first": "2025-01-24",
+   "id": "GHSA-w5hq-hm5m-4548"
+  },
+  "@nuxt/vite-builder": {
+   "first": "2025-01-27",
+   "id": "GHSA-2452-6xj8-jh47"
+  },
+  "@nuxt/webpack-builder": {
+   "first": "2025-01-27",
+   "id": "GHSA-4gf7-ff8x-hq99"
+  },
+  "@nuxt/rspack-builder": {
+   "first": "2025-01-27",
+   "id": "GHSA-4gf7-ff8x-hq99"
+  },
+  "@sentry/node": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/aws-serverless": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/bun": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/google-cloud-serverless": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/nestjs": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/nuxt": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/remix": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/solidstart": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "@sentry/sveltekit": {
+   "first": "2025-01-28",
+   "id": "GHSA-r5w7-f542-q2j4"
+  },
+  "files.photo.gallery": {
+   "first": "2025-01-30",
+   "id": "GHSA-5wjw-qjhm-v43h"
+  },
+  "zx": {
+   "first": "2025-02-03",
+   "id": "GHSA-qwp8-x4ff-5h87"
+  },
+  "@vitest/browser": {
+   "first": "2025-02-04",
+   "id": "GHSA-8gvc-j273-4wm5"
+  },
+  "vitest": {
+   "first": "2025-02-04",
+   "id": "GHSA-9crc-q9x8-hgqq"
+  },
+  "module-from-string": {
+   "first": "2025-02-06",
+   "id": "GHSA-q5j8-9m9g-x2jh"
+  },
+  "@tanstack/form-core": {
+   "first": "2025-02-06",
+   "id": "GHSA-ggv3-vmgw-xv2q"
+  },
+  "@ndhoule/defaults": {
+   "first": "2025-02-06",
+   "id": "GHSA-79h2-v6hh-wq23"
+  },
+  "@stryker-mutator/util": {
+   "first": "2025-02-06",
+   "id": "GHSA-9j5q-479x-43g2"
+  },
+  "utils-extend": {
+   "first": "2025-02-06",
+   "id": "GHSA-7qgg-vw88-cc99"
+  },
+  "eazy-logger": {
+   "first": "2025-02-06",
+   "id": "GHSA-r7jx-5m6m-cpg9"
+  },
+  "node-opcua-alarm-condition": {
+   "first": "2025-02-06",
+   "id": "GHSA-gvwq-6fmx-28xm"
+  },
+  "@zag-js/core": {
+   "first": "2025-02-06",
+   "id": "GHSA-fg4m-w35q-vfg2"
+  },
+  "@rpldy/uploader": {
+   "first": "2025-02-06",
+   "id": "GHSA-pc47-g7gv-4gpw"
+  },
+  "@nuxtjs/mdc": {
+   "first": "2025-02-06",
+   "id": "GHSA-j82m-pc2v-2484"
+  },
+  "esbuild": {
+   "first": "2025-02-10",
+   "id": "GHSA-67mh-4wv8-2f99"
+  },
+  "@coinbase/wallet-sdk": {
+   "first": "2025-02-10",
+   "id": "GHSA-8rgj-285w-qcq4"
+  },
+  "serialize-javascript": {
+   "first": "2025-02-10",
+   "id": "GHSA-76p7-773f-r4q5"
+  },
+  "@sap/approuter": {
+   "first": "2025-02-11",
+   "id": "GHSA-cpfx-964w-4jvp"
+  },
+  "koa": {
+   "first": "2025-02-12",
+   "id": "GHSA-593f-38f6-jp5m"
+  },
+  "parse-duration": {
+   "first": "2025-02-12",
+   "id": "GHSA-hcrg-fc28-fcg5"
+  },
+  "vega-selections": {
+   "first": "2025-02-14",
+   "id": "GHSA-mp7w-mhcv-673j"
+  },
+  "@octokit/endpoint": {
+   "first": "2025-02-14",
+   "id": "GHSA-x4c5-c7rf-jjgv"
+  },
+  "@octokit/plugin-paginate-rest": {
+   "first": "2025-02-14",
+   "id": "GHSA-h5c3-5r3r-rr8q"
+  },
+  "@octokit/request-error": {
+   "first": "2025-02-14",
+   "id": "GHSA-xx4v-prfh-6cgc"
+  },
+  "@octokit/request": {
+   "first": "2025-02-14",
+   "id": "GHSA-rmvr-2pp2-xj38"
+  },
+  "docsgpt": {
+   "first": "2025-02-20",
+   "id": "GHSA-9gff-5v8w-x922"
+  },
+  "@ckeditor/ckeditor5-real-time-collaboration": {
+   "first": "2025-02-20",
+   "id": "GHSA-j3mm-wmfm-mwvh"
+  },
+  "ckeditor5-premium-features": {
+   "first": "2025-02-20",
+   "id": "GHSA-j3mm-wmfm-mwvh"
+  },
+  "solid-js": {
+   "first": "2025-02-25",
+   "id": "GHSA-3qxh-p7jc-5xh6"
+  },
+  "dom-expressions": {
+   "first": "2025-02-25",
+   "id": "GHSA-hw62-58pr-7wc5"
+  },
+  "mongosh": {
+   "first": "2025-02-27",
+   "id": "GHSA-r95j-4jvf-mrrw"
+  },
+  "prismjs": {
+   "first": "2025-03-03",
+   "id": "GHSA-x7hr-w5r2-h6wg"
+  },
+  "stage-js": {
+   "first": "2025-03-03",
+   "id": "GHSA-fp3m-g5rc-4c28"
+  },
+  "mavo": {
+   "first": "2025-03-03",
+   "id": "GHSA-3mf5-r4hg-hfx9"
+  },
+  "tsup": {
+   "first": "2025-03-03",
+   "id": "GHSA-3mv9-4h5g-vhg3"
+  },
+  "seajs": {
+   "first": "2025-03-03",
+   "id": "GHSA-pfr4-4397-3hg8"
+  },
+  "manifest": {
+   "first": "2025-03-03",
+   "id": "GHSA-h8h6-7752-g28c"
+  },
+  "@intlify/message-resolver": {
+   "first": "2025-03-07",
+   "id": "GHSA-p2ph-7g93-hw3m"
+  },
+  "canvg": {
+   "first": "2025-03-10",
+   "id": "GHSA-v2mw-5mch-w8c5"
+  },
+  "@mockoon/commons-server": {
+   "first": "2025-03-11",
+   "id": "GHSA-w7f9-wqc4-3wxr"
+  },
+  "@mockoon/cli": {
+   "first": "2025-03-11",
+   "id": "GHSA-w7f9-wqc4-3wxr"
+  },
+  "@babel/helpers": {
+   "first": "2025-03-11",
+   "id": "GHSA-968p-4wvh-cqc8"
+  },
+  "@babel/runtime": {
+   "first": "2025-03-11",
+   "id": "GHSA-968p-4wvh-cqc8"
+  },
+  "@babel/runtime-corejs2": {
+   "first": "2025-03-11",
+   "id": "GHSA-968p-4wvh-cqc8"
+  },
+  "@babel/runtime-corejs3": {
+   "first": "2025-03-11",
+   "id": "GHSA-968p-4wvh-cqc8"
+  },
+  "parse-git-config": {
+   "first": "2025-03-12",
+   "id": "GHSA-8g77-54rh-46hx"
+  },
+  "azle": {
+   "first": "2025-03-14",
+   "id": "GHSA-xc76-5pf9-mx8m"
+  },
+  "@nestjs/common": {
+   "first": "2025-03-14",
+   "id": "GHSA-cj7v-w2c7-cp7c"
+  },
+  "@jitbit/htmlsanitizer": {
+   "first": "2025-03-14",
+   "id": "GHSA-vhv4-fh94-jm5x"
+  },
+  "jspdf": {
+   "first": "2025-03-18",
+   "id": "GHSA-w532-jxjh-hjhj"
+  },
+  "open-webui": {
+   "first": "2025-03-20",
+   "id": "GHSA-g3mx-83mp-3rwc"
+  },
+  "cdk": {
+   "first": "2025-03-21",
+   "id": "GHSA-v63m-x9r9-8gqp"
+  },
+  "nossrf": {
+   "first": "2025-03-23",
+   "id": "GHSA-vm77-mr48-27wj"
+  },
+  "ContentTools": {
+   "first": "2025-03-24",
+   "id": "GHSA-4f2v-2gpq-qhjg"
+  },
+  "@mozilla/readability": {
+   "first": "2025-03-26",
+   "id": "GHSA-3p6v-hrg8-8qj7"
+  },
+  "@directus/storage-driver-s3": {
+   "first": "2025-03-26",
+   "id": "GHSA-j8xj-7jff-46mx"
+  },
+  "@directus/types": {
+   "first": "2025-03-26",
+   "id": "GHSA-56p6-qw3c-fq2g"
+  },
+  "tar-fs": {
+   "first": "2025-03-27",
+   "id": "GHSA-pq67-2wwv-3xjx"
+  },
+  "@alizeait/unflatto": {
+   "first": "2025-03-28",
+   "id": "GHSA-799q-f2px-wx8c"
+  },
+  "depath": {
+   "first": "2025-03-28",
+   "id": "GHSA-4h4x-4m75-47j4"
+  },
+  "cool-path": {
+   "first": "2025-03-28",
+   "id": "GHSA-4h4x-4m75-47j4"
+  },
+  "redoc": {
+   "first": "2025-03-28",
+   "id": "GHSA-9rhg-254w-fh9x"
+  },
+  "gifplayer": {
+   "first": "2025-03-31",
+   "id": "GHSA-gr7w-hmch-25g7"
+  },
+  "@react-router/express": {
+   "first": "2025-04-01",
+   "id": "GHSA-4q56-crqp-v477"
+  },
+  "@remix-run/express": {
+   "first": "2025-04-01",
+   "id": "GHSA-4q56-crqp-v477"
+  },
+  "image-size": {
+   "first": "2025-04-02",
+   "id": "GHSA-m5qc-5hw7-8vg7"
+  },
+  "@tauri-apps/plugin-shell": {
+   "first": "2025-04-02",
+   "id": "GHSA-c9pr-q8gx-3mgp"
+  },
+  "react-draft-wysiwyg": {
+   "first": "2025-04-04",
+   "id": "GHSA-fq5x-7292-2p5r"
+  },
+  "bigint-buffer": {
+   "first": "2025-04-04",
+   "id": "GHSA-3gc7-fjrx-p6mg"
+  },
+  "expand-object": {
+   "first": "2025-04-04",
+   "id": "GHSA-4vjr-hfpp-2m7w"
+  },
+  "generator-jhipster-entity-audit": {
+   "first": "2025-04-04",
+   "id": "GHSA-7rmp-3g9f-cvq8"
+  },
+  "js-object-utilities": {
+   "first": "2025-04-07",
+   "id": "GHSA-hpqf-m68j-2pfx"
+  },
+  "estree-util-value-to-estree": {
+   "first": "2025-04-07",
+   "id": "GHSA-f7f6-9jq7-3rqj"
+  },
+  "@apeleghq/asn1-der": {
+   "first": "2025-04-07",
+   "id": "GHSA-p4qw-7j9g-5h53"
+  },
+  "flowise-components": {
+   "first": "2025-04-09",
+   "id": "GHSA-gjx9-wg9x-7gvp"
+  },
+  "crud-query-parser": {
+   "first": "2025-04-09",
+   "id": "GHSA-9r25-rp3p-h2w4"
+  },
+  "jquery-validation": {
+   "first": "2025-04-15",
+   "id": "GHSA-rrj2-ph5q-jxw2"
+  },
+  "@backstage/plugin-permission-backend": {
+   "first": "2025-04-16",
+   "id": "GHSA-f8j4-p5cr-p777"
+  },
+  "fastify": {
+   "first": "2025-04-18",
+   "id": "GHSA-mg2h-6x62-wpwc"
+  },
+  "@quasar/quasar-ui-qmarkdown": {
+   "first": "2025-04-20",
+   "id": "GHSA-wm65-ph3w-587c"
+  },
+  "xrpl": {
+   "first": "2025-04-22",
+   "id": "GHSA-33qr-m49q-rxfx"
+  },
+  "@posthog/plugin-server": {
+   "first": "2025-04-23",
+   "id": "GHSA-v64v-fq96-c5wv"
+  },
+  "@trpc/server": {
+   "first": "2025-04-24",
+   "id": "GHSA-pj3v-9cm8-gvj8"
+  },
+  "react-router": {
+   "first": "2025-04-24",
+   "id": "GHSA-f46r-rw29-r322"
+  },
+  "@escape.tech/graphql-armor-cost-limit": {
+   "first": "2025-04-25",
+   "id": "GHSA-733v-p3h5-qpq7"
+  },
+  "formidable": {
+   "first": "2025-04-26",
+   "id": "GHSA-75v8-2h7p-7m2m"
+  },
+  "@account-kit/smart-contracts": {
+   "first": "2025-04-29",
+   "id": "GHSA-wfm2-rq5g-f8v5"
+  },
+  "@auth0/nextjs-auth0": {
+   "first": "2025-04-29",
+   "id": "GHSA-pjr6-jx7r-j4r6"
+  },
+  "base-x": {
+   "first": "2025-04-30",
+   "id": "GHSA-xq7p-g2vc-g82p"
+  },
+  "@cloudflare/workers-oauth-provider": {
+   "first": "2025-05-01",
+   "id": "GHSA-7cp4-jw97-3rc2"
+  },
+  "flags": {
+   "first": "2025-05-02",
+   "id": "GHSA-892p-pqrr-hxqr"
+  },
+  "@vercel/flags": {
+   "first": "2025-05-02",
+   "id": "GHSA-892p-pqrr-hxqr"
+  },
+  "@misskey-dev/summaly": {
+   "first": "2025-05-05",
+   "id": "GHSA-7899-w6c4-vqc4"
+  },
+  "@lumieducation/h5p-server": {
+   "first": "2025-05-11",
+   "id": "GHSA-m7gm-v253-56hh"
+  },
+  "bootstrap-multiselect": {
+   "first": "2025-05-13",
+   "id": "GHSA-gv5r-9gxr-v74w"
+  },
+  "meteor": {
+   "first": "2025-05-16",
+   "id": "GHSA-j3v9-6gc7-vf5f"
+  },
+  "lockfile-lint-api": {
+   "first": "2025-05-16",
+   "id": "GHSA-7cfr-5cjf-32p4"
+  },
+  "cocotais-bot": {
+   "first": "2025-05-19",
+   "id": "GHSA-mj2c-8hxf-ffvq"
+  },
+  "multer": {
+   "first": "2025-05-19",
+   "id": "GHSA-44fp-w29j-9vj5"
+  },
+  "samlify": {
+   "first": "2025-05-19",
+   "id": "GHSA-r683-v43c-6xqv"
+  },
+  "marked": {
+   "first": "2025-05-23",
+   "id": "GHSA-p9wx-2529-fp83"
+  },
+  "radashi": {
+   "first": "2025-05-27",
+   "id": "GHSA-2xv9-ghh9-xc69"
+  },
+  "@supabase/auth-js": {
+   "first": "2025-05-27",
+   "id": "GHSA-8r88-6cj9-9fh5"
+  },
+  "mcp-markdownify-server": {
+   "first": "2025-05-29",
+   "id": "GHSA-frq9-3hp2-xvxg"
+  },
+  "billboard.js": {
+   "first": "2025-06-04",
+   "id": "GHSA-65p9-j6pg-72hj"
+  },
+  "angular-sanitize": {
+   "first": "2025-06-04",
+   "id": "GHSA-4p4w-6hg8-63wx"
+  },
+  "webpack-dev-server": {
+   "first": "2025-06-04",
+   "id": "GHSA-4v9v-hfq4-rm2v"
+  },
+  "@haxtheweb/open-apis": {
+   "first": "2025-06-05",
+   "id": "GHSA-fvx2-x7ff-fc56"
+  },
+  "react-native-keys": {
+   "first": "2025-06-09",
+   "id": "GHSA-fj44-h6xw-896g"
+  },
+  "@haxtheweb/haxcms-nodejs": {
+   "first": "2025-06-09",
+   "id": "GHSA-v3ph-2q5q-cg88"
+  },
+  "brace-expansion": {
+   "first": "2025-06-09",
+   "id": "GHSA-v6h2-p8h4-qcjw"
+  },
+  "pm2": {
+   "first": "2025-06-09",
+   "id": "GHSA-x5gf-qvw8-r2rm"
+  },
+  "taro-css-to-react-native": {
+   "first": "2025-06-09",
+   "id": "GHSA-f5xg-cfpj-2mw6"
+  },
+  "@vue/cli-plugin-pwa": {
+   "first": "2025-06-09",
+   "id": "GHSA-79vf-hf9f-j9q8"
+  },
+  "@nx/azure-cache": {
+   "first": "2025-06-10",
+   "id": "GHSA-rrr2-jcr8-7q3x"
+  },
+  "pg-promise": {
+   "first": "2025-06-12",
+   "id": "GHSA-ff9h-848c-4xfj"
+  },
+  "@modelcontextprotocol/inspector": {
+   "first": "2025-06-13",
+   "id": "GHSA-7f8r-222p-6f5g"
+  },
+  "@opennextjs/cloudflare": {
+   "first": "2025-06-16",
+   "id": "GHSA-rvpw-p7vw-wj3m"
+  },
+  "microlight": {
+   "first": "2025-06-17",
+   "id": "GHSA-wgc6-9f6w-h8hx"
+  },
+  "@openlist-frontend/openlist-frontend": {
+   "first": "2025-06-18",
+   "id": "GHSA-2hw3-h8qx-hqqp"
+  },
+  "taylored": {
+   "first": "2025-06-18",
+   "id": "GHSA-8g98-m4j9-qww5"
+  },
+  "@anthropic-ai/claude-code": {
+   "first": "2025-06-23",
+   "id": "GHSA-9f65-56v6-gxw7"
+  },
+  "pbkdf2": {
+   "first": "2025-06-23",
+   "id": "GHSA-h7cp-r72f-jxh6"
+  },
+  "ios-simulator-mcp": {
+   "first": "2025-06-26",
+   "id": "GHSA-6f6r-m9pv-67jw"
+  },
+  "tiny-secp256k1": {
+   "first": "2025-06-30",
+   "id": "GHSA-7mc2-6phr-23xc"
+  },
+  "string-math": {
+   "first": "2025-06-30",
+   "id": "GHSA-994j-5c83-r424"
+  },
+  "@cyanheads/git-mcp-server": {
+   "first": "2025-06-30",
+   "id": "GHSA-3q26-f695-pp76"
+  },
+  "@modelcontextprotocol/server-filesystem": {
+   "first": "2025-07-01",
+   "id": "GHSA-q66q-fx2p-7w4m"
+  },
+  "node-code-sandbox-mcp": {
+   "first": "2025-07-08",
+   "id": "GHSA-5w57-2ccq-8w95"
+  },
+  "@cloudflare/vite-plugin": {
+   "first": "2025-07-08",
+   "id": "GHSA-4pfg-2mw5-f8jx"
+  },
+  "mcp-server-kubernetes": {
+   "first": "2025-07-08",
+   "id": "GHSA-gjv4-ghm7-q58q"
+  },
+  "mcp-remote": {
+   "first": "2025-07-09",
+   "id": "GHSA-6xpm-ggf7-wc3p"
+  },
+  "@clerk/backend": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/astro": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/express": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/fastify": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/nuxt": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/react-router": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/remix": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "@clerk/tanstack-react-start": {
+   "first": "2025-07-09",
+   "id": "GHSA-9mp4-77wg-rwx9"
+  },
+  "docusaurus-plugin-content-gists": {
+   "first": "2025-07-09",
+   "id": "GHSA-qf34-qpr4-5pph"
+  },
+  "@pdfme/common": {
+   "first": "2025-07-10",
+   "id": "GHSA-54xv-94qv-2gfg"
+  },
+  "better-call": {
+   "first": "2025-07-11",
+   "id": "GHSA-hq75-xg7r-rx6c"
+  },
+  "@sunwood-ai-labs/github-kanban-mcp-server": {
+   "first": "2025-07-15",
+   "id": "GHSA-6jx8-rcjx-vmwf"
+  },
+  "@dirac-grid/diracx-web-components": {
+   "first": "2025-07-17",
+   "id": "GHSA-hfj7-542q-8fvv"
+  },
+  "on-headers": {
+   "first": "2025-07-17",
+   "id": "GHSA-76c9-3jph-rj3q"
+  },
+  "eslint-config-prettier": {
+   "first": "2025-07-19",
+   "id": "GHSA-f29h-pxvx-f335"
+  },
+  "eslint-plugin-prettier": {
+   "first": "2025-07-19",
+   "id": "GHSA-f29h-pxvx-f335"
+  },
+  "synckit": {
+   "first": "2025-07-19",
+   "id": "GHSA-f29h-pxvx-f335"
+  },
+  "@pkgr/core": {
+   "first": "2025-07-19",
+   "id": "GHSA-f29h-pxvx-f335"
+  },
+  "napi-postinstall": {
+   "first": "2025-07-19",
+   "id": "GHSA-f29h-pxvx-f335"
+  },
+  "got-fetch": {
+   "first": "2025-07-19",
+   "id": "GHSA-f29h-pxvx-f335"
+  },
+  "@translated/lara-mcp": {
+   "first": "2025-07-21",
+   "id": "GHSA-xj5p-8h7g-76m7"
+  },
+  "form-data": {
+   "first": "2025-07-21",
+   "id": "GHSA-fjxv-7rqg-78g4"
+  },
+  "files-bucket-server": {
+   "first": "2025-07-23",
+   "id": "GHSA-3r3j-4vrw-884j"
+  },
+  "private-ip": {
+   "first": "2025-07-23",
+   "id": "GHSA-9h3q-32c7-r533"
+  },
+  "node-saml": {
+   "first": "2025-07-25",
+   "id": "GHSA-m837-g268-mmv7"
+  },
+  "linkifyjs": {
+   "first": "2025-07-26",
+   "id": "GHSA-95jq-xph2-cx9h"
+  },
+  "ssrfcheck": {
+   "first": "2025-07-28",
+   "id": "GHSA-c2fv-2fmj-9xrx"
+  },
+  "webfinger.js": {
+   "first": "2025-07-28",
+   "id": "GHSA-8xq3-w9fx-74rv"
+  },
+  "passport-saml": {
+   "first": "2025-07-28",
+   "id": "GHSA-4mxg-3p6v-xgq3"
+  },
+  "@node-saml/passport-saml": {
+   "first": "2025-07-28",
+   "id": "GHSA-4mxg-3p6v-xgq3"
+  },
+  "@finos/git-proxy": {
+   "first": "2025-07-30",
+   "id": "GHSA-qr93-8wwf-22g4"
+  },
+  "@nyariv/sandboxjs": {
+   "first": "2025-07-31",
+   "id": "GHSA-9qm3-6qrr-c76m"
+  },
+  "@nestjs/devtools-integration": {
+   "first": "2025-08-01",
+   "id": "GHSA-85cg-cmq5-qjm7"
+  },
+  "ipx": {
+   "first": "2025-08-04",
+   "id": "GHSA-mm3p-j368-7jcr"
+  },
+  "js-toml": {
+   "first": "2025-08-04",
+   "id": "GHSA-65fc-cr5f-v7r2"
+  },
+  "mcp-package-docs": {
+   "first": "2025-08-05",
+   "id": "GHSA-vf9j-h32g-2764"
+  },
+  "tmp": {
+   "first": "2025-08-06",
+   "id": "GHSA-52f5-9888-hmc6"
+  },
+  "thinbus-srp": {
+   "first": "2025-08-06",
+   "id": "GHSA-8q6v-474h-whgg"
+  },
+  "@workos-inc/authkit-react-router": {
+   "first": "2025-08-08",
+   "id": "GHSA-vqvc-9q8x-vmq6"
+  },
+  "content-security-policy-parser": {
+   "first": "2025-08-12",
+   "id": "GHSA-w2cq-g8g3-gm83"
+  },
+  "@astrojs/node": {
+   "first": "2025-08-15",
+   "id": "GHSA-9x9c-ghc5-jhw9"
+  },
+  "express-gateway": {
+   "first": "2025-08-18",
+   "id": "GHSA-q4rg-7cjj-5r86"
+  },
+  "screenshot-desktop": {
+   "first": "2025-08-19",
+   "id": "GHSA-gjx4-2c7g-fm94"
+  },
+  "@elysiajs/cors": {
+   "first": "2025-08-20",
+   "id": "GHSA-f9qj-4c5x-cpcw"
+  },
+  "x402": {
+   "first": "2025-08-20",
+   "id": "GHSA-3j63-5h8p-gf7c"
+  },
+  "x402-next": {
+   "first": "2025-08-20",
+   "id": "GHSA-3j63-5h8p-gf7c"
+  },
+  "x402-express": {
+   "first": "2025-08-20",
+   "id": "GHSA-3j63-5h8p-gf7c"
+  },
+  "x402-hono": {
+   "first": "2025-08-20",
+   "id": "GHSA-3j63-5h8p-gf7c"
+  },
+  "@wong2/mcp-cli": {
+   "first": "2025-08-21",
+   "id": "GHSA-p6rm-483j-37jf"
+  },
+  "cipher-base": {
+   "first": "2025-08-21",
+   "id": "GHSA-cpq7-6gpm-g9rc"
+  },
+  "sha.js": {
+   "first": "2025-08-21",
+   "id": "GHSA-95m3-7q98-8xr5"
+  },
+  "vite-plugin-static-copy": {
+   "first": "2025-08-21",
+   "id": "GHSA-pp7p-q8fx-2968"
+  },
+  "@musistudio/claude-code-router": {
+   "first": "2025-08-21",
+   "id": "GHSA-8hmm-4crw-vm2c"
+  },
+  "liferay-ckeditor": {
+   "first": "2025-08-22",
+   "id": "GHSA-3h7r-4xxj-3mfm"
+  },
+  "request-filtering-agent": {
+   "first": "2025-08-25",
+   "id": "GHSA-pw25-c82r-75mm"
+  },
+  "@escape.tech/graphql-armor-max-depth": {
+   "first": "2025-08-26",
+   "id": "GHSA-hmfr-rx46-4jx2"
+  },
+  "devalue": {
+   "first": "2025-08-26",
+   "id": "GHSA-vj54-72f3-p5jv"
+  },
+  "@plone/volto": {
+   "first": "2025-08-28",
+   "id": "GHSA-xjhf-7833-3pm5"
+  },
+  "@payloadcms/next": {
+   "first": "2025-08-29",
+   "id": "GHSA-26rv-h2hf-3fw4"
+  },
+  "@payloadcms/graphql": {
+   "first": "2025-08-29",
+   "id": "GHSA-26rv-h2hf-3fw4"
+  },
+  "@aiondadotcom/mcp-ssh": {
+   "first": "2025-08-29",
+   "id": "GHSA-694p-3fxc-m92h"
+  },
+  "@astrojs/cloudflare": {
+   "first": "2025-09-04",
+   "id": "GHSA-qpr4-c339-7vq8"
+  },
+  "simstudio": {
+   "first": "2025-09-08",
+   "id": "GHSA-g4c9-f287-64xg"
+  },
+  "@n8n/n8n-nodes-langchain": {
+   "first": "2025-09-08",
+   "id": "GHSA-v2x8-97xq-8xrr"
+  },
+  "codeceptjs": {
+   "first": "2025-09-08",
+   "id": "GHSA-34w8-mcwr-vg29"
+  },
+  "@akoskm/create-mcp-server-stdio": {
+   "first": "2025-09-08",
+   "id": "GHSA-3ch2-jxxc-v4xf"
+  },
+  "duckdb": {
+   "first": "2025-09-09",
+   "id": "GHSA-w62p-hx95-gf2c"
+  },
+  "@duckdb/node-api": {
+   "first": "2025-09-09",
+   "id": "GHSA-w62p-hx95-gf2c"
+  },
+  "@duckdb/node-bindings": {
+   "first": "2025-09-09",
+   "id": "GHSA-w62p-hx95-gf2c"
+  },
+  "@duckdb/duckdb-wasm": {
+   "first": "2025-09-09",
+   "id": "GHSA-w62p-hx95-gf2c"
+  },
+  "element-plus": {
+   "first": "2025-09-09",
+   "id": "GHSA-5m5x-9j46-h678"
+  },
+  "cattown": {
+   "first": "2025-09-09",
+   "id": "GHSA-455v-w7r9-3vv9"
+  },
+  "@webrecorder/wabac": {
+   "first": "2025-09-10",
+   "id": "GHSA-w765-jm6w-4hhj"
+  },
+  "replaywebpage": {
+   "first": "2025-09-10",
+   "id": "GHSA-w765-jm6w-4hhj"
+  },
+  "@webrecorder/archivewebpage": {
+   "first": "2025-09-10",
+   "id": "GHSA-w765-jm6w-4hhj"
+  },
+  "decap-cms": {
+   "first": "2025-09-10",
+   "id": "GHSA-xp8g-32qh-mv28"
+  },
+  "interactive-git-checkout": {
+   "first": "2025-09-10",
+   "id": "GHSA-4wcm-7hjf-6xw5"
+  },
+  "@angular/platform-server": {
+   "first": "2025-09-10",
+   "id": "GHSA-68x2-mx4q-78m7"
+  },
+  "@angular/ssr": {
+   "first": "2025-09-10",
+   "id": "GHSA-68x2-mx4q-78m7"
+  },
+  "jsondiffpatch": {
+   "first": "2025-09-11",
+   "id": "GHSA-33vc-wfww-vjfv"
+  },
+  "prebid.js": {
+   "first": "2025-09-11",
+   "id": "GHSA-jwq7-6j4r-2f92"
+  },
+  "prebid-universal-creative": {
+   "first": "2025-09-11",
+   "id": "GHSA-m662-56rj-8fmm"
+  },
+  "express-xss-sanitizer": {
+   "first": "2025-09-15",
+   "id": "GHSA-qhwp-454g-2gv4"
+  },
+  "@metamask/sdk": {
+   "first": "2025-09-15",
+   "id": "GHSA-qj3p-xc97-xw74"
+  },
+  "@metamask/sdk-react": {
+   "first": "2025-09-15",
+   "id": "GHSA-qj3p-xc97-xw74"
+  },
+  "@metamask/sdk-communication-layer": {
+   "first": "2025-09-15",
+   "id": "GHSA-qj3p-xc97-xw74"
+  },
+  "hackmd-mcp": {
+   "first": "2025-09-15",
+   "id": "GHSA-g5cg-6c7v-mmpw"
+  },
+  "backslash": {
+   "first": "2025-09-15",
+   "id": "GHSA-53mq-f4w3-f7qv"
+  },
+  "simple-swizzle": {
+   "first": "2025-09-15",
+   "id": "GHSA-9g9j-rggx-7fmg"
+  },
+  "color-string": {
+   "first": "2025-09-15",
+   "id": "GHSA-286p-vc9p-p5qv"
+  },
+  "color": {
+   "first": "2025-09-15",
+   "id": "GHSA-qrmh-qg46-72pp"
+  },
+  "color-name": {
+   "first": "2025-09-15",
+   "id": "GHSA-5fvm-p68v-5wmh"
+  },
+  "color-convert": {
+   "first": "2025-09-15",
+   "id": "GHSA-pxx3-g568-hxr4"
+  },
+  "error-ex": {
+   "first": "2025-09-15",
+   "id": "GHSA-6jp5-hh4c-8c5h"
+  },
+  "is-arrayish": {
+   "first": "2025-09-15",
+   "id": "GHSA-frh7-2f84-v9mw"
+  },
+  "@executeautomation/database-server": {
+   "first": "2025-09-16",
+   "id": "GHSA-65hm-pwj5-73pw"
+  },
+  "@parcel/reporter-dev-server": {
+   "first": "2025-09-17",
+   "id": "GHSA-qm9p-f9j5-w83w"
+  },
+  "@sequa-ai/sequa-mcp": {
+   "first": "2025-09-17",
+   "id": "GHSA-9pw5-wx67-q964"
+  },
+  "@digitalocean/do-markdownit": {
+   "first": "2025-09-19",
+   "id": "GHSA-2h8j-8r9p-849f"
+  },
+  "@openai/codex": {
+   "first": "2025-09-19",
+   "id": "GHSA-w5fx-fh39-j5rw"
+  },
+  "@conventional-changelog/git-client": {
+   "first": "2025-09-22",
+   "id": "GHSA-vh25-5764-9wcr"
+  },
+  "git-commiters": {
+   "first": "2025-09-22",
+   "id": "GHSA-g38c-wxjf-xrh6"
+  },
+  "mailgen": {
+   "first": "2025-09-22",
+   "id": "GHSA-j2xj-h7w5-r7vp"
+  },
+  "@meshconnect/web-link-sdk": {
+   "first": "2025-09-22",
+   "id": "GHSA-vh3f-qppr-j97f"
+  },
+  "min-document": {
+   "first": "2025-09-24",
+   "id": "GHSA-rx8g-88g5-qh64"
+  },
+  "csvtojson": {
+   "first": "2025-09-24",
+   "id": "GHSA-vrw9-g62v-7fmf"
+  },
+  "@messageformat/runtime": {
+   "first": "2025-09-24",
+   "id": "GHSA-6xv4-9cqp-92rh"
+  },
+  "counterpart": {
+   "first": "2025-09-24",
+   "id": "GHSA-2488-w585-72ch"
+  },
+  "adb-mcp": {
+   "first": "2025-09-24",
+   "id": "GHSA-54j7-grvr-9xwg"
+  },
+  "@mastra/mcp-docs-server": {
+   "first": "2025-09-24",
+   "id": "GHSA-xh92-rqrq-227v"
+  },
+  "ts-fns": {
+   "first": "2025-09-24",
+   "id": "GHSA-g7wq-wggw-vmhg"
+  },
+  "web3-core-subscriptions": {
+   "first": "2025-09-24",
+   "id": "GHSA-hhf6-3xpg-pggx"
+  },
+  "node-cube": {
+   "first": "2025-09-24",
+   "id": "GHSA-8v65-5fw5-23wj"
+  },
+  "toggle-array": {
+   "first": "2025-09-24",
+   "id": "GHSA-34q3-8x9v-j957"
+  },
+  "json-schema-editor-visual": {
+   "first": "2025-09-24",
+   "id": "GHSA-3c3p-xh4f-pfh7"
+  },
+  "web3-core-method": {
+   "first": "2025-09-24",
+   "id": "GHSA-2j4c-9qqq-896r"
+  },
+  "messageformat": {
+   "first": "2025-09-24",
+   "id": "GHSA-xfqm-j7pc-xrfc"
+  },
+  "rollbar": {
+   "first": "2025-09-24",
+   "id": "GHSA-m929-rg27-gj99"
+  },
+  "fast-redact": {
+   "first": "2025-09-24",
+   "id": "GHSA-ffrw-9mx8-89p8"
+  },
+  "mpregular": {
+   "first": "2025-09-24",
+   "id": "GHSA-xx4g-r65p-3qf2"
+  },
+  "csvjson": {
+   "first": "2025-09-24",
+   "id": "GHSA-xq4f-3jxp-qv6m"
+  },
+  "spmrc": {
+   "first": "2025-09-24",
+   "id": "GHSA-r2rv-8pp3-65xw"
+  },
+  "magix-combine-ex": {
+   "first": "2025-09-24",
+   "id": "GHSA-cr7h-93fh-whwm"
+  },
+  "sassdoc-extras": {
+   "first": "2025-09-24",
+   "id": "GHSA-3mpm-jx38-9m8w"
+  },
+  "parse": {
+   "first": "2025-09-24",
+   "id": "GHSA-9g8m-v378-pcg3"
+  },
+  "nx": {
+   "first": "2025-09-25",
+   "id": "GHSA-8mjq-32x3-22qf"
+  },
+  "dref": {
+   "first": "2025-09-25",
+   "id": "GHSA-76g8-235f-gj6p"
+  },
+  "apidoc-core": {
+   "first": "2025-09-25",
+   "id": "GHSA-5q53-78f2-6gf8"
+  },
+  "cors-anywhere": {
+   "first": "2025-09-25",
+   "id": "GHSA-r3jv-xfgx-gj24"
+  },
+  "get-jwks": {
+   "first": "2025-09-26",
+   "id": "GHSA-qc2q-qhf3-235m"
+  },
+  "@apollo/sandbox": {
+   "first": "2025-09-26",
+   "id": "GHSA-w87v-7w53-wwxv"
+  },
+  "@apollo/explorer": {
+   "first": "2025-09-26",
+   "id": "GHSA-w87v-7w53-wwxv"
+  },
+  "algoliasearch-helper": {
+   "first": "2025-09-27",
+   "id": "GHSA-529q-4j3p-7c5r"
+  },
+  "check-branches": {
+   "first": "2025-09-30",
+   "id": "GHSA-9c4g-fp4r-prrv"
+  },
+  "figma-developer-mcp": {
+   "first": "2025-09-30",
+   "id": "GHSA-gxw4-4fc5-9gr5"
+  },
+  "financejs": {
+   "first": "2025-09-30",
+   "id": "GHSA-5q7q-p8pc-782h"
+  },
+  "validator": {
+   "first": "2025-09-30",
+   "id": "GHSA-9965-vmph-33xx"
+  },
+  "fiora": {
+   "first": "2025-10-01",
+   "id": "GHSA-hg3j-6pmh-mvjr"
+  },
+  "@samanhappy/mcphub": {
+   "first": "2025-10-05",
+   "id": "GHSA-5q2p-3jg8-2m98"
+  },
+  "sillytavern": {
+   "first": "2025-10-06",
+   "id": "GHSA-7cxj-w27x-x78q"
+  },
+  "pdfmake": {
+   "first": "2025-10-07",
+   "id": "GHSA-rj3r-r7hh-jxfq"
+  },
+  "Flowise": {
+   "first": "2025-10-09",
+   "id": "GHSA-jv9m-vf54-chjj"
+  },
+  "n8n-nodes-base": {
+   "first": "2025-10-09",
+   "id": "GHSA-365g-vjw2-grx8"
+  },
+  "cross-zip": {
+   "first": "2025-10-10",
+   "id": "GHSA-gj5f-73vh-wpf7"
+  },
+  "qwc2": {
+   "first": "2025-10-13",
+   "id": "GHSA-gxp8-m5rq-3m38"
+  },
+  "commandkit": {
+   "first": "2025-10-13",
+   "id": "GHSA-fhwm-pc6r-4h2f"
+  },
+  "playwright": {
+   "first": "2025-10-14",
+   "id": "GHSA-7mvr-c777-76hp"
+  },
+  "sveltekit-superforms": {
+   "first": "2025-10-15",
+   "id": "GHSA-hwmc-4c8j-xxj7"
+  },
+  "@strapi/core": {
+   "first": "2025-10-16",
+   "id": "GHSA-495j-h493-42q2"
+  },
+  "mammoth": {
+   "first": "2025-10-17",
+   "id": "GHSA-rmjr-87wv-gf87"
+  },
+  "@actual-app/sync-server": {
+   "first": "2025-10-20",
+   "id": "GHSA-xvp7-8vm8-xfxx"
+  },
+  "@kottster/server": {
+   "first": "2025-10-23",
+   "id": "GHSA-j3w7-9qc3-g96p"
+  },
+  "typeorm": {
+   "first": "2025-10-29",
+   "id": "GHSA-q2pj-6v73-8rgj"
+  },
+  "@react-native-community/cli": {
+   "first": "2025-11-03",
+   "id": "GHSA-399j-vxmf-hjvr"
+  },
+  "@react-native-community/cli-server-api": {
+   "first": "2025-11-03",
+   "id": "GHSA-399j-vxmf-hjvr"
+  },
+  "expr-eval": {
+   "first": "2025-11-05",
+   "id": "GHSA-jc85-fpwf-qm7x"
+  },
+  "expr-eval-fork": {
+   "first": "2025-11-05",
+   "id": "GHSA-jc85-fpwf-qm7x"
+  },
+  "ai": {
+   "first": "2025-11-07",
+   "id": "GHSA-rwvc-j5jr-mgvh"
+  },
+  "cloudinary": {
+   "first": "2025-11-10",
+   "id": "GHSA-g4mf-96x5-5m2c"
+  },
+  "aws-advanced-nodejs-wrapper": {
+   "first": "2025-11-13",
+   "id": "GHSA-8wj8-cfxr-9374"
+  },
+  "vega-expression": {
+   "first": "2025-11-13",
+   "id": "GHSA-7f2v-3qq3-vvjf"
+  },
+  "vega-interpreter": {
+   "first": "2025-11-13",
+   "id": "GHSA-7f2v-3qq3-vvjf"
+  },
+  "js-yaml": {
+   "first": "2025-11-14",
+   "id": "GHSA-mh29-5h37-fv8m"
+  },
+  "@apollo/composition": {
+   "first": "2025-11-14",
+   "id": "GHSA-mx7m-j9xf-62hw"
+  },
+  "flowise-ui": {
+   "first": "2025-11-14",
+   "id": "GHSA-x39m-3393-3qp4"
+  },
+  "glob": {
+   "first": "2025-11-17",
+   "id": "GHSA-5j98-mcp5-4vw2"
+  },
+  "@dependencytrack/frontend": {
+   "first": "2025-11-17",
+   "id": "GHSA-7xvh-c266-cfr5"
+  },
+  "@hpke/core": {
+   "first": "2025-11-20",
+   "id": "GHSA-73g8-5h73-26h4"
+  },
+  "md-to-pdf": {
+   "first": "2025-11-20",
+   "id": "GHSA-547r-qmjm-8hvw"
+  },
+  "@clerk/clerk-js": {
+   "first": "2025-11-20",
+   "id": "GHSA-3mm3-wfpv-q85g"
+  },
+  "@sentry/node-core": {
+   "first": "2025-11-24",
+   "id": "GHSA-6465-jgvq-jhgp"
+  },
+  "@better-auth/passkey": {
+   "first": "2025-11-25",
+   "id": "GHSA-4vcf-q4xf-f48m"
+  },
+  "@oneuptime/common": {
+   "first": "2025-11-25",
+   "id": "GHSA-675q-66gf-gqg8"
+  },
+  "valibot": {
+   "first": "2025-11-26",
+   "id": "GHSA-vqpr-j7v3-hqw9"
+  },
+  "node-forge": {
+   "first": "2025-11-26",
+   "id": "GHSA-5gfm-wpxj-wjgq"
+  },
+  "willitmerge": {
+   "first": "2025-11-26",
+   "id": "GHSA-j9wj-m24m-7jj6"
+  },
+  "@angular/common": {
+   "first": "2025-11-26",
+   "id": "GHSA-58c5-g7wp-6w37"
+  },
+  "tryton-sao": {
+   "first": "2025-11-30",
+   "id": "GHSA-6qj9-2g9m-29x9"
+  },
+  "mcp-watch": {
+   "first": "2025-12-02",
+   "id": "GHSA-27m7-ffhq-jqrm"
+  },
+  "@portkey-ai/gateway": {
+   "first": "2025-12-02",
+   "id": "GHSA-hhh5-2cvx-vmfp"
+  },
+  "@angular/compiler": {
+   "first": "2025-12-02",
+   "id": "GHSA-v4hv-rgfq-gp49"
+  },
+  "mdast-util-to-hast": {
+   "first": "2025-12-02",
+   "id": "GHSA-4fh9-h7wg-q85m"
+  },
+  "@modelcontextprotocol/sdk": {
+   "first": "2025-12-02",
+   "id": "GHSA-w48q-cv73-mx4w"
+  },
+  "@nocobase/auth": {
+   "first": "2025-12-02",
+   "id": "GHSA-644f-hrff-mf96"
+  },
+  "react-server-dom-webpack": {
+   "first": "2025-12-03",
+   "id": "GHSA-fv66-9v8q-g76r"
+  },
+  "react-server-dom-turbopack": {
+   "first": "2025-12-03",
+   "id": "GHSA-fv66-9v8q-g76r"
+  },
+  "react-server-dom-parcel": {
+   "first": "2025-12-03",
+   "id": "GHSA-fv66-9v8q-g76r"
+  },
+  "@vitejs/plugin-rsc": {
+   "first": "2025-12-03",
+   "id": "GHSA-fmh4-wr37-44fp"
+  },
+  "jws": {
+   "first": "2025-12-04",
+   "id": "GHSA-869p-cjfg-cm3x"
+  },
+  "@anthropic-ai/sandbox-runtime": {
+   "first": "2025-12-04",
+   "id": "GHSA-9gqj-5w7c-vx47"
+  },
+  "altcha": {
+   "first": "2025-12-08",
+   "id": "GHSA-mpmc-qchh-r9q8"
+  },
+  "elysia": {
+   "first": "2025-12-09",
+   "id": "GHSA-hxj9-33pp-j2cc"
+  },
+  "@tiptap/extension-link": {
+   "first": "2025-12-09",
+   "id": "GHSA-vhrc-hgrq-x75r"
+  },
+  "mcp-fetch-server": {
+   "first": "2025-12-10",
+   "id": "GHSA-8fxj-2g9q-8fjw"
+  },
+  "formio": {
+   "first": "2025-12-10",
+   "id": "GHSA-m654-769v-qjv7"
+  },
+  "servify-express": {
+   "first": "2025-12-11",
+   "id": "GHSA-qgc4-8p88-4w7m"
+  },
+  "lightning-flow-scanner": {
+   "first": "2025-12-12",
+   "id": "GHSA-55jh-84jv-8mx8"
+  },
+  "vuetify": {
+   "first": "2025-12-12",
+   "id": "GHSA-3jp5-5f8r-q2wg"
+  },
+  "mjml": {
+   "first": "2025-12-15",
+   "id": "GHSA-45h5-66jx-r2wf"
+  },
+  "misskey-js": {
+   "first": "2025-12-15",
+   "id": "GHSA-496g-mmpw-j9x3"
+  },
+  "likec4": {
+   "first": "2025-12-15",
+   "id": "GHSA-vr6p-vq2p-6j74"
+  },
+  "altcha-lib": {
+   "first": "2025-12-16",
+   "id": "GHSA-6gvq-jcmp-8959"
+  },
+  "tinacms": {
+   "first": "2025-12-18",
+   "id": "GHSA-529f-9qwm-9628"
+  },
+  "@tinacms/graphql": {
+   "first": "2025-12-18",
+   "id": "GHSA-529f-9qwm-9628"
+  },
+  "storybook": {
+   "first": "2025-12-18",
+   "id": "GHSA-8452-54wp-rmv6"
+  },
+  "orejime": {
+   "first": "2025-12-19",
+   "id": "GHSA-72mh-hgpm-6384"
+  },
+  "@tutao/tutanota-utils": {
+   "first": "2025-12-19",
+   "id": "GHSA-24v3-254g-jv85"
+  },
+  "@langchain/core": {
+   "first": "2025-12-23",
+   "id": "GHSA-r399-636x-v7f6"
+  },
+  "hemmelig": {
+   "first": "2025-12-29",
+   "id": "GHSA-vvxf-wj5w-6gj5"
+  },
+  "@nestjs/platform-fastify": {
+   "first": "2025-12-30",
+   "id": "GHSA-8wpr-639p-ccrj"
+  },
+  "axios-cache-interceptor": {
+   "first": "2025-12-30",
+   "id": "GHSA-x4m5-4cw8-vc44"
+  },
+  "qs": {
+   "first": "2025-12-30",
+   "id": "GHSA-6rw7-vpxm-498p"
+  },
+  "serverless": {
+   "first": "2025-12-31",
+   "id": "GHSA-rwc2-f344-q6w6"
+  },
+  "signalk-server": {
+   "first": "2026-01-02",
+   "id": "GHSA-w3x5-7c4c-66p9"
+  },
+  "@adonisjs/bodyparser": {
+   "first": "2026-01-02",
+   "id": "GHSA-gvq6-hvvp-h34h"
+  },
+  "@openzeppelin/confidential-contracts": {
+   "first": "2026-01-05",
+   "id": "GHSA-hqf9-8xv5-x8xw"
+  },
+  "carbone": {
+   "first": "2026-01-07",
+   "id": "GHSA-6rcw-ww3x-xqwm"
+  },
+  "@playwright/mcp": {
+   "first": "2026-01-07",
+   "id": "GHSA-6fg3-hvw7-2fwq"
+  },
+  "fast-filesystem-mcp": {
+   "first": "2026-01-07",
+   "id": "GHSA-j893-m93w-jwjw"
+  },
+  "preact": {
+   "first": "2026-01-07",
+   "id": "GHSA-36hm-qxxp-pg3m"
+  },
+  "@remix-run/react": {
+   "first": "2026-01-08",
+   "id": "GHSA-3cgp-3xvw-98x8"
+  },
+  "@react-router/node": {
+   "first": "2026-01-08",
+   "id": "GHSA-9583-h5hc-x8cw"
+  },
+  "@remix-run/node": {
+   "first": "2026-01-08",
+   "id": "GHSA-9583-h5hc-x8cw"
+  },
+  "@remix-run/deno": {
+   "first": "2026-01-08",
+   "id": "GHSA-9583-h5hc-x8cw"
+  },
+  "@remix-run/router": {
+   "first": "2026-01-08",
+   "id": "GHSA-2w69-qvjg-hvjx"
+  },
+  "@remix-run/server-runtime": {
+   "first": "2026-01-08",
+   "id": "GHSA-h5cw-625j-3rxh"
+  },
+  "shakapacker": {
+   "first": "2026-01-08",
+   "id": "GHSA-96qw-h329-v5rg"
+  },
+  "@smithy/config-resolver": {
+   "first": "2026-01-08",
+   "id": "GHSA-6475-r3vj-m8vf"
+  },
+  "aws-sdk": {
+   "first": "2026-01-08",
+   "id": "GHSA-j965-2qgj-vjmq"
+  },
+  "@angular/core": {
+   "first": "2026-01-09",
+   "id": "GHSA-jrmj-c5cx-3cw6"
+  },
+  "@questdb/web-console": {
+   "first": "2026-01-10",
+   "id": "GHSA-xf94-h87h-g9wr"
+  },
+  "@orval/mcp": {
+   "first": "2026-01-13",
+   "id": "GHSA-mwr6-3gp8-9jmj"
+  },
+  "opencode-ai": {
+   "first": "2026-01-13",
+   "id": "GHSA-vxw4-wv6m-9hhh"
+  },
+  "@adonisjs/lucid": {
+   "first": "2026-01-13",
+   "id": "GHSA-g5gc-h5hp-555f"
+  },
+  "quill": {
+   "first": "2026-01-13",
+   "id": "GHSA-v3m3-f69x-jf25"
+  },
+  "outray": {
+   "first": "2026-01-13",
+   "id": "GHSA-45hj-9x76-wp9g"
+  },
+  "enclave-vm": {
+   "first": "2026-01-14",
+   "id": "GHSA-7qm7-455j-5p63"
+  },
+  "html2pdf.js": {
+   "first": "2026-01-14",
+   "id": "GHSA-w8x4-x68c-m6fc"
+  },
+  "diff": {
+   "first": "2026-01-14",
+   "id": "GHSA-73rr-hh4g-fpgx"
+  },
+  "h3": {
+   "first": "2026-01-15",
+   "id": "GHSA-mp2g-9vg9-f4cg"
+  },
+  "pepr": {
+   "first": "2026-01-15",
+   "id": "GHSA-w54x-r83c-x79q"
+  },
+  "vnu-jar": {
+   "first": "2026-01-16",
+   "id": "GHSA-fccg-7w3p-w66f"
+  },
+  "@veramo/data-store": {
+   "first": "2026-01-16",
+   "id": "GHSA-38cw-85xc-xr9x"
+  },
+  "graphql-modules": {
+   "first": "2026-01-16",
+   "id": "GHSA-53wg-r69p-v3r7"
+  },
+  "@mcpjam/inspector": {
+   "first": "2026-01-16",
+   "id": "GHSA-232v-j27c-5pp6"
+  },
+  "opencc": {
+   "first": "2026-01-18",
+   "id": "GHSA-5pr6-crvp-2j9f"
+  },
+  "@fastify/middie": {
+   "first": "2026-01-20",
+   "id": "GHSA-cxrg-g7r8-w69p"
+  },
+  "@fastify/express": {
+   "first": "2026-01-20",
+   "id": "GHSA-g6q3-96cp-5r5m"
+  },
+  "@hotwired/turbo": {
+   "first": "2026-01-20",
+   "id": "GHSA-qppm-g56g-fpvp"
+  },
+  "binary-parser": {
+   "first": "2026-01-20",
+   "id": "GHSA-m39p-34qh-rh3w"
+  },
+  "@orval/core": {
+   "first": "2026-01-21",
+   "id": "GHSA-h526-wf6g-67jv"
+  },
+  "seroval": {
+   "first": "2026-01-21",
+   "id": "GHSA-hj76-42vx-jwp4"
+  },
+  "sm-crypto": {
+   "first": "2026-01-21",
+   "id": "GHSA-pgx9-497m-6c4v"
+  },
+  "@envelop/graphql-modules": {
+   "first": "2026-01-21",
+   "id": "GHSA-h3hw-29fv-2x75"
+  },
+  "@backstage/backend-defaults": {
+   "first": "2026-01-21",
+   "id": "GHSA-rq6q-wr2q-7pgp"
+  },
+  "@backstage/cli-common": {
+   "first": "2026-01-21",
+   "id": "GHSA-2p49-45hj-7mc9"
+  },
+  "lodash": {
+   "first": "2026-01-21",
+   "id": "GHSA-xxjr-mmjv-4gpg"
+  },
+  "lodash.unset": {
+   "first": "2026-01-21",
+   "id": "GHSA-xxjr-mmjv-4gpg"
+  },
+  "lodash-es": {
+   "first": "2026-01-21",
+   "id": "GHSA-xxjr-mmjv-4gpg"
+  },
+  "lodash-amd": {
+   "first": "2026-01-21",
+   "id": "GHSA-xxjr-mmjv-4gpg"
+  },
+  "@typebot.io/js": {
+   "first": "2026-01-22",
+   "id": "GHSA-4xc5-wfwc-jw47"
+  },
+  "@orval/mock": {
+   "first": "2026-01-22",
+   "id": "GHSA-f456-rf33-4626"
+  },
+  "gemini-mcp-tool": {
+   "first": "2026-01-23",
+   "id": "GHSA-28qq-5f47-r5x2"
+  },
+  "npm": {
+   "first": "2026-01-23",
+   "id": "GHSA-3966-f6p6-2qr9"
+  },
+  "eslint": {
+   "first": "2026-01-26",
+   "id": "GHSA-p5wg-g6qr-c7cg"
+  },
+  "@phala/dcap-qvl": {
+   "first": "2026-01-26",
+   "id": "GHSA-796p-j2gh-9m2q"
+  },
+  "@phala/dcap-qvl-web": {
+   "first": "2026-01-26",
+   "id": "GHSA-796p-j2gh-9m2q"
+  },
+  "@phala/dcap-qvl-node": {
+   "first": "2026-01-26",
+   "id": "GHSA-796p-j2gh-9m2q"
+  },
+  "studiocms": {
+   "first": "2026-01-27",
+   "id": "GHSA-8cw6-53m5-4932"
+  },
+  "@vltpkg/tar": {
+   "first": "2026-01-28",
+   "id": "GHSA-gf2c-jwcj-x929"
+  },
+  "browserstack-local": {
+   "first": "2026-01-28",
+   "id": "GHSA-g4w6-c99w-4wh7"
+  },
+  "jsonpath": {
+   "first": "2026-01-28",
+   "id": "GHSA-6c59-mwgh-r2x6"
+  },
+  "makerjs": {
+   "first": "2026-01-29",
+   "id": "GHSA-2cp6-34r9-54xx"
+  },
+  "deephas": {
+   "first": "2026-01-29",
+   "id": "GHSA-2733-6c58-pf27"
+  },
+  "clawdbot": {
+   "first": "2026-02-02",
+   "id": "GHSA-r2c6-8jc8-g32w"
+  },
+  "@backstage/plugin-techdocs-node": {
+   "first": "2026-02-02",
+   "id": "GHSA-w669-jj7h-88m9"
+  },
+  "@signalk/set-system-time": {
+   "first": "2026-02-02",
+   "id": "GHSA-p8gp-2w28-mhwg"
+  },
+  "locutus": {
+   "first": "2026-02-02",
+   "id": "GHSA-rxrv-835q-v5mh"
+  },
+  "compressing": {
+   "first": "2026-02-03",
+   "id": "GHSA-cc8f-xg8v-72m3"
+  },
+  "agents": {
+   "first": "2026-02-03",
+   "id": "GHSA-r7x9-8ph7-w8cg"
+  },
+  "@isaacs/brace-expansion": {
+   "first": "2026-02-03",
+   "id": "GHSA-7h2j-956f-4vf2"
+  },
+  "apollo-server": {
+   "first": "2026-02-04",
+   "id": "GHSA-mp6q-xf9x-fwf7"
+  },
+  "openclaw": {
+   "first": "2026-02-04",
+   "id": "GHSA-r8g4-86fx-92mq"
+  },
+  "@coding-solo/godot-mcp": {
+   "first": "2026-02-04",
+   "id": "GHSA-8jx2-rhfh-q928"
+  },
+  "survey-pdf": {
+   "first": "2026-02-04",
+   "id": "GHSA-h3q6-jfrg-3x6q"
+  },
+  "@enclave-vm/core": {
+   "first": "2026-02-05",
+   "id": "GHSA-x39w-8vm5-5m3p"
+  },
+  "@payloadcms/drizzle": {
+   "first": "2026-02-05",
+   "id": "GHSA-xx6w-jxg9-2wh8"
+  },
+  "sceditor": {
+   "first": "2026-02-06",
+   "id": "GHSA-25fq-6qgg-qpj8"
+  },
+  "client-certificate-auth": {
+   "first": "2026-02-06",
+   "id": "GHSA-m4w9-gch5-c2g4"
+  },
+  "mcp-maigret": {
+   "first": "2026-02-08",
+   "id": "GHSA-2g7v-hghf-grg4"
+  },
+  "xcode-mcp-server": {
+   "first": "2026-02-08",
+   "id": "GHSA-84fx-pwf3-7777"
+  },
+  "langsmith": {
+   "first": "2026-02-09",
+   "id": "GHSA-v34v-rq6j-cj6p"
+  },
+  "@rage-against-the-pixel/unity-cli": {
+   "first": "2026-02-10",
+   "id": "GHSA-4255-c27h-62m5"
+  },
+  "@cubejs-backend/server-core": {
+   "first": "2026-02-10",
+   "id": "GHSA-v226-32c7-x2v7"
+  },
+  "@capgo/capacitor-native-biometric": {
+   "first": "2026-02-10",
+   "id": "GHSA-vx5f-vmr6-32wf"
+  },
+  "@casl/ability": {
+   "first": "2026-02-10",
+   "id": "GHSA-x9vf-53q3-cvx6"
+  },
+  "set-in": {
+   "first": "2026-02-11",
+   "id": "GHSA-2c4m-g7rx-63q7"
+  },
+  "nanotar": {
+   "first": "2026-02-11",
+   "id": "GHSA-92fh-27vv-894w"
+  },
+  "ajv": {
+   "first": "2026-02-11",
+   "id": "GHSA-2g4f-4pwh-qvx6"
+  },
+  "next-mdx-remote": {
+   "first": "2026-02-12",
+   "id": "GHSA-g4xw-jxrg-5f6m"
+  },
+  "markdown-it": {
+   "first": "2026-02-12",
+   "id": "GHSA-38c4-r59v-3vqw"
+  },
+  "cedipay-core": {
+   "first": "2026-02-12",
+   "id": "GHSA-wvr6-395c-5pxr"
+  },
+  "@farmfe/core": {
+   "first": "2026-02-12",
+   "id": "GHSA-p773-8mf4-rjm5"
+  },
+  "beautiful-mermaid": {
+   "first": "2026-02-13",
+   "id": "GHSA-cgmm-x5ww-q5cr"
+  },
+  "@bsv/sdk": {
+   "first": "2026-02-17",
+   "id": "GHSA-vjpq-xx5g-qvmm"
+  },
+  "moltbot": {
+   "first": "2026-02-17",
+   "id": "GHSA-mr32-vwc2-5j6h"
+  },
+  "@openclaw/voice-call": {
+   "first": "2026-02-17",
+   "id": "GHSA-3m3q-x3gj-f79x"
+  },
+  "@clawdbot/voice-call": {
+   "first": "2026-02-17",
+   "id": "GHSA-3m3q-x3gj-f79x"
+  },
+  "@openclaw/bluebubbles": {
+   "first": "2026-02-17",
+   "id": "GHSA-pchc-86f6-8758"
+  },
+  "@openclaw/nextcloud-talk": {
+   "first": "2026-02-17",
+   "id": "GHSA-r5h9-vjqc-hq3r"
+  },
+  "@tygo-van-den-hurk/slyde": {
+   "first": "2026-02-18",
+   "id": "GHSA-w7h5-55jg-cq2f"
+  },
+  "minimatch": {
+   "first": "2026-02-18",
+   "id": "GHSA-3ppc-4f35-3m26"
+  },
+  "@langchain/langgraph-checkpoint-redis": {
+   "first": "2026-02-18",
+   "id": "GHSA-5mx2-w598-339m"
+  },
+  "fabric": {
+   "first": "2026-02-18",
+   "id": "GHSA-hfvx-25r5-qc3w"
+  },
+  "@sveltejs/adapter-vercel": {
+   "first": "2026-02-19",
+   "id": "GHSA-9pq4-5hcf-288c"
+  },
+  "ebay-mcp": {
+   "first": "2026-02-19",
+   "id": "GHSA-97rm-xj73-33jh"
+  },
+  "swiper": {
+   "first": "2026-02-19",
+   "id": "GHSA-hmx5-qpq5-p643"
+  },
+  "@feathersjs/authentication-oauth": {
+   "first": "2026-02-19",
+   "id": "GHSA-ppf9-4ffw-hh4p"
+  },
+  "pannellum": {
+   "first": "2026-02-19",
+   "id": "GHSA-8423-w5wx-h2r6"
+  },
+  "bn.js": {
+   "first": "2026-02-20",
+   "id": "GHSA-378v-28hj-76wf"
+  },
+  "@sync-in/server": {
+   "first": "2026-02-20",
+   "id": "GHSA-9jmq-xgjm-p8c2"
+  },
+  "lettermint": {
+   "first": "2026-02-20",
+   "id": "GHSA-49pc-8936-wvfp"
+  },
+  "repostat": {
+   "first": "2026-02-25",
+   "id": "GHSA-fm8c-6m29-rp6j"
+  },
+  "parse-dashboard": {
+   "first": "2026-02-25",
+   "id": "GHSA-qwc3-h9mg-4582"
+  },
+  "budibase": {
+   "first": "2026-02-25",
+   "id": "GHSA-rvhr-26g4-p2r8"
+  },
+  "basic-ftp": {
+   "first": "2026-02-25",
+   "id": "GHSA-5rq4-664w-9x2c"
+  },
+  "@nguniversal/express-engine": {
+   "first": "2026-02-25",
+   "id": "GHSA-x288-3778-4hhx"
+  },
+  "terriajs-server": {
+   "first": "2026-02-26",
+   "id": "GHSA-w789-49fc-v8hr"
+  },
+  "clevertap-web-sdk": {
+   "first": "2026-02-27",
+   "id": "GHSA-jfrq-hj9f-c8qx"
+  },
+  "@orpc/client": {
+   "first": "2026-03-02",
+   "id": "GHSA-m272-9rp6-32mc"
+  },
+  "@tootallnate/once": {
+   "first": "2026-03-03",
+   "id": "GHSA-vpq2-c234-7xj6"
+  },
+  "mailparser": {
+   "first": "2026-03-03",
+   "id": "GHSA-7gmj-h9xc-mcxc"
+  },
+  "underscore": {
+   "first": "2026-03-03",
+   "id": "GHSA-qpx9-hpmf-5gmw"
+  },
+  "mcp-nmap-server": {
+   "first": "2026-03-03",
+   "id": "GHSA-xc68-rrqc-qgq3"
+  },
+  "darkreader": {
+   "first": "2026-03-04",
+   "id": "GHSA-x369-mcw8-8rvj"
+  },
+  "@ckeditor/ckeditor5-html-support": {
+   "first": "2026-03-04",
+   "id": "GHSA-jrqm-vmqc-gm93"
+  },
+  "immutable": {
+   "first": "2026-03-04",
+   "id": "GHSA-wf6x-7x77-mvgw"
+  },
+  "svgo": {
+   "first": "2026-03-04",
+   "id": "GHSA-xpqw-6gx7-v673"
+  },
+  "@backstage/integration": {
+   "first": "2026-03-05",
+   "id": "GHSA-95v5-prp4-5gv5"
+  },
+  "@fonoster/voice": {
+   "first": "2026-03-05",
+   "id": "GHSA-9fv2-c7v6-p45w"
+  },
+  "@github/copilot": {
+   "first": "2026-03-06",
+   "id": "GHSA-g8r9-g2v8-jv6f"
+  },
+  "express-rate-limit": {
+   "first": "2026-03-06",
+   "id": "GHSA-46wh-pxpv-q5gq"
+  },
+  "defuddle": {
+   "first": "2026-03-06",
+   "id": "GHSA-5mq8-78gm-pjmq"
+  },
+  "workflow": {
+   "first": "2026-03-06",
+   "id": "GHSA-9r75-g2cr-3h76"
+  },
+  "@workflow/core": {
+   "first": "2026-03-06",
+   "id": "GHSA-9r75-g2cr-3h76"
+  },
+  "@powersync/service-core": {
+   "first": "2026-03-07",
+   "id": "GHSA-q6wc-xx4m-92fj"
+  },
+  "@powersync/service-sync-rules": {
+   "first": "2026-03-07",
+   "id": "GHSA-q6wc-xx4m-92fj"
+  },
+  "@x402/svm": {
+   "first": "2026-03-07",
+   "id": "GHSA-qr2g-p6q7-w82m"
+  },
+  "liquidjs": {
+   "first": "2026-03-10",
+   "id": "GHSA-wmfp-5q7x-987x"
+  },
+  "@azure/mcp": {
+   "first": "2026-03-10",
+   "id": "GHSA-hhfx-wfvq-7g9c"
+  },
+  "@feathersjs/mongodb": {
+   "first": "2026-03-10",
+   "id": "GHSA-p9xr-7p9p-gpqx"
+  },
+  "file-type": {
+   "first": "2026-03-10",
+   "id": "GHSA-5v7r-6r5c-r473"
+  },
+  "@siteboon/claude-code-ui": {
+   "first": "2026-03-10",
+   "id": "GHSA-7fv4-fmmc-86g2"
+  },
+  "@appium/support": {
+   "first": "2026-03-11",
+   "id": "GHSA-rfx7-4xw3-gh4m"
+  },
+  "@siteboon/claudecodeui": {
+   "first": "2026-03-11",
+   "id": "GHSA-f2fc-vc88-6w7q"
+  },
+  "@striae-org/striae": {
+   "first": "2026-03-11",
+   "id": "GHSA-mmf8-487q-p45m"
+  },
+  "@whyour/qinglong": {
+   "first": "2026-03-12",
+   "id": "GHSA-xj37-qjg2-xwv2"
+  },
+  "yauzl": {
+   "first": "2026-03-12",
+   "id": "GHSA-gmq8-994r-jv83"
+  },
+  "@keycloak/keycloak-admin-client": {
+   "first": "2026-03-12",
+   "id": "GHSA-r8jr-wg88-fq5c"
+  },
+  "unhead": {
+   "first": "2026-03-12",
+   "id": "GHSA-g5xx-pwrp-g3fv"
+  },
+  "@studiocms/s3-storage": {
+   "first": "2026-03-12",
+   "id": "GHSA-mm78-fgq8-6pgr"
+  },
+  "@backstage/plugin-auth-backend": {
+   "first": "2026-03-12",
+   "id": "GHSA-wqvh-63mv-9w92"
+  },
+  "hyperterse": {
+   "first": "2026-03-12",
+   "id": "GHSA-92gp-jfgx-9qpv"
+  },
+  "dagu": {
+   "first": "2026-03-13",
+   "id": "GHSA-9wmw-9wph-2vwp"
+  },
+  "flatted": {
+   "first": "2026-03-13",
+   "id": "GHSA-25h7-pfq9-p65f"
+  },
+  "oneuptime": {
+   "first": "2026-03-13",
+   "id": "GHSA-p5g2-jm85-8g35"
+  },
+  "@apollo/federation-internals": {
+   "first": "2026-03-13",
+   "id": "GHSA-pfjj-6f4p-rvmh"
+  },
+  "@google/clasp": {
+   "first": "2026-03-13",
+   "id": "GHSA-hqjg-pww4-pcgq"
+  },
+  "vulnogram": {
+   "first": "2026-03-16",
+   "id": "GHSA-vggc-6pg2-xvp9"
+  },
+  "@dicebear/converter": {
+   "first": "2026-03-16",
+   "id": "GHSA-v3r3-4qgc-vw66"
+  },
+  "@leanprover/unicode-input-component": {
+   "first": "2026-03-16",
+   "id": "GHSA-6ggm-pwr9-r5h2"
+  },
+  "sjcl": {
+   "first": "2026-03-17",
+   "id": "GHSA-2w8x-224x-785m"
+  },
+  "music-metadata": {
+   "first": "2026-03-17",
+   "id": "GHSA-v6c2-xwv6-8xf7"
+  },
+  "kysely": {
+   "first": "2026-03-18",
+   "id": "GHSA-wmrf-hv6w-mr66"
+  },
+  "@aborruso/ckan-mcp-server": {
+   "first": "2026-03-18",
+   "id": "GHSA-3xm7-qw7j-qc8v"
+  },
+  "@capgo/cli": {
+   "first": "2026-03-18",
+   "id": "GHSA-8mpm-q7mh-8fvh"
+  },
+  "@pdfme/schemas": {
+   "first": "2026-03-18",
+   "id": "GHSA-qq9g-96v4-m3cj"
+  },
+  "@developer.notchatbot/webchat": {
+   "first": "2026-03-18",
+   "id": "GHSA-w3vx-52j6-9fjp"
+  },
+  "apostrophe": {
+   "first": "2026-03-18",
+   "id": "GHSA-v9xm-ffx2-7h35"
+  },
+  "@apostrophecms/import-export": {
+   "first": "2026-03-18",
+   "id": "GHSA-mwxc-m426-3f78"
+  },
+  "mcp-bridge": {
+   "first": "2026-03-19",
+   "id": "GHSA-wvr4-3wq4-gpc5"
+  },
+  "@dicebear/core": {
+   "first": "2026-03-19",
+   "id": "GHSA-mr9r-mww3-v6gv"
+  },
+  "@dicebear/initials": {
+   "first": "2026-03-19",
+   "id": "GHSA-mr9r-mww3-v6gv"
+  },
+  "@orpc/openapi": {
+   "first": "2026-03-20",
+   "id": "GHSA-7f6v-3gx7-27q8"
+  },
+  "effect": {
+   "first": "2026-03-20",
+   "id": "GHSA-38f7-945m-qr2g"
+  },
+  "@pdfme/pdf-lib": {
+   "first": "2026-03-20",
+   "id": "GHSA-vrqm-gvq7-rrwh"
+  },
+  "fido2-lib": {
+   "first": "2026-03-24",
+   "id": "GHSA-g3qj-j598-cxmq"
+  },
+  "pdf-image": {
+   "first": "2026-03-25",
+   "id": "GHSA-q5mh-72xg-628w"
+  },
+  "@grackle-ai/server": {
+   "first": "2026-03-25",
+   "id": "GHSA-7q9x-8g6p-3x75"
+  },
+  "@grackle-ai/mcp": {
+   "first": "2026-03-25",
+   "id": "GHSA-647h-p824-99w7"
+  },
+  "@grackle-ai/powerline": {
+   "first": "2026-03-25",
+   "id": "GHSA-xq7h-vwjp-5vrh"
+  },
+  "textract": {
+   "first": "2026-03-25",
+   "id": "GHSA-9pcj-m5rr-p28g"
+  },
+  "thumbler": {
+   "first": "2026-03-25",
+   "id": "GHSA-mvhf-547c-h55r"
+  },
+  "node-tesseract-ocr": {
+   "first": "2026-03-25",
+   "id": "GHSA-8j44-735h-w4w2"
+  },
+  "@seafile/sdoc-editor": {
+   "first": "2026-03-25",
+   "id": "GHSA-rqj3-x344-qvxc"
+  },
+  "picomatch": {
+   "first": "2026-03-25",
+   "id": "GHSA-c2c7-rcm5-vvqj"
+  },
+  "srvx": {
+   "first": "2026-03-26",
+   "id": "GHSA-p36q-q72m-gchr"
+  },
+  "@astrojs/vercel": {
+   "first": "2026-03-26",
+   "id": "GHSA-mr6q-rp88-fx84"
+  },
+  "handlebars": {
+   "first": "2026-03-26",
+   "id": "GHSA-2qvq-rjwj-gvw9"
+  },
+  "postiz": {
+   "first": "2026-03-27",
+   "id": "GHSA-vj2p-7pgw-g2wf"
+  },
+  "@mobilenext/mobile-mcp": {
+   "first": "2026-03-27",
+   "id": "GHSA-3p2m-h2v6-g9mx"
+  },
+  "@clerk/hono": {
+   "first": "2026-03-27",
+   "id": "GHSA-gjxx-92w9-8v8f"
+  },
+  "mppx": {
+   "first": "2026-03-29",
+   "id": "GHSA-mv9j-8jvg-j8mr"
+  },
+  "@mikro-orm/core": {
+   "first": "2026-03-29",
+   "id": "GHSA-gwhv-j974-6fxm"
+  },
+  "@nocobase/plugin-workflow-javascript": {
+   "first": "2026-03-30",
+   "id": "GHSA-px3p-vgh9-m57c"
+  },
+  "OpenClaw": {
+   "first": "2026-03-31",
+   "id": "GHSA-vm29-7mq3-9jrg"
+  },
+  "nuxt-og-image": {
+   "first": "2026-03-31",
+   "id": "GHSA-c7xp-q6q8-hg76"
+  },
+  "xmldom": {
+   "first": "2026-04-01",
+   "id": "GHSA-wh4c-j3r5-mjhp"
+  },
+  "@xmldom/xmldom": {
+   "first": "2026-04-01",
+   "id": "GHSA-wh4c-j3r5-mjhp"
+  },
+  "replicator": {
+   "first": "2026-04-01",
+   "id": "GHSA-2gmp-34j9-fqjm"
+  },
+  "@anthropic-ai/sdk": {
+   "first": "2026-04-01",
+   "id": "GHSA-5474-4w2j-mq4c"
+  },
+  "@payloadcms/storage-azure": {
+   "first": "2026-04-01",
+   "id": "GHSA-frq9-7j6g-v74x"
+  },
+  "@payloadcms/storage-gcs": {
+   "first": "2026-04-01",
+   "id": "GHSA-frq9-7j6g-v74x"
+  },
+  "@payloadcms/storage-r2": {
+   "first": "2026-04-01",
+   "id": "GHSA-frq9-7j6g-v74x"
+  },
+  "@payloadcms/storage-s3": {
+   "first": "2026-04-01",
+   "id": "GHSA-frq9-7j6g-v74x"
+  },
+  "@stablelib/ed25519": {
+   "first": "2026-04-01",
+   "id": "GHSA-x3ff-w252-2g7j"
+  },
+  "dbgate-web": {
+   "first": "2026-04-01",
+   "id": "GHSA-35xm-qvjg-8m42"
+  },
+  "Haraka": {
+   "first": "2026-04-01",
+   "id": "GHSA-xph3-r2jf-4vp3"
+  },
+  "@nocobase/plugin-workflow-sql": {
+   "first": "2026-04-01",
+   "id": "GHSA-vx58-fwwq-5g8j"
+  },
+  "lodash.template": {
+   "first": "2026-04-01",
+   "id": "GHSA-r5fr-rjxr-66jc"
+  },
+  "mcp-handler": {
+   "first": "2026-04-01",
+   "id": "GHSA-w2fm-25vw-vh7f"
+  },
+  "a11y-mcp": {
+   "first": "2026-04-02",
+   "id": "GHSA-prmx-7v35-7q82"
+  },
+  "@usebruno/cli": {
+   "first": "2026-04-02",
+   "id": "GHSA-658g-p7jg-wx5g"
+  },
+  "@lightdash/cli": {
+   "first": "2026-04-02",
+   "id": "GHSA-3hfp-gqgh-xc5g"
+  },
+  "telejson": {
+   "first": "2026-04-02",
+   "id": "GHSA-ccgf-5rwj-j3hv"
+  },
+  "@budibase/backend-core": {
+   "first": "2026-04-03",
+   "id": "GHSA-7r9j-r86q-7g45"
+  },
+  "@hapi/content": {
+   "first": "2026-04-04",
+   "id": "GHSA-jg4p-7fhp-p32p"
+  },
+  "@stablelib/cbor": {
+   "first": "2026-04-04",
+   "id": "GHSA-w48f-fwg7-ww6p"
+  },
+  "defu": {
+   "first": "2026-04-04",
+   "id": "GHSA-737v-mqg7-c878"
+  },
+  "@elgentos/magento2-dev-mcp": {
+   "first": "2026-04-06",
+   "id": "GHSA-xqv9-qr76-hfq2"
+  },
+  "@nor2/heim-mcp": {
+   "first": "2026-04-06",
+   "id": "GHSA-wx4p-jr66-jfp9"
+  },
+  "@fedify/vocab-runtime": {
+   "first": "2026-04-07",
+   "id": "GHSA-gm9m-gwc4-hwgp"
+  },
+  "genieacs": {
+   "first": "2026-04-07",
+   "id": "GHSA-2h6j-mhcp-9j9h"
+  },
+  "coursevault-preview": {
+   "first": "2026-04-08",
+   "id": "GHSA-9h9m-rr67-9jpg"
+  },
+  "skilleton": {
+   "first": "2026-04-08",
+   "id": "GHSA-5g3j-89fr-r2vp"
+  },
+  "rwsdk": {
+   "first": "2026-04-08",
+   "id": "GHSA-x8rx-789c-2pxq"
+  },
+  "drizzle-orm": {
+   "first": "2026-04-08",
+   "id": "GHSA-gpj5-g38j-94v9"
+  },
+  "@delmaredigital/payload-puck": {
+   "first": "2026-04-08",
+   "id": "GHSA-65w6-pf7x-5g85"
+  },
+  "openclaw-claude-bridge": {
+   "first": "2026-04-08",
+   "id": "GHSA-7853-gqqm-vcwx"
+  },
+  "@lobehub/lobehub": {
+   "first": "2026-04-08",
+   "id": "GHSA-5mwj-v5jw-5c97"
+  },
+  "mcp-from-openapi": {
+   "first": "2026-04-08",
+   "id": "GHSA-v6ph-xcq9-qxxj"
+  },
+  "@frontmcp/sdk": {
+   "first": "2026-04-08",
+   "id": "GHSA-v6ph-xcq9-qxxj"
+  },
+  "@frontmcp/adapters": {
+   "first": "2026-04-08",
+   "id": "GHSA-v6ph-xcq9-qxxj"
+  },
+  "n8n-mcp": {
+   "first": "2026-04-08",
+   "id": "GHSA-4ggg-h7ph-26qr"
+  },
+  "@chenglou/pretext": {
+   "first": "2026-04-08",
+   "id": "GHSA-5478-66c3-rhxr"
+  },
+  "taskflow-ai": {
+   "first": "2026-04-09",
+   "id": "GHSA-3xp3-pr8x-f755"
+  },
+  "api-lab-mcp": {
+   "first": "2026-04-09",
+   "id": "GHSA-crh9-3gjh-m6gc"
+  },
+  "mcp-server-taskwarrior": {
+   "first": "2026-04-09",
+   "id": "GHSA-95hg-3c55-xf9x"
+  },
+  "9router": {
+   "first": "2026-04-09",
+   "id": "GHSA-xrrh-p7f2-27vm"
+  },
+  "js-video-url-parser": {
+   "first": "2026-04-10",
+   "id": "GHSA-8fgx-wgvr-pcx8"
+  },
+  "@saltcorn/data": {
+   "first": "2026-04-10",
+   "id": "GHSA-59xv-588h-2vmm"
+  },
+  "next-intl": {
+   "first": "2026-04-10",
+   "id": "GHSA-8f24-v5vv-gm5j"
+  },
+  "paperclipai": {
+   "first": "2026-04-10",
+   "id": "GHSA-68qg-g8mg-6pr7"
+  },
+  "@paperclipai/server": {
+   "first": "2026-04-10",
+   "id": "GHSA-68qg-g8mg-6pr7"
+  },
+  "mathjs": {
+   "first": "2026-04-10",
+   "id": "GHSA-jvff-x2qm-6286"
+  },
+  "@nestjs/microservices": {
+   "first": "2026-04-14",
+   "id": "GHSA-hpwf-8g29-85qm"
+  },
+  "@adonisjs/http-server": {
+   "first": "2026-04-14",
+   "id": "GHSA-6qvv-pj99-48qm"
+  },
+  "@adonisjs/core": {
+   "first": "2026-04-14",
+   "id": "GHSA-6qvv-pj99-48qm"
+  },
+  "@novu/api": {
+   "first": "2026-04-14",
+   "id": "GHSA-4x48-cgf9-q33f"
+  },
+  "novu/api": {
+   "first": "2026-04-14",
+   "id": "GHSA-26wg-9xf2-q495"
+  },
+  "protocol-buffers-schema": {
+   "first": "2026-04-15",
+   "id": "GHSA-j452-xhg8-qg39"
+  },
+  "@nocobase/plugin-workflow-request": {
+   "first": "2026-04-15",
+   "id": "GHSA-mvvv-v22x-xqwp"
+  },
+  "vite-plus": {
+   "first": "2026-04-16",
+   "id": "GHSA-33r3-4whc-44c2"
+  },
+  "@fastify/http-proxy": {
+   "first": "2026-04-16",
+   "id": "GHSA-gwhp-pf74-vj37"
+  },
+  "mcp-framework": {
+   "first": "2026-04-16",
+   "id": "GHSA-353c-v8x9-v7c3"
+  },
+  "@node-oauth/oauth2-server": {
+   "first": "2026-04-16",
+   "id": "GHSA-jhm7-29pj-4xvf"
+  },
+  "mojic": {
+   "first": "2026-04-16",
+   "id": "GHSA-wqq3-wfmp-v85g"
+  },
+  "@clerk/shared": {
+   "first": "2026-04-16",
+   "id": "GHSA-vqx2-fgx2-5wq9"
+  },
+  "@fastify/static": {
+   "first": "2026-04-16",
+   "id": "GHSA-x428-ghpx-8j92"
+  },
+  "@better-auth/oauth-provider": {
+   "first": "2026-04-16",
+   "id": "GHSA-xr8f-h2gw-9xh6"
+  },
+  "@paperclipai/shared": {
+   "first": "2026-04-16",
+   "id": "GHSA-3pw3-v88x-xj24"
+  },
+  "@paperclipai/ui": {
+   "first": "2026-04-16",
+   "id": "GHSA-fpw4-p57j-hqmq"
+  },
+  "math-codegen": {
+   "first": "2026-04-17",
+   "id": "GHSA-p6x5-p4xf-cc4r"
+  },
+  "@brikcss/merge": {
+   "first": "2026-04-20",
+   "id": "GHSA-3jc6-6r48-v6qf"
+  },
+  "@gitlawb/openclaude": {
+   "first": "2026-04-21",
+   "id": "GHSA-m6rx-7pvw-2f73"
+  },
+  "engramx": {
+   "first": "2026-04-22",
+   "id": "GHSA-2r2p-4cgf-hv7h"
+  },
+  "i18next-http-middleware": {
+   "first": "2026-04-22",
+   "id": "GHSA-5fgg-jcpf-8jjw"
+  },
+  "i18next-http-backend": {
+   "first": "2026-04-22",
+   "id": "GHSA-q89c-q3h5-w34g"
+  },
+  "i18nextify": {
+   "first": "2026-04-22",
+   "id": "GHSA-6457-mxpq-4fqq"
+  },
+  "i18next-fs-backend": {
+   "first": "2026-04-22",
+   "id": "GHSA-8847-338w-5hcj"
+  },
+  "marko": {
+   "first": "2026-04-22",
+   "id": "GHSA-x9fj-57fh-c8wq"
+  },
+  "@marko/runtime-tags": {
+   "first": "2026-04-22",
+   "id": "GHSA-x9fj-57fh-c8wq"
+  },
+  "@nocobase/plugin-collection-sql": {
+   "first": "2026-04-22",
+   "id": "GHSA-wrwh-c28m-9jjh"
+  },
+  "@nocobase/database": {
+   "first": "2026-04-22",
+   "id": "GHSA-4948-f92q-f432"
+  },
+  "i18next-locize-backend": {
+   "first": "2026-04-22",
+   "id": "GHSA-mgcp-mfp8-3q45"
+  },
+  "locize": {
+   "first": "2026-04-22",
+   "id": "GHSA-w937-fg2h-xhq2"
+  },
+  "uuid": {
+   "first": "2026-04-22",
+   "id": "GHSA-w5hq-g745-h8pq"
+  },
+  "@evomap/evolver": {
+   "first": "2026-04-22",
+   "id": "GHSA-2cjr-5v3h-v2w4"
+  },
+  "copilot-api": {
+   "first": "2026-04-23",
+   "id": "GHSA-3vr4-cvmg-7fx4"
+  },
+  "openlearnx": {
+   "first": "2026-04-23",
+   "id": "GHSA-8h25-q488-4hxw"
+  },
+  "@google/gemini-cli": {
+   "first": "2026-04-24",
+   "id": "GHSA-wpqr-6v78-jr5g"
+  },
+  "@excalidraw/mermaid-to-excalidraw": {
+   "first": "2026-04-24",
+   "id": "GHSA-39h7-pwv7-rc3x"
+  },
+  "@dadigua/hyperchat": {
+   "first": "2026-04-28",
+   "id": "GHSA-r2jq-4h3x-rfj6"
+  },
+  "thrift": {
+   "first": "2026-04-28",
+   "id": "GHSA-r67j-r569-jrwp"
+  },
+  "cyberchef": {
+   "first": "2026-04-29",
+   "id": "GHSA-h4hv-92pp-pcjg"
+  },
+  "mcp-server-semgrep": {
+   "first": "2026-04-30",
+   "id": "GHSA-86hp-qxqp-w9wv"
+  },
+  "@jupyter-notebook/help-extension": {
+   "first": "2026-04-30",
+   "id": "GHSA-rch3-82jr-f9w9"
+  },
+  "@jupyterlab/help-extension": {
+   "first": "2026-04-30",
+   "id": "GHSA-rch3-82jr-f9w9"
+  },
+  "@clerk/clerk-react": {
+   "first": "2026-04-30",
+   "id": "GHSA-w24r-5266-9c3c"
+  },
+  "@clerk/react": {
+   "first": "2026-04-30",
+   "id": "GHSA-w24r-5266-9c3c"
+  },
+  "@clerk/vue": {
+   "first": "2026-04-30",
+   "id": "GHSA-w24r-5266-9c3c"
+  },
+  "@clerk/clerk-expo": {
+   "first": "2026-04-30",
+   "id": "GHSA-w24r-5266-9c3c"
+  },
+  "@clerk/expo": {
+   "first": "2026-04-30",
+   "id": "GHSA-w24r-5266-9c3c"
+  },
+  "@clerk/chrome-extension": {
+   "first": "2026-04-30",
+   "id": "GHSA-w24r-5266-9c3c"
+  },
+  "@diplodoc/search-extension": {
+   "first": "2026-05-01",
+   "id": "GHSA-rjmp-rwj4-mv82"
+  },
+  "yii2-mcp-server": {
+   "first": "2026-05-02",
+   "id": "GHSA-gc8w-x73w-p4rh"
+  },
+  "sublinear-time-solver": {
+   "first": "2026-05-02",
+   "id": "GHSA-gc2j-wpjv-jhrw"
+  },
+  "@puchunjie/doc-tools-mcp": {
+   "first": "2026-05-04",
+   "id": "GHSA-gcmm-c94j-j47x"
+  },
+  "network-ai": {
+   "first": "2026-05-05",
+   "id": "GHSA-fj4g-2p96-q6m3"
+  },
+  "inngest": {
+   "first": "2026-05-05",
+   "id": "GHSA-2jf5-6wwv-vhxx"
+  },
+  "@tdurieux/anonymous_github": {
+   "first": "2026-05-05",
+   "id": "GHSA-g485-8j3v-p6x8"
+  },
+  "@workos/authkit-session": {
+   "first": "2026-05-05",
+   "id": "GHSA-vvvv-983w-r7pv"
+  },
+  "exiftool-vendored": {
+   "first": "2026-05-05",
+   "id": "GHSA-cw26-7653-2rp5"
+  },
+  "link-preview-js": {
+   "first": "2026-05-05",
+   "id": "GHSA-4gp8-rjrq-ch6q"
+  },
+  "open-websearch": {
+   "first": "2026-05-05",
+   "id": "GHSA-v228-72c7-fx8j"
+  },
+  "magicmirror": {
+   "first": "2026-05-05",
+   "id": "GHSA-ph6f-2cvq-79hq"
+  },
+  "ip-address": {
+   "first": "2026-05-05",
+   "id": "GHSA-v2v4-37r5-5v8g"
+  },
+  "sse-channel": {
+   "first": "2026-05-05",
+   "id": "GHSA-84hm-wfh8-c5pg"
+  },
+  "auth0-js": {
+   "first": "2026-05-06",
+   "id": "GHSA-8qjv-jj2q-x832"
+  },
+  "icu-minify": {
+   "first": "2026-05-06",
+   "id": "GHSA-r27j-894h-3w3p"
+  },
+  "dssrf": {
+   "first": "2026-05-06",
+   "id": "GHSA-8p33-q827-ghj5"
+  },
+  "nitro": {
+   "first": "2026-05-06",
+   "id": "GHSA-5w89-w975-hf9q"
+  },
+  "nitropack": {
+   "first": "2026-05-06",
+   "id": "GHSA-5w89-w975-hf9q"
+  },
+  "@backstage/plugin-catalog-unprocessed-entities-common": {
+   "first": "2026-05-06",
+   "id": "GHSA-p7g9-rp3g-mgfg"
+  },
+  "@backstage/plugin-catalog-unprocessed-entities": {
+   "first": "2026-05-06",
+   "id": "GHSA-p7g9-rp3g-mgfg"
+  },
+  "@backstage/plugin-catalog-backend-module-unprocessed": {
+   "first": "2026-05-06",
+   "id": "GHSA-p7g9-rp3g-mgfg"
+  },
+  "@axonflow/sdk": {
+   "first": "2026-05-06",
+   "id": "GHSA-mph8-9v29-pm42"
+  },
+  "@axonflow/openclaw": {
+   "first": "2026-05-06",
+   "id": "GHSA-cqmh-pcgr-q42f"
+  },
+  "vercel": {
+   "first": "2026-05-07",
+   "id": "GHSA-pgf8-2hgj-grqg"
+  },
+  "kiota-typescript": {
+   "first": "2026-05-07",
+   "id": "GHSA-7j59-v9qr-6fq9"
+  },
+  "node-ts-ocr": {
+   "first": "2026-05-07",
+   "id": "GHSA-8jh2-3mw6-6pfm"
+  },
+  "@jswork/next-npm-version": {
+   "first": "2026-05-07",
+   "id": "GHSA-2xx6-qf7x-grqh"
+  },
+  "cinny": {
+   "first": "2026-05-07",
+   "id": "GHSA-j944-w549-3453"
+  },
+  "intercom-client": {
+   "first": "2026-05-07",
+   "id": "GHSA-54pg-9963-v8vg"
+  },
+  "parse-ini": {
+   "first": "2026-05-07",
+   "id": "GHSA-x72j-hv9f-qqh4"
+  },
+  "youtube-regex": {
+   "first": "2026-05-07",
+   "id": "GHSA-vpxx-h23g-gxh2"
+  },
+  "query-string-parser": {
+   "first": "2026-05-07",
+   "id": "GHSA-587p-w43q-4hjx"
+  },
+  "mcp-ssh-tool": {
+   "first": "2026-05-07",
+   "id": "GHSA-j7h9-2jh7-g967"
+  },
+  "short-video-maker": {
+   "first": "2026-05-08",
+   "id": "GHSA-935g-9rq5-q95c"
+  },
+  "fast-xml-builder": {
+   "first": "2026-05-08",
+   "id": "GHSA-45c6-75p6-83cc"
+  },
+  "@fastify/accepts-serializer": {
+   "first": "2026-05-08",
+   "id": "GHSA-qxhc-wx3p-2wmg"
+  },
+  "fast-uri": {
+   "first": "2026-05-08",
+   "id": "GHSA-q3j6-qgpj-74h6"
+  },
+  "@mikro-orm/sql": {
+   "first": "2026-05-08",
+   "id": "GHSA-cfw5-68c4-ffqp"
+  },
+  "@mikro-orm/knex": {
+   "first": "2026-05-08",
+   "id": "GHSA-cfw5-68c4-ffqp"
+  },
+  "@babel/plugin-transform-modules-systemjs": {
+   "first": "2026-05-08",
+   "id": "GHSA-fv7c-fp4j-7gwp"
+  },
+  "cline": {
+   "first": "2026-05-08",
+   "id": "GHSA-5c57-rqjx-35g2"
+  },
+  "eventsource-encoder": {
+   "first": "2026-05-08",
+   "id": "GHSA-m9g3-3g99-mhpx"
+  },
+  "@yoda.digital/gitlab-mcp-server": {
+   "first": "2026-05-09",
+   "id": "GHSA-8jr5-6gvj-rfpf"
+  },
+  "velocityjs": {
+   "first": "2026-05-09",
+   "id": "GHSA-j658-c2gf-x6pq"
+  },
+  "@profullstack/mcp-server": {
+   "first": "2026-05-09",
+   "id": "GHSA-v6wj-c83f-v46x"
+  },
+  "@opentelemetry/exporter-prometheus": {
+   "first": "2026-05-11",
+   "id": "GHSA-q7rr-3cgh-j5r3"
+  },
+  "@opentelemetry/sdk-node": {
+   "first": "2026-05-11",
+   "id": "GHSA-q7rr-3cgh-j5r3"
+  },
+  "@opentelemetry/auto-instrumentations-node": {
+   "first": "2026-05-11",
+   "id": "GHSA-q7rr-3cgh-j5r3"
+  },
+  "@rvf/set-get": {
+   "first": "2026-05-11",
+   "id": "GHSA-c567-44rc-m5hq"
+  },
+  "@theecryptochad/merge-guard": {
+   "first": "2026-05-11",
+   "id": "GHSA-mhwj-73qx-jqxm"
+  },
+  "@wdio/browserstack-service": {
+   "first": "2026-05-11",
+   "id": "GHSA-5c46-x3qw-q7j7"
+  },
+  "automagik-genie": {
+   "first": "2026-05-11",
+   "id": "GHSA-64vr-4gr2-m642"
+  },
+  "@steipete/summarize": {
+   "first": "2026-05-11",
+   "id": "GHSA-qp7v-gjgg-4mj6"
+  },
+  "@tanstack/arktype-adapter": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/eslint-plugin-router": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/eslint-plugin-start": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/history": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/nitro-v2-vite-plugin": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-router": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-router-devtools": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-router-ssr-query": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-start": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-start-client": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-start-rsc": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/react-start-server": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-cli": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-core": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-devtools": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-devtools-core": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-generator": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-plugin": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-ssr-query-core": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-utils": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/router-vite-plugin": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/solid-router": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/solid-router-devtools": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/solid-router-ssr-query": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/solid-start": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/solid-start-client": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/solid-start-server": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/start-client-core": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/start-fn-stubs": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/start-plugin-core": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/start-server-core": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/start-static-server-functions": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/start-storage-context": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/valibot-adapter": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/virtual-file-routes": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/vue-router": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/vue-router-devtools": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/vue-router-ssr-query": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/vue-start": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/vue-start-client": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/vue-start-server": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "@tanstack/zod-adapter": {
+   "first": "2026-05-12",
+   "id": "GHSA-g7cv-rxg3-hmpx"
+  },
+  "protobufjs-cli": {
+   "first": "2026-05-12",
+   "id": "GHSA-f84p-cvgm-xgjj"
+  },
+  "@protobufjs/utf8": {
+   "first": "2026-05-12",
+   "id": "GHSA-q6x5-8v7m-xcrf"
+  },
+  "sealed-env": {
+   "first": "2026-05-12",
+   "id": "GHSA-x3r2-fj3r-g5mv"
+  },
+  "openclaude": {
+   "first": "2026-05-12",
+   "id": "GHSA-m77w-p5jj-xmhg"
+  },
+  "kubectl-mcp-server": {
+   "first": "2026-05-12",
+   "id": "GHSA-94gr-w3q5-rfqr"
+  },
+  "claude-code-cache-fix": {
+   "first": "2026-05-13",
+   "id": "GHSA-g3xq-3gmv-qq8g"
+  },
+  "@strapi/content-type-builder": {
+   "first": "2026-05-13",
+   "id": "GHSA-3xcq-8mjw-h6mx"
+  },
+  "@strapi/plugin-content-type-builder": {
+   "first": "2026-05-13",
+   "id": "GHSA-3xcq-8mjw-h6mx"
+  },
+  "@strapi/upload": {
+   "first": "2026-05-14",
+   "id": "GHSA-pcw7-5633-82vv"
+  },
+  "@apostrophecms/cli": {
+   "first": "2026-05-14",
+   "id": "GHSA-hcwq-x9fw-8cfq"
+  },
+  "@karakeep/sdk": {
+   "first": "2026-05-14",
+   "id": "GHSA-7rx4-c5vx-g8w3"
+  },
+  "deepseek-tui": {
+   "first": "2026-05-14",
+   "id": "GHSA-96ff-gc8g-wpvg"
+  },
+  "@utcp/http": {
+   "first": "2026-05-14",
+   "id": "GHSA-r8j5-8747-88cm"
+  },
+  "@ranfdev/deepobj": {
+   "first": "2026-05-14",
+   "id": "GHSA-x7q7-fchv-8h2j"
+  },
+  "smtp-server": {
+   "first": "2026-05-15",
+   "id": "GHSA-fv2f-rw9f-v9cm"
+  },
+  "@joplin/onenote-converter": {
+   "first": "2026-05-15",
+   "id": "GHSA-gcmj-c9gg-9vh6"
+  },
+  "@kilocode/cli": {
+   "first": "2026-05-18",
+   "id": "GHSA-rpc6-9c4p-j5cg"
+  },
+  "@ai-sdk/provider-utils": {
+   "first": "2026-05-18",
+   "id": "GHSA-866g-f22w-33x8"
+  },
+  "form-data-objectizer": {
+   "first": "2026-05-18",
+   "id": "GHSA-m2hg-wjq3-28wq"
+  },
+  "@sveltia/cms": {
+   "first": "2026-05-18",
+   "id": "GHSA-97r8-rf7q-wmjw"
+  },
+  "neotoma": {
+   "first": "2026-05-18",
+   "id": "GHSA-5cvp-p7p4-mcx9"
+  },
+  "parse-nested-form-data": {
+   "first": "2026-05-18",
+   "id": "GHSA-xp7r-j8r6-j9h3"
+  },
+  "dynoxide": {
+   "first": "2026-05-18",
+   "id": "GHSA-fvh2-gm75-j4j7"
+  },
+  "@tmlmobilidade/utils": {
+   "first": "2026-05-18",
+   "id": "GHSA-cmxg-94mg-jq94"
+  },
+  "multiparty": {
+   "first": "2026-05-18",
+   "id": "GHSA-qxch-whhj-8956"
+  },
+  "@budibase/worker": {
+   "first": "2026-05-18",
+   "id": "GHSA-c54j-xp92-wh28"
+  },
+  "@mistralai/mistralai": {
+   "first": "2026-05-18",
+   "id": "GHSA-jgg6-4rpr-wfh7"
+  },
+  "@mistralai/mistralai-azure": {
+   "first": "2026-05-18",
+   "id": "GHSA-jgg6-4rpr-wfh7"
+  },
+  "@mistralai/mistralai-gcp": {
+   "first": "2026-05-18",
+   "id": "GHSA-jgg6-4rpr-wfh7"
+  },
+  "ngrok": {
+   "first": "2026-05-18",
+   "id": "GHSA-qr28-p3wr-mxq3"
+  },
+  "@opensearch-project/opensearch": {
+   "first": "2026-05-19",
+   "id": "GHSA-27f5-xjrr-q9ff"
+  },
+  "@haxtheweb/video-player": {
+   "first": "2026-05-19",
+   "id": "GHSA-2m6p-hm3w-6jm3"
+  },
+  "@haxtheweb/iframe-loader": {
+   "first": "2026-05-19",
+   "id": "GHSA-jh3h-rpxg-fr36"
+  },
+  "auth-fetch-mcp": {
+   "first": "2026-05-19",
+   "id": "GHSA-hv85-774v-26fg"
+  },
+  "@apify/actors-mcp-server": {
+   "first": "2026-05-19",
+   "id": "GHSA-jwp7-wg77-3w9v"
+  },
+  "turbo": {
+   "first": "2026-05-19",
+   "id": "GHSA-3qcw-2rhx-2726"
+  },
+  "@turbo/codemod": {
+   "first": "2026-05-19",
+   "id": "GHSA-3qcw-2rhx-2726"
+  },
+  "@turbo/workspaces": {
+   "first": "2026-05-19",
+   "id": "GHSA-3qcw-2rhx-2726"
+  },
+  "@penpot/mcp": {
+   "first": "2026-05-19",
+   "id": "GHSA-22qr-rp27-j9wm"
+  },
+  "@nuxt/nitro-server": {
+   "first": "2026-05-19",
+   "id": "GHSA-g8wj-3cr3-6w7v"
+  },
+  "@libp2p/kad-dht": {
+   "first": "2026-05-19",
+   "id": "GHSA-32mq-hpph-xfvr"
+  },
+  "camofox-mcp": {
+   "first": "2026-05-19",
+   "id": "GHSA-7hgr-7h44-33w2"
+  },
+  "@beproduct/nestjs-auth": {
+   "first": "2026-05-19",
+   "id": "GHSA-6xwp-cp5h-q856"
+  },
+  "@cap-js/sqlite": {
+   "first": "2026-05-20",
+   "id": "GHSA-pvw4-cvr4-97p8"
+  },
+  "@cap-js/postgres": {
+   "first": "2026-05-20",
+   "id": "GHSA-pvw4-cvr4-97p8"
+  },
+  "@cap-js/db-service": {
+   "first": "2026-05-20",
+   "id": "GHSA-pvw4-cvr4-97p8"
+  },
+  "@cyntler/react-doc-viewer": {
+   "first": "2026-05-20",
+   "id": "GHSA-fvhg-p4hf-79x3"
+  },
+  "md-fileserver": {
+   "first": "2026-05-21",
+   "id": "GHSA-32q2-hhr5-6qvv"
+  },
+  "@hulumi/baseline": {
+   "first": "2026-05-21",
+   "id": "GHSA-gfp8-mp24-5vxg"
+  },
+  "@hulumi/drift": {
+   "first": "2026-05-21",
+   "id": "GHSA-2ffm-hxrq-qqmm"
+  },
+  "@hulumi/policies": {
+   "first": "2026-05-21",
+   "id": "GHSA-g43v-9x7q-83pq"
+  },
+  "js-cookie": {
+   "first": "2026-05-21",
+   "id": "GHSA-qjx8-664m-686j"
+  },
+  "@libp2p/gossipsub": {
+   "first": "2026-05-21",
+   "id": "GHSA-4f8r-922h-2vgv"
+  },
+  "@nevware21/ts-utils": {
+   "first": "2026-05-21",
+   "id": "GHSA-x7j8-49r8-mr43"
+  },
+  "@boxlite-ai/boxlite": {
+   "first": "2026-05-21",
+   "id": "GHSA-g6ww-w5j2-r7x3"
+  },
+  "postcss-selector-parser": {
+   "first": "2026-05-26",
+   "id": "GHSA-w9m9-85wc-3x92"
+  },
+  "echarts": {
+   "first": "2026-05-26",
+   "id": "GHSA-fgmj-fm8m-jvvx"
+  },
+  "blitz": {
+   "first": "2026-05-26",
+   "id": "GHSA-h2p9-cr4h-px24"
+  },
+  "@koa/router": {
+   "first": "2026-05-26",
+   "id": "GHSA-47p6-69vm-vw6v"
+  },
+  "pacote": {
+   "first": "2026-05-26",
+   "id": "GHSA-w4pp-8pjf-rmxw"
+  },
+  "cryptpad": {
+   "first": "2026-05-26",
+   "id": "GHSA-g2g4-47gv-p72v"
+  },
+  "yeoman-environment": {
+   "first": "2026-05-26",
+   "id": "GHSA-vv9j-gjw2-j8wp"
+  },
+  "@hapi/wreck": {
+   "first": "2026-05-27",
+   "id": "GHSA-vhjm-w67q-g75c"
+  },
+  "json-2-csv": {
+   "first": "2026-05-28",
+   "id": "GHSA-g27c-q7cp-mhx6"
+  },
+  "shamefile": {
+   "first": "2026-05-28",
+   "id": "GHSA-x6p3-76f2-xxvh"
+  },
+  "exifreader": {
+   "first": "2026-05-29",
+   "id": "GHSA-rr89-w3h9-m66j"
+  },
+  "@agenticmail/api": {
+   "first": "2026-05-29",
+   "id": "GHSA-wjjv-3mj2-39hf"
+  },
+  "@agenticmail/core": {
+   "first": "2026-05-29",
+   "id": "GHSA-wjjv-3mj2-39hf"
+  },
+  "@agenticmail/mcp": {
+   "first": "2026-06-01",
+   "id": "GHSA-63gr-g7jc-v8rg"
+  },
+  "@enderfga/claw-orchestrator": {
+   "first": "2026-06-01",
+   "id": "GHSA-q6qc-xp4q-rjq5"
+  },
+  "@wonderwhy-er/desktop-commander": {
+   "first": "2026-06-03",
+   "id": "GHSA-5xx3-j724-wmx5"
+  },
+  "launch-editor": {
+   "first": "2026-06-03",
+   "id": "GHSA-c27g-q93r-2cwf"
+  },
+  "browserstack-runner": {
+   "first": "2026-06-03",
+   "id": "GHSA-8rpw-6cqh-2v9h"
+  },
+  "turbo-stream": {
+   "first": "2026-06-04",
+   "id": "GHSA-rxv8-25v2-qmq8"
+  },
+  "@cap-js/openapi": {
+   "first": "2026-06-04",
+   "id": "GHSA-jpvj-wpmj-h7rv"
+  },
+  "decompress": {
+   "first": "2026-06-05",
+   "id": "GHSA-h39j-r5qq-r9mm"
+  },
+  "claude-mem": {
+   "first": "2026-06-05",
+   "id": "GHSA-5gvr-v6qv-h5mm"
+  },
+  "dbgate-serve": {
+   "first": "2026-06-05",
+   "id": "GHSA-8v3q-9vmx-36vc"
+  },
+  "dbgate": {
+   "first": "2026-06-05",
+   "id": "GHSA-h535-j5hr-mv56"
+  },
+  "dbgate-api": {
+   "first": "2026-06-05",
+   "id": "GHSA-wm5r-5qp3-5vxf"
+  },
+  "cordova-plugin-inappbrowser": {
+   "first": "2026-06-08",
+   "id": "GHSA-q42j-x8rq-pjg6"
+  },
+  "actual": {
+   "first": "2026-06-08",
+   "id": "GHSA-7rvm-xjpp-63r9"
+  },
+  "degit": {
+   "first": "2026-06-09",
+   "id": "GHSA-77c7-pq4r-6mcq"
+  },
+  "shell-quote": {
+   "first": "2026-06-09",
+   "id": "GHSA-w7jw-789q-3m8p"
+  },
+  "@papra/webhooks": {
+   "first": "2026-06-10",
+   "id": "GHSA-5g86-85rp-f9hx"
+  },
+  "baileys": {
+   "first": "2026-06-10",
+   "id": "GHSA-qvv5-jq5g-4cgg"
+  },
+  "@whiskeysockets/baileys": {
+   "first": "2026-06-10",
+   "id": "GHSA-qvv5-jq5g-4cgg"
+  },
+  "@element-hq/element-call-embedded": {
+   "first": "2026-06-11",
+   "id": "GHSA-6vhh-4xw6-h2h2"
+  },
+  "@openzeppelin/wizard": {
+   "first": "2026-06-11",
+   "id": "GHSA-4x76-22x2-rx8v"
+  },
+  "joi": {
+   "first": "2026-06-11",
+   "id": "GHSA-q7cg-457f-vx79"
+  },
+  "@hapi/inert": {
+   "first": "2026-06-11",
+   "id": "GHSA-rcvq-m9j9-6f4g"
+  },
+  "@steipete/summarize-core": {
+   "first": "2026-06-11",
+   "id": "GHSA-q9xm-f36c-xm3q"
+  },
+  "@langchain/langgraph-checkpoint-mongodb": {
+   "first": "2026-06-12",
+   "id": "GHSA-98xf-r82g-9mhx"
+  },
+  "@angular/service-worker": {
+   "first": "2026-06-15",
+   "id": "GHSA-gv2q-mqqv-365m"
+  },
+  "@babel/core": {
+   "first": "2026-06-15",
+   "id": "GHSA-4x5r-pxfx-6jf8"
+  },
+  "@opentelemetry/core": {
+   "first": "2026-06-15",
+   "id": "GHSA-8988-4f7v-96qf"
+  },
+  "remotion": {
+   "first": "2026-06-15",
+   "id": "GHSA-2jqp-f4gr-44fr"
+  },
+  "youtransfer": {
+   "first": "2026-06-15",
+   "id": "GHSA-68mc-h6h8-79wj"
+  },
+  "@astrojs/netlify": {
+   "first": "2026-06-16",
+   "id": "GHSA-529g-xq4f-cw38"
+  },
+  "@mariozechner/pi-coding-agent": {
+   "first": "2026-06-16",
+   "id": "GHSA-7v5m-pr3q-6453"
+  },
+  "@earendil-works/pi-coding-agent": {
+   "first": "2026-06-16",
+   "id": "GHSA-7v5m-pr3q-6453"
+  },
+  "chrome-devtools-mcp": {
+   "first": "2026-06-17",
+   "id": "GHSA-3pvj-jv98-qhjq"
+  },
+  "piscina": {
+   "first": "2026-06-18",
+   "id": "GHSA-x9g3-xrwr-cwfg"
+  },
+  "hydrooj": {
+   "first": "2026-06-18",
+   "id": "GHSA-94jp-7776-qj6q"
+  },
+  "@tinacms/mdx": {
+   "first": "2026-06-18",
+   "id": "GHSA-2vcc-5v34-9jc8"
+  },
+  "praisonai": {
+   "first": "2026-06-18",
+   "id": "GHSA-4qq2-2j2x-x62c"
+  },
+  "@bitbonsai/mcpvault": {
+   "first": "2026-06-18",
+   "id": "GHSA-j99q-93c9-h869"
+  },
+  "@agenticmail/claudecode": {
+   "first": "2026-06-18",
+   "id": "GHSA-fq4x-789w-jg5h"
+  },
+  "@agenticmail/codex": {
+   "first": "2026-06-18",
+   "id": "GHSA-fq4x-789w-jg5h"
+  },
+  "@agenticmail/openclaw": {
+   "first": "2026-06-18",
+   "id": "GHSA-fq4x-789w-jg5h"
+  },
+  "@acastellon/auth": {
+   "first": "2026-06-18",
+   "id": "GHSA-gfj5-979r-92pw"
+  },
+  "@theia/ai-chat-ui": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/ai-chat": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/ai-claude-code": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/ai-code-completion": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/ai-core": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/ai-editor": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/ai-ide": {
+   "first": "2026-06-18",
+   "id": "GHSA-qwjm-9c66-w4q4"
+  },
+  "@theia/debug": {
+   "first": "2026-06-18",
+   "id": "GHSA-g9jw-92q7-g7fj"
+  },
+  "@theia/task": {
+   "first": "2026-06-18",
+   "id": "GHSA-g9jw-92q7-g7fj"
+  },
+  "@theia/workspace": {
+   "first": "2026-06-18",
+   "id": "GHSA-g9jw-92q7-g7fj"
+  },
+  "ts-deepmerge": {
+   "first": "2026-06-19",
+   "id": "GHSA-87mf-gv2c-c62c"
+  },
+  "agentic-flow": {
+   "first": "2026-06-19",
+   "id": "GHSA-vcv2-r9jh-99m5"
+  },
+  "@openzeppelin/wizard-cairo": {
+   "first": "2026-06-19",
+   "id": "GHSA-9wxg-vf3r-56hc"
+  },
+  "@openzeppelin/wizard-stellar": {
+   "first": "2026-06-19",
+   "id": "GHSA-9wxg-vf3r-56hc"
+  },
+  "@openzeppelin/wizard-stylus": {
+   "first": "2026-06-19",
+   "id": "GHSA-9wxg-vf3r-56hc"
+  },
+  "@jupyterlab/git": {
+   "first": "2026-06-19",
+   "id": "GHSA-f962-v9hr-pfg5"
+  },
+  "kozou": {
+   "first": "2026-06-19",
+   "id": "GHSA-v52w-28xh-v562"
+  },
+  "@kozou/api": {
+   "first": "2026-06-19",
+   "id": "GHSA-v52w-28xh-v562"
+  },
+  "@kozou/mcp": {
+   "first": "2026-06-19",
+   "id": "GHSA-v52w-28xh-v562"
+  },
+  "@kozou/core": {
+   "first": "2026-06-19",
+   "id": "GHSA-v52w-28xh-v562"
+  },
+  "@cyclonedx/cyclonedx-npm": {
+   "first": "2026-06-19",
+   "id": "GHSA-v75r-vx73-82pj"
+  },
+  "flat-to-nested": {
+   "first": "2026-06-19",
+   "id": "GHSA-hp36-v28f-w3r4"
+  },
+  "@tinacms/app": {
+   "first": "2026-06-19",
+   "id": "GHSA-g5qx-h5f3-mp2f"
+  },
+  "@outerbase/studio": {
+   "first": "2026-06-19",
+   "id": "GHSA-wwf9-7jrc-rv4q"
+  },
+  "mcp-searxng": {
+   "first": "2026-06-19",
+   "id": "GHSA-xcqx-9jf5-w339"
+  },
+  "@zenalexa/unicli": {
+   "first": "2026-06-19",
+   "id": "GHSA-v3f4-w7r7-v3hm"
+  },
+  "appium-mcp": {
+   "first": "2026-06-19",
+   "id": "GHSA-x975-rgx4-5fh4"
+  },
+  "@jhb.software/payload-cloudinary-plugin": {
+   "first": "2026-06-19",
+   "id": "GHSA-h5x8-xp6m-x6q4"
+  },
+  "@merill/lokka": {
+   "first": "2026-06-19",
+   "id": "GHSA-g2gw-q38m-vjfc"
+  },
+  "@actual-app/cli": {
+   "first": "2026-06-22",
+   "id": "GHSA-7gh7-258j-4mpq"
+  },
+  "scim-patch": {
+   "first": "2026-06-22",
+   "id": "GHSA-9m6g-wc8r-q59c"
+  },
+  "devbridge-autocomplete": {
+   "first": "2026-06-22",
+   "id": "GHSA-hvqh-jw65-wcpq"
+  },
+  "@actual-app/web": {
+   "first": "2026-06-22",
+   "id": "GHSA-xqjm-27pc-rvwm"
+  },
+  "extract-zip": {
+   "first": "2026-06-26",
+   "id": "GHSA-jmr9-qjv8-65gv"
+  },
+  "@sigstore/core": {
+   "first": "2026-06-26",
+   "id": "GHSA-jfc7-64v2-mr8c"
+  },
+  "@mcptoolshop/backpropagate": {
+   "first": "2026-06-26",
+   "id": "GHSA-f65r-h4g3-3h9h"
+  },
+  "linkify-it": {
+   "first": "2026-06-26",
+   "id": "GHSA-22p9-wv53-3rq4"
+  },
+  "muhammara": {
+   "first": "2026-06-26",
+   "id": "GHSA-fhp4-pr5j-46m5"
+  },
+  "better-helperjs": {
+   "first": "2026-06-26",
+   "id": "GHSA-3p34-w4f6-5xh2"
+  },
+  "@deepstream/server": {
+   "first": "2026-06-26",
+   "id": "GHSA-9v98-6g37-x9g6"
+  },
+  "@cardano402/mcp-server": {
+   "first": "2026-06-26",
+   "id": "GHSA-rp72-5v5q-2446"
+  },
+  "line-desktop-mcp": {
+   "first": "2026-06-26",
+   "id": "GHSA-4hf8-5mjm-rfgq"
+  },
+  "@microsoft/kiota-http-fetchlibrary": {
+   "first": "2026-06-26",
+   "id": "GHSA-396q-4vc8-28x9"
+  },
+  "@cedar-policy/authorization-for-expressjs": {
+   "first": "2026-06-30",
+   "id": "GHSA-g4w6-vmgf-xqvx"
+  },
+  "@jshookmcp/jshook": {
+   "first": "2026-07-01",
+   "id": "GHSA-c5r6-m4mr-8q5j"
+  },
+  "wetty": {
+   "first": "2026-07-01",
+   "id": "GHSA-p26j-h7wj-r568"
+  },
+  "repomix": {
+   "first": "2026-07-01",
+   "id": "GHSA-9mm9-rqhj-j5mx"
+  },
+  "@sigstore/verify": {
+   "first": "2026-07-01",
+   "id": "GHSA-xgjw-pm74-86q4"
+  },
+  "sigstore": {
+   "first": "2026-07-01",
+   "id": "GHSA-52v5-jr5w-gjxr"
+  },
+  "@hey-api/openapi-ts": {
+   "first": "2026-07-01",
+   "id": "GHSA-hhx9-57xq-r5rw"
+  },
+  "Openclaw": {
+   "first": "2026-07-02",
+   "id": "GHSA-2j8v-hwgc-x698"
+  },
+  "@asymmetric-effort/specifyjs": {
+   "first": "2026-07-02",
+   "id": "GHSA-8882-frvv-92w4"
+  },
+  "@grackle-ai/runtime-sdk": {
+   "first": "2026-07-02",
+   "id": "GHSA-vv65-f55v-xm6g"
+  },
+  "@grackle-ai/plugin-core": {
+   "first": "2026-07-02",
+   "id": "GHSA-f9ff-5x35-7gfw"
+  },
+  "@grackle-ai/auth": {
+   "first": "2026-07-02",
+   "id": "GHSA-f9ff-5x35-7gfw"
+  },
+  "@nuxt/ui": {
+   "first": "2026-07-02",
+   "id": "GHSA-gj2h-2fpw-fhv9"
+  },
+  "@asymmetric-effort/nogginlessdom": {
+   "first": "2026-07-02",
+   "id": "GHSA-322x-v876-g883"
+  },
+  "@xhmikosr/decompress": {
+   "first": "2026-07-06",
+   "id": "GHSA-mp2f-45pm-3cg9"
+  },
+  "@better-auth/sso": {
+   "first": "2026-07-07",
+   "id": "GHSA-5rr4-8452-hf4v"
+  },
+  "@better-auth/scim": {
+   "first": "2026-07-07",
+   "id": "GHSA-2vg6-77g8-24mp"
+  },
+  "waku": {
+   "first": "2026-07-08",
+   "id": "GHSA-75w3-gmqx-993q"
+  },
+  "@jsonbored/gittensory-mcp": {
+   "first": "2026-07-09",
+   "id": "GHSA-382c-vx95-w3p5"
+  },
+  "morgan": {
+   "first": "2026-07-10",
+   "id": "GHSA-4vj7-5mj6-jm8m"
+  },
+  "adm-zip": {
+   "first": "2026-07-10",
+   "id": "GHSA-xcpc-8h2w-3j85"
+  },
+  "safeinstall-cli": {
+   "first": "2026-07-10",
+   "id": "GHSA-xrmc-c5cg-rv7x"
+  },
+  "@feathersjs/commons": {
+   "first": "2026-07-14",
+   "id": "GHSA-28xv-ph75-77wh"
+  },
+  "tidgi": {
+   "first": "2026-07-14",
+   "id": "GHSA-9hc2-hjx8-q6pv"
+  },
+  "jsii-diff": {
+   "first": "2026-07-15",
+   "id": "GHSA-h738-vh6g-q8gh"
+  },
+  "obsidian-local-rest-api": {
+   "first": "2026-07-15",
+   "id": "GHSA-62gx-5q78-wrvx"
+  },
+  "websocket-driver": {
+   "first": "2026-07-15",
+   "id": "GHSA-xv26-6w52-cph6"
+  },
+  "dd-trace": {
+   "first": "2026-07-15",
+   "id": "GHSA-wxqq-gcq8-c443"
+  },
+  "@andrea9293/mcp-documentation-server": {
+   "first": "2026-07-15",
+   "id": "GHSA-6f5r-5672-72j7"
+  },
+  "@genql/cli": {
+   "first": "2026-07-16",
+   "id": "GHSA-w757-xvvv-vgfw"
+  },
+  "@tak-ps/cloudtak": {
+   "first": "2026-07-17",
+   "id": "GHSA-vqrw-qphh-p34v"
+  },
+  "mcp-memory-keeper": {
+   "first": "2026-07-17",
+   "id": "GHSA-f7wf-v2vw-mpcx"
+  },
+  "@prompty/core": {
+   "first": "2026-07-17",
+   "id": "GHSA-wxhm-2mq7-7697"
+  },
+  "@astrojs/rss": {
+   "first": "2026-07-20",
+   "id": "GHSA-8j5q-mfj2-5q9q"
+  },
+  "@opentelemetry/propagator-jaeger": {
+   "first": "2026-07-21",
+   "id": "GHSA-45rx-2jwx-cxfr"
+  },
+  "@sigstore/oci": {
+   "first": "2026-07-21",
+   "id": "GHSA-pf56-329r-95rw"
+  },
+  "fflate": {
+   "first": "2026-07-22",
+   "id": "GHSA-px8p-9vwx-vf98"
+  },
+  "@n8n/computer-use": {
+   "first": "2026-07-22",
+   "id": "GHSA-4v35-78jc-648r"
+  },
+  "danger": {
+   "first": "2026-07-23",
+   "id": "GHSA-3x93-p86w-5jvh"
+  },
+  "@auth/core": {
+   "first": "2026-07-23",
+   "id": "GHSA-x445-f3h2-j279"
+  },
+  "react-router-dom": {
+   "first": "2026-07-23",
+   "id": "GHSA-jjmj-jmhj-qwj2"
+  },
+  "builder-util-runtime": {
+   "first": "2026-07-24",
+   "id": "GHSA-p2f4-r6v6-j797"
+  },
+  "@better-auth/stripe": {
+   "first": "2026-07-24",
+   "id": "GHSA-h3rm-78g3-j7cp"
+  },
+  "@aws-cdk/aws-codebuild": {
+   "first": "2026-07-24",
+   "id": "GHSA-464c-974j-9xm6"
+  },
+  "@anephenix/hub": {
+   "first": "2026-07-24",
+   "id": "GHSA-g5vv-q72c-7j78"
+  },
+  "quasar": {
+   "first": "2026-07-24",
+   "id": "GHSA-3r53-75j5-3g7j"
+  },
+  "@wakaru/cli": {
+   "first": "2026-07-28",
+   "id": "GHSA-7wpj-vvmv-pgm8"
+  },
+  "@novu/application-generic": {
+   "first": "2026-07-28",
+   "id": "GHSA-vg6v-j97m-h5xq"
+  },
+  "qti-neon": {
+   "first": "2026-07-28",
+   "id": "GHSA-85rg-p3fr-xc2f"
+  },
+  "@hypequery/clickhouse": {
+   "first": "2026-07-28",
+   "id": "GHSA-6wcc-39rp-hh9p"
+  },
+  "style-dictionary": {
+   "first": "2026-07-28",
+   "id": "GHSA-vj5c-m527-mpff"
+  },
+  "swagger-typescript-api": {
+   "first": "2026-07-29",
+   "id": "GHSA-h754-fxp7-88wx"
+  },
+  "@dynatrace-oss/dynatrace-mcp-server": {
+   "first": "2026-07-29",
+   "id": "GHSA-pc2w-4mq8-32qw"
+  },
+  "@aws/agentcore": {
+   "first": "2026-07-29",
+   "id": "GHSA-m4x6-gwgp-4pm7"
+  },
+  "@aws-amplify/codegen-ui-react": {
+   "first": "2026-07-30",
+   "id": "GHSA-hf3j-86p7-mfw8"
+  },
+  "re2": {
+   "first": "2026-07-31",
+   "id": "GHSA-6hxr-mr5r-9836"
+  },
+  "hashi-vault-js": {
+   "first": "2026-07-31",
+   "id": "GHSA-g956-2f74-rmv7"
+  },
+  "@phun-ky/defaults-deep": {
+   "first": "2026-07-31",
+   "id": "GHSA-mj3g-7xcc-x4vh"
+  },
+  "@nocobase/plugin-notification-in-app-message": {
+   "first": "2026-07-31",
+   "id": "GHSA-p849-8hwh-84j9"
+  },
+  "@apostrophecms/seo": {
+   "first": "2026-07-31",
+   "id": "GHSA-wf43-fpp3-cf65"
+  },
+  "siyuan": {
+   "first": "2026-08-03",
+   "id": "GHSA-2mmh-4rf8-7xg6"
+  },
+  "@tryghost/activitypub": {
+   "first": "2026-08-04",
+   "id": "GHSA-xpp7-93x6-v29m"
+  },
+  "@nx/s3-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "@nx/gcs-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "@nx/shared-fs-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "@nx/powerpack-s3-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "@nx/powerpack-gcs-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "@nx/powerpack-azure-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "@nx/powerpack-shared-fs-cache": {
+   "first": "2026-08-06",
+   "id": "GHSA-vp3h-ghgh-jr7g"
+  },
+  "ngx-extended-pdf-viewer": {
+   "first": "2026-08-06",
+   "id": "GHSA-w9hm-4m3m-fxmm"
+  },
+  "ep_etherpad-lite": {
+   "first": "2026-08-13",
+   "id": "GHSA-fjgc-3mj7-8rg8"
+  },
+  "@trigger.dev/core": {
+   "first": "2026-08-13",
+   "id": "GHSA-p28v-f755-9qrg"
+  },
+  "@ooples/token-optimizer-mcp": {
+   "first": "2026-08-14",
+   "id": "GHSA-49mq-fc6q-3h46"
+  },
+  "deepmerge-ts": {
+   "first": "2026-08-17",
+   "id": "GHSA-ggr8-5vv4-36mx"
+  },
+  "@medplum/core": {
+   "first": "2026-08-17",
+   "id": "GHSA-m44r-7c5h-m6mj"
+  },
+  "mlflow": {
+   "first": "2026-08-17",
+   "id": "GHSA-3p64-6gvh-82v5"
+  },
+  "@rhinostone/swig": {
+   "first": "2026-08-18",
+   "id": "GHSA-2mf3-mr2r-r4vf"
+  },
+  "@rhinostone/swig-core": {
+   "first": "2026-08-18",
+   "id": "GHSA-2mf3-mr2r-r4vf"
+  },
+  "@rhinostone/swig-twig": {
+   "first": "2026-08-18",
+   "id": "GHSA-2mf3-mr2r-r4vf"
+  },
+  "@rhinostone/swig-jinja2": {
+   "first": "2026-08-18",
+   "id": "GHSA-2mf3-mr2r-r4vf"
+  },
+  "@rhinostone/swig-django": {
+   "first": "2026-08-18",
+   "id": "GHSA-2mf3-mr2r-r4vf"
+  },
+  "@geolens/sdk": {
+   "first": "2026-08-18",
+   "id": "GHSA-p23g-mvhj-jh3j"
+  },
+  "grok-faf-mcp": {
+   "first": "2026-08-19",
+   "id": "GHSA-cc2g-gq8c-r332"
+  },
+  "faf-mcp": {
+   "first": "2026-08-19",
+   "id": "GHSA-j4r7-8ph4-43g3"
+  },
+  "claude-faf-mcp": {
+   "first": "2026-08-19",
+   "id": "GHSA-rr55-jp92-8wp2"
+  },
+  "@contentful/mcp-server": {
+   "first": "2026-08-19",
+   "id": "GHSA-2xhg-73j7-rrgx"
+  },
+  "@contentful/mcp-tools": {
+   "first": "2026-08-19",
+   "id": "GHSA-2xhg-73j7-rrgx"
+  },
+  "@logto/tunnel": {
+   "first": "2026-08-19",
+   "id": "GHSA-rxjr-6c9q-h67x"
+  },
+  "next-tinacms-s3": {
+   "first": "2026-08-19",
+   "id": "GHSA-8mq9-5fw2-5rm4"
+  },
+  "next-tinacms-dos": {
+   "first": "2026-08-19",
+   "id": "GHSA-8mq9-5fw2-5rm4"
+  },
+  "next-tinacms-azure": {
+   "first": "2026-08-19",
+   "id": "GHSA-8mq9-5fw2-5rm4"
+  },
+  "next-tinacms-cloudinary": {
+   "first": "2026-08-19",
+   "id": "GHSA-8mq9-5fw2-5rm4"
+  },
+  "@nocobase/plugin-backups": {
+   "first": "2026-08-20",
+   "id": "GHSA-p853-83gj-wjj3"
+  },
+  "next-video": {
+   "first": "2026-08-20",
+   "id": "GHSA-2p39-2jf3-fv2q"
+  },
+  "node-opcua": {
+   "first": "2026-08-20",
+   "id": "GHSA-mq36-523m-x7vv"
+  },
+  "@nocobase/server": {
+   "first": "2026-08-20",
+   "id": "GHSA-ghvf-qf6h-g8x5"
+  },
+  "gettext-converter": {
+   "first": "2026-08-20",
+   "id": "GHSA-f4jp-rw7w-ccwg"
+  },
+  "unleash-server": {
+   "first": "2026-08-21",
+   "id": "GHSA-r5pq-6chh-j3xp"
+  },
+  "pickem": {
+   "first": "2026-08-25",
+   "id": "GHSA-8qx3-8gm5-9cj2"
+  },
+  "urllib": {
+   "first": "2026-08-25",
+   "id": "GHSA-hq3h-g68c-hp78"
+  },
+  "browse-mcp": {
+   "first": "2026-08-25",
+   "id": "GHSA-m9mq-7m7q-xc6p"
+  },
+  "@platejs/media": {
+   "first": "2026-08-25",
+   "id": "GHSA-qj6x-xx2h-8hvv"
+  },
+  "mediasoup": {
+   "first": "2026-08-25",
+   "id": "GHSA-p7x2-g5cq-fhmq"
+  },
+  "consciousness-explorer": {
+   "first": "2026-08-25",
+   "id": "GHSA-xc9g-j69q-37xw"
+  },
+  "@arikusi/deepseek-mcp-server": {
+   "first": "2026-08-25",
+   "id": "GHSA-fh3r-g96v-f578"
+  },
+  "@logtape/syslog": {
+   "first": "2026-08-26",
+   "id": "GHSA-8h6h-x5pq-56fq"
+  },
+  "suneditor": {
+   "first": "2026-08-26",
+   "id": "GHSA-w93q-cq9w-58p7"
+  },
+  "n8n-nodes-sqlite3": {
+   "first": "2026-08-27",
+   "id": "GHSA-q7m3-rhxg-7vxr"
+  },
+  "libreoffice-convert": {
+   "first": "2026-08-27",
+   "id": "GHSA-gmxc-r82q-347r"
+  },
+  "mariadb": {
+   "first": "2026-08-28",
+   "id": "GHSA-cqhc-2h57-wpxf"
+  },
+  "@hono/oauth-providers": {
+   "first": "2026-08-31",
+   "id": "GHSA-fm3f-ch8h-qw8q"
+  },
+  "decode-uri-component": {
+   "first": "2026-08-31",
+   "id": "GHSA-vcc3-ghjq-m6fr"
+  }
+ }
+}

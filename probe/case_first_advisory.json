@@ -1,0 +1,3554 @@
+{
+ "color-name": {
+  "id": "GHSA-5fvm-p68v-5wmh",
+  "published": "2025-09-15",
+  "severity": "high",
+  "cve": "CVE-2025-59145",
+  "type": "reviewed",
+  "summary": "color-name@2.0.1 contains malware after npm account takeover",
+  "co_affected": []
+ },
+ "color-string": {
+  "id": "GHSA-286p-vc9p-p5qv",
+  "published": "2025-09-15",
+  "severity": "high",
+  "cve": "CVE-2025-59142",
+  "type": "reviewed",
+  "summary": "color-string@2.1.1 contains malware after npm account takeover",
+  "co_affected": []
+ },
+ "compressing": {
+  "id": "GHSA-cc8f-xg8v-72m3",
+  "published": "2026-02-03",
+  "severity": "high",
+  "cve": "CVE-2026-24884",
+  "type": "reviewed",
+  "summary": "Compressing Vulnerable to Arbitrary File Write via Symlink Extraction",
+  "co_affected": []
+ },
+ "content-security-policy-parser": {
+  "id": "GHSA-w2cq-g8g3-gm83",
+  "published": "2025-08-12",
+  "severity": "high",
+  "cve": "CVE-2025-55164",
+  "type": "reviewed",
+  "summary": "content-security-policy-parser Prototype Pollution Vulnerability May Lead to RCE",
+  "co_affected": []
+ },
+ "convict": {
+  "id": "GHSA-4jrm-c32x-w4jf",
+  "published": "2023-01-10",
+  "severity": "high",
+  "cve": "CVE-2023-0163",
+  "type": "reviewed",
+  "summary": "convict vulnerable to Prototype Pollution",
+  "co_affected": []
+ },
+ "cookie": {
+  "id": "GHSA-pxg6-pf52-xh8x",
+  "published": "2024-10-04",
+  "severity": "low",
+  "cve": "CVE-2024-47764",
+  "type": "reviewed",
+  "summary": "cookie accepts cookie name, path, and domain with out of bounds characters",
+  "co_affected": []
+ },
+ "critters": {
+  "id": "GHSA-cx3j-qqxj-9597",
+  "published": "2023-08-11",
+  "severity": "medium",
+  "cve": "CVE-2023-3481",
+  "type": "reviewed",
+  "summary": "Critters Cross-site Scripting Vulnerability",
+  "co_affected": []
+ },
+ "cyberchef": {
+  "id": "GHSA-h4hv-92pp-pcjg",
+  "published": "2026-04-29",
+  "severity": "high",
+  "cve": "CVE-2026-42615",
+  "type": "reviewed",
+  "summary": "CyberChef has a Cross-site Scripting issue",
+  "co_affected": []
+ },
+ "danger": {
+  "id": "GHSA-3x93-p86w-5jvh",
+  "published": "2026-07-23",
+  "severity": "medium",
+  "cve": "CVE-2026-16629",
+  "type": "reviewed",
+  "summary": "danger allows local OS command injection through crafted file paths",
+  "co_affected": []
+ },
+ "darkreader": {
+  "id": "GHSA-x369-mcw8-8rvj",
+  "published": "2026-03-04",
+  "severity": "low",
+  "cve": "CVE-2025-68467",
+  "type": "reviewed",
+  "summary": "Dark Reader gives users the ability to request style sheets from local web servers",
+  "co_affected": []
+ },
+ "dash-core-components": {
+  "id": "GHSA-547x-748v-vp6p",
+  "published": "2024-02-02",
+  "severity": "medium",
+  "cve": "CVE-2024-21485",
+  "type": "reviewed",
+  "summary": "Dash apps vulnerable to Cross-site Scripting",
+  "co_affected": [
+   "dash-html-components"
+  ]
+ },
+ "dash-html-components": {
+  "id": "GHSA-547x-748v-vp6p",
+  "published": "2024-02-02",
+  "severity": "medium",
+  "cve": "CVE-2024-21485",
+  "type": "reviewed",
+  "summary": "Dash apps vulnerable to Cross-site Scripting",
+  "co_affected": [
+   "dash-core-components"
+  ]
+ },
+ "dd-trace": {
+  "id": "GHSA-wxqq-gcq8-c443",
+  "published": "2026-07-15",
+  "severity": "high",
+  "cve": "CVE-2026-50272",
+  "type": "reviewed",
+  "summary": "dd-trace-js: Improper parsing of W3C baggage headers may lead to DoS",
+  "co_affected": []
+ },
+ "debug": {
+  "id": "GHSA-9vvw-cc9w-f27h",
+  "published": "2023-01-09",
+  "severity": "high",
+  "cve": "CVE-2017-20165",
+  "type": "reviewed",
+  "summary": "debug Inefficient Regular Expression Complexity vulnerability",
+  "co_affected": []
+ },
+ "decode-uri-component": {
+  "id": "GHSA-vcc3-ghjq-m6fr",
+  "published": "2026-08-31",
+  "severity": "medium",
+  "cve": "CVE-2026-45822",
+  "type": "reviewed",
+  "summary": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+  "co_affected": []
+ },
+ "deepmerge-ts": {
+  "id": "GHSA-ggr8-5vv4-36mx",
+  "published": "2026-08-17",
+  "severity": "high",
+  "cve": "CVE-2026-40345",
+  "type": "reviewed",
+  "summary": "DeepmergeTS has stack exhaustion when merging recursive object graphs",
+  "co_affected": []
+ },
+ "defu": {
+  "id": "GHSA-737v-mqg7-c878",
+  "published": "2026-04-04",
+  "severity": "high",
+  "cve": "CVE-2026-35209",
+  "type": "reviewed",
+  "summary": "defu: Prototype pollution via `__proto__` key in defaults argument",
+  "co_affected": []
+ },
+ "deobfuscator": {
+  "id": "GHSA-jg82-xh3w-rhxx",
+  "published": "2023-10-18",
+  "severity": "high",
+  "cve": "CVE-2023-45811",
+  "type": "reviewed",
+  "summary": "Synchrony deobfuscator prototype pollution vulnerability leading to arbitrary code execution",
+  "co_affected": []
+ },
+ "devalue": {
+  "id": "GHSA-vj54-72f3-p5jv",
+  "published": "2025-08-26",
+  "severity": "high",
+  "cve": "CVE-2025-57820",
+  "type": "reviewed",
+  "summary": "devalue prototype pollution vulnerability",
+  "co_affected": []
+ },
+ "diff": {
+  "id": "GHSA-73rr-hh4g-fpgx",
+  "published": "2026-01-14",
+  "severity": "low",
+  "cve": "CVE-2026-24001",
+  "type": "reviewed",
+  "summary": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
+  "co_affected": []
+ },
+ "directus": {
+  "id": "GHSA-j3rg-3rgm-537h",
+  "published": "2023-03-03",
+  "severity": "medium",
+  "cve": "CVE-2023-26492",
+  "type": "reviewed",
+  "summary": "Directus vulnerable to Server-Side Request Forgery On File Import",
+  "co_affected": []
+ },
+ "dom-expressions": {
+  "id": "GHSA-hw62-58pr-7wc5",
+  "published": "2025-02-25",
+  "severity": "high",
+  "cve": "CVE-2025-27108",
+  "type": "reviewed",
+  "summary": "DOM Expressions has a Cross-Site Scripting (XSS) vulnerability due to improper use of string.replace",
+  "co_affected": []
+ },
+ "dompurify": {
+  "id": "GHSA-8hgg-xxm5-3873",
+  "published": "2023-11-14",
+  "severity": "medium",
+  "cve": "CVE-2019-25155",
+  "type": "reviewed",
+  "summary": "DOMPurify Open Redirect vulnerability",
+  "co_affected": []
+ },
+ "drizzle-orm": {
+  "id": "GHSA-gpj5-g38j-94v9",
+  "published": "2026-04-08",
+  "severity": "high",
+  "cve": "CVE-2026-39356",
+  "type": "reviewed",
+  "summary": "Drizzle ORM has SQL injection via improperly escaped SQL identifiers",
+  "co_affected": []
+ },
+ "dset": {
+  "id": "GHSA-f6v4-cf5j-vf3w",
+  "published": "2024-09-11",
+  "severity": "high",
+  "cve": "CVE-2024-21529",
+  "type": "reviewed",
+  "summary": "dset Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "duckdb": {
+  "id": "GHSA-w62p-hx95-gf2c",
+  "published": "2025-09-09",
+  "severity": "high",
+  "cve": "CVE-2025-59037",
+  "type": "reviewed",
+  "summary": "DuckDB NPM packages 1.3.3 and 1.29.2 briefly compromised with malware",
+  "co_affected": [
+   "@duckdb/duckdb-wasm",
+   "@duckdb/node-api",
+   "@duckdb/node-bindings"
+  ]
+ },
+ "ecdh": {
+  "id": "GHSA-p2hp-3wv3-4w74",
+  "published": "2023-02-24",
+  "severity": "high",
+  "cve": "CVE-2022-44310",
+  "type": "reviewed",
+  "summary": "ecdh vulnerable to Exposure of Resource to Wrong Sphere",
+  "co_affected": []
+ },
+ "echarts": {
+  "id": "GHSA-fgmj-fm8m-jvvx",
+  "published": "2026-05-26",
+  "severity": "medium",
+  "cve": "CVE-2026-45249",
+  "type": "reviewed",
+  "summary": "Apache ECharts has a cross-site scripting (XSS) vulnerability",
+  "co_affected": []
+ },
+ "ejs": {
+  "id": "GHSA-ghr5-ch3p-vcr6",
+  "published": "2024-04-28",
+  "severity": "medium",
+  "cve": "CVE-2024-33883",
+  "type": "reviewed",
+  "summary": "ejs lacks certain pollution protection",
+  "co_affected": []
+ },
+ "electron": {
+  "id": "GHSA-7x97-j373-85x5",
+  "published": "2023-09-06",
+  "severity": "medium",
+  "cve": "CVE-2023-39956",
+  "type": "reviewed",
+  "summary": "Electron vulnerable to out-of-package code execution when launched with arbitrary cwd",
+  "co_affected": []
+ },
+ "electron-pdf": {
+  "id": "GHSA-3jcv-5f9p-2f2p",
+  "published": "2024-02-20",
+  "severity": "high",
+  "cve": "CVE-2024-1648",
+  "type": "reviewed",
+  "summary": "Cross-site Scripting in electron-pdf",
+  "co_affected": []
+ },
+ "electron-updater": {
+  "id": "GHSA-9jxc-qjr9-vjxq",
+  "published": "2024-07-09",
+  "severity": "high",
+  "cve": "CVE-2024-39698",
+  "type": "reviewed",
+  "summary": "electron-updater Code Signing Bypass on Windows",
+  "co_affected": []
+ },
+ "element-plus": {
+  "id": "GHSA-5m5x-9j46-h678",
+  "published": "2025-09-09",
+  "severity": "medium",
+  "cve": "CVE-2025-57665",
+  "type": "reviewed",
+  "summary": "Element Plus Link component (el-link) implements insufficient input validation for the href attribute",
+  "co_affected": []
+ },
+ "elysia": {
+  "id": "GHSA-8vch-m3f4-q8jf",
+  "published": "2025-12-09",
+  "severity": "high",
+  "cve": "CVE-2025-66457",
+  "type": "reviewed",
+  "summary": "Elysia affected by arbitrary code injection through cookie config",
+  "co_affected": []
+ },
+ "engine.io": {
+  "id": "GHSA-q9mw-68c2-j6m5",
+  "published": "2023-05-03",
+  "severity": "medium",
+  "cve": "CVE-2023-31125",
+  "type": "reviewed",
+  "summary": "engine.io Uncaught Exception vulnerability",
+  "co_affected": []
+ },
+ "erxes": {
+  "id": "GHSA-g9ph-r9hc-34r8",
+  "published": "2023-02-21",
+  "severity": "medium",
+  "cve": "CVE-2021-32853",
+  "type": "reviewed",
+  "summary": "Erxes vulnerable to Cross-site Scripting",
+  "co_affected": []
+ },
+ "es5-ext": {
+  "id": "GHSA-4gmj-3p3h-gm8h",
+  "published": "2024-02-26",
+  "severity": "low",
+  "cve": "CVE-2024-27088",
+  "type": "reviewed",
+  "summary": "es5-ext vulnerable to Regular Expression Denial of Service in `function#copy` and `function#toStringTokens`",
+  "co_affected": []
+ },
+ "esbuild": {
+  "id": "GHSA-67mh-4wv8-2f99",
+  "published": "2025-02-10",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "esbuild enables any website to send any requests to the development server and read the response",
+  "co_affected": []
+ },
+ "eslint": {
+  "id": "GHSA-p5wg-g6qr-c7cg",
+  "published": "2026-01-26",
+  "severity": "medium",
+  "cve": "CVE-2025-50537",
+  "type": "reviewed",
+  "summary": "Withdrawn Advisory: eslint has a Stack Overflow when serializing objects with circular references",
+  "co_affected": []
+ },
+ "eslint-config-prettier": {
+  "id": "GHSA-f29h-pxvx-f335",
+  "published": "2025-07-19",
+  "severity": "high",
+  "cve": "CVE-2025-54313",
+  "type": "reviewed",
+  "summary": "eslint-config-prettier, eslint-plugin-prettier, synckit, @pkgr/core, napi-postinstall have embedded malicious code",
+  "co_affected": [
+   "@pkgr/core",
+   "eslint-plugin-prettier",
+   "got-fetch",
+   "napi-postinstall",
+   "synckit"
+  ]
+ },
+ "eslint-detailed-reporter": {
+  "id": "GHSA-4xr4-89m5-46c7",
+  "published": "2023-04-20",
+  "severity": "low",
+  "cve": "CVE-2022-4942",
+  "type": "reviewed",
+  "summary": "eslint-detailed-reporter vulnerable to cross-site scripting",
+  "co_affected": []
+ },
+ "eslint-plugin-prettier": {
+  "id": "GHSA-f29h-pxvx-f335",
+  "published": "2025-07-19",
+  "severity": "high",
+  "cve": "CVE-2025-54313",
+  "type": "reviewed",
+  "summary": "eslint-config-prettier, eslint-plugin-prettier, synckit, @pkgr/core, napi-postinstall have embedded malicious code",
+  "co_affected": [
+   "@pkgr/core",
+   "eslint-config-prettier",
+   "got-fetch",
+   "napi-postinstall",
+   "synckit"
+  ]
+ },
+ "estree-util-value-to-estree": {
+  "id": "GHSA-f7f6-9jq7-3rqj",
+  "published": "2025-04-07",
+  "severity": "medium",
+  "cve": "CVE-2025-32014",
+  "type": "reviewed",
+  "summary": "estree-util-value-to-estree allows prototype pollution in generated ESTree",
+  "co_affected": []
+ },
+ "exifreader": {
+  "id": "GHSA-h64w-w9pr-82m4",
+  "published": "2026-05-29",
+  "severity": "high",
+  "cve": "CVE-2026-8813",
+  "type": "reviewed",
+  "summary": "ExifReader is vulnerable to denial of service via crafted ICC `mluc` tag",
+  "co_affected": []
+ },
+ "exiftool-vendored": {
+  "id": "GHSA-cw26-7653-2rp5",
+  "published": "2026-05-05",
+  "severity": "high",
+  "cve": "CVE-2026-43893",
+  "type": "reviewed",
+  "summary": "exiftool-vendored vulnerable to argument injection via newline characters in tag names",
+  "co_affected": []
+ },
+ "expo": {
+  "id": "GHSA-wr5g-q49g-548w",
+  "published": "2023-04-24",
+  "severity": "critical",
+  "cve": "CVE-2023-28131",
+  "type": "reviewed",
+  "summary": "Expo SDK has an OAuth vulnerability",
+  "co_affected": []
+ },
+ "express": {
+  "id": "GHSA-rv95-896h-c2vc",
+  "published": "2024-03-25",
+  "severity": "medium",
+  "cve": "CVE-2024-29041",
+  "type": "reviewed",
+  "summary": "Express.js Open Redirect in malformed URLs",
+  "co_affected": []
+ },
+ "express-rate-limit": {
+  "id": "GHSA-46wh-pxpv-q5gq",
+  "published": "2026-03-06",
+  "severity": "high",
+  "cve": "CVE-2026-30827",
+  "type": "reviewed",
+  "summary": "express-rate-limit: IPv4-mapped IPv6 addresses bypass per-client rate limiting on servers with dual-stack network",
+  "co_affected": []
+ },
+ "express-xss-sanitizer": {
+  "id": "GHSA-qhwp-454g-2gv4",
+  "published": "2025-09-15",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: express-xss-sanitizer has an unbounded recursion depth",
+  "co_affected": []
+ },
+ "express-zod-api": {
+  "id": "GHSA-mvrp-3cvx-c325",
+  "published": "2023-10-04",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Zod denial of service vulnerability during email validation",
+  "co_affected": []
+ },
+ "external-svg-loader": {
+  "id": "GHSA-xc2r-jf2x-gjr8",
+  "published": "2023-08-14",
+  "severity": "critical",
+  "cve": "CVE-2023-40013",
+  "type": "reviewed",
+  "summary": "external-svg-loader Cross-site Scripting vulnerability",
+  "co_affected": []
+ },
+ "fabric": {
+  "id": "GHSA-hfvx-25r5-qc3w",
+  "published": "2026-02-18",
+  "severity": "high",
+  "cve": "CVE-2026-27013",
+  "type": "reviewed",
+  "summary": "Fabric.js Affected by Stored XSS via SVG Export",
+  "co_affected": []
+ },
+ "fast-jwt": {
+  "id": "GHSA-c2ff-88x2-x9pg",
+  "published": "2023-11-20",
+  "severity": "medium",
+  "cve": "CVE-2023-48223",
+  "type": "reviewed",
+  "summary": "JWT Algorithm Confusion",
+  "co_affected": []
+ },
+ "fast-redact": {
+  "id": "GHSA-ffrw-9mx8-89p8",
+  "published": "2025-09-24",
+  "severity": "low",
+  "cve": "CVE-2025-57319",
+  "type": "reviewed",
+  "summary": "Withdrawn Advisory: fast-redact vulnerable to prototype pollution",
+  "co_affected": []
+ },
+ "fast-uri": {
+  "id": "GHSA-v39h-62p7-jpjc",
+  "published": "2026-05-08",
+  "severity": "high",
+  "cve": "CVE-2026-6322",
+  "type": "reviewed",
+  "summary": "fast-uri vulnerable to host confusion via percent-encoded authority delimiters",
+  "co_affected": []
+ },
+ "fast-xml-parser": {
+  "id": "GHSA-6w63-h3fj-q4vw",
+  "published": "2023-06-06",
+  "severity": "high",
+  "cve": "CVE-2023-34104",
+  "type": "reviewed",
+  "summary": "fast-xml-parser vulnerable to Regex Injection via Doctype Entities",
+  "co_affected": []
+ },
+ "fastify": {
+  "id": "GHSA-mg2h-6x62-wpwc",
+  "published": "2025-04-18",
+  "severity": "high",
+  "cve": "CVE-2025-32442",
+  "type": "reviewed",
+  "summary": "Fastify vulnerable to invalid content-type parsing, which could lead to validation bypass",
+  "co_affected": []
+ },
+ "fflate": {
+  "id": "GHSA-px8p-9vwx-vf98",
+  "published": "2026-07-22",
+  "severity": "medium",
+  "cve": "CVE-2026-45820",
+  "type": "reviewed",
+  "summary": "fflate unzipSync can enter an infinite loop when parsing malformed ZIP64 archives",
+  "co_affected": []
+ },
+ "fido2-lib": {
+  "id": "GHSA-g3qj-j598-cxmq",
+  "published": "2026-03-24",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "fido2-lib is vulnerable to DoS via cbor-extract heap buffer over-read in CBOR attestation parsing",
+  "co_affected": []
+ },
+ "file-type": {
+  "id": "GHSA-5v7r-6r5c-r473",
+  "published": "2026-03-10",
+  "severity": "medium",
+  "cve": "CVE-2026-31808",
+  "type": "reviewed",
+  "summary": "file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header",
+  "co_affected": []
+ },
+ "find-exec": {
+  "id": "GHSA-95rp-6gqp-6622",
+  "published": "2023-08-30",
+  "severity": "critical",
+  "cve": "CVE-2023-40582",
+  "type": "reviewed",
+  "summary": "Command Injection Vulnerability in find-exec",
+  "co_affected": []
+ },
+ "find-my-way": {
+  "id": "GHSA-rrr8-f88r-h8q6",
+  "published": "2024-09-18",
+  "severity": "high",
+  "cve": "CVE-2024-45813",
+  "type": "reviewed",
+  "summary": "find-my-way has a ReDoS vulnerability in multiparametric routes",
+  "co_affected": []
+ },
+ "firebase": {
+  "id": "GHSA-3wf4-68gx-mph8",
+  "published": "2024-11-18",
+  "severity": "medium",
+  "cve": "CVE-2024-11023",
+  "type": "reviewed",
+  "summary": "Firebase JavaScript SDK allows attackers to manipulate the \"_authTokenSyncURL\" to point to their own server",
+  "co_affected": []
+ },
+ "firebase-tools": {
+  "id": "GHSA-rcm2-22f3-pqv3",
+  "published": "2024-05-02",
+  "severity": "low",
+  "cve": "CVE-2024-4128",
+  "type": "reviewed",
+  "summary": "Firebase vulnerable to CRSF attack",
+  "co_affected": []
+ },
+ "flatted": {
+  "id": "GHSA-25h7-pfq9-p65f",
+  "published": "2026-03-13",
+  "severity": "high",
+  "cve": "CVE-2026-32141",
+  "type": "reviewed",
+  "summary": "flatted vulnerable to unbounded recursion DoS in parse() revive phase",
+  "co_affected": []
+ },
+ "follow-redirects": {
+  "id": "GHSA-jchw-25xp-jwwc",
+  "published": "2024-01-02",
+  "severity": "medium",
+  "cve": "CVE-2023-26159",
+  "type": "reviewed",
+  "summary": "Follow Redirects improperly handles URLs in the url.parse() function",
+  "co_affected": []
+ },
+ "formidable": {
+  "id": "GHSA-75v8-2h7p-7m2m",
+  "published": "2025-04-26",
+  "severity": "low",
+  "cve": "CVE-2025-46653",
+  "type": "reviewed",
+  "summary": "Formidable relies on hexoid to prevent guessing of filenames for untrusted executable content",
+  "co_affected": []
+ },
+ "formio": {
+  "id": "GHSA-m654-769v-qjv7",
+  "published": "2025-12-10",
+  "severity": "high",
+  "cve": "CVE-2025-67718",
+  "type": "reviewed",
+  "summary": "Formio improperly authorized permission elevation through specially crafted request path",
+  "co_affected": []
+ },
+ "foundation-sites": {
+  "id": "GHSA-p8pc-3f7w-jr5q",
+  "published": "2024-10-26",
+  "severity": "medium",
+  "cve": "CVE-2020-26304",
+  "type": "reviewed",
+  "summary": "Foundation Regular Expression Denial of Service vulnerability",
+  "co_affected": []
+ },
+ "froala-editor": {
+  "id": "GHSA-hvpq-7vcc-5hj5",
+  "published": "2023-09-15",
+  "severity": "medium",
+  "cve": "CVE-2023-41592",
+  "type": "reviewed",
+  "summary": "Froala Editor Cross-site Scripting vulnerability",
+  "co_affected": []
+ },
+ "gatsby": {
+  "id": "GHSA-c6f8-8r25-c4gc",
+  "published": "2023-06-09",
+  "severity": "medium",
+  "cve": "CVE-2023-34238",
+  "type": "reviewed",
+  "summary": "Gatsby develop server has Local File Inclusion vulnerability",
+  "co_affected": []
+ },
+ "gatsby-plugin-sharp": {
+  "id": "GHSA-h2pm-378c-pcxx",
+  "published": "2023-04-20",
+  "severity": "medium",
+  "cve": "CVE-2023-30548",
+  "type": "reviewed",
+  "summary": "Path traversal vulnerability in gatsby-plugin-sharp",
+  "co_affected": []
+ },
+ "gatsby-transformer-remark": {
+  "id": "GHSA-7ch4-rr99-cqcw",
+  "published": "2023-01-11",
+  "severity": "high",
+  "cve": "CVE-2023-22491",
+  "type": "reviewed",
+  "summary": "gatsby-transformer-remark has possible unsanitized JavaScript code injection",
+  "co_affected": []
+ },
+ "generator-jhipster": {
+  "id": "GHSA-4gpm-r23h-gprw",
+  "published": "2023-10-31",
+  "severity": "high",
+  "cve": "CVE-2015-20110",
+  "type": "reviewed",
+  "summary": "generator-jhipster allows a timing attack against validateToken due to a string comparison that stops at the first character",
+  "co_affected": []
+ },
+ "genieacs": {
+  "id": "GHSA-2h6j-mhcp-9j9h",
+  "published": "2026-04-07",
+  "severity": "high",
+  "cve": "CVE-2025-56015",
+  "type": "reviewed",
+  "summary": "GenieACS has an unauthenticated access vulnerability via the NBI API endpoint",
+  "co_affected": []
+ },
+ "get-jwks": {
+  "id": "GHSA-qc2q-qhf3-235m",
+  "published": "2025-09-26",
+  "severity": "critical",
+  "cve": "CVE-2025-59936",
+  "type": "reviewed",
+  "summary": "get-jwks: poisoned JWKS cache allows post-fetch issuer validation bypass",
+  "co_affected": []
+ },
+ "gettext-converter": {
+  "id": "GHSA-f4jp-rw7w-ccwg",
+  "published": "2026-08-20",
+  "severity": "medium",
+  "cve": "CVE-2026-55451",
+  "type": "reviewed",
+  "summary": "gettext-converter: Prototype pollution in js2i18next() via crafted translation keys",
+  "co_affected": []
+ },
+ "gettext.js": {
+  "id": "GHSA-vwhg-jwr4-vxgg",
+  "published": "2024-08-15",
+  "severity": "high",
+  "cve": "CVE-2024-43370",
+  "type": "reviewed",
+  "summary": "gettext.js has a Cross-site Scripting injection ",
+  "co_affected": []
+ },
+ "ghost": {
+  "id": "GHSA-r97q-ghch-82j9",
+  "published": "2023-05-03",
+  "severity": "high",
+  "cve": "CVE-2023-31133",
+  "type": "reviewed",
+  "summary": "Ghost vulnerable to information disclosure of private API fields",
+  "co_affected": []
+ },
+ "git-commit-info": {
+  "id": "GHSA-h42j-mrmp-9369",
+  "published": "2023-06-28",
+  "severity": "high",
+  "cve": "CVE-2023-26134",
+  "type": "reviewed",
+  "summary": "git-commit-info vulnerable to Command Injection",
+  "co_affected": []
+ },
+ "glob": {
+  "id": "GHSA-5j98-mcp5-4vw2",
+  "published": "2025-11-17",
+  "severity": "high",
+  "cve": "CVE-2025-64756",
+  "type": "reviewed",
+  "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+  "co_affected": []
+ },
+ "google-translate-api-browser": {
+  "id": "GHSA-4233-7q5q-m7p6",
+  "published": "2023-11-27",
+  "severity": "low",
+  "cve": "CVE-2023-48711",
+  "type": "reviewed",
+  "summary": "google-translate-api-browser Server-Side Request Forgery (SSRF) Vulnerability",
+  "co_affected": []
+ },
+ "got-fetch": {
+  "id": "GHSA-f29h-pxvx-f335",
+  "published": "2025-07-19",
+  "severity": "high",
+  "cve": "CVE-2025-54313",
+  "type": "reviewed",
+  "summary": "eslint-config-prettier, eslint-plugin-prettier, synckit, @pkgr/core, napi-postinstall have embedded malicious code",
+  "co_affected": [
+   "@pkgr/core",
+   "eslint-config-prettier",
+   "eslint-plugin-prettier",
+   "napi-postinstall",
+   "synckit"
+  ]
+ },
+ "graphql": {
+  "id": "GHSA-9pv7-vfvm-6vr7",
+  "published": "2023-09-20",
+  "severity": "medium",
+  "cve": "CVE-2023-26144",
+  "type": "reviewed",
+  "summary": "graphql Uncontrolled Resource Consumption vulnerability",
+  "co_affected": []
+ },
+ "graphql-modules": {
+  "id": "GHSA-53wg-r69p-v3r7",
+  "published": "2026-01-16",
+  "severity": "high",
+  "cve": "CVE-2026-23735",
+  "type": "reviewed",
+  "summary": "GraphQL Modules has a Race Condition issue",
+  "co_affected": []
+ },
+ "h3": {
+  "id": "GHSA-mp2g-9vg9-f4cg",
+  "published": "2026-01-15",
+  "severity": "high",
+  "cve": "CVE-2026-23527",
+  "type": "reviewed",
+  "summary": "h3 v1 has Request Smuggling (TE.TE) issue",
+  "co_affected": []
+ },
+ "happy-dom": {
+  "id": "GHSA-96g7-g7g9-jxw8",
+  "published": "2024-11-06",
+  "severity": "critical",
+  "cve": "CVE-2024-51757",
+  "type": "reviewed",
+  "summary": "happy-dom allows for server side code to be executed by a <script> tag",
+  "co_affected": []
+ },
+ "hashi-vault-js": {
+  "id": "GHSA-g956-2f74-rmv7",
+  "published": "2026-07-31",
+  "severity": "high",
+  "cve": "CVE-2026-55100",
+  "type": "reviewed",
+  "summary": "hashi-vault-js has a path traversal and query parameter injection",
+  "co_affected": []
+ },
+ "hexo": {
+  "id": "GHSA-x2jc-989c-47q4",
+  "published": "2023-09-08",
+  "severity": "high",
+  "cve": "CVE-2023-39584",
+  "type": "reviewed",
+  "summary": "Hexo `include_code` has a path traversal",
+  "co_affected": []
+ },
+ "highlight.run": {
+  "id": "GHSA-9qpj-qq2r-5mcc",
+  "published": "2023-05-26",
+  "severity": "medium",
+  "cve": "CVE-2023-33187",
+  "type": "reviewed",
+  "summary": "html inputs of type password recorded in plaintext when converted to text inputs",
+  "co_affected": []
+ },
+ "hono": {
+  "id": "GHSA-f6gv-hh8j-q8vq",
+  "published": "2023-12-15",
+  "severity": "medium",
+  "cve": "CVE-2023-50710",
+  "type": "reviewed",
+  "summary": "Named path parameters can be overridden in TrieRouter",
+  "co_affected": []
+ },
+ "http-proxy-middleware": {
+  "id": "GHSA-c7qv-q95q-8v27",
+  "published": "2024-10-19",
+  "severity": "high",
+  "cve": "CVE-2024-21536",
+  "type": "reviewed",
+  "summary": "Denial of service in http-proxy-middleware",
+  "co_affected": []
+ },
+ "hull.js": {
+  "id": "GHSA-q849-wxrc-vqrp",
+  "published": "2024-12-02",
+  "severity": "critical",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "hull.js Code Injection Vulnerability",
+  "co_affected": []
+ },
+ "hydrooj": {
+  "id": "GHSA-94jp-7776-qj6q",
+  "published": "2026-06-18",
+  "severity": "medium",
+  "cve": "CVE-2026-55617",
+  "type": "reviewed",
+  "summary": "Hydro: Insufficient session expiration when recreating sessions",
+  "co_affected": []
+ },
+ "i18next-fs-backend": {
+  "id": "GHSA-8847-338w-5hcj",
+  "published": "2026-04-22",
+  "severity": "high",
+  "cve": "CVE-2026-41693",
+  "type": "reviewed",
+  "summary": "i18next-fs-backend: Path traversal via unsanitised lng/ns allows arbitrary file read/overwrite",
+  "co_affected": []
+ },
+ "i18next-http-backend": {
+  "id": "GHSA-q89c-q3h5-w34g",
+  "published": "2026-04-22",
+  "severity": "medium",
+  "cve": "CVE-2026-41691",
+  "type": "reviewed",
+  "summary": " i18next-http-backend has Path Traversal & URL Injection via Unsanitised lng/ns",
+  "co_affected": []
+ },
+ "i18next-http-middleware": {
+  "id": "GHSA-c3h8-g69v-pjrg",
+  "published": "2026-04-22",
+  "severity": "high",
+  "cve": "CVE-2026-41683",
+  "type": "reviewed",
+  "summary": "i18next-http-middleware: HTTP response splitting and DoS via unsanitised Content-Language header",
+  "co_affected": []
+ },
+ "i18next-locize-backend": {
+  "id": "GHSA-mgcp-mfp8-3q45",
+  "published": "2026-04-22",
+  "severity": "medium",
+  "cve": "CVE-2026-41885",
+  "type": "reviewed",
+  "summary": "i18next-locize-backend has URL Injection via Unsanitized Path Parameters",
+  "co_affected": []
+ },
+ "image-size": {
+  "id": "GHSA-m5qc-5hw7-8vg7",
+  "published": "2025-04-02",
+  "severity": "high",
+  "cve": "CVE-2025-71319",
+  "type": "reviewed",
+  "summary": "image-size Denial of Service via Infinite Loop during Image Processing",
+  "co_affected": []
+ },
+ "images": {
+  "id": "GHSA-vjpv-x8p9-7p85",
+  "published": "2024-07-10",
+  "severity": "high",
+  "cve": "CVE-2024-21523",
+  "type": "reviewed",
+  "summary": "images vulnerable to Denial of Service",
+  "co_affected": []
+ },
+ "immutable": {
+  "id": "GHSA-wf6x-7x77-mvgw",
+  "published": "2026-03-04",
+  "severity": "high",
+  "cve": "CVE-2026-29063",
+  "type": "reviewed",
+  "summary": "Immutable is vulnerable to Prototype Pollution",
+  "co_affected": []
+ },
+ "import-in-the-middle": {
+  "id": "GHSA-5r27-rw8r-7967",
+  "published": "2023-08-08",
+  "severity": "high",
+  "cve": "CVE-2023-38704",
+  "type": "reviewed",
+  "summary": "import-in-the-middle has unsanitized user controlled input in module generation",
+  "co_affected": []
+ },
+ "inngest": {
+  "id": "GHSA-2jf5-6wwv-vhxx",
+  "published": "2026-05-05",
+  "severity": "high",
+  "cve": "CVE-2026-42047",
+  "type": "reviewed",
+  "summary": "Inngest TypeScript SDK exposes environment variables via serve() handler on unhandled HTTP methods",
+  "co_affected": []
+ },
+ "intercom-client": {
+  "id": "GHSA-54pg-9963-v8vg",
+  "published": "2026-05-07",
+  "severity": "critical",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Compromised version of intercom-client published to npm",
+  "co_affected": []
+ },
+ "ip": {
+  "id": "GHSA-78xj-cgh5-2h22",
+  "published": "2024-02-08",
+  "severity": "low",
+  "cve": "CVE-2023-42282",
+  "type": "reviewed",
+  "summary": "NPM IP package incorrectly identifies some private IP addresses as public",
+  "co_affected": []
+ },
+ "ipx": {
+  "id": "GHSA-mm3p-j368-7jcr",
+  "published": "2025-08-04",
+  "severity": "medium",
+  "cve": "CVE-2025-54387",
+  "type": "reviewed",
+  "summary": "IPX Allows Path Traversal via Prefix Matching Bypass",
+  "co_affected": []
+ },
+ "izimodal": {
+  "id": "GHSA-h685-83w4-3ph3",
+  "published": "2023-02-21",
+  "severity": "medium",
+  "cve": "CVE-2021-32860",
+  "type": "reviewed",
+  "summary": "iziModal Cross-site Scripting vulnerability",
+  "co_affected": []
+ },
+ "jodit": {
+  "id": "GHSA-95xr-cq6h-vwr3",
+  "published": "2023-09-19",
+  "severity": "medium",
+  "cve": "CVE-2023-42399",
+  "type": "reviewed",
+  "summary": "Jodit Editor vulnerable to cross-site scripting",
+  "co_affected": []
+ },
+ "joi": {
+  "id": "GHSA-q7cg-457f-vx79",
+  "published": "2026-06-11",
+  "severity": "medium",
+  "cve": "CVE-2026-48038",
+  "type": "reviewed",
+  "summary": "joi has an uncaught RangeError on deeply nested input through recursive `link()` schemas",
+  "co_affected": []
+ },
+ "jose": {
+  "id": "GHSA-hhhv-q57g-882q",
+  "published": "2024-03-07",
+  "severity": "medium",
+  "cve": "CVE-2024-28176",
+  "type": "reviewed",
+  "summary": "jose vulnerable to resource exhaustion via specifically crafted JWE with compressed plaintext",
+  "co_affected": [
+   "jose-node-cjs-runtime",
+   "jose-node-esm-runtime"
+  ]
+ },
+ "jose-node-cjs-runtime": {
+  "id": "GHSA-hhhv-q57g-882q",
+  "published": "2024-03-07",
+  "severity": "medium",
+  "cve": "CVE-2024-28176",
+  "type": "reviewed",
+  "summary": "jose vulnerable to resource exhaustion via specifically crafted JWE with compressed plaintext",
+  "co_affected": [
+   "jose",
+   "jose-node-esm-runtime"
+  ]
+ },
+ "jquery": {
+  "id": "GHSA-257q-pv89-v3xv",
+  "published": "2023-06-26",
+  "severity": "medium",
+  "cve": "CVE-2020-23064",
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: jQuery Cross Site Scripting vulnerability",
+  "co_affected": []
+ },
+ "jquery-validation": {
+  "id": "GHSA-rrj2-ph5q-jxw2",
+  "published": "2025-04-15",
+  "severity": "medium",
+  "cve": "CVE-2025-3573",
+  "type": "reviewed",
+  "summary": "jquery-validation vulnerable to Cross-site Scripting",
+  "co_affected": []
+ },
+ "js-object-utilities": {
+  "id": "GHSA-hpqf-m68j-2pfx",
+  "published": "2025-04-07",
+  "severity": "high",
+  "cve": "CVE-2025-28269",
+  "type": "reviewed",
+  "summary": "js-object-utilities Vulnerable to Prototype Pollution",
+  "co_affected": []
+ },
+ "jsii": {
+  "id": "GHSA-m56h-5xx3-2jc2",
+  "published": "2024-12-18",
+  "severity": "low",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Prototype pollution in jsii.configureCategories",
+  "co_affected": []
+ },
+ "jsii-diff": {
+  "id": "GHSA-h738-vh6g-q8gh",
+  "published": "2026-07-15",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: Command Injection in jsii-diff via npm: package argument",
+  "co_affected": []
+ },
+ "json-2-csv": {
+  "id": "GHSA-g27c-q7cp-mhx6",
+  "published": "2026-05-28",
+  "severity": "medium",
+  "cve": "CVE-2026-9673",
+  "type": "reviewed",
+  "summary": "json-2-csv vulnerable to CSV Injection via the preventCsvInjection optio",
+  "co_affected": []
+ },
+ "json-logic-js": {
+  "id": "GHSA-67j4-2mh6-8627",
+  "published": "2023-03-05",
+  "severity": "critical",
+  "cve": "CVE-2021-4329",
+  "type": "reviewed",
+  "summary": "json-logic-js Command Injection vulnerability",
+  "co_affected": []
+ },
+ "jsonata": {
+  "id": "GHSA-fqg8-vfv7-8fj8",
+  "published": "2024-03-04",
+  "severity": "critical",
+  "cve": "CVE-2024-27307",
+  "type": "reviewed",
+  "summary": "JSONata expression can pollute the \"Object\" prototype",
+  "co_affected": []
+ },
+ "jsonpath-plus": {
+  "id": "GHSA-pppg-cpfq-h7wr",
+  "published": "2024-10-11",
+  "severity": "critical",
+  "cve": "CVE-2024-21534",
+  "type": "reviewed",
+  "summary": "JSONPath Plus Remote Code Execution (RCE) Vulnerability",
+  "co_affected": []
+ },
+ "jspdf": {
+  "id": "GHSA-w532-jxjh-hjhj",
+  "published": "2025-03-18",
+  "severity": "high",
+  "cve": "CVE-2025-29907",
+  "type": "reviewed",
+  "summary": "jsPDF Bypass Regular Expression Denial of Service (ReDoS)",
+  "co_affected": []
+ },
+ "jspreadsheet-ce": {
+  "id": "GHSA-q82h-q47j-f492",
+  "published": "2023-02-18",
+  "severity": "medium",
+  "cve": "CVE-2022-48115",
+  "type": "reviewed",
+  "summary": "Cross-site Scripting in jspreadsheet",
+  "co_affected": []
+ },
+ "jsreport": {
+  "id": "GHSA-g7rj-q722-245g",
+  "published": "2023-05-08",
+  "severity": "critical",
+  "cve": "CVE-2023-2583",
+  "type": "reviewed",
+  "summary": "jsreport vulnerable to code injection",
+  "co_affected": []
+ },
+ "jsrsasign": {
+  "id": "GHSA-rh63-9qcf-83gf",
+  "published": "2024-01-19",
+  "severity": "high",
+  "cve": "CVE-2024-21484",
+  "type": "reviewed",
+  "summary": "Marvin Attack of RSA and RSAOAEP decryption in jsrsasign",
+  "co_affected": []
+ },
+ "jsuites": {
+  "id": "GHSA-r4hg-4cpq-q57c",
+  "published": "2023-01-31",
+  "severity": "medium",
+  "cve": "CVE-2022-25979",
+  "type": "reviewed",
+  "summary": "jSuites subect to Cross-site Scripting",
+  "co_affected": []
+ },
+ "jszip": {
+  "id": "GHSA-36fh-84j7-cv5h",
+  "published": "2023-01-29",
+  "severity": "medium",
+  "cve": "CVE-2022-48285",
+  "type": "reviewed",
+  "summary": "JSZip contains Path Traversal via loadAsync",
+  "co_affected": []
+ },
+ "katex": {
+  "id": "GHSA-3wc5-fcw2-2329",
+  "published": "2024-03-25",
+  "severity": "medium",
+  "cve": "CVE-2024-28246",
+  "type": "reviewed",
+  "summary": "KaTeX missing normalization of the protocol in URLs allows bypassing forbidden protocols",
+  "co_affected": []
+ },
+ "keycloak-connect": {
+  "id": "GHSA-59fq-727j-hm3f",
+  "published": "2023-03-02",
+  "severity": "medium",
+  "cve": "CVE-2022-2237",
+  "type": "reviewed",
+  "summary": "keycloak-connect contains Open redirect vulnerability in the Node.js adapter",
+  "co_affected": []
+ },
+ "koa": {
+  "id": "GHSA-593f-38f6-jp5m",
+  "published": "2025-02-12",
+  "severity": "critical",
+  "cve": "CVE-2025-25200",
+  "type": "reviewed",
+  "summary": "Inefficient Regular Expression Complexity in koa",
+  "co_affected": []
+ },
+ "kysely": {
+  "id": "GHSA-wmrf-hv6w-mr66",
+  "published": "2026-03-18",
+  "severity": "high",
+  "cve": "CVE-2026-32763",
+  "type": "reviewed",
+  "summary": "SQL Injection via unsanitized JSON path keys when ignoring/silencing compilation errors or using `Kysely<any>`.",
+  "co_affected": []
+ },
+ "launch-editor": {
+  "id": "GHSA-c27g-q93r-2cwf",
+  "published": "2026-06-03",
+  "severity": "high",
+  "cve": "CVE-2024-52011",
+  "type": "reviewed",
+  "summary": "launch-editor vulnerable to command injection via the crafted request on Windows",
+  "co_affected": [
+   "vite"
+  ]
+ },
+ "layui": {
+  "id": "GHSA-hx4h-676r-j3qp",
+  "published": "2023-07-16",
+  "severity": "medium",
+  "cve": "CVE-2023-3691",
+  "type": "reviewed",
+  "summary": "layui vulnerable to cross-site scripting",
+  "co_affected": []
+ },
+ "libreoffice-convert": {
+  "id": "GHSA-gmxc-r82q-347r",
+  "published": "2026-08-27",
+  "severity": "medium",
+  "cve": "CVE-2026-54732",
+  "type": "reviewed",
+  "summary": "libreoffice-convert vulnerable to path traversal / arbitrary file write",
+  "co_affected": []
+ },
+ "libxmljs": {
+  "id": "GHSA-mg49-jqgw-gcj6",
+  "published": "2024-05-02",
+  "severity": "critical",
+  "cve": "CVE-2024-34392",
+  "type": "reviewed",
+  "summary": "libxmljs vulnerable to type confusion when parsing specially crafted XML ",
+  "co_affected": []
+ },
+ "libxmljs2": {
+  "id": "GHSA-mjr4-7xg5-pfvh",
+  "published": "2024-05-02",
+  "severity": "critical",
+  "cve": "CVE-2024-34393",
+  "type": "reviewed",
+  "summary": "libxmljs2 type confusion vulnerability when parsing specially crafted XML",
+  "co_affected": []
+ },
+ "lilconfig": {
+  "id": "GHSA-fq9m-v26v-2m4f",
+  "published": "2024-10-31",
+  "severity": "high",
+  "cve": "CVE-2024-21537",
+  "type": "reviewed",
+  "summary": "lilconfig Code Injection vulnerability",
+  "co_affected": []
+ },
+ "link-preview-js": {
+  "id": "GHSA-4gp8-rjrq-ch6q",
+  "published": "2026-05-05",
+  "severity": "high",
+  "cve": "CVE-2026-43897",
+  "type": "reviewed",
+  "summary": "link-preview-js vulnerable to IPv6 and internal loopback attacks",
+  "co_affected": []
+ },
+ "linkify-it": {
+  "id": "GHSA-22p9-wv53-3rq4",
+  "published": "2026-06-26",
+  "severity": "high",
+  "cve": "CVE-2026-48801",
+  "type": "reviewed",
+  "summary": "LinkifyIt#match scan loop has quadratic algorithmic complexity",
+  "co_affected": []
+ },
+ "linkifyjs": {
+  "id": "GHSA-95jq-xph2-cx9h",
+  "published": "2025-07-26",
+  "severity": "high",
+  "cve": "CVE-2025-8101",
+  "type": "reviewed",
+  "summary": "Linkify Allows Prototype Pollution & HTML Attribute Injection (XSS)",
+  "co_affected": []
+ },
+ "liquidjs": {
+  "id": "GHSA-wmfp-5q7x-987x",
+  "published": "2026-03-10",
+  "severity": "high",
+  "cve": "CVE-2026-30952",
+  "type": "reviewed",
+  "summary": "liquidjs has a path traversal fallback vulnerability",
+  "co_affected": []
+ },
+ "locize": {
+  "id": "GHSA-w937-fg2h-xhq2",
+  "published": "2026-04-22",
+  "severity": "high",
+  "cve": "CVE-2026-41886",
+  "type": "reviewed",
+  "summary": "locize Client SDK: Cross-origin DOM XSS & Handler Hijack Through Missing e.origin Validation in InContext Editor ",
+  "co_affected": []
+ },
+ "lockfile-lint-api": {
+  "id": "GHSA-7cfr-5cjf-32p4",
+  "published": "2025-05-16",
+  "severity": "medium",
+  "cve": "CVE-2025-4759",
+  "type": "reviewed",
+  "summary": "lockfile-lint-api Vulnerable to Incorrect Behavior Order",
+  "co_affected": []
+ },
+ "locutus": {
+  "id": "GHSA-rxrv-835q-v5mh",
+  "published": "2026-02-02",
+  "severity": "critical",
+  "cve": "CVE-2026-25521",
+  "type": "reviewed",
+  "summary": "locutus is vulnerable to Prototype Pollution",
+  "co_affected": []
+ },
+ "luxon": {
+  "id": "GHSA-3xq5-wjfh-ppjc",
+  "published": "2023-01-09",
+  "severity": "high",
+  "cve": "CVE-2023-22467",
+  "type": "reviewed",
+  "summary": "Luxon Inefficient Regular Expression Complexity vulnerability",
+  "co_affected": []
+ },
+ "maildev": {
+  "id": "GHSA-vc6q-ccj9-9r89",
+  "published": "2024-04-05",
+  "severity": "critical",
+  "cve": "CVE-2024-27448",
+  "type": "reviewed",
+  "summary": "MailDev Remote Code Execution",
+  "co_affected": []
+ },
+ "mailgen": {
+  "id": "GHSA-j2xj-h7w5-r7vp",
+  "published": "2025-09-22",
+  "severity": "medium",
+  "cve": "CVE-2025-59526",
+  "type": "reviewed",
+  "summary": "Mailgen: HTML injection vulnerability in plaintext e-mails",
+  "co_affected": []
+ },
+ "mailparser": {
+  "id": "GHSA-7gmj-h9xc-mcxc",
+  "published": "2026-03-03",
+  "severity": "low",
+  "cve": "CVE-2026-3455",
+  "type": "reviewed",
+  "summary": "mailparser vulnerable to Cross-site Scripting",
+  "co_affected": []
+ },
+ "makerjs": {
+  "id": "GHSA-2cp6-34r9-54xx",
+  "published": "2026-01-29",
+  "severity": "medium",
+  "cve": "CVE-2026-24888",
+  "type": "reviewed",
+  "summary": "Maker.js has Unsafe Property Copying in makerjs.extendObject",
+  "co_affected": []
+ },
+ "mammoth": {
+  "id": "GHSA-rmjr-87wv-gf87",
+  "published": "2025-10-17",
+  "severity": "medium",
+  "cve": "CVE-2025-11849",
+  "type": "reviewed",
+  "summary": "Mammoth is vulnerable to Directory Traversal",
+  "co_affected": []
+ },
+ "mapshaper": {
+  "id": "GHSA-8m36-62rw-9mxw",
+  "published": "2024-02-13",
+  "severity": "medium",
+  "cve": "CVE-2024-1163",
+  "type": "reviewed",
+  "summary": "mapshaper Path Traversal vulnerability",
+  "co_affected": []
+ },
+ "mariadb": {
+  "id": "GHSA-g5xc-5w98-jfvm",
+  "published": "2026-08-28",
+  "severity": "medium",
+  "cve": "CVE-2026-55855",
+  "type": "reviewed",
+  "summary": "MariaDB has  possible SQL injection in Buffer parameter escaping under big5/gbk/sjis/cp932/gb18030 client charsets",
+  "co_affected": []
+ },
+ "markdown-it": {
+  "id": "GHSA-38c4-r59v-3vqw",
+  "published": "2026-02-12",
+  "severity": "medium",
+  "cve": "CVE-2026-2327",
+  "type": "reviewed",
+  "summary": "markdown-it is has a Regular Expression Denial of Service (ReDoS)",
+  "co_affected": []
+ },
+ "markdown-pdf": {
+  "id": "GHSA-qghr-877h-f9jh",
+  "published": "2023-04-05",
+  "severity": "high",
+  "cve": "CVE-2023-0835",
+  "type": "reviewed",
+  "summary": "markdown-pdf vulnerable to local file read via server side cross-site scripting (XSS)",
+  "co_affected": []
+ },
+ "markdown-to-jsx": {
+  "id": "GHSA-4wx3-54gh-9fr9",
+  "published": "2024-10-15",
+  "severity": "medium",
+  "cve": "CVE-2024-21535",
+  "type": "reviewed",
+  "summary": "Cross site scripting in markdown-to-jsx",
+  "co_affected": []
+ },
+ "marked": {
+  "id": "GHSA-p9wx-2529-fp83",
+  "published": "2025-05-23",
+  "severity": "medium",
+  "cve": "CVE-2018-25110",
+  "type": "reviewed",
+  "summary": "Marked allows Regular Expression Denial of Service (ReDoS) attacks",
+  "co_affected": []
+ },
+ "marko": {
+  "id": "GHSA-x9fj-57fh-c8wq",
+  "published": "2026-04-22",
+  "severity": "medium",
+  "cve": "CVE-2026-41591",
+  "type": "reviewed",
+  "summary": "Marko: XSS via case-insensitive script/style closing tag bypass in runtime HTML escaping",
+  "co_affected": [
+   "@marko/runtime-tags"
+  ]
+ },
+ "math-codegen": {
+  "id": "GHSA-p6x5-p4xf-cc4r",
+  "published": "2026-04-17",
+  "severity": "critical",
+  "cve": "CVE-2026-41507",
+  "type": "reviewed",
+  "summary": "Remote Code Execution (RCE) via String Literal Injection into math-codegen",
+  "co_affected": []
+ },
+ "mathjax": {
+  "id": "GHSA-v638-q856-grg8",
+  "published": "2023-08-29",
+  "severity": "high",
+  "cve": "CVE-2023-39663",
+  "type": "reviewed",
+  "summary": "MathJax Regular expression Denial of Service (ReDoS)",
+  "co_affected": []
+ },
+ "mathjs": {
+  "id": "GHSA-jvff-x2qm-6286",
+  "published": "2026-04-10",
+  "severity": "high",
+  "cve": "CVE-2026-41139",
+  "type": "reviewed",
+  "summary": "mathjs Allows Improperly Controlled Modification of Dynamically-Determined Object Attributes",
+  "co_affected": []
+ },
+ "mathlive": {
+  "id": "GHSA-qwj6-q94f-8425",
+  "published": "2025-01-21",
+  "severity": "medium",
+  "cve": "CVE-2025-29049",
+  "type": "reviewed",
+  "summary": "MathLive's Lack of Escaping of HTML allows for XSS",
+  "co_affected": []
+ },
+ "matrix-appservice-bridge": {
+  "id": "GHSA-vc7j-h8xg-fv5x",
+  "published": "2023-08-04",
+  "severity": "medium",
+  "cve": "CVE-2023-38691",
+  "type": "reviewed",
+  "summary": "matrix-appservice-bridge doesn't verify the sub parameter of an openId token exhange, allowing unauthorized access to provisioning APIs",
+  "co_affected": []
+ },
+ "matrix-js-sdk": {
+  "id": "GHSA-rfv9-x7hh-xc32",
+  "published": "2023-03-28",
+  "severity": "high",
+  "cve": "CVE-2022-36059",
+  "type": "reviewed",
+  "summary": "matrix-js-sdk Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "matrix-react-sdk": {
+  "id": "GHSA-2x9c-qwgf-94xr",
+  "published": "2023-03-28",
+  "severity": "high",
+  "cve": "CVE-2022-36060",
+  "type": "reviewed",
+  "summary": "matrix-react-sdk Prototype pollution vulnerability",
+  "co_affected": []
+ },
+ "md-to-pdf": {
+  "id": "GHSA-547r-qmjm-8hvw",
+  "published": "2025-11-20",
+  "severity": "critical",
+  "cve": "CVE-2025-65108",
+  "type": "reviewed",
+  "summary": "md-to-pdf vulnerable to arbitrary JavaScript code execution when parsing front matter",
+  "co_affected": []
+ },
+ "mdast-util-to-hast": {
+  "id": "GHSA-4fh9-h7wg-q85m",
+  "published": "2025-12-02",
+  "severity": "medium",
+  "cve": "CVE-2025-66400",
+  "type": "reviewed",
+  "summary": "mdast-util-to-hast has unsanitized class attribute",
+  "co_affected": []
+ },
+ "mediasoup": {
+  "id": "GHSA-p7x2-g5cq-fhmq",
+  "published": "2026-08-25",
+  "severity": "medium",
+  "cve": "CVE-2026-55663",
+  "type": "reviewed",
+  "summary": "mediasoup: SCTP state cookie lacks cryptographic authentication, enabling unauthorized association establishment (RFC 9260 violation)",
+  "co_affected": []
+ },
+ "mercurius": {
+  "id": "GHSA-cm8h-q92v-xcfc",
+  "published": "2023-01-09",
+  "severity": "medium",
+  "cve": "CVE-2023-22477",
+  "type": "reviewed",
+  "summary": "mercurius has Uncaught Exception when using subscriptions",
+  "co_affected": []
+ },
+ "mermaid": {
+  "id": "GHSA-m4gq-x24j-jpmf",
+  "published": "2024-10-22",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Prototype pollution vulnerability found in Mermaid's bundled version of DOMPurify",
+  "co_affected": []
+ },
+ "meshcentral": {
+  "id": "GHSA-wpxw-5xfm-x22v",
+  "published": "2024-01-29",
+  "severity": "high",
+  "cve": "CVE-2023-51842",
+  "type": "reviewed",
+  "summary": "MeshCentral algorithm-downgrade issue",
+  "co_affected": []
+ },
+ "messageformat": {
+  "id": "GHSA-xfqm-j7pc-xrfc",
+  "published": "2025-09-24",
+  "severity": "low",
+  "cve": "CVE-2025-57349",
+  "type": "reviewed",
+  "summary": "messageformat has a prototype pollution vulnerability",
+  "co_affected": []
+ },
+ "meteor": {
+  "id": "GHSA-j3v9-6gc7-vf5f",
+  "published": "2025-05-16",
+  "severity": "medium",
+  "cve": "CVE-2025-4727",
+  "type": "reviewed",
+  "summary": "Meteor Affected By Inefficient Regular Expression Complexity",
+  "co_affected": []
+ },
+ "micromatch": {
+  "id": "GHSA-952p-6rrq-rcjv",
+  "published": "2024-05-14",
+  "severity": "medium",
+  "cve": "CVE-2024-4067",
+  "type": "reviewed",
+  "summary": "Regular Expression Denial of Service (ReDoS) in micromatch",
+  "co_affected": []
+ },
+ "miniflare": {
+  "id": "GHSA-fwvg-2739-22v7",
+  "published": "2023-12-29",
+  "severity": "high",
+  "cve": "CVE-2023-7078",
+  "type": "reviewed",
+  "summary": "Miniflare vulnerable to Server-Side Request Forgery (SSRF)",
+  "co_affected": []
+ },
+ "minimatch": {
+  "id": "GHSA-3ppc-4f35-3m26",
+  "published": "2026-02-18",
+  "severity": "high",
+  "cve": "CVE-2026-26996",
+  "type": "reviewed",
+  "summary": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+  "co_affected": []
+ },
+ "misskey-js": {
+  "id": "GHSA-wwrj-3hvj-prpm",
+  "published": "2025-12-15",
+  "severity": "medium",
+  "cve": "CVE-2025-66482",
+  "type": "reviewed",
+  "summary": "Misskey has a login rate limit bypass via spoofed X-Forwarded-For header",
+  "co_affected": []
+ },
+ "mjml": {
+  "id": "GHSA-45h5-66jx-r2wf",
+  "published": "2025-12-15",
+  "severity": "medium",
+  "cve": "CVE-2025-67898",
+  "type": "reviewed",
+  "summary": "MJML allows mj-include directory traversal due to an incomplete fix for CVE-2020-12827",
+  "co_affected": []
+ },
+ "module-from-string": {
+  "id": "GHSA-q5j8-9m9g-x2jh",
+  "published": "2025-02-06",
+  "severity": "high",
+  "cve": "CVE-2024-57072",
+  "type": "reviewed",
+  "summary": "module-from-string prototype pollution",
+  "co_affected": []
+ },
+ "mongo-express": {
+  "id": "GHSA-fffg-cwc9-xvj7",
+  "published": "2024-03-01",
+  "severity": "medium",
+  "cve": "CVE-2023-52555",
+  "type": "reviewed",
+  "summary": "mongo-express Cross-site Request Forgery vulnerability",
+  "co_affected": []
+ },
+ "mongodb": {
+  "id": "GHSA-vxvm-qww3-2fh7",
+  "published": "2023-08-29",
+  "severity": "medium",
+  "cve": "CVE-2021-32050",
+  "type": "reviewed",
+  "summary": "MongoDB Driver may publish events containing authentication-related data",
+  "co_affected": []
+ },
+ "mongoose": {
+  "id": "GHSA-9m93-w8w6-76hh",
+  "published": "2023-07-17",
+  "severity": "critical",
+  "cve": "CVE-2023-3696",
+  "type": "reviewed",
+  "summary": "Mongoose Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "mongosh": {
+  "id": "GHSA-f5w3-73h4-jpcm",
+  "published": "2025-02-27",
+  "severity": "high",
+  "cve": "CVE-2025-1756",
+  "type": "reviewed",
+  "summary": "mongosh vulnerable to local privilege escalation",
+  "co_affected": []
+ },
+ "msgpackr": {
+  "id": "GHSA-7hpj-7hhx-2fgx",
+  "published": "2023-12-28",
+  "severity": "high",
+  "cve": "CVE-2023-52079",
+  "type": "reviewed",
+  "summary": "msgpackr's conversion of property names to strings can trigger infinite recursion",
+  "co_affected": []
+ },
+ "muhammara": {
+  "id": "GHSA-fhp4-pr5j-46m5",
+  "published": "2026-06-26",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Muhammara has a NULL pointer dereference in LZWDecode filter when DecodeParms omits EarlyChange key",
+  "co_affected": []
+ },
+ "multer": {
+  "id": "GHSA-4pg4-qvpc-4q3h",
+  "published": "2025-05-19",
+  "severity": "high",
+  "cve": "CVE-2025-47944",
+  "type": "reviewed",
+  "summary": "Multer vulnerable to Denial of Service from maliciously crafted requests",
+  "co_affected": []
+ },
+ "multiparty": {
+  "id": "GHSA-65x3-rw7q-gx94",
+  "published": "2026-05-18",
+  "severity": "high",
+  "cve": "CVE-2026-8159",
+  "type": "reviewed",
+  "summary": "multiparty vulnerable to ReDoS via filename parsing",
+  "co_affected": []
+ },
+ "music-metadata": {
+  "id": "GHSA-v6c2-xwv6-8xf7",
+  "published": "2026-03-17",
+  "severity": "high",
+  "cve": "CVE-2026-32256",
+  "type": "reviewed",
+  "summary": "music-metadata has an infinite loop vulnerability in ASF parser",
+  "co_affected": []
+ },
+ "mysql2": {
+  "id": "GHSA-mqr2-w7wj-jjgr",
+  "published": "2024-04-10",
+  "severity": "medium",
+  "cve": "CVE-2024-21507",
+  "type": "reviewed",
+  "summary": "mysql2 cache poisoning vulnerability",
+  "co_affected": []
+ },
+ "n8n": {
+  "id": "GHSA-364x-8g5j-x2pr",
+  "published": "2026-03-27",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "n8n has XSS in its Credential Management Flow",
+  "co_affected": []
+ },
+ "n8n-nodes-base": {
+  "id": "GHSA-365g-vjw2-grx8",
+  "published": "2025-10-09",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "n8n: Execute Command Node Allows Authenticated Users to Run Arbitrary Commands on Host",
+  "co_affected": [
+   "n8n"
+  ]
+ },
+ "nanoid": {
+  "id": "GHSA-mwcw-c2x4-8c55",
+  "published": "2024-12-09",
+  "severity": "medium",
+  "cve": "CVE-2024-55565",
+  "type": "reviewed",
+  "summary": "Predictable results in nanoid generation when given non-integer values",
+  "co_affected": []
+ },
+ "network": {
+  "id": "GHSA-vvh2-82c7-ppfg",
+  "published": "2024-01-30",
+  "severity": "high",
+  "cve": "CVE-2024-21488",
+  "type": "reviewed",
+  "summary": "network Arbitrary Command Injection vulnerability",
+  "co_affected": []
+ },
+ "next": {
+  "id": "GHSA-c59h-r6p8-q9wc",
+  "published": "2023-10-22",
+  "severity": "low",
+  "cve": "CVE-2023-46298",
+  "type": "reviewed",
+  "summary": "Next.js missing cache-control header may lead to CDN caching empty reply",
+  "co_affected": []
+ },
+ "next-auth": {
+  "id": "GHSA-7r7x-4c4q-c4qf",
+  "published": "2023-03-13",
+  "severity": "high",
+  "cve": "CVE-2023-27490",
+  "type": "reviewed",
+  "summary": "Missing proper state, nonce and PKCE checks for OAuth authentication",
+  "co_affected": []
+ },
+ "next-intl": {
+  "id": "GHSA-8f24-v5vv-gm5j",
+  "published": "2026-04-10",
+  "severity": "medium",
+  "cve": "CVE-2026-40299",
+  "type": "reviewed",
+  "summary": "next-intl has an open redirect vulnerability",
+  "co_affected": []
+ },
+ "next-mdx-remote": {
+  "id": "GHSA-g4xw-jxrg-5f6m",
+  "published": "2026-02-12",
+  "severity": "high",
+  "cve": "CVE-2026-0969",
+  "type": "reviewed",
+  "summary": "next-mdx-remote affected by arbitrary code execution in React server-side rendering of untrusted MDX content",
+  "co_affected": []
+ },
+ "next-tinacms-cloudinary": {
+  "id": "GHSA-8mq9-5fw2-5rm4",
+  "published": "2026-08-19",
+  "severity": "medium",
+  "cve": "CVE-2026-59992",
+  "type": "reviewed",
+  "summary": "Tina: Broken Access Control: arbitrary bucket-key write/delete in `next-tinacms-s3` (and sibling production media adapters)",
+  "co_affected": [
+   "next-tinacms-azure",
+   "next-tinacms-dos",
+   "next-tinacms-s3"
+  ]
+ },
+ "ngrok": {
+  "id": "GHSA-qr28-p3wr-mxq3",
+  "published": "2026-05-18",
+  "severity": "high",
+  "cve": "CVE-2025-57282",
+  "type": "reviewed",
+  "summary": "ngrok is Vulnerable to Command Injection",
+  "co_affected": []
+ },
+ "ngx-extended-pdf-viewer": {
+  "id": "GHSA-w9hm-4m3m-fxmm",
+  "published": "2026-08-06",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "ngx-extended-pdf-viewer bundles a version of pdf.js vulnerable to CVE-2026-16633",
+  "co_affected": []
+ },
+ "nitropack": {
+  "id": "GHSA-9phm-9p8f-hw5m",
+  "published": "2026-05-06",
+  "severity": "medium",
+  "cve": "CVE-2026-44372",
+  "type": "reviewed",
+  "summary": "Nitro has an Open Redirect via Protocol-Relative URL Bypass in Wildcard Route Rules",
+  "co_affected": [
+   "nitro"
+  ]
+ },
+ "nocodb": {
+  "id": "GHSA-xrpm-hccg-28x7",
+  "published": "2023-09-21",
+  "severity": "medium",
+  "cve": "CVE-2023-5104",
+  "type": "reviewed",
+  "summary": "Improper Input Validation in nocodb",
+  "co_affected": []
+ },
+ "node-forge": {
+  "id": "GHSA-554w-wpv2-vw27",
+  "published": "2025-11-26",
+  "severity": "high",
+  "cve": "CVE-2025-66031",
+  "type": "reviewed",
+  "summary": "node-forge has ASN.1 Unbounded Recursion",
+  "co_affected": []
+ },
+ "node-jose": {
+  "id": "GHSA-5h4j-qrvg-9xhw",
+  "published": "2023-02-16",
+  "severity": "high",
+  "cve": "CVE-2023-25653",
+  "type": "reviewed",
+  "summary": "Improper calculations in ECC implementation can trigger a Denial-of-Service (DoS)",
+  "co_affected": []
+ },
+ "node-opcua": {
+  "id": "GHSA-6wvw-vrw4-363w",
+  "published": "2026-08-20",
+  "severity": "high",
+  "cve": "CVE-2026-54156",
+  "type": "reviewed",
+  "summary": "node-opcua: Unbounded nonce cache enables unauthenticated heap exhaustion DoS",
+  "co_affected": []
+ },
+ "node-saml": {
+  "id": "GHSA-m837-g268-mmv7",
+  "published": "2025-07-25",
+  "severity": "critical",
+  "cve": "CVE-2025-54369",
+  "type": "reviewed",
+  "summary": "Node-SAML SAML Authentication Bypass",
+  "co_affected": [
+   "@node-saml/node-saml"
+  ]
+ },
+ "nodemailer": {
+  "id": "GHSA-9h6g-pr28-7cqp",
+  "published": "2024-01-31",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "nodemailer ReDoS when trying to send a specially crafted email",
+  "co_affected": []
+ },
+ "nope-validator": {
+  "id": "GHSA-3phv-83cj-p8p7",
+  "published": "2024-10-26",
+  "severity": "medium",
+  "cve": "CVE-2020-26309",
+  "type": "reviewed",
+  "summary": "nope-validator Regular Expression Denial of Service vulnerability",
+  "co_affected": []
+ },
+ "npm": {
+  "id": "GHSA-3966-f6p6-2qr9",
+  "published": "2026-01-23",
+  "severity": "high",
+  "cve": "CVE-2026-0775",
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: npm cli Uncontrolled Search Path Element Local Privilege Escalation Vulnerability",
+  "co_affected": []
+ },
+ "nuxt": {
+  "id": "GHSA-gc34-5v43-h7v8",
+  "published": "2023-06-13",
+  "severity": "critical",
+  "cve": "CVE-2023-3224",
+  "type": "reviewed",
+  "summary": "nuxt Code Injection vulnerability",
+  "co_affected": []
+ },
+ "nuxt-api-party": {
+  "id": "GHSA-q6hx-3m4p-749h",
+  "published": "2023-12-11",
+  "severity": "high",
+  "cve": "CVE-2023-49800",
+  "type": "reviewed",
+  "summary": "DOS by abusing `fetchOptions.retry`. ",
+  "co_affected": []
+ },
+ "nuxt-og-image": {
+  "id": "GHSA-mg36-wvcr-m75h",
+  "published": "2026-03-31",
+  "severity": "medium",
+  "cve": "CVE-2026-34405",
+  "type": "reviewed",
+  "summary": "Nuxt OG Image is vulnerable to reflected XSS via query parameter injection into HTML attributes",
+  "co_affected": []
+ },
+ "nx": {
+  "id": "GHSA-8mjq-32x3-22qf",
+  "published": "2025-09-25",
+  "severity": "critical",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: Malicious versions of Nx were published",
+  "co_affected": []
+ },
+ "oceanic.js": {
+  "id": "GHSA-5h5v-hw44-f6gg",
+  "published": "2024-05-14",
+  "severity": "medium",
+  "cve": "CVE-2024-34712",
+  "type": "reviewed",
+  "summary": "Oceanic allows unsanitized user input to lead to path traversal in URLs",
+  "co_affected": []
+ },
+ "octokit": {
+  "id": "GHSA-pwfr-8pq7-x9qv",
+  "published": "2023-12-16",
+  "severity": "high",
+  "cve": "CVE-2023-50728",
+  "type": "reviewed",
+  "summary": "Unauthenticated Denial of Service in the octokit/webhooks library",
+  "co_affected": [
+   "@octokit/app",
+   "@octokit/webhooks",
+   "probot"
+  ]
+ },
+ "openpgp": {
+  "id": "GHSA-ch3c-v47x-4pgp",
+  "published": "2023-08-29",
+  "severity": "medium",
+  "cve": "CVE-2023-41037",
+  "type": "reviewed",
+  "summary": "Cleartext Signed Message Signature Spoofing in openpgp",
+  "co_affected": []
+ },
+ "orejime": {
+  "id": "GHSA-72mh-hgpm-6384",
+  "published": "2025-12-19",
+  "severity": "low",
+  "cve": "CVE-2025-68457",
+  "type": "reviewed",
+  "summary": "Orejime has executable code in HTML attributes",
+  "co_affected": []
+ },
+ "pacote": {
+  "id": "GHSA-w4pp-8pjf-rmxw",
+  "published": "2026-05-26",
+  "severity": "high",
+  "cve": "CVE-2026-9496",
+  "type": "reviewed",
+  "summary": "pacote is vulnerable to Denial of Service (DoS) via the addGitSha function",
+  "co_affected": []
+ },
+ "pagefind": {
+  "id": "GHSA-gprj-6m2f-j9hx",
+  "published": "2024-09-03",
+  "severity": "medium",
+  "cve": "CVE-2024-45389",
+  "type": "reviewed",
+  "summary": "DOM clobbering could escalate to Cross-site Scripting (XSS)",
+  "co_affected": [
+   "@pagefind/default-ui",
+   "@pagefind/modular-ui"
+  ]
+ },
+ "papaparse": {
+  "id": "GHSA-798h-g4j5-5537",
+  "published": "2023-01-11",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: PapaParse Inefficient Regular Expression Complexity vulnerability",
+  "co_affected": []
+ },
+ "parse": {
+  "id": "GHSA-9g8m-v378-pcg3",
+  "published": "2025-09-24",
+  "severity": "medium",
+  "cve": "CVE-2025-57324",
+  "type": "reviewed",
+  "summary": "parse is vulnerable to prototype pollution",
+  "co_affected": []
+ },
+ "parse-dashboard": {
+  "id": "GHSA-jhp4-jvq3-w5xr",
+  "published": "2026-02-25",
+  "severity": "high",
+  "cve": "CVE-2026-27610",
+  "type": "reviewed",
+  "summary": "Parse Dashboard Has a Cache Key Collision that Leaks Master Key to Read-Only Sessions",
+  "co_affected": []
+ },
+ "parse-server": {
+  "id": "GHSA-vm5r-c87r-pf6x",
+  "published": "2023-01-31",
+  "severity": "high",
+  "cve": "CVE-2023-22474",
+  "type": "reviewed",
+  "summary": "Parse Server option `masterKeyIps` vulnerability to IP spoofing",
+  "co_affected": []
+ },
+ "parse-uri": {
+  "id": "GHSA-6fx8-h7jm-663j",
+  "published": "2025-01-16",
+  "severity": "medium",
+  "cve": "CVE-2024-36751",
+  "type": "reviewed",
+  "summary": "parse-uri Regular expression Denial of Service (ReDoS)",
+  "co_affected": [
+   "parseuri"
+  ]
+ },
+ "passport-saml": {
+  "id": "GHSA-4mxg-3p6v-xgq3",
+  "published": "2025-07-28",
+  "severity": "critical",
+  "cve": "CVE-2025-54419",
+  "type": "reviewed",
+  "summary": "Node-SAML SAML Signature Verification Vulnerability",
+  "co_affected": [
+   "@node-saml/node-saml",
+   "@node-saml/passport-saml"
+  ]
+ },
+ "path-to-regexp": {
+  "id": "GHSA-9wv6-86v2-598j",
+  "published": "2024-09-09",
+  "severity": "high",
+  "cve": "CVE-2024-45296",
+  "type": "reviewed",
+  "summary": "path-to-regexp outputs backtracking regular expressions",
+  "co_affected": []
+ },
+ "payload": {
+  "id": "GHSA-35jj-vqcf-f2jf",
+  "published": "2023-04-26",
+  "severity": "high",
+  "cve": "CVE-2023-30843",
+  "type": "reviewed",
+  "summary": "Hidden fields can be leaked on readable collections in Payload",
+  "co_affected": []
+ },
+ "pdfjs-dist": {
+  "id": "GHSA-wgrm-67xf-hhpq",
+  "published": "2024-05-07",
+  "severity": "high",
+  "cve": "CVE-2024-4367",
+  "type": "reviewed",
+  "summary": "PDF.js vulnerable to arbitrary JavaScript execution upon opening a malicious PDF",
+  "co_affected": []
+ },
+ "pdfmake": {
+  "id": "GHSA-rj3r-r7hh-jxfq",
+  "published": "2025-10-07",
+  "severity": "high",
+  "cve": "CVE-2025-11362",
+  "type": "reviewed",
+  "summary": "pdfmake is vulnerable to Throttling via repeatedly redirecting URL in file embedding",
+  "co_affected": []
+ },
+ "petite-vue-i18n": {
+  "id": "GHSA-hjwq-mjwj-4x6c",
+  "published": "2024-12-02",
+  "severity": "medium",
+  "cve": "CVE-2024-52810",
+  "type": "reviewed",
+  "summary": "@intlify/shared Prototype Pollution vulnerability",
+  "co_affected": [
+   "@intlify/shared",
+   "@intlify/vue-i18n-core",
+   "vue-i18n"
+  ]
+ },
+ "pg-promise": {
+  "id": "GHSA-ff9h-848c-4xfj",
+  "published": "2025-06-12",
+  "severity": "medium",
+  "cve": "CVE-2025-29744",
+  "type": "reviewed",
+  "summary": "pg-promise SQL Injection vulnerability",
+  "co_affected": []
+ },
+ "phin": {
+  "id": "GHSA-x565-32qp-m3vf",
+  "published": "2024-04-11",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "phin may include sensitive headers in subsequent requests after redirect",
+  "co_affected": []
+ },
+ "phoenix_html": {
+  "id": "GHSA-5g2h-9x5v-5h3x",
+  "published": "2023-01-10",
+  "severity": "medium",
+  "cve": "CVE-2021-46871",
+  "type": "reviewed",
+  "summary": "phoenix_html allows Cross-site Scripting in HEEx class attributes",
+  "co_affected": []
+ },
+ "picomatch": {
+  "id": "GHSA-3v7f-55p6-f55p",
+  "published": "2026-03-25",
+  "severity": "medium",
+  "cve": "CVE-2026-33672",
+  "type": "reviewed",
+  "summary": "Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching",
+  "co_affected": []
+ },
+ "pkg": {
+  "id": "GHSA-22r3-9w55-cj54",
+  "published": "2024-02-09",
+  "severity": "medium",
+  "cve": "CVE-2024-24828",
+  "type": "reviewed",
+  "summary": "Pkg Local Privilege Escalation",
+  "co_affected": []
+ },
+ "playwright": {
+  "id": "GHSA-7mvr-c777-76hp",
+  "published": "2025-10-14",
+  "severity": "high",
+  "cve": "CVE-2025-59288",
+  "type": "reviewed",
+  "summary": "Playwright downloads and installs browsers without verifying the authenticity of the SSL certificate",
+  "co_affected": []
+ },
+ "plotly.js": {
+  "id": "GHSA-wjc4-73q6-gv3m",
+  "published": "2024-01-03",
+  "severity": "critical",
+  "cve": "CVE-2023-46308",
+  "type": "reviewed",
+  "summary": "plotly.js prototype pollution vulnerability",
+  "co_affected": []
+ },
+ "pm2": {
+  "id": "GHSA-x5gf-qvw8-r2rm",
+  "published": "2025-06-09",
+  "severity": "low",
+  "cve": "CVE-2025-5891",
+  "type": "reviewed",
+  "summary": "pm2 Regular Expression Denial of Service vulnerability",
+  "co_affected": []
+ },
+ "pnpm": {
+  "id": "GHSA-5r98-f33j-g8h7",
+  "published": "2023-08-01",
+  "severity": "high",
+  "cve": "CVE-2023-37478",
+  "type": "reviewed",
+  "summary": "pnpm incorrectly parses tar archives relative to specification",
+  "co_affected": [
+   "@pnpm/cafs",
+   "@pnpm/exe",
+   "@pnpm/linux-arm64",
+   "@pnpm/linux-x64",
+   "@pnpm/linuxstatic-arm64",
+   "@pnpm/macos-arm64",
+   "@pnpm/macos-x64",
+   "@pnpm/win-x64"
+  ]
+ },
+ "postcss": {
+  "id": "GHSA-7fh5-64p2-3v2j",
+  "published": "2023-09-30",
+  "severity": "medium",
+  "cve": "CVE-2023-44270",
+  "type": "reviewed",
+  "summary": "PostCSS line return parsing error",
+  "co_affected": []
+ },
+ "postcss-selector-parser": {
+  "id": "GHSA-w9m9-85wc-3x92",
+  "published": "2026-05-26",
+  "severity": "low",
+  "cve": "CVE-2026-9358",
+  "type": "reviewed",
+  "summary": "postcss-selector-parser allows denial of service through uncontrolled AST recursion",
+  "co_affected": []
+ },
+ "posthog-js": {
+  "id": "GHSA-8775-5hwv-wr6v",
+  "published": "2023-05-22",
+  "severity": "medium",
+  "cve": "CVE-2023-32325",
+  "type": "reviewed",
+  "summary": "Potential for cross-site scripting in PostHog-js",
+  "co_affected": []
+ },
+ "preact": {
+  "id": "GHSA-36hm-qxxp-pg3m",
+  "published": "2026-01-07",
+  "severity": "high",
+  "cve": "CVE-2026-22028",
+  "type": "reviewed",
+  "summary": "Preact has JSON VNode Injection issue",
+  "co_affected": []
+ },
+ "prebid-universal-creative": {
+  "id": "GHSA-m662-56rj-8fmm",
+  "published": "2025-09-11",
+  "severity": "critical",
+  "cve": "CVE-2025-59039",
+  "type": "reviewed",
+  "summary": "Prebid-universal-creative latest on npm briefly compromised",
+  "co_affected": []
+ },
+ "prebid.js": {
+  "id": "GHSA-jwq7-6j4r-2f92",
+  "published": "2025-09-11",
+  "severity": "high",
+  "cve": "CVE-2025-59038",
+  "type": "reviewed",
+  "summary": "Prebid.js NPM package briefly compromised",
+  "co_affected": []
+ },
+ "prismjs": {
+  "id": "GHSA-x7hr-w5r2-h6wg",
+  "published": "2025-03-03",
+  "severity": "medium",
+  "cve": "CVE-2024-53382",
+  "type": "reviewed",
+  "summary": "PrismJS DOM Clobbering vulnerability",
+  "co_affected": []
+ },
+ "private-ip": {
+  "id": "GHSA-9h3q-32c7-r533",
+  "published": "2025-07-23",
+  "severity": "high",
+  "cve": "CVE-2025-8020",
+  "type": "reviewed",
+  "summary": "private-ip vulnerable to Server-Side Request Forgery",
+  "co_affected": []
+ },
+ "probot": {
+  "id": "GHSA-pwfr-8pq7-x9qv",
+  "published": "2023-12-16",
+  "severity": "high",
+  "cve": "CVE-2023-50728",
+  "type": "reviewed",
+  "summary": "Unauthenticated Denial of Service in the octokit/webhooks library",
+  "co_affected": [
+   "@octokit/app",
+   "@octokit/webhooks",
+   "octokit"
+  ]
+ },
+ "protobufjs": {
+  "id": "GHSA-h755-8qp9-cq85",
+  "published": "2023-07-05",
+  "severity": "critical",
+  "cve": "CVE-2023-36665",
+  "type": "reviewed",
+  "summary": "protobufjs Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "protobufjs-cli": {
+  "id": "GHSA-6r35-46g8-jcw9",
+  "published": "2026-05-12",
+  "severity": "high",
+  "cve": "CVE-2026-44295",
+  "type": "reviewed",
+  "summary": "protobuf.js: Code injection in pbjs static output from crafted schema names",
+  "co_affected": []
+ },
+ "pubnub": {
+  "id": "GHSA-5844-q3fc-56rh",
+  "published": "2023-12-06",
+  "severity": "medium",
+  "cve": "CVE-2023-26154",
+  "type": "reviewed",
+  "summary": "pubnub Insufficient Entropy vulnerability",
+  "co_affected": []
+ },
+ "qs": {
+  "id": "GHSA-6rw7-vpxm-498p",
+  "published": "2025-12-30",
+  "severity": "medium",
+  "cve": "CVE-2025-15284",
+  "type": "reviewed",
+  "summary": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+  "co_affected": []
+ },
+ "quasar": {
+  "id": "GHSA-3r53-75j5-3g7j",
+  "published": "2026-07-24",
+  "severity": "medium",
+  "cve": "CVE-2026-73647",
+  "type": "reviewed",
+  "summary": "Quasar: Prototype pollution in the extend() utility",
+  "co_affected": []
+ },
+ "ra-ui-materialui": {
+  "id": "GHSA-5jcr-82fh-339v",
+  "published": "2023-02-14",
+  "severity": "medium",
+  "cve": "CVE-2023-25572",
+  "type": "reviewed",
+  "summary": "Cross-Site-Scripting attack on `<RichTextField>`",
+  "co_affected": [
+   "react-admin"
+  ]
+ },
+ "rangy": {
+  "id": "GHSA-65rp-mhqf-8gj3",
+  "published": "2023-02-24",
+  "severity": "high",
+  "cve": "CVE-2023-26102",
+  "type": "reviewed",
+  "summary": "rangy vulnerable to Prototype Pollution",
+  "co_affected": []
+ },
+ "re2": {
+  "id": "GHSA-ff84-5f28-78qj",
+  "published": "2026-07-31",
+  "severity": "medium",
+  "cve": "CVE-2026-67550",
+  "type": "reviewed",
+  "summary": "re2: Out-of-bounds heap read in `exec`/`test`/`match` via attacker-influenced `lastIndex` on a non-ASCII subject \u2192 uncatchable process crash (DoS)",
+  "co_affected": []
+ },
+ "react-admin": {
+  "id": "GHSA-5jcr-82fh-339v",
+  "published": "2023-02-14",
+  "severity": "medium",
+  "cve": "CVE-2023-25572",
+  "type": "reviewed",
+  "summary": "Cross-Site-Scripting attack on `<RichTextField>`",
+  "co_affected": [
+   "ra-ui-materialui"
+  ]
+ },
+ "react-devtools-core": {
+  "id": "GHSA-rxrc-rgv4-jpvx",
+  "published": "2023-10-19",
+  "severity": "medium",
+  "cve": "CVE-2023-5654",
+  "type": "reviewed",
+  "summary": "React Developer Tools extension Improper Authorization vulnerability",
+  "co_affected": []
+ },
+ "react-draft-wysiwyg": {
+  "id": "GHSA-fq5x-7292-2p5r",
+  "published": "2025-04-04",
+  "severity": "low",
+  "cve": "CVE-2025-3191",
+  "type": "reviewed",
+  "summary": "React Draft Wysiwyg Cross-Site Scripting (XSS) via the Embedded Button",
+  "co_affected": []
+ },
+ "react-native-document-picker": {
+  "id": "GHSA-pmgm-h3cc-m4hj",
+  "published": "2024-02-16",
+  "severity": "high",
+  "cve": "CVE-2024-25466",
+  "type": "reviewed",
+  "summary": "React Native Document Picker Directory Traversal vulnerability",
+  "co_affected": []
+ },
+ "react-native-mmkv": {
+  "id": "GHSA-4jh3-6jhv-2mgp",
+  "published": "2024-01-09",
+  "severity": "medium",
+  "cve": "CVE-2024-21668",
+  "type": "reviewed",
+  "summary": "react-native-mmkv Insertion of Sensitive Information into Log File vulnerability",
+  "co_affected": []
+ },
+ "react-pdf": {
+  "id": "GHSA-87hq-q4gp-9wr4",
+  "published": "2024-05-07",
+  "severity": "high",
+  "cve": "CVE-2024-34342",
+  "type": "reviewed",
+  "summary": "react-pdf vulnerable to arbitrary JavaScript execution upon opening a malicious PDF with PDF.js",
+  "co_affected": []
+ },
+ "react-router": {
+  "id": "GHSA-cpj6-fhp6-mr6j",
+  "published": "2025-04-24",
+  "severity": "high",
+  "cve": "CVE-2025-43865",
+  "type": "reviewed",
+  "summary": "React Router allows pre-render data spoofing on React-Router framework mode",
+  "co_affected": []
+ },
+ "react-router-dom": {
+  "id": "GHSA-jjmj-jmhj-qwj2",
+  "published": "2026-07-23",
+  "severity": "medium",
+  "cve": "CVE-2026-53668",
+  "type": "reviewed",
+  "summary": "React Router: Open redirect leading to XSS",
+  "co_affected": [
+   "react-router"
+  ]
+ },
+ "react-server-dom-webpack": {
+  "id": "GHSA-fv66-9v8q-g76r",
+  "published": "2025-12-03",
+  "severity": "critical",
+  "cve": "CVE-2025-55182",
+  "type": "reviewed",
+  "summary": "React Server Components are Vulnerable to RCE",
+  "co_affected": [
+   "react-server-dom-parcel",
+   "react-server-dom-turbopack"
+  ]
+ },
+ "redoc": {
+  "id": "GHSA-9rhg-254w-fh9x",
+  "published": "2025-03-28",
+  "severity": "high",
+  "cve": "CVE-2024-57083",
+  "type": "reviewed",
+  "summary": "Redoc Prototype Pollution via `Module.mergeObjects` Component",
+  "co_affected": []
+ },
+ "remotion": {
+  "id": "GHSA-g6pc-6676-c23j",
+  "published": "2026-06-15",
+  "severity": "critical",
+  "cve": "CVE-2026-30121",
+  "type": "reviewed",
+  "summary": "Remotion: arbitrary file write vulnerability",
+  "co_affected": []
+ },
+ "renovate": {
+  "id": "GHSA-rqgv-292v-5qgr",
+  "published": "2024-04-23",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Renovate vulnerable to arbitrary command injection via helmv3 manager and registryAliases",
+  "co_affected": []
+ },
+ "request-filtering-agent": {
+  "id": "GHSA-pw25-c82r-75mm",
+  "published": "2025-08-25",
+  "severity": "medium",
+  "cve": "CVE-2025-57814",
+  "type": "reviewed",
+  "summary": "request-filtering-agent SSRF Bypass via HTTPS Requests to 127.0.0.1",
+  "co_affected": []
+ },
+ "rollbar": {
+  "id": "GHSA-m929-rg27-gj99",
+  "published": "2025-09-24",
+  "severity": "low",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: rollbar vulnerable to prototype pollution",
+  "co_affected": []
+ },
+ "rollup": {
+  "id": "GHSA-gcx4-mw62-g8wm",
+  "published": "2024-09-23",
+  "severity": "high",
+  "cve": "CVE-2024-47068",
+  "type": "reviewed",
+  "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS",
+  "co_affected": []
+ },
+ "rsshub": {
+  "id": "GHSA-64wp-jh9p-5cg2",
+  "published": "2023-01-11",
+  "severity": "high",
+  "cve": "CVE-2023-22493",
+  "type": "reviewed",
+  "summary": "RSSHub SSRF vulnerability",
+  "co_affected": []
+ },
+ "sails": {
+  "id": "GHSA-gpw9-fwm8-7rx7",
+  "published": "2023-07-27",
+  "severity": "high",
+  "cve": "CVE-2023-38504",
+  "type": "reviewed",
+  "summary": "DoS vulnerability for apps with sockets enabled",
+  "co_affected": []
+ },
+ "samlify": {
+  "id": "GHSA-r683-v43c-6xqv",
+  "published": "2025-05-19",
+  "severity": "critical",
+  "cve": "CVE-2025-47949",
+  "type": "reviewed",
+  "summary": "samlify SAML Signature Wrapping attack",
+  "co_affected": []
+ },
+ "sanitize-html": {
+  "id": "GHSA-rm97-x556-q36h",
+  "published": "2024-02-24",
+  "severity": "medium",
+  "cve": "CVE-2024-21501",
+  "type": "reviewed",
+  "summary": "sanitize-html Information Exposure vulnerability",
+  "co_affected": []
+ },
+ "scim-patch": {
+  "id": "GHSA-9m6g-wc8r-q59c",
+  "published": "2026-06-22",
+  "severity": "critical",
+  "cve": "CVE-2026-48170",
+  "type": "reviewed",
+  "summary": "scimPatch vulnerable to prototype pollution via unfiltered keys in patch",
+  "co_affected": []
+ },
+ "secp256k1": {
+  "id": "GHSA-584q-6j8j-r5pm",
+  "published": "2024-10-21",
+  "severity": "high",
+  "cve": "CVE-2024-48930",
+  "type": "reviewed",
+  "summary": "secp256k1-node allows private key extraction over ECDH",
+  "co_affected": []
+ },
+ "semver": {
+  "id": "GHSA-c2qf-rxjj-qqgw",
+  "published": "2023-06-21",
+  "severity": "high",
+  "cve": "CVE-2022-25883",
+  "type": "reviewed",
+  "summary": "semver vulnerable to Regular Expression Denial of Service",
+  "co_affected": []
+ },
+ "send": {
+  "id": "GHSA-m6fv-jmcg-4jfg",
+  "published": "2024-09-10",
+  "severity": "low",
+  "cve": "CVE-2024-43799",
+  "type": "reviewed",
+  "summary": "send vulnerable to template injection that can lead to XSS",
+  "co_affected": []
+ },
+ "sequelize": {
+  "id": "GHSA-8c25-f3mj-v6h8",
+  "published": "2023-02-16",
+  "severity": "medium",
+  "cve": "CVE-2023-22580",
+  "type": "reviewed",
+  "summary": "Sequelize information disclosure vulnerability",
+  "co_affected": [
+   "@sequelize/core"
+  ]
+ },
+ "sequelize-typescript": {
+  "id": "GHSA-7pvx-4585-hqww",
+  "published": "2023-11-24",
+  "severity": "high",
+  "cve": "CVE-2023-6293",
+  "type": "reviewed",
+  "summary": "sequelize-typescript Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "serve-static": {
+  "id": "GHSA-cm22-4g7w-348p",
+  "published": "2024-09-10",
+  "severity": "low",
+  "cve": "CVE-2024-43800",
+  "type": "reviewed",
+  "summary": "serve-static vulnerable to template injection that can lead to XSS",
+  "co_affected": []
+ },
+ "serverless": {
+  "id": "GHSA-rwc2-f344-q6w6",
+  "published": "2025-12-31",
+  "severity": "high",
+  "cve": "CVE-2025-69256",
+  "type": "reviewed",
+  "summary": "serverless MCP Server vulnerable to Command Injection in list-projects tool",
+  "co_affected": []
+ },
+ "ses": {
+  "id": "GHSA-9c4h-3f7h-322r",
+  "published": "2023-08-09",
+  "severity": "critical",
+  "cve": "CVE-2023-39532",
+  "type": "reviewed",
+  "summary": "SES's dynamic import and spread operator provides possible path to arbitrary exfiltration and execution",
+  "co_affected": []
+ },
+ "shakapacker": {
+  "id": "GHSA-96qw-h329-v5rg",
+  "published": "2026-01-08",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Shakapacker has environment variable leak via EnvironmentPlugin that exposes secrets to client-side bundles",
+  "co_affected": []
+ },
+ "sharp": {
+  "id": "GHSA-54xq-cgqr-rpm3",
+  "published": "2023-11-16",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "sharp vulnerability in libwebp dependency CVE-2023-4863",
+  "co_affected": []
+ },
+ "shell-quote": {
+  "id": "GHSA-w7jw-789q-3m8p",
+  "published": "2026-06-09",
+  "severity": "critical",
+  "cve": "CVE-2026-9277",
+  "type": "reviewed",
+  "summary": "shell-quote quote() does not escape newlines in object .op values",
+  "co_affected": []
+ },
+ "shescape": {
+  "id": "GHSA-3g7p-8qhx-mc8r",
+  "published": "2023-06-22",
+  "severity": "low",
+  "cve": "CVE-2023-35931",
+  "type": "reviewed",
+  "summary": "Shescape potential environment variable exposure on Windows with CMD",
+  "co_affected": []
+ },
+ "showdown": {
+  "id": "GHSA-rmmh-p597-ppvv",
+  "published": "2024-02-26",
+  "severity": "medium",
+  "cve": "CVE-2024-1899",
+  "type": "reviewed",
+  "summary": "Showdown vulnerable to Regular Expression Denial of Service (ReDoS) in link/anchor parsing",
+  "co_affected": []
+ },
+ "signalk-server": {
+  "id": "GHSA-fq56-hvg6-wvm5",
+  "published": "2026-01-02",
+  "severity": "critical",
+  "cve": "CVE-2025-68620",
+  "type": "reviewed",
+  "summary": "Signal K Server vulnerable to JWT Token Theft via WebSocket Enumeration and Unauthenticated Polling",
+  "co_affected": []
+ },
+ "sigstore": {
+  "id": "GHSA-52v5-jr5w-gjxr",
+  "published": "2026-07-01",
+  "severity": "high",
+  "cve": "CVE-2026-48815",
+  "type": "reviewed",
+  "summary": "sigstore's `certificateOIDs` verification constraints are silently dropped and never enforced",
+  "co_affected": []
+ },
+ "simple-git": {
+  "id": "GHSA-9w5j-4mwv-2wj8",
+  "published": "2023-01-26",
+  "severity": "critical",
+  "cve": "CVE-2022-25860",
+  "type": "reviewed",
+  "summary": "Remote code execution in simple-git",
+  "co_affected": []
+ },
+ "slim-select": {
+  "id": "GHSA-qvqv-mcxr-x8qw",
+  "published": "2024-10-02",
+  "severity": "medium",
+  "cve": "CVE-2024-9440",
+  "type": "reviewed",
+  "summary": "Slim Select has potential Cross-site Scripting issue",
+  "co_affected": []
+ },
+ "sm-crypto": {
+  "id": "GHSA-hpwg-xg7m-3p6m",
+  "published": "2026-01-21",
+  "severity": "high",
+  "cve": "CVE-2026-23965",
+  "type": "reviewed",
+  "summary": "sm-crypto Affected by Signature Forgery in SM2-DSA",
+  "co_affected": []
+ },
+ "smtp-server": {
+  "id": "GHSA-fv2f-rw9f-v9cm",
+  "published": "2026-05-15",
+  "severity": "high",
+  "cve": "CVE-2026-38728",
+  "type": "reviewed",
+  "summary": "smtp-server's command parser memory exhaustion denial-of-service",
+  "co_affected": []
+ },
+ "snarkjs": {
+  "id": "GHSA-xp5g-jhg3-3rg2",
+  "published": "2023-05-22",
+  "severity": "high",
+  "cve": "CVE-2023-33252",
+  "type": "reviewed",
+  "summary": "Double spend in snarkjs",
+  "co_affected": []
+ },
+ "snowflake-sdk": {
+  "id": "GHSA-h53w-7qw7-vh5c",
+  "published": "2023-06-09",
+  "severity": "high",
+  "cve": "CVE-2023-34232",
+  "type": "reviewed",
+  "summary": "Snowflake NodeJS Driver vulnerable to Command Injection",
+  "co_affected": []
+ },
+ "snyk": {
+  "id": "GHSA-4vrv-93c7-m92j",
+  "published": "2023-07-06",
+  "severity": "high",
+  "cve": "CVE-2022-24441",
+  "type": "reviewed",
+  "summary": "snyk Code Injection vulnerability",
+  "co_affected": []
+ },
+ "snyk-gradle-plugin": {
+  "id": "GHSA-qqqw-gm93-qf6m",
+  "published": "2024-10-23",
+  "severity": "high",
+  "cve": "CVE-2024-48964",
+  "type": "reviewed",
+  "summary": "OS Command Injection in Snyk gradle plugin",
+  "co_affected": []
+ },
+ "snyk-php-plugin": {
+  "id": "GHSA-69f9-h8f9-7vjf",
+  "published": "2024-10-23",
+  "severity": "high",
+  "cve": "CVE-2024-48963",
+  "type": "reviewed",
+  "summary": "OS Command Injection in Snyk php plugin",
+  "co_affected": []
+ },
+ "socket.io": {
+  "id": "GHSA-25hc-qcg6-38wj",
+  "published": "2024-06-19",
+  "severity": "medium",
+  "cve": "CVE-2024-38355",
+  "type": "reviewed",
+  "summary": "socket.io has an unhandled 'error' event",
+  "co_affected": []
+ },
+ "socket.io-parser": {
+  "id": "GHSA-cqmj-92xf-r6r9",
+  "published": "2023-05-23",
+  "severity": "medium",
+  "cve": "CVE-2023-32695",
+  "type": "reviewed",
+  "summary": "Insufficient validation when decoding a Socket.IO packet",
+  "co_affected": []
+ },
+ "solid-js": {
+  "id": "GHSA-3qxh-p7jc-5xh6",
+  "published": "2025-02-25",
+  "severity": "high",
+  "cve": "CVE-2025-27109",
+  "type": "reviewed",
+  "summary": "Solid Lacks Escaping of HTML in JSX Fragments allows for Cross-Site Scripting (XSS)",
+  "co_affected": []
+ },
+ "speaker": {
+  "id": "GHSA-w5fc-gj3h-26rx",
+  "published": "2024-07-10",
+  "severity": "high",
+  "cve": "CVE-2024-21526",
+  "type": "reviewed",
+  "summary": "speaker vulnerable to Denial of Service",
+  "co_affected": []
+ },
+ "sqlite3": {
+  "id": "GHSA-jqv5-7xpx-qj74",
+  "published": "2023-03-13",
+  "severity": "high",
+  "cve": "CVE-2022-43441",
+  "type": "reviewed",
+  "summary": "sqlite vulnerable to code execution due to Object coercion",
+  "co_affected": []
+ },
+ "stimulsoft-dashboards-js": {
+  "id": "GHSA-9m6m-c64r-w4f4",
+  "published": "2024-02-05",
+  "severity": "medium",
+  "cve": "CVE-2024-24396",
+  "type": "reviewed",
+  "summary": "Stimulsoft Dashboard.JS Cross Site Scripting vulnerability",
+  "co_affected": []
+ },
+ "stimulus_reflex": {
+  "id": "GHSA-f78j-4w3g-4q65",
+  "published": "2024-03-12",
+  "severity": "high",
+  "cve": "CVE-2024-28121",
+  "type": "reviewed",
+  "summary": "StimulusReflex arbitrary method call",
+  "co_affected": []
+ },
+ "store2": {
+  "id": "GHSA-w5hq-hm5m-4548",
+  "published": "2025-01-24",
+  "severity": "medium",
+  "cve": "CVE-2024-57556",
+  "type": "reviewed",
+  "summary": "Cross Site Scripting vulnerability in store2",
+  "co_affected": []
+ },
+ "storybook": {
+  "id": "GHSA-8452-54wp-rmv6",
+  "published": "2025-12-18",
+  "severity": "high",
+  "cve": "CVE-2025-68429",
+  "type": "reviewed",
+  "summary": "Storybook manager bundle may expose environment variables during build",
+  "co_affected": []
+ },
+ "string-kit": {
+  "id": "GHSA-pfrm-4rjw-g9q5",
+  "published": "2023-01-02",
+  "severity": "high",
+  "cve": "CVE-2021-4299",
+  "type": "reviewed",
+  "summary": "string-kit Inefficient Regular Expression Complexity vulnerability",
+  "co_affected": []
+ },
+ "style-dictionary": {
+  "id": "GHSA-vj5c-m527-mpff",
+  "published": "2026-07-28",
+  "severity": "high",
+  "cve": "CVE-2026-54639",
+  "type": "reviewed",
+  "summary": "Style Dictionary - Prototype Pollution in convertTokenData utility function",
+  "co_affected": []
+ },
+ "stylelint": {
+  "id": "GHSA-f7xj-rg7h-mc87",
+  "published": "2023-07-07",
+  "severity": "low",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Stylelint has vulnerability in semver dependency",
+  "co_affected": []
+ },
+ "suneditor": {
+  "id": "GHSA-w93q-cq9w-58p7",
+  "published": "2026-08-26",
+  "severity": "high",
+  "cve": "CVE-2026-54606",
+  "type": "reviewed",
+  "summary": "SunEditor Embed Plugin has DOM XSS via External Script Element After Iframe Embed",
+  "co_affected": []
+ },
+ "survey-creator": {
+  "id": "GHSA-xgj4-2hrf-j4xg",
+  "published": "2024-03-21",
+  "severity": "medium",
+  "cve": "CVE-2024-28635",
+  "type": "reviewed",
+  "summary": "Cross-site scripting in Survey Creator",
+  "co_affected": []
+ },
+ "survey-pdf": {
+  "id": "GHSA-h3q6-jfrg-3x6q",
+  "published": "2026-02-04",
+  "severity": "critical",
+  "cve": "CVE-2026-25630",
+  "type": "reviewed",
+  "summary": "survey-pdf Upgraded jsPDF Version Due to Security Vulnerability",
+  "co_affected": []
+ },
+ "svelecte": {
+  "id": "GHSA-7h45-grc5-89wq",
+  "published": "2023-08-14",
+  "severity": "medium",
+  "cve": "CVE-2023-38687",
+  "type": "reviewed",
+  "summary": "Svelecte item names vulnerable to execution of arbitrary JavaScript",
+  "co_affected": []
+ },
+ "svelte": {
+  "id": "GHSA-8266-84wp-wv5c",
+  "published": "2024-08-30",
+  "severity": "medium",
+  "cve": "CVE-2024-45047",
+  "type": "reviewed",
+  "summary": "Svelte has a potential mXSS vulnerability due to improper HTML escaping",
+  "co_affected": []
+ },
+ "svgo": {
+  "id": "GHSA-xpqw-6gx7-v673",
+  "published": "2026-03-04",
+  "severity": "high",
+  "cve": "CVE-2026-29074",
+  "type": "reviewed",
+  "summary": "SVGO DoS through entity expansion in DOCTYPE (Billion Laughs)",
+  "co_affected": []
+ },
+ "swagger-typescript-api": {
+  "id": "GHSA-w284-33mx-6g9v",
+  "published": "2026-07-29",
+  "severity": "high",
+  "cve": "CVE-2026-54666",
+  "type": "reviewed",
+  "summary": "swagger-typescript-api vulnerable to code injection via unescaped OpenAPI path strings in generated method bodies",
+  "co_affected": []
+ },
+ "sweetalert2": {
+  "id": "GHSA-mrr8-v49w-3333",
+  "published": "2023-07-10",
+  "severity": "low",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "sweetalert2 contains potentially undesirable behavior",
+  "co_affected": []
+ },
+ "swiper": {
+  "id": "GHSA-hmx5-qpq5-p643",
+  "published": "2026-02-19",
+  "severity": "critical",
+  "cve": "CVE-2026-27212",
+  "type": "reviewed",
+  "summary": "Prototype pollution in swiper",
+  "co_affected": []
+ },
+ "synckit": {
+  "id": "GHSA-f29h-pxvx-f335",
+  "published": "2025-07-19",
+  "severity": "high",
+  "cve": "CVE-2025-54313",
+  "type": "reviewed",
+  "summary": "eslint-config-prettier, eslint-plugin-prettier, synckit, @pkgr/core, napi-postinstall have embedded malicious code",
+  "co_affected": [
+   "@pkgr/core",
+   "eslint-config-prettier",
+   "eslint-plugin-prettier",
+   "got-fetch",
+   "napi-postinstall"
+  ]
+ },
+ "systeminformation": {
+  "id": "GHSA-gx6r-qc2v-3p3v",
+  "published": "2023-09-21",
+  "severity": "critical",
+  "cve": "CVE-2023-42810",
+  "type": "reviewed",
+  "summary": "systeminformation SSID Command Injection Vulnerability",
+  "co_affected": []
+ },
+ "tar": {
+  "id": "GHSA-f5x3-32g6-xq36",
+  "published": "2024-03-22",
+  "severity": "medium",
+  "cve": "CVE-2024-28863",
+  "type": "reviewed",
+  "summary": "Denial of service while parsing a tar file due to lack of folders count validation",
+  "co_affected": [
+   "node-tar"
+  ]
+ },
+ "taro-css-to-react-native": {
+  "id": "GHSA-f5xg-cfpj-2mw6",
+  "published": "2025-06-09",
+  "severity": "medium",
+  "cve": "CVE-2025-5896",
+  "type": "reviewed",
+  "summary": "taro-css-to-react-native Regular Expression Denial of Service vulnerability",
+  "co_affected": []
+ },
+ "tarteaucitronjs": {
+  "id": "GHSA-f44m-65h3-99vc",
+  "published": "2023-07-11",
+  "severity": "medium",
+  "cve": "CVE-2023-3620",
+  "type": "reviewed",
+  "summary": "tarteaucitron.js vulnerable to Cross-site Scripting",
+  "co_affected": []
+ },
+ "telejson": {
+  "id": "GHSA-ccgf-5rwj-j3hv",
+  "published": "2026-04-02",
+  "severity": "low",
+  "cve": "CVE-2026-47099",
+  "type": "reviewed",
+  "summary": "TeleJSON: DOM XSS via unsanitised constructor name in `new Function()`",
+  "co_affected": []
+ },
+ "terminal-kit": {
+  "id": "GHSA-wxgh-8gmr-3qh3",
+  "published": "2023-01-07",
+  "severity": "high",
+  "cve": "CVE-2021-4306",
+  "type": "reviewed",
+  "summary": "terminal-kit Inefficient Regular Expression Complexity vulnerability",
+  "co_affected": []
+ },
+ "thrift": {
+  "id": "GHSA-r67j-r569-jrwp",
+  "published": "2026-04-28",
+  "severity": "high",
+  "cve": "CVE-2026-41636",
+  "type": "reviewed",
+  "summary": "Apache Thrift Node.js bindings vulnerable to Uncontrolled Recursion",
+  "co_affected": []
+ },
+ "tinacms": {
+  "id": "GHSA-529f-9qwm-9628",
+  "published": "2025-12-18",
+  "severity": "high",
+  "cve": "CVE-2025-68278",
+  "type": "reviewed",
+  "summary": "tinacms is vulnerable to arbitrary code execution",
+  "co_affected": [
+   "@tinacms/cli",
+   "@tinacms/graphql"
+  ]
+ },
+ "tiny-secp256k1": {
+  "id": "GHSA-5vhg-9xg4-cv9m",
+  "published": "2025-06-30",
+  "severity": "high",
+  "cve": "CVE-2024-49365",
+  "type": "reviewed",
+  "summary": "tiny-secp256k1 allows for verify() bypass when running in bundled environment",
+  "co_affected": []
+ },
+ "tinymce": {
+  "id": "GHSA-hgqx-r2hp-jr38",
+  "published": "2023-10-19",
+  "severity": "medium",
+  "cve": "CVE-2023-45819",
+  "type": "reviewed",
+  "summary": "TinyMCE XSS vulnerability in notificationManager.open API",
+  "co_affected": []
+ },
+ "total4": {
+  "id": "GHSA-jj45-24rw-v6jw",
+  "published": "2023-05-04",
+  "severity": "medium",
+  "cve": "CVE-2023-30094",
+  "type": "reviewed",
+  "summary": "Cross-site scripting in TotalJS",
+  "co_affected": []
+ },
+ "tough-cookie": {
+  "id": "GHSA-72xf-g2v4-qvf3",
+  "published": "2023-07-01",
+  "severity": "medium",
+  "cve": "CVE-2023-26136",
+  "type": "reviewed",
+  "summary": "tough-cookie Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "trix": {
+  "id": "GHSA-qjqp-xr96-cj99",
+  "published": "2024-05-07",
+  "severity": "medium",
+  "cve": "CVE-2024-34341",
+  "type": "reviewed",
+  "summary": "Trix Editor Arbitrary Code Execution Vulnerability",
+  "co_affected": []
+ },
+ "ts-deepmerge": {
+  "id": "GHSA-87mf-gv2c-c62c",
+  "published": "2026-06-19",
+  "severity": "medium",
+  "cve": "CVE-2026-12644",
+  "type": "reviewed",
+  "summary": "ts-deepmerge: Prototype Method Override leads to DoS",
+  "co_affected": []
+ },
+ "tsup": {
+  "id": "GHSA-3mv9-4h5g-vhg3",
+  "published": "2025-03-03",
+  "severity": "low",
+  "cve": "CVE-2024-53384",
+  "type": "reviewed",
+  "summary": "tsup DOM Clobbering vulnerability",
+  "co_affected": []
+ },
+ "turbo": {
+  "id": "GHSA-hcf7-66rw-9f5r",
+  "published": "2026-05-19",
+  "severity": "medium",
+  "cve": "CVE-2026-45773",
+  "type": "reviewed",
+  "summary": "Turbo: Login callback CSRF/session fixation",
+  "co_affected": []
+ },
+ "typed-rest-client": {
+  "id": "GHSA-558p-m34m-vpmq",
+  "published": "2023-04-27",
+  "severity": "critical",
+  "cve": "CVE-2023-30846",
+  "type": "reviewed",
+  "summary": "Potential leak of authentication data to 3rd parties",
+  "co_affected": []
+ },
+ "typeorm": {
+  "id": "GHSA-q2pj-6v73-8rgj",
+  "published": "2025-10-29",
+  "severity": "high",
+  "cve": "CVE-2025-60542",
+  "type": "reviewed",
+  "summary": "TypeORM vulnerable to SQL injection via crafted request to repository.save or repository.update",
+  "co_affected": []
+ },
+ "ua-parser-js": {
+  "id": "GHSA-fhg7-m89q-25r3",
+  "published": "2023-01-24",
+  "severity": "high",
+  "cve": "CVE-2022-25927",
+  "type": "reviewed",
+  "summary": "ReDoS Vulnerability in ua-parser-js version",
+  "co_affected": []
+ },
+ "underscore": {
+  "id": "GHSA-qpx9-hpmf-5gmw",
+  "published": "2026-03-03",
+  "severity": "high",
+  "cve": "CVE-2026-27601",
+  "type": "reviewed",
+  "summary": "Underscore has unlimited recursion in _.flatten and _.isEqual, potential for DoS attack",
+  "co_affected": []
+ },
+ "undici": {
+  "id": "GHSA-5r9g-qh6m-jxff",
+  "published": "2023-02-16",
+  "severity": "medium",
+  "cve": "CVE-2023-23936",
+  "type": "reviewed",
+  "summary": "CRLF Injection in Nodejs \u2018undici\u2019 via host",
+  "co_affected": []
+ },
+ "unhead": {
+  "id": "GHSA-5339-hvwr-7582",
+  "published": "2026-03-12",
+  "severity": "low",
+  "cve": "CVE-2026-31873",
+  "type": "reviewed",
+  "summary": "Unhead Vulnerable to Bypass of URI Scheme Sanitization in makeTagSafe via Case-Sensitivity",
+  "co_affected": []
+ },
+ "unleash-server": {
+  "id": "GHSA-w4mq-xh27-6xpx",
+  "published": "2026-08-21",
+  "severity": "medium",
+  "cve": "CVE-2026-63466",
+  "type": "reviewed",
+  "summary": "Unleash: Global Mustache.escape override disables HTML escaping process-wide, enabling Slack/Teams link-injection via unrestricted username",
+  "co_affected": []
+ },
+ "uplot": {
+  "id": "GHSA-34q8-jcq6-mc37",
+  "published": "2024-10-01",
+  "severity": "high",
+  "cve": "CVE-2024-21489",
+  "type": "reviewed",
+  "summary": "uPlot Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "urllib": {
+  "id": "GHSA-hq3h-g68c-hp78",
+  "published": "2026-08-25",
+  "severity": "high",
+  "cve": "CVE-2026-55553",
+  "type": "reviewed",
+  "summary": "urllib's cross-origin redirects preserve credential-bearing request headers, leading to potential credential leakage",
+  "co_affected": []
+ },
+ "utilities": {
+  "id": "GHSA-wxfj-84xf-7gxv",
+  "published": "2023-02-28",
+  "severity": "high",
+  "cve": "CVE-2023-26105",
+  "type": "reviewed",
+  "summary": "mde utilities contains Prototype Pollution",
+  "co_affected": []
+ },
+ "uuid": {
+  "id": "GHSA-w5hq-g745-h8pq",
+  "published": "2026-04-22",
+  "severity": "medium",
+  "cve": "CVE-2026-41907",
+  "type": "reviewed",
+  "summary": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+  "co_affected": []
+ },
+ "vconsole": {
+  "id": "GHSA-f737-3fh6-jf6w",
+  "published": "2023-04-26",
+  "severity": "critical",
+  "cve": "CVE-2023-30363",
+  "type": "reviewed",
+  "summary": "Prototype Pollution in vConsole",
+  "co_affected": []
+ },
+ "vditor": {
+  "id": "GHSA-vfmp-9999-6wqj",
+  "published": "2023-02-21",
+  "severity": "medium",
+  "cve": "CVE-2021-32855",
+  "type": "reviewed",
+  "summary": "Vditor Cross-site Scripting vulnerability",
+  "co_affected": []
+ },
+ "vega": {
+  "id": "GHSA-cp47-r258-q626",
+  "published": "2023-03-02",
+  "severity": "medium",
+  "cve": null,
+  "type": "reviewed",
+  "summary": " Vega vulnerable to arbitrary code execution when clicking href links",
+  "co_affected": []
+ },
+ "vega-functions": {
+  "id": "GHSA-4vq7-882g-wcg4",
+  "published": "2023-03-02",
+  "severity": "medium",
+  "cve": "CVE-2023-26486",
+  "type": "reviewed",
+  "summary": "Vega Expression Language `scale` expression function Cross Site Scripting",
+  "co_affected": [
+   "vega"
+  ]
+ },
+ "vega-selections": {
+  "id": "GHSA-mp7w-mhcv-673j",
+  "published": "2025-02-14",
+  "severity": "medium",
+  "cve": "CVE-2025-25304",
+  "type": "reviewed",
+  "summary": "Vega allows Cross-site Scripting via the vlSelectionTuples function",
+  "co_affected": [
+   "vega"
+  ]
+ },
+ "velocityjs": {
+  "id": "GHSA-j658-c2gf-x6pq",
+  "published": "2026-05-09",
+  "severity": "high",
+  "cve": "CVE-2026-44966",
+  "type": "reviewed",
+  "summary": "Velocity.js has a Prototype Pollution vulnerability through #set path assignment",
+  "co_affected": []
+ },
+ "vercel": {
+  "id": "GHSA-pgf8-2hgj-grqg",
+  "published": "2026-05-07",
+  "severity": "medium",
+  "cve": "CVE-2026-44479",
+  "type": "reviewed",
+  "summary": "Vercel: Non-interactive mode includes CLI arguments in suggested command output",
+  "co_affected": []
+ },
+ "vite": {
+  "id": "GHSA-353f-5xf4-qw67",
+  "published": "2023-06-06",
+  "severity": "high",
+  "cve": "CVE-2023-34092",
+  "type": "reviewed",
+  "summary": "Vite Server Options (server.fs.deny) can be bypassed using double forward-slash (//)",
+  "co_affected": []
+ },
+ "vite-plugin-static-copy": {
+  "id": "GHSA-pp7p-q8fx-2968",
+  "published": "2025-08-21",
+  "severity": "medium",
+  "cve": "CVE-2025-57753",
+  "type": "reviewed",
+  "summary": "vite-plugin-static-copy files not included in `src` are possible to access with a crafted request",
+  "co_affected": []
+ },
+ "vitest": {
+  "id": "GHSA-9crc-q9x8-hgqq",
+  "published": "2025-02-04",
+  "severity": "critical",
+  "cve": "CVE-2025-24964",
+  "type": "reviewed",
+  "summary": "Vitest allows Remote Code Execution when accessing a malicious website while Vitest API server is listening",
+  "co_affected": []
+ },
+ "vm2": {
+  "id": "GHSA-7jxr-cg7f-gpgv",
+  "published": "2023-04-07",
+  "severity": "critical",
+  "cve": "CVE-2023-29017",
+  "type": "reviewed",
+  "summary": "vm2 vulnerable to sandbox escape",
+  "co_affected": []
+ },
+ "vnu-jar": {
+  "id": "GHSA-fccg-7w3p-w66f",
+  "published": "2026-01-16",
+  "severity": "medium",
+  "cve": "CVE-2025-15104",
+  "type": "reviewed",
+  "summary": "Nu Html Checker (vnu) contains a Server-Side Request Forgery (SSRF) vulnerability",
+  "co_affected": []
+ },
+ "vue": {
+  "id": "GHSA-5j4c-8p2g-v4jx",
+  "published": "2024-10-15",
+  "severity": "low",
+  "cve": "CVE-2024-9506",
+  "type": "reviewed",
+  "summary": "ReDoS vulnerability in vue package that is exploitable through inefficient regex evaluation in the parseHTML function",
+  "co_affected": []
+ },
+ "vue-i18n": {
+  "id": "GHSA-hjwq-mjwj-4x6c",
+  "published": "2024-12-02",
+  "severity": "medium",
+  "cve": "CVE-2024-52810",
+  "type": "reviewed",
+  "summary": "@intlify/shared Prototype Pollution vulnerability",
+  "co_affected": [
+   "@intlify/shared",
+   "@intlify/vue-i18n-core",
+   "petite-vue-i18n"
+  ]
+ },
+ "vue-template-compiler": {
+  "id": "GHSA-g3ch-rx76-35fx",
+  "published": "2024-07-23",
+  "severity": "medium",
+  "cve": "CVE-2024-6783",
+  "type": "reviewed",
+  "summary": "vue-template-compiler vulnerable to client-side Cross-Site Scripting (XSS)",
+  "co_affected": []
+ },
+ "vuetify": {
+  "id": "GHSA-9w3x-85mw-4fwm",
+  "published": "2025-12-12",
+  "severity": "medium",
+  "cve": "CVE-2025-8082",
+  "type": "reviewed",
+  "summary": "Vuetify has a Cross-site Scripting (XSS) vulnerability in the VDatePicker component",
+  "co_affected": []
+ },
+ "vxe-table": {
+  "id": "GHSA-2qjp-fg8c-g878",
+  "published": "2024-05-24",
+  "severity": "low",
+  "cve": "CVE-2023-1001",
+  "type": "reviewed",
+  "summary": "vxe-table Cross-site Scripting vulnerability",
+  "co_affected": []
+ },
+ "web3-core-method": {
+  "id": "GHSA-2j4c-9qqq-896r",
+  "published": "2025-09-24",
+  "severity": "low",
+  "cve": "CVE-2025-57329",
+  "type": "reviewed",
+  "summary": "web3-core-method is vulnerable to prototype pollution",
+  "co_affected": []
+ },
+ "web3-core-subscriptions": {
+  "id": "GHSA-hhf6-3xpg-pggx",
+  "published": "2025-09-24",
+  "severity": "low",
+  "cve": "CVE-2025-57330",
+  "type": "reviewed",
+  "summary": "web3-core-subscriptions has a Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "web3-utils": {
+  "id": "GHSA-87qp-7cw8-8q9c",
+  "published": "2024-03-25",
+  "severity": "high",
+  "cve": null,
+  "type": "reviewed",
+  "summary": "Duplicate Advisory: web3-utils Prototype Pollution vulnerability",
+  "co_affected": []
+ },
+ "webpack": {
+  "id": "GHSA-hc6q-2mpp-qw7j",
+  "published": "2023-03-13",
+  "severity": "critical",
+  "cve": "CVE-2023-28154",
+  "type": "reviewed",
+  "summary": "Cross-realm object access in Webpack 5",
+  "co_affected": []
+ },
+ "webpack-dev-middleware": {
+  "id": "GHSA-wr3j-pwj9-hqq6",
+  "published": "2024-03-21",
+  "severity": "high",
+  "cve": "CVE-2024-29180",
+  "type": "reviewed",
+  "summary": "Path traversal in webpack-dev-middleware",
+  "co_affected": []
+ },
+ "webpack-dev-server": {
+  "id": "GHSA-9jgg-88mc-972h",
+  "published": "2025-06-04",
+  "severity": "medium",
+  "cve": "CVE-2025-30360",
+  "type": "reviewed",
+  "summary": "webpack-dev-server users' source code may be stolen when they access a malicious web site with non-Chromium based browser",
+  "co_affected": []
+ },
+ "wetty": {
+  "id": "GHSA-p26j-h7wj-r568",
+  "published": "2026-07-01",
+  "severity": "high",
+  "cve": "CVE-2026-49864",
+  "type": "reviewed",
+  "summary": "wetty vulnerable to DOM XSS via file-download filename",
+  "co_affected": []
+ },
+ "whistle": {
+  "id": "GHSA-gg6x-448q-pqqm",
+  "published": "2024-12-10",
+  "severity": "high",
+  "cve": "CVE-2024-55500",
+  "type": "reviewed",
+  "summary": "Avenwu Whistle Cross-Site Request Forgery (CSRF)",
+  "co_affected": []
+ },
+ "workerd": {
+  "id": "GHSA-8vx6-69vg-c46f",
+  "published": "2023-05-12",
+  "severity": "medium",
+  "cve": "CVE-2023-2512",
+  "type": "reviewed",
+  "summary": "Buffer under-read in workerd",
+  "co_affected": []
+ },
+ "wrangler": {
+  "id": "GHSA-8c93-4hch-xgxp",
+  "published": "2023-08-03",
+  "severity": "medium",
+  "cve": "CVE-2023-3348",
+  "type": "reviewed",
+  "summary": "Cloudflare Wrangler directory traversal vulnerability",
+  "co_affected": []
+ },
+ "ws": {
+  "id": "GHSA-3h5v-q93c-6h6q",
+  "published": "2024-06-17",
+  "severity": "high",
+  "cve": "CVE-2024-37890",
+  "type": "reviewed",
+  "summary": "ws affected by a DoS when handling a request with many HTTP headers",
+  "co_affected": []
+ },
+ "xlsx": {
+  "id": "GHSA-4r6h-8v6p-xvw6",
+  "published": "2023-04-24",
+  "severity": "high",
+  "cve": "CVE-2023-30533",
+  "type": "reviewed",
+  "summary": "Prototype Pollution in sheetJS",
+  "co_affected": []
+ },
+ "xml-crypto": {
+  "id": "GHSA-2xp3-57p7-qf4v",
+  "published": "2024-05-01",
+  "severity": "critical",
+  "cve": "CVE-2024-32962",
+  "type": "reviewed",
+  "summary": "xml-crypto vulnerable to XML signature verification bypass due improper verification of signature/signature spoofing",
+  "co_affected": []
+ },
+ "xrpl": {
+  "id": "GHSA-33qr-m49q-rxfx",
+  "published": "2025-04-22",
+  "severity": "critical",
+  "cve": "CVE-2025-32965",
+  "type": "reviewed",
+  "summary": "Compromised xrpl.js versions 4.2.1, 4.2.2, 4.2.3, 4.2.4, and 2.14.2",
+  "co_affected": []
+ },
+ "yaml": {
+  "id": "GHSA-f9xv-q969-pqx4",
+  "published": "2023-04-24",
+  "severity": "high",
+  "cve": "CVE-2023-2251",
+  "type": "reviewed",
+  "summary": "Uncaught Exception in yaml",
+  "co_affected": []
+ },
+ "yarn": {
+  "id": "GHSA-mpwj-fcr6-x34c",
+  "published": "2024-02-04",
+  "severity": "high",
+  "cve": "CVE-2021-4435",
+  "type": "reviewed",
+  "summary": "Yarn untrusted search path vulnerability",
+  "co_affected": []
+ },
+ "yeoman-environment": {
+  "id": "GHSA-vv9j-gjw2-j8wp",
+  "published": "2026-05-26",
+  "severity": "high",
+  "cve": "CVE-2026-42089",
+  "type": "reviewed",
+  "summary": "yeoman-environment Vulnerable to Arbitrary Package Installation without User Confirmation",
+  "co_affected": []
+ },
+ "zod": {
+  "id": "GHSA-m95q-7qp3-xv42",
+  "published": "2023-09-28",
+  "severity": "medium",
+  "cve": "CVE-2023-4316",
+  "type": "reviewed",
+  "summary": "Zod denial of service vulnerability",
+  "co_affected": []
+ },
+ "zx": {
+  "id": "GHSA-qwp8-x4ff-5h87",
+  "published": "2025-02-03",
+  "severity": "medium",
+  "cve": "CVE-2025-24959",
+  "type": "reviewed",
+  "summary": "ZX Allows Environment Variable Injection for dotenv API",
+  "co_affected": []
+ }
+}

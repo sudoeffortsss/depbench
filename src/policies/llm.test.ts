@@ -4,7 +4,9 @@
  * defeat the benchmark more thoroughly than any bug in the scoring.
  */
 import { describe, expect, it } from "vitest";
-import { BudgetGate, MODEL_ARMS, estimateCost, parseVerdict } from "./llm.js";
+import {
+  BudgetGate, MODEL_ARMS, assertStratifiable, estimateCost, parseVerdict,
+} from "./llm.js";
 
 describe("parseVerdict accepts what it should", () => {
   it("parses a clean verdict", () => {
@@ -78,7 +80,7 @@ describe("budget gate is a ceiling, not a warning", () => {
 describe("cost estimates", () => {
   it("prices all three arms for the real universe", () => {
     for (const arm of MODEL_ARMS) {
-      const e = estimateCost(arm, 1915);
+      const e = estimateCost(arm, 3215);
       expect(e.usdBatched).toBeGreaterThan(0);
       expect(e.usdBatched).toBeLessThan(e.usdListPrice);
       // Sanity: no arm should cost more than the project's stated $50 ceiling.
@@ -87,8 +89,41 @@ describe("cost estimates", () => {
   });
 
   it("orders the arms by price as their tiers imply", () => {
-    const [flash, haiku, sonnet] = MODEL_ARMS.map((a) => estimateCost(a, 1915).usdBatched);
+    const [flash, haiku, sonnet] = MODEL_ARMS.map((a) => estimateCost(a, 3215).usdBatched);
     expect(flash!).toBeLessThan(haiku!);
     expect(haiku!).toBeLessThan(sonnet!);
+  });
+});
+
+describe("cutoff stratification", () => {
+  it("every registered arm can actually be split at its cutoff", () => {
+    for (const arm of MODEL_ARMS) {
+      expect(() => assertStratifiable(arm)).not.toThrow();
+      expect(arm.trainingCutoff).toMatch(/^\d{4}-\d{2}$/);
+      expect(arm.cutoffEvidence.length).toBeGreaterThan(20);
+    }
+  });
+
+  it("the case splits agree with the frozen case count", () => {
+    for (const arm of MODEL_ARMS) {
+      const { preCutoff, postCutoff } = arm.caseSplit;
+      expect(preCutoff + postCutoff).toBe(643);
+    }
+  });
+
+  it("refuses an arm whose cutoff is unpublished", () => {
+    // gemini-3.1-flash-lite was registered here until 2026-09-07 and had to go: its
+    // model card states no cutoff, so the strata are undefined.
+    const arm = { ...MODEL_ARMS[0]!, policy: "unpublished", trainingCutoff: "unstated" };
+    expect(() => assertStratifiable(arm)).toThrow(/not a YYYY-MM date/);
+  });
+
+  it("refuses an arm whose cutoff leaves a stratum too small to interpret", () => {
+    const arm = {
+      ...MODEL_ARMS[0]!,
+      policy: "lopsided",
+      caseSplit: { preCutoff: 604, postCutoff: 39 },
+    };
+    expect(() => assertStratifiable(arm)).toThrow(/cannot separate its own AUC/);
   });
 });

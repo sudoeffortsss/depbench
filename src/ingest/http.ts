@@ -70,11 +70,18 @@ export function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-export async function fetchJson<T>(
+/**
+ * The retry, rate-limit and backoff behaviour, with the decoding left to the caller.
+ *
+ * `fetchJson` and `fetchBytes` differ only in what they do with a 200, and that
+ * difference is not worth two copies of the 429-penalty and abort-timeout handling.
+ */
+async function fetchWith<T>(
   url: string,
   limiter: RateLimiter,
   opts: RateLimitOptions,
-  headers: Record<string, string> = {},
+  headers: Record<string, string>,
+  decode: (res: Response) => Promise<FetchResult<T>>,
 ): Promise<FetchResult<T>> {
   const maxAttempts = opts.maxAttempts ?? 5;
   const backoffBase = opts.backoffBaseMs ?? 1000;
@@ -110,17 +117,7 @@ export async function fetchJson<T>(
         return { ok: false, status: res.status, error: `HTTP ${res.status} ${text.slice(0, 200)}` };
       }
 
-      const raw = await res.text();
-      try {
-        return { ok: true, status: res.status, body: JSON.parse(raw) as T, raw };
-      } catch (e) {
-        // A 200 whose body will not parse is a failure, not an empty success.
-        return {
-          ok: false,
-          status: res.status,
-          error: `unparseable JSON (${raw.length} bytes): ${String(e).slice(0, 120)}`,
-        };
-      }
+      return await decode(res);
     } catch (e) {
       lastError = String(e).slice(0, 200);
       if (attempt < maxAttempts) await sleep(backoffBase * 2 ** (attempt - 1));
@@ -130,6 +127,50 @@ export async function fetchJson<T>(
   }
 
   return { ok: false, status: lastStatus, error: `${lastError} after ${maxAttempts} attempts` };
+}
+
+export async function fetchJson<T>(
+  url: string,
+  limiter: RateLimiter,
+  opts: RateLimitOptions,
+  headers: Record<string, string> = {},
+): Promise<FetchResult<T>> {
+  return fetchWith<T>(url, limiter, opts, headers, async (res) => {
+    const raw = await res.text();
+    try {
+      return { ok: true, status: res.status, body: JSON.parse(raw) as T, raw };
+    } catch (e) {
+      // A 200 whose body will not parse is a failure, not an empty success.
+      return {
+        ok: false,
+        status: res.status,
+        error: `unparseable JSON (${raw.length} bytes): ${String(e).slice(0, 120)}`,
+      };
+    }
+  });
+}
+
+/**
+ * The same contract for binary payloads. Used for package tarballs, which are the only
+ * source of the README and package.json *as they stood on the scoring date*: a packument
+ * carries at most the current release's readme field, and for many packages not even
+ * that (minimist's is zero bytes).
+ */
+export async function fetchBytes(
+  url: string,
+  limiter: RateLimiter,
+  opts: RateLimitOptions,
+  headers: Record<string, string> = {},
+): Promise<FetchResult<Uint8Array>> {
+  return fetchWith<Uint8Array>(url, limiter, opts, headers, async (res) => {
+    const buf = new Uint8Array(await res.arrayBuffer());
+    // A 200 with no body is a failure dressed as a success, which is the shape of error
+    // this benchmark exists to catch.
+    if (buf.length === 0) {
+      return { ok: false, status: res.status, error: "empty body on a 200" };
+    }
+    return { ok: true, status: res.status, body: buf, raw: `${buf.length} bytes` };
+  });
 }
 
 /**

@@ -26,16 +26,58 @@ export interface ModelArm {
   outputPerMTok: number;
   /** Batch APIs are half price on both providers. */
   batchDiscount: number;
+  /**
+   * The published training data cutoff, as `YYYY-MM`.
+   *
+   * This is a first-class field rather than a comment because the retrospective arm
+   * cannot include a model without it. Every case in the evaluation set carries a GHSA
+   * publication date, so asking a model to "predict" an advisory it may have read during
+   * training measures recall, not forecasting. The only defence is to split the cases at
+   * the model's cutoff and compare the two strata, and that split is undefined for a
+   * model whose cutoff is unpublished or hedged.
+   */
+  trainingCutoff: string;
+  /** Verbatim source for the cutoff. An arm may not be run without one. */
+  cutoffEvidence: string;
+  /**
+   * Cases before / on-or-after this cutoff, keyed on the earliest in-window advisory
+   * per package, which is the first date a model could have read about it. Regenerate
+   * with `npx tsx probe/cutoff_split.mts` after any change to the universe.
+   */
+  caseSplit: { preCutoff: number; postCutoff: number };
 }
 
 export const MODEL_ARMS: ModelArm[] = [
   {
     policy: "llm-flash-lite",
     provider: "google",
-    model: "gemini-3.1-flash-lite",
-    inputPerMTok: 0.25,
-    outputPerMTok: 1.5,
+    // Not the newest and not the cheapest choice by accident.
+    //
+    // gemini-3.1-flash-lite was registered here first and had to be dropped: its model
+    // card states no cutoff at all. Nor do the 3.x cards that do state one help, because
+    // the statement is hedged ("March 2026 ... in others they may experience the model's
+    // knowledge is limited to January 2025"), which is not a boundary anything can be
+    // split on. The 2.5 tier is the newest Gemini that publishes an unhedged date, and
+    // it splits this evaluation set 312/331, the most balanced of any arm.
+    //
+    // Within that tier this is the Flash rather than the Flash-Lite, and that was not a
+    // choice either. `gemini-2.5-flash-lite` and `gemini-2.5-pro` both appear in
+    // models.list and both return 404 on generateContent: "no longer available to new
+    // users. Please update your code to use models/gemini-3.5-flash-lite". Being listed
+    // is not being callable, and the suggested replacement is the model whose cutoff is
+    // hedged, so taking the advice would have cost the experiment its boundary.
+    // `gemini-2.5-flash` is callable, carries the same published cutoff, and costs 3x
+    // the input and 6x the output rate. That is the price of a date you can split on.
+    model: "gemini-2.5-flash",
+    inputPerMTok: 0.3,
+    outputPerMTok: 2.5,
     batchDiscount: 0.5,
+    trainingCutoff: "2025-01",
+    cutoffEvidence:
+      '"Latest update June 2025 / Knowledge cutoff January 2025", spec strip on ' +
+      "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash. Verified callable " +
+      "on 2026-09-07; the Flash-Lite and Pro of the same tier are listed but 404.",
+    caseSplit: { preCutoff: 312, postCutoff: 331 },
   },
   {
     policy: "llm-haiku",
@@ -44,6 +86,17 @@ export const MODEL_ARMS: ModelArm[] = [
     inputPerMTok: 1.0,
     outputPerMTok: 5.0,
     batchDiscount: 0.5,
+    // The vendor publishes two different dates for this model, five months apart. That
+    // is not a problem to route around, it is a free experiment: score the strata at
+    // both boundaries and see which one performance actually steps at. Whichever answer
+    // comes back is a statement about the model that its own documentation does not make.
+    trainingCutoff: "2025-07",
+    cutoffEvidence:
+      'Capabilities table at https://platform.claude.com/docs/en/models/haiku-4-5/overview ' +
+      'gives two disagreeing rows: "Reliable knowledge cutoff | Feb 2025" and ' +
+      '"Training data cutoff | Jul 2025". The later is recorded here; the earlier is a ' +
+      "second boundary worth testing.",
+    caseSplit: { preCutoff: 377, postCutoff: 266 },
   },
   {
     policy: "llm-sonnet",
@@ -52,8 +105,39 @@ export const MODEL_ARMS: ModelArm[] = [
     inputPerMTok: 2.0,
     outputPerMTok: 10.0,
     batchDiscount: 0.5,
+    trainingCutoff: "2026-01",
+    cutoffEvidence:
+      'Capabilities table at https://platform.claude.com/docs/en/models/sonnet-5/overview, ' +
+      'both rows agreeing: "Reliable knowledge cutoff | Jan 2026" and "Training data ' +
+      'cutoff | Jan 2026"',
+    caseSplit: { preCutoff: 457, postCutoff: 186 },
   },
 ];
+
+/**
+ * An arm is runnable only if its cutoff can actually split the evaluation set.
+ *
+ * Called before any paid request. A model with an unpublished or hedged cutoff produces
+ * a number that cannot be told apart from memorisation, and a number like that is worse
+ * than no number, because it will be quoted.
+ */
+export function assertStratifiable(arm: ModelArm): void {
+  if (!/^\d{4}-\d{2}$/.test(arm.trainingCutoff)) {
+    throw new Error(
+      `${arm.policy}: trainingCutoff "${arm.trainingCutoff}" is not a YYYY-MM date, so ` +
+        `the cases cannot be split at it`,
+    );
+  }
+  const { preCutoff, postCutoff } = arm.caseSplit;
+  const MIN_STRATUM = 100;
+  if (preCutoff < MIN_STRATUM || postCutoff < MIN_STRATUM) {
+    throw new Error(
+      `${arm.policy}: cutoff ${arm.trainingCutoff} splits the cases ${preCutoff}/` +
+        `${postCutoff}; a stratum under ${MIN_STRATUM} cannot separate its own AUC ` +
+        `from chance, so the comparison would be uninformative by construction`,
+    );
+  }
+}
 
 /**
  * What a model is asked to judge. Deliberately the things metadata cannot see: the rule
@@ -171,12 +255,30 @@ export interface CostEstimate {
   usdBatched: number;
 }
 
-/** Token counts are estimates until a real `count_tokens` call is made. Labelled as such. */
+/** README text is truncated before it reaches a model; long tails are not informative. */
+export const README_CHAR_CAP = 8000;
+export const PACKAGE_JSON_CHAR_CAP = 3000;
+
+/**
+ * Measured, not assumed.
+ *
+ * The defaults were 5,000 and 300, both guesses. `probe/tarball_size.mts` pulled the
+ * point-in-time tarball for 20 randomly drawn universe members (20/20 succeeded) and
+ * measured the README and package.json that would actually be sent. Untruncated the mean
+ * is 4,988 tokens, which looks like a lucky guess but is dragged there by a long tail:
+ * one README in the sample is 162 KB. Under the caps above the character count implied
+ * 2,320 tokens.
+ *
+ * The figures here are the provider's own, from `usageMetadata` over ten real calls
+ * across all five conditions: 2,613 input and 103 output. Output includes
+ * `thoughtsTokenCount`, which bills at the output rate and which an earlier version of
+ * the client ignored entirely.
+ */
 export function estimateCost(
   arm: ModelArm,
   packages: number,
-  avgInputTokens = 5000,
-  avgOutputTokens = 300,
+  avgInputTokens = 2613,
+  avgOutputTokens = 103,
 ): CostEstimate {
   const inputTokens = packages * avgInputTokens;
   const outputTokens = packages * avgOutputTokens;

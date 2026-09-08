@@ -161,6 +161,42 @@ describe("harness invariants are enforced by the schema", () => {
     expect(r.rows[0]!.abstain).toBe(true);
   });
 
+  it("accepts a probe row, which answers a different question and has no score", async () => {
+    // Added after this constraint killed the first paid run on its first package. The
+    // reidentify and recall probes parse cleanly, do not abstain, and have no risk score
+    // to give, which the original rule had no way to express.
+    await db.query(
+      `INSERT INTO policy_score (run_id, pkg_name, as_of_date, policy, score, abstain, parse_status, raw_output)
+       VALUES (1, 'chalk', '2023-01-01', 'llm-x:reidentify', NULL, false, 'ok', '{"identified":false}')`,
+    );
+    const r = await db.query<{ raw_output: string }>(
+      `SELECT raw_output FROM policy_score WHERE policy = 'llm-x:reidentify'`,
+    );
+    expect(r.rows[0]!.raw_output).toContain("identified");
+  });
+
+  it("still rejects a probe row that carries no answer either", async () => {
+    // The exemption is not a blanket one: a probe with neither a score nor an output is
+    // as empty as the score row above, and just as invisible downstream.
+    await expect(
+      db.query(
+        `INSERT INTO policy_score (run_id, pkg_name, as_of_date, policy, score, abstain, parse_status, raw_output)
+         VALUES (1, 'chalk', '2023-01-01', 'llm-x:recall', NULL, false, 'ok', NULL)`,
+      ),
+    ).rejects.toThrow(/score_present_unless_unanswered/i);
+  });
+
+  it("does not let an ordinary policy claim the probe exemption by naming itself", async () => {
+    // The exemption matches two specific suffixes rather than a wildcard, so a policy
+    // cannot opt out of harness rule 1 by choosing a convenient name.
+    await expect(
+      db.query(
+        `INSERT INTO policy_score (run_id, pkg_name, as_of_date, policy, score, abstain, parse_status, raw_output)
+         VALUES (1, 'chalk', '2023-01-01', 'reidentify-ish', NULL, false, 'ok', 'anything')`,
+      ),
+    ).rejects.toThrow(/score_present_unless_unanswered/i);
+  });
+
   it("accepts an unparseable model output and keeps the raw text", async () => {
     await db.query(
       `INSERT INTO policy_score (run_id, pkg_name, as_of_date, policy, score, abstain, parse_status, raw_output)

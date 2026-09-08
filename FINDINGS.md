@@ -16,6 +16,103 @@ still live in a second file, and it had already damaged the evaluation set.
 
 ---
 
+## F17 · The model knows, and the question you ask decides whether it tells you
+
+**2026-09-08** · model arm complete, 19,188 calls, $14.78
+
+**The result.** One model, `gemini-2.5-flash`, reading the README and package.json that
+were live on the scoring date. Nothing else: no download counts, no version counts, no
+release dates, because separate rule policies already measure those.
+
+```
+                              AUC            95% CI
+forecast, name visible      0.814    [0.796, 0.831]
+forecast, name blinded      0.781    [0.761, 0.800]
+practitioner, name blinded  0.539    [0.514, 0.564]
+popularity (best rule)      0.529    [0.504, 0.554]
+practitioner, name visible  0.529    [0.505, 0.553]
+random                      0.505    [0.479, 0.530]
+age                         0.358    [0.334, 0.381]
+```
+
+**Two prompts, 0.285 apart, on the same model and the same text.** Asked whether a package
+will have an advisory published against it, the model is right 81 times in 100. Asked
+whether a developer should adopt the package, it is right 53 times in 100, which is
+exactly where ranking by download count lands.
+
+It is not that the model does not know. It is that the question decides whether it says.
+
+`ajv` is the shape of it in one row: `practitioner` returns 0.1 with the reason "the
+package appears well-maintained and supported, with clear documentation, active
+contributions, and significant sponsorship", while `forecast` returns 0.8 on the same
+text. Well maintained and likely to have an advisory are both true, and only one of them
+reaches a developer who asks for advice.
+
+**Three alternative explanations, tested rather than dismissed.**
+
+*Memorisation.* The model may have read the advisories. Splitting cases at its published
+training cutoff (2025-01, an unhedged date, which is why this model was chosen at all,
+see F15):
+
+```
+                 disclosed before   on or after     gap
+forecast named        0.827            0.802       0.024
+forecast blind        0.792            0.770       0.022
+```
+
+Both gaps are about 0.02 with heavily overlapping intervals. The recall probe agrees:
+asked directly, the model claims to remember an advisory for 14.2% of cases against a
+1.4% false alarm rate on controls, worth 0.564 as a classifier. Explicit recall is not
+all a model absorbed, which is why the strata carry this and not the probe.
+
+*Document size.* Bigger packages have longer READMEs and are more likely to be audited.
+This one is not a straw man: **length alone scores 0.606**, higher than every metadata
+rule in the benchmark. But the model's score correlates with README length at only 0.257,
+and within each length quartile it still scores:
+
+```
+0 - 957 chars    0.775      3,100 - 7,792   0.818
+957 - 3,100      0.803      7,792 +         0.806
+```
+
+*Package identity.* The model may simply recognise the package and apply what it knows
+about that package's prominence. This is the one blinding was built to answer, and
+blinding **does not work**: the re-identification probe says the model still names the
+package 57.8% of the time from substituted text, so the blind arm is nominal and the
+small named-versus-blind gap proves nothing on its own.
+
+What does answer it is splitting the blind results by whether the model re-identified
+**that** package:
+
+```
+forecast blind, packages it named        0.780   [0.756, 0.803]   n=1,808
+forecast blind, packages it did not      0.761   [0.726, 0.796]   n=1,338
+```
+
+On 1,338 packages where identity was genuinely unavailable to it, the model still scores
+0.761. Identity is worth about 0.02.
+
+**And it never once said it did not know.** The rubric offers abstention and states in
+the prompt that abstaining is scored apart from being wrong. Across **12,572 scoring
+calls, abstentions: 0**, including packages whose entire README is one line.
+
+**Why this arm was reframed before it was run, and why that mattered.** The original
+question was whether a model can predict dependency risk. That question is unanswerable
+against this ground truth: an advisory records that somebody looked (F4), so a model
+reasoning correctly about danger scores below chance and a model reciting advisories
+scores above it, and neither result means what it appears to. The question was turned
+around to ask whether the model repeats a belief this data contradicts, with three
+reference points instead of one line at 0.5. That is what makes 0.814 and 0.529
+readable as two different answers rather than one confusing number.
+
+**What this is actually about.** The rule arm found that the ecosystem's health signals
+run backwards. This arm found that a frontier model has a much better signal, will not
+volunteer it, and will not tell you when it is guessing. A benchmark that had only asked
+the practitioner question would have concluded the model is no better than download
+count, published that, and been wrong.
+
+---
+
 ## F16 · The daily ledger stopped producing days, and the guard reported success
 
 **2026-09-08** · prospective arm

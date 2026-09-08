@@ -390,8 +390,8 @@ are findings; then wider only if the result is genuinely surprising and defensib
 | 5 | outcomes, harness, guardrails | ✅ F11–F14 fixed six defects in our own code |
 | **6** | **first numbers, rules only, $0** | ✅ **nothing beats download count** |
 | 7 | remaining rule policies | ✅ folded into stage 4 |
-| 8 | cost control and the LLM policy interface | ✅ built, **deliberately unrun** |
-| 9 | the three model arms | ⏸ **registered, not executed** — see below |
+| 8 | cost control and the LLM policy interface | ✅ built and exercised, $14.78 spent against a $50 ceiling |
+| 9 | the three model arms | ✅ Gemini run (F17) · ⏸ the two Claude arms registered, not executed |
 | 10 | results page and CLI | ✅ |
 | 11 | prospective arm | ✅ running daily |
 

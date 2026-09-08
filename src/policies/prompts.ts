@@ -34,6 +34,7 @@ export type Condition =
   | "practitioner-named"
   | "practitioner-blind"
   | "forecast-named"
+  | "forecast-blind"
   | "reidentify"
   | "recall";
 
@@ -157,6 +158,13 @@ export const CONDITIONS: ConditionSpec[] = [
     purpose: "The literal label question: will an advisory be published?",
   },
   {
+    key: "forecast-blind",
+    blinded: true,
+    withText: true,
+    prompt: FORECAST,
+    purpose: "The missing cell: is the forecast signal in the text or in the identity?",
+  },
+  {
     key: "reidentify",
     blinded: true,
     withText: true,
@@ -177,7 +185,33 @@ export const SCORING_CONDITIONS: Condition[] = [
   "practitioner-named",
   "practitioner-blind",
   "forecast-named",
+  "forecast-blind",
 ];
+
+/**
+ * Why the fourth scoring cell exists.
+ *
+ * The first run left the design as a ragged 2x2: both practitioner conditions, but only
+ * the named forecast. That made the arm's largest result, forecast at 0.814 against
+ * practitioner at 0.529, open to a reading it could not answer. Two mechanisms produce a
+ * high forecast score and the run could not separate them:
+ *
+ *   the text        the model read the README and inferred something real about the
+ *                   package's exposure
+ *   the identity    the model recognised the package, which it does 57.8% of the time
+ *                   even from substituted text, and applied what it knows about that
+ *                   package's prominence
+ *
+ * Two other checks already argue for the first. The cutoff strata are 0.827 against
+ * 0.802, so it is not recall of the advisory itself. Document length alone scores 0.606
+ * and the model still scores 0.775 to 0.818 within every length quartile, so it is not
+ * a proxy for size. Neither rules out identity.
+ *
+ * This condition does. If blinding costs the forecast little, the signal survives without
+ * the name. If it collapses toward chance the way practitioner-blind did, the forecast
+ * was reading a label rather than a document, and the headline needs rewriting rather
+ * than defending.
+ */
 
 /** Reference points the report prints beside every model AUC, from run 4. */
 export const REFERENCE_POINTS = [

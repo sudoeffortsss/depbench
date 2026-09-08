@@ -68,24 +68,40 @@ async function main(): Promise<void> {
     console.log("  scoring      : " + targets.length);
     console.log("  conditions   : " + CONDITIONS.length);
 
+    // Rows already paid for, so a dry run against --resume prices the work that remains
+    // rather than the work in total. Without this the estimate for adding one condition
+    // to a finished five-condition run read $17.33 when the actual spend was $3.
+    const resumeArgDry = argv.indexOf("--resume");
+    const doneAlready = resumeArgDry > -1
+      ? await alreadyScored(db, Number(argv[resumeArgDry + 1]))
+      : new Set<string>();
+
     // Real token counts for the material that will actually be sent, rather than the
     // estimator\'s average.
     let chars = 0;
+    let skipped = 0;
     let emptyEvidence = 0;
     let residualLeaks = 0;
+    let plannedCalls = 0;
     for (const t of targets) {
       for (const spec of CONDITIONS) {
         const built = buildContent(t, spec);
-        chars += built.content.length + spec.prompt.length;
         if (spec.key === "practitioner-named" && built.evidenceEmpty) emptyEvidence++;
         if (spec.blinded && built.residual.length > 0) residualLeaks++;
+        if (doneAlready.has(arm.policy + ":" + spec.key + " " + t.pkg_name)) {
+          skipped++;
+          continue;
+        }
+        plannedCalls++;
+        chars += built.content.length + spec.prompt.length;
       }
     }
     const inTok = Math.round(chars / 4);
-    const outTok = targets.length * CONDITIONS.length * 200;
+    const outTok = plannedCalls * 200;
     const usd = (inTok / 1e6) * arm.inputPerMTok + (outTok / 1e6) * arm.outputPerMTok;
 
-    console.log("\n  calls        : " + targets.length * CONDITIONS.length);
+    console.log("\n  calls        : " + plannedCalls +
+      (skipped > 0 ? "   (" + skipped + " already scored, not repriced)" : ""));
     console.log("  input tokens : " + inTok.toLocaleString() + "   (measured, not averaged)");
     console.log("  output tokens: " + outTok.toLocaleString() + "   (assumed 200/call)");
     console.log("  projected    : $" + usd.toFixed(2) + "   at list price, sync endpoint");

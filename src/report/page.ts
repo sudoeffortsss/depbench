@@ -166,7 +166,25 @@ async function main(): Promise<void> {
     const ctl = feat.rows.find((r: any) => !r.is_case);
     const cse = feat.rows.find((r: any) => r.is_case);
 
+    // Which arms actually ran, from the scores rather than from a hardcoded claim. The
+    // page said "not run" for all three for a day after the Gemini arm had in fact run.
+    const ran = await db.query<{ arm: string; usd: string; calls: string }>(
+      `SELECT split_part(policy, ':', 1) AS arm,
+              round(sum(cost_usd)::numeric, 2) AS usd,
+              count(*) AS calls
+         FROM policy_score WHERE cost_usd > 0 GROUP BY 1`,
+    );
+    const spendByArm = new Map(ran.rows.map((r) => [r.arm, r]));
+
     const armRows = MODEL_ARMS.map((a) => {
+      const done = spendByArm.get(a.policy);
+      if (done) {
+        return `<tr><td>${esc(a.policy)}</td><td colspan="9">` +
+          `<strong>${esc(a.model)}</strong> — run. ${Number(done.calls).toLocaleString()} ` +
+          `calls, $${done.usd}. Training cutoff ${esc(a.trainingCutoff)}, splitting the ` +
+          `cases ${a.caseSplit.preCutoff}/${a.caseSplit.postCutoff}. Its four scoring ` +
+          `conditions are in the table above.</td></tr>`;
+      }
       const e = estimateCost(a, members.length);
       // The cutoff is shown because it is what makes the arm interpretable at all, not
       // as a spec detail: without it the cases cannot be split and a good score cannot
@@ -270,7 +288,7 @@ committed before any policy existed; its hash is above.</p>
 <footer>
 <p><a href="https://github.com/sudoeffortsss/truthlag">Source, method and findings</a> ·
 <a href="https://github.com/sudoeffortsss/truthlag/blob/main/FINDINGS.md">FINDINGS.md</a>
-records sixteen things this project assumed, tested, and had to change, including
+records seventeen things this project assumed, tested, and had to change, including
 four defects in its own code — one of which had silently removed 40% of the evaluation
 set before anything was scored.</p>
 <p>Allen Cai · code Apache-2.0, data CC BY-SA 4.0 · download ranking from
@@ -281,7 +299,7 @@ set before anything was scored.</p>
     await mkdir(OUT, { recursive: true });
     await writeFile(join(OUT, "index.html"), html);
     console.log(`wrote docs/index.html  (${(html.length / 1024).toFixed(1)} KB)`);
-    console.log(`  policies shown : ${results.length} scored + ${MODEL_ARMS.length} registered-unrun`);
+    console.log(`  policies shown : ${results.length} scored + ${MODEL_ARMS.length - spendByArm.size} registered-unrun`);
     console.log(`  days sealed    : ${sealed.length}`);
   } finally {
     await db.close();

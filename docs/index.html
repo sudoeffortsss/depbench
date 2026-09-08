@@ -78,6 +78,17 @@ packages with real usage and real advisories, not the 4.3 million package regist
     <td>25.8%</td>
   </tr>
 <tr>
+    <td>llm-flash-lite:forecast-blind</td>
+    <td><strong>0.781</strong></td>
+    <td>[0.761, 0.800]</td>
+    <td>624</td><td>2522</td>
+    <td>98.4%</td>
+    <td>0.0%</td>
+    <td>1.6%</td>
+    <td>27.4%</td>
+    <td>28.5%</td>
+  </tr>
+<tr>
     <td>llm-flash-lite:practitioner-blind</td>
     <td><strong>0.539</strong></td>
     <td>[0.514, 0.564]</td>
@@ -101,7 +112,7 @@ packages with real usage and real advisories, not the 4.3 million package regist
   </tr>
 <tr class="pending"><td>llm-flash-lite:reidentify</td><td colspan="9">refused: no package received a score</td></tr>
 <tr class="pending"><td>llm-flash-lite:recall</td><td colspan="9">refused: no package received a score</td></tr>
-<tr class="pending"><td>llm-flash-lite</td><td colspan="9"><strong>gemini-2.5-flash</strong> — not run, built and registered. Training cutoff 2025-01, which splits the cases 312/331. A batched run would cost about $1.67.</td></tr>
+<tr><td>llm-flash-lite</td><td colspan="9"><strong>gemini-2.5-flash</strong> — run. 19,188 calls, $14.78. Training cutoff 2025-01, splitting the cases 312/331. Its four scoring conditions are in the table above.</td></tr>
 <tr class="pending"><td>llm-haiku</td><td colspan="9"><strong>claude-haiku-4-5</strong> — not run, built and registered. Training cutoff 2025-07, which splits the cases 377/266. A batched run would cost about $5.03.</td></tr>
 <tr class="pending"><td>llm-sonnet</td><td colspan="9"><strong>claude-sonnet-5</strong> — not run, built and registered. Training cutoff 2026-01, which splits the cases 457/186. A batched run would cost about $10.06.</td></tr>
 </tbody>
@@ -154,7 +165,7 @@ committed before any policy existed; its hash is above.</p>
 <footer>
 <p><a href="https://github.com/sudoeffortsss/truthlag">Source, method and findings</a> ·
 <a href="https://github.com/sudoeffortsss/truthlag/blob/main/FINDINGS.md">FINDINGS.md</a>
-records sixteen things this project assumed, tested, and had to change, including
+records seventeen things this project assumed, tested, and had to change, including
 four defects in its own code — one of which had silently removed 40% of the evaluation
 set before anything was scored.</p>
 <p>Allen Cai · code Apache-2.0, data CC BY-SA 4.0 · download ranking from

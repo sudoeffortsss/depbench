@@ -16,7 +16,7 @@ what actually happened over the following three and a half years.
 
 ## Status
 
-**Retrospective arm complete. Model arms built and deliberately unrun.**
+**Retrospective arm complete. The Gemini arm has been run; the two Claude arms are built and deliberately unrun.**
 
 ```
 policy          AUC           95% CI  scored abstain no_ans  top10% falseflag
@@ -68,7 +68,8 @@ Everything above cost nothing to produce. No model was called.
 | ingest and reconstruction | ✅ 3,204 of 3,215, F8 |
 | rule policies and harness | ✅ 42 tests, F11–F14 |
 | **first numbers** | ✅ **above, $0** |
-| model arms | ⏸ built and registered, cutoffs verified (F15), **deliberately unrun** |
+| Gemini arm | ✅ 19,188 calls, $14.78, F15 and F17 |
+| Claude arms | ⏸ built and registered, cutoffs verified (F15), **deliberately unrun** |
 | prospective arm | ✅ sealing daily |
 
 `npm run estimate` prints what running the model arms would cost ($20.30 batched across

@@ -72,9 +72,16 @@ Everything above cost nothing to produce. No model was called.
 | Claude arms | ⏸ built and registered, cutoffs verified (F15), **deliberately unrun** |
 | prospective arm | ✅ sealing daily |
 
-`npm run estimate` prints what running the model arms would cost ($20.30 batched across
-all three) and exits without calling anything. Spending is a decision with a number
-attached; the project does not make it quietly.
+`npm run estimate` prints what running the model arms would cost and exits without
+calling anything. Spending is a decision with a number attached; the project does not
+make it quietly.
+
+The Gemini arm ran and cost **$14.78** for 19,188 calls. The two Claude arms are priced
+at **$90.51 batched**, against a hard ceiling of $50 that `BudgetGate` throws at rather
+than warns about. So "deliberately unrun" is now two statements: the question they would
+answer, whether four times the price buys more accuracy, is worth asking, and it cannot
+be asked inside the budget this project committed to. Both are in the estimator's output
+rather than in a footnote.
 
 Read [`FINDINGS.md`](./FINDINGS.md) first — it is the most useful thing in here.
 

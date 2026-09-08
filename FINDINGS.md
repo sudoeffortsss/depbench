@@ -16,6 +16,68 @@ still live in a second file, and it had already damaged the evaluation set.
 
 ---
 
+## F16 · The daily ledger stopped producing days, and the guard reported success
+
+**2026-09-08** · prospective arm
+
+**What we believed.** The prospective arm was running. A workflow seals predictions every
+day into `predictions/<date>.jsonl`, commits them, and the public git timestamp is the
+proof that a prediction preceded its outcome. `README` and the results page both said so.
+
+**What was actually on the remote.**
+
+```
+predictions/2026-09-06.jsonl   1,194,228 bytes   predicted_on 2026-09-06
+predictions/.jsonl             1,141,312 bytes   predicted_on ""
+```
+
+**Two lines, one on each side.**
+
+```
+seal.yml:43   TRUTHLAG_DATE: ${{ github.event.inputs.date }}
+seal.ts:165   process.env.TRUTHLAG_DATE ?? new Date().toISOString().slice(0, 10)
+```
+
+`github.event.inputs` exists only for a manual dispatch. On the schedule GitHub sets the
+variable to the **empty string** rather than leaving it unset, and `??` falls back only on
+null or undefined. So the date was `""`, and the day sealed itself into a file with no
+name.
+
+**The filename was the smaller half.** `main` refuses to overwrite a day that is already
+sealed:
+
+```ts
+if (existing.includes(`${today}.jsonl`)) {
+  console.log(`  ${today}.jsonl already sealed; refusing to overwrite a sealed day`);
+  return;
+}
+```
+
+Once `.jsonl` existed, every later scheduled run found it, printed that the day was
+already sealed, exited 0, and wrote nothing. **A ledger whose entire claim is one file per
+day with a public timestamp had stopped producing days, and the guard designed to protect
+it was the mechanism that kept it stopped.** The workflow went green throughout.
+
+**What changed.** The date is resolved by an exported function that treats empty and
+whitespace as unset and throws on anything that is not `YYYY-MM-DD`, rather than naming a
+file after it. Six tests cover it, including the empty-string case by name.
+
+The unnamed file was renamed to `predictions/2026-09-07.jsonl` and its `predicted_on`
+filled in. The date is not a guess: it comes from the commit timestamp of `b14e458`,
+authored `2026-09-07T03:09:24Z`, which anyone can check and which nothing here touched.
+`seal_sha256` covers the prediction lines below the header, so the recovered file hashes
+to `f02d283624fa7ef744a986bd…`, byte-identical to what the run sealed. The original is
+kept out of the repository rather than deleted.
+
+**What this episode is really about.** F14 was a bug that a passing pipeline hid. This is
+the same shape one layer up: every signal a maintainer would look at was green. The
+workflow succeeded, the guard fired correctly by its own logic, and the commit history
+showed a file arriving. What none of them checked is the thing the arm exists to produce,
+which is a **series**. A benchmark that reports coverage on its inputs and not on its own
+outputs is only half instrumented.
+
+---
+
 ## F15 · Most of the models cannot be benchmarked, because they will not say when they stopped reading
 
 **2026-09-07** · model arm selection, nothing spent

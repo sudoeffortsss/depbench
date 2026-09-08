@@ -270,7 +270,7 @@ committed before any policy existed; its hash is above.</p>
 <footer>
 <p><a href="https://github.com/sudoeffortsss/truthlag">Source, method and findings</a> ·
 <a href="https://github.com/sudoeffortsss/truthlag/blob/main/FINDINGS.md">FINDINGS.md</a>
-records fifteen things this project assumed, tested, and had to change, including
+records sixteen things this project assumed, tested, and had to change, including
 four defects in its own code — one of which had silently removed 40% of the evaluation
 set before anything was scored.</p>
 <p>Allen Cai · code Apache-2.0, data CC BY-SA 4.0 · download ranking from

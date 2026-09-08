@@ -159,10 +159,49 @@ export async function seal(today: string): Promise<{ file: string; rows: number;
   return { file, rows: rows.length, sealHash };
 }
 
+/**
+ * The date this run seals, from the environment or the clock, and never from neither.
+ *
+ * Extracted and exported so it can be tested, because it is the thing that broke. The
+ * workflow sets TRUTHLAG_DATE from `github.event.inputs.date`, which exists only for a
+ * manual dispatch. On the schedule GitHub sets the variable to the empty string rather
+ * than leaving it unset, `??` does not fall back on "", and the run sealed itself to
+ * `predictions/.jsonl` with an empty `predicted_on`.
+ *
+ * The damage was not one bad filename. `main` refuses to overwrite a day that is already
+ * sealed, so once `.jsonl` existed every later scheduled run found it, reported "already
+ * sealed", and wrote nothing. A ledger whose whole claim is one file per day with a
+ * public timestamp had quietly stopped producing days, while the workflow and the guard
+ * both reported success.
+ */
+export function resolveSealDate(envValue: string | undefined, now: Date): string {
+  const fromEnv = (envValue ?? "").trim();
+  const today = fromEnv !== "" ? fromEnv : now.toISOString().slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(today)) {
+    throw new Error(
+      `TRUTHLAG_DATE must be YYYY-MM-DD, got ${JSON.stringify(envValue)}. ` +
+        `Refusing to seal an unnamed day.`,
+    );
+  }
+  return today;
+}
+
 async function main(): Promise<void> {
   // Date comes from the environment so a scheduled run and a manual one agree, and so
   // this file contains no hidden clock.
-  const today = process.env.TRUTHLAG_DATE ?? new Date().toISOString().slice(0, 10);
+  //
+  // Trimmed and length-checked rather than passed straight to `??`, because the workflow
+  // sets TRUTHLAG_DATE from `github.event.inputs.date`, which exists only for a manual
+  // dispatch. On the schedule GitHub sets the variable to the empty string rather than
+  // leaving it unset, `??` does not fall back on "", and the run sealed itself to
+  // `predictions/.jsonl` with an empty `predicted_on`.
+  //
+  // The damage was not one bad filename. The guard below refuses to overwrite a day that
+  // is already sealed, so once `.jsonl` existed every later scheduled run found it,
+  // reported "already sealed", and wrote nothing. A daily ledger whose whole claim is one
+  // file per day with a public timestamp had quietly stopped producing days, while both
+  // the workflow and the guard reported success.
+  const today = resolveSealDate(process.env.TRUTHLAG_DATE, new Date());
   console.log(`truthlag seal  ${today}`);
 
   const existing = await readdir(OUT_DIR).catch(() => [] as string[]);

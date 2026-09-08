@@ -66,64 +66,44 @@ packages with real usage and real advisories, not the 4.3 million package regist
 <th>scored</th><th>abstain</th><th>no answer</th><th>top 10%</th><th>false flag</th>
 </tr></thead>
 <tbody>
-<tr class="baseline">
-    <td>popularity</td>
-    <td><strong>0.529</strong></td>
-    <td>[0.502, 0.553]</td>
-    <td>641</td><td>2558</td>
-    <td>99.5%</td>
-    <td>0.2%</td>
-    <td>0.3%</td>
-    <td>12.6%</td>
-    <td>32.8%</td>
-  </tr>
-<tr class="baseline">
-    <td>random</td>
-    <td><strong>0.504</strong></td>
-    <td class="chance">[0.479, 0.530]</td>
-    <td>643</td><td>2561</td>
-    <td>99.7%</td>
-    <td>0.0%</td>
-    <td>0.3%</td>
-    <td>9.5%</td>
-    <td>47.5%</td>
-  </tr>
 <tr>
-    <td>cadence</td>
-    <td><strong>0.402</strong></td>
-    <td>[0.380, 0.425]</td>
-    <td>641</td><td>2528</td>
+    <td>llm-flash-lite:forecast-named</td>
+    <td><strong>0.814</strong></td>
+    <td>[0.796, 0.831]</td>
+    <td>626</td><td>2528</td>
     <td>98.6%</td>
-    <td>1.1%</td>
-    <td>0.3%</td>
-    <td>5.9%</td>
-    <td><abbr title="This policy ranks by staleness, so no actively maintained control can enter its riskiest decile. The rate is 0 by construction, not by precision.">n/a</abbr></td>
+    <td>0.0%</td>
+    <td>1.4%</td>
+    <td>31.4%</td>
+    <td>25.8%</td>
   </tr>
 <tr>
-    <td>composite</td>
-    <td><strong>0.372</strong></td>
-    <td>[0.348, 0.395]</td>
-    <td>643</td><td>2561</td>
-    <td>99.7%</td>
+    <td>llm-flash-lite:practitioner-blind</td>
+    <td><strong>0.539</strong></td>
+    <td>[0.514, 0.564]</td>
+    <td>619</td><td>2509</td>
+    <td>97.8%</td>
     <td>0.0%</td>
-    <td>0.3%</td>
-    <td>5.3%</td>
-    <td>8.1%</td>
+    <td>2.2%</td>
+    <td>13.2%</td>
+    <td>46.1%</td>
   </tr>
 <tr>
-    <td>age</td>
-    <td><strong>0.357</strong></td>
-    <td>[0.334, 0.380]</td>
-    <td>643</td><td>2561</td>
-    <td>99.7%</td>
+    <td>llm-flash-lite:practitioner-named</td>
+    <td><strong>0.529</strong></td>
+    <td>[0.505, 0.553]</td>
+    <td>633</td><td>2511</td>
+    <td>98.3%</td>
     <td>0.0%</td>
-    <td>0.3%</td>
-    <td>5.6%</td>
-    <td><abbr title="This policy ranks by staleness, so no actively maintained control can enter its riskiest decile. The rate is 0 by construction, not by precision.">n/a</abbr></td>
+    <td>1.7%</td>
+    <td>12.0%</td>
+    <td>51.7%</td>
   </tr>
-<tr class="pending"><td>llm-flash-lite</td><td colspan="9"><strong>gemini-2.5-flash-lite</strong> — not run, built and registered. Training cutoff 2025-01, which splits the cases 312/331. A batched run would cost about $0.50.</td></tr>
-<tr class="pending"><td>llm-haiku</td><td colspan="9"><strong>claude-haiku-4-5</strong> — not run, built and registered. Training cutoff 2025-07, which splits the cases 377/266. A batched run would cost about $5.34.</td></tr>
-<tr class="pending"><td>llm-sonnet</td><td colspan="9"><strong>claude-sonnet-5</strong> — not run, built and registered. Training cutoff 2026-01, which splits the cases 457/186. A batched run would cost about $10.67.</td></tr>
+<tr class="pending"><td>llm-flash-lite:reidentify</td><td colspan="9">refused: no package received a score</td></tr>
+<tr class="pending"><td>llm-flash-lite:recall</td><td colspan="9">refused: no package received a score</td></tr>
+<tr class="pending"><td>llm-flash-lite</td><td colspan="9"><strong>gemini-2.5-flash</strong> — not run, built and registered. Training cutoff 2025-01, which splits the cases 312/331. A batched run would cost about $1.67.</td></tr>
+<tr class="pending"><td>llm-haiku</td><td colspan="9"><strong>claude-haiku-4-5</strong> — not run, built and registered. Training cutoff 2025-07, which splits the cases 377/266. A batched run would cost about $5.03.</td></tr>
+<tr class="pending"><td>llm-sonnet</td><td colspan="9"><strong>claude-sonnet-5</strong> — not run, built and registered. Training cutoff 2026-01, which splits the cases 457/186. A batched run would cost about $10.06.</td></tr>
 </tbody>
 </table>
 </div>
@@ -151,7 +131,7 @@ staleness is safe but because staleness is invisible.</p>
 score today's registry and the predictions are committed to a public repository before any
 outcome exists. The commit timestamp is the evidence.</p>
 <div class="kv">
-<span>days sealed</span><b>1</b>
+<span>days sealed</span><b>2</b>
 <span>predictions per day</span><b>9,575</b>
 <span>first sealed</span><b>2026-09-06</b>
 </div>
@@ -174,7 +154,7 @@ committed before any policy existed; its hash is above.</p>
 <footer>
 <p><a href="https://github.com/sudoeffortsss/truthlag">Source, method and findings</a> ·
 <a href="https://github.com/sudoeffortsss/truthlag/blob/main/FINDINGS.md">FINDINGS.md</a>
-records fifteen things this project assumed, tested, and had to change, including
+records sixteen things this project assumed, tested, and had to change, including
 four defects in its own code — one of which had silently removed 40% of the evaluation
 set before anything was scored.</p>
 <p>Allen Cai · code Apache-2.0, data CC BY-SA 4.0 · download ranking from

@@ -61,8 +61,16 @@ export interface Guardrails {
   /**
    * Of the packages in the riskiest decile, what fraction were actively maintained
    * controls. A policy that flags everything shows up here.
+   *
+   * Uninformative for any policy that ranks by staleness. Its riskiest decile consists
+   * of the least actively maintained packages by construction, so `releases_last_90d > 0`
+   * is false throughout and the rate is 0.0% for definitional reasons rather than
+   * precision. Measured: age and cadence each had exactly 0 active controls in their top
+   * decile, against 92 for random (FINDINGS.md F12). Read with `tautological` beside it.
    */
   activeControlFalseFlagRate: number;
+  /** True when the rate above cannot carry information, see the note on it. */
+  falseFlagIsTautological: boolean;
   /**
    * Of the packages a policy declined to score, what fraction were cases. High means
    * the policy was declining precisely where it mattered; low means abstention was
@@ -71,10 +79,26 @@ export interface Guardrails {
   abstainHitRate: number | null;
 }
 
+export interface AucInterval {
+  /** Bootstrap percentile bounds. */
+  lo: number;
+  hi: number;
+  /** Resamples drawn. Fixed seed, so the interval is reproducible. */
+  resamples: number;
+  /** True when the interval contains 0.5, i.e. chance is not excluded. */
+  includesChance: boolean;
+}
+
 export interface MetricsOk {
   ok: true;
   policy: string;
   auc: number;
+  /**
+   * The headline is not publishable without this. For one release the table carried a
+   * 0.088 spread between best and worst policy with no indication that two of the five
+   * intervals crossed 0.5 outright (FINDINGS.md F12).
+   */
+  aucCi: AucInterval;
   /** Cases and controls actually used, after abstentions and failures. */
   casesScored: number;
   controlsScored: number;
@@ -120,6 +144,41 @@ export function auc(caseScores: number[], controlScores: number[]): number {
   if (n1 === 0 || n2 === 0) return Number.NaN;
   const u = rankSumCases - (n1 * (n1 + 1)) / 2;
   return u / (n1 * n2);
+}
+
+/** Deterministic PRNG, so a published interval can be reproduced exactly. */
+function mulberry32(seed: number): () => number {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/**
+ * Percentile bootstrap over cases and controls independently, which is the resampling
+ * scheme that matches how a case-control sample was drawn.
+ */
+export function aucInterval(
+  caseScores: number[],
+  controlScores: number[],
+  resamples = 2000,
+  seed = 20260906,
+): AucInterval {
+  const rnd = mulberry32(seed);
+  const draw = (a: number[]): number[] => {
+    const out = new Array<number>(a.length);
+    for (let i = 0; i < a.length; i++) out[i] = a[Math.floor(rnd() * a.length)]!;
+    return out;
+  };
+  const boots = new Array<number>(resamples);
+  for (let b = 0; b < resamples; b++) boots[b] = auc(draw(caseScores), draw(controlScores));
+  boots.sort((x, y) => x - y);
+  const lo = boots[Math.floor(0.025 * resamples)]!;
+  const hi = boots[Math.floor(0.975 * resamples)]!;
+  return { lo, hi, resamples, includesChance: lo <= 0.5 && hi >= 0.5 };
 }
 
 function quantile(sorted: number[], q: number): number {
@@ -177,6 +236,7 @@ export function computeMetrics(
   }
 
   const value = auc(caseScores, controlScores);
+  const ci = aucInterval(caseScores, controlScores);
 
   // Guardrails on the riskiest decile.
   //
@@ -228,6 +288,7 @@ export function computeMetrics(
     ok: true,
     policy,
     auc: value,
+    aucCi: ci,
     casesScored: caseScores.length,
     controlsScored: controlScores.length,
     coverage,
@@ -236,6 +297,9 @@ export function computeMetrics(
       boundaryTieSize: usable.filter((r) => r.score === boundaryScore).length,
       activeControlFalseFlagRate:
         topDecile.length === 0 ? Number.NaN : activeControlsInTop / topDecile.length,
+      // No active control can enter a staleness-ranked top decile, so a 0 here is a
+      // property of the ranking, not evidence about the policy.
+      falseFlagIsTautological: activeControlsInTop === 0 && topDecileSize > 0,
       abstainHitRate,
     },
     costUsd,

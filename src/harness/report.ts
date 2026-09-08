@@ -100,24 +100,30 @@ async function main(): Promise<void> {
     }
 
     console.log(
-      `  ${"policy".padEnd(12)} ${"AUC".padStart(6)}  ${"cases".padStart(5)} ` +
-        `${"ctrls".padStart(5)}  ${"scored".padStart(6)} ${"abstain".padStart(7)} ` +
-        `${"no_ans".padStart(6)}  ${"top10%".padStart(6)} ${"falseflag".padStart(9)}`,
+      `  ${"policy".padEnd(12)} ${"AUC".padStart(6)} ${"95% CI".padStart(16)}  ` +
+        `${"cases".padStart(5)} ${"ctrls".padStart(5)}  ${"scored".padStart(6)} ` +
+        `${"abstain".padStart(7)} ${"no_ans".padStart(6)}  ${"top10%".padStart(6)} ` +
+        `${"falseflag".padStart(9)}`,
     );
-    console.log(`  ${"-".repeat(84)}`);
+    console.log(`  ${"-".repeat(101)}`);
 
     for (const m of results) {
       if (!m.ok) {
         console.log(`  ${m.policy.padEnd(12)} REFUSED  ${m.reason}`);
         continue;
       }
+      const ci = `[${m.aucCi.lo.toFixed(3)}, ${m.aucCi.hi.toFixed(3)}]`;
+      // A rate that cannot be anything but zero is marked, not printed as if it were a
+      // measurement (FINDINGS.md F12).
+      const ff = m.guardrails.falseFlagIsTautological
+        ? "    n/a*"
+        : pct(m.guardrails.activeControlFalseFlagRate);
       console.log(
-        `  ${m.policy.padEnd(12)} ${m.auc.toFixed(3).padStart(6)}  ` +
+        `  ${m.policy.padEnd(12)} ${m.auc.toFixed(3).padStart(6)} ${ci.padStart(16)}  ` +
           `${String(m.casesScored).padStart(5)} ${String(m.controlsScored).padStart(5)}  ` +
           `${pct(m.coverage.scoredFraction)} ${pct(m.coverage.abstainRate)} ` +
           `${pct(m.coverage.noAnswerRate)}  ` +
-          `${pct(m.guardrails.topDecileCaseRecall)} ` +
-          `${pct(m.guardrails.activeControlFalseFlagRate)}`,
+          `${pct(m.guardrails.topDecileCaseRecall)} ${ff}`,
       );
     }
 
@@ -127,6 +133,24 @@ async function main(): Promise<void> {
     console.log(
       `    AUC 0.5 is chance. Above 0.5 means the policy ranks cases above controls.`,
     );
+    console.log(
+      `    An interval containing 0.500 means chance is not excluded at this sample size.`,
+    );
+    const chancy = results.filter((m) => m.ok && m.aucCi.includesChance);
+    if (chancy.length > 0) {
+      console.log(
+        `    indistinguishable from chance: ` +
+          chancy.map((m) => (m.ok ? m.policy : "")).join(", "),
+      );
+    }
+    const taut = results.filter((m) => m.ok && m.guardrails.falseFlagIsTautological);
+    if (taut.length > 0) {
+      console.log(
+        `\n    * falseflag is n/a for ${taut.map((m) => (m.ok ? m.policy : "")).join(", ")}: ` +
+          `these rank by staleness, so no actively maintained control can enter their\n` +
+          `      riskiest decile and the rate is 0 by construction, not by precision.`,
+      );
+    }
     if (floor?.ok) {
       console.log(`    random     = ${floor.auc.toFixed(3)}  <- the floor`);
     }
